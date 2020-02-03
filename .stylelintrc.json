@@ -1,0 +1,31 @@
+{
+	"processors": [
+		"stylelint-processor-styled-components"
+	],
+	"extends": [
+		"stylelint-config-airbnb",
+		"stylelint-config-styled-components"
+	],
+	"plugins": [
+		"stylelint-order",
+		"stylelint-prettier"
+	],
+	"rules": {
+		"prettier/prettier": true,
+		"order/order": [
+			"custom-properties",
+			"declarations"
+		],
+		"max-nesting-depth": 4,
+		"order/properties-alphabetical-order": true,
+		"number-leading-zero": "always",
+		"rule-empty-line-before": [
+			"always",
+			{
+				"except": [
+					"first-nested"
+				]
+			}
+		]
+	}
+}
