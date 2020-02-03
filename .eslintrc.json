@@ -22,17 +22,12 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [
-          ".tsx"
-        ]
+        "extensions": [".tsx"]
       }
     ],
     "react/jsx-props-no-spreading": 0,
@@ -55,10 +50,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [
-          "**/*.test.ts",
-          "**/*.test.tsx"
-        ]
+        "devDependencies": ["**/*.test.ts", "**/*.test.tsx"]
       }
     ]
   },

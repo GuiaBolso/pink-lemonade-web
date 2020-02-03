@@ -27,7 +27,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run check:consistency"
+      "pre-commit": "npm run check:consistency",
+      "pre-push": "npm run test"
     }
   },
   "eslintConfig": {
