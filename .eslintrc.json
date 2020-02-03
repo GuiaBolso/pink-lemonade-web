@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "extends": [
     "plugin:react/recommended",
@@ -21,12 +22,17 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
   "rules": {
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [".tsx"]
+        "extensions": [
+          ".tsx"
+        ]
       }
     ],
     "react/jsx-props-no-spreading": 0,
@@ -45,7 +51,16 @@
         "tsx": "never"
       }
     ],
-    "node/no-unsupported-features/es-syntax": 0
+    "node/no-unsupported-features/es-syntax": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.ts",
+          "**/*.test.tsx"
+        ]
+      }
+    ]
   },
   "settings": {
     "import/resolver": {
