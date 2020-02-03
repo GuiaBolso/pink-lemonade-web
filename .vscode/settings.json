@@ -16,5 +16,5 @@
     "typescriptreact"
   ],
   "eslint.alwaysShowStatus": true,
-  "eslint.enable": true,
+  "eslint.enable": true
 }
