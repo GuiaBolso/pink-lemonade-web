@@ -1,4 +1,4 @@
-import DesignSystem from 'design-system-utils';
+import DesignSystem, { pxTo } from 'design-system-utils';
 
 const designTokens: any = {
   type: {
@@ -8,13 +8,12 @@ const designTokens: any = {
 
     // used with `tokens.fs('size')` or `tokens.fontSize('size')`
     sizes: {
-      xs: '8px',
-      s: '16px',
-      m: '24px',
-      l: '40px',
-      xl: '56px',
-      xxl: '80px',
-      expanded: '100%',
+      xxs: pxTo(10, 16, 'rem'),
+      xs: pxTo(12, 16, 'rem'),
+      s: pxTo(14, 16, 'rem'),
+      m: pxTo(16, 16, 'rem'),
+      l: pxTo(18, 16, 'rem'),
+      xl: pxTo(28, 16, 'rem'),
     },
 
     fontFamily: {
@@ -26,13 +25,17 @@ const designTokens: any = {
     },
 
     lineHeight: {
-      headings: 1.1,
+      xs: pxTo(12, 16, 'rem'),
+      s: pxTo(16, 16, 'rem'),
+      m: pxTo(20, 16, 'rem'),
+      l: pxTo(24, 16, 'rem'),
+      xl: pxTo(36, 16, 'rem'),
     },
 
     fontWeight: {
-      normal: 300, // Useful to set here if using anything other than `normal`
-      bold: 'bold', // Useful to set here when bold webfonts come as 400 font-weight.
-      headings: 'bold', // instead of browser default, bold
+      normal: 400, // Useful to set here if using anything other than `normal`
+      semiBold: 600, // Useful to set here when bold webfonts come as 400 font-weight.
+      bold: 700, // instead of browser default, bold
     },
   },
 
