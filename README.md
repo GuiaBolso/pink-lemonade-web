@@ -1,44 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pink Lemonade Web by GuiaBolso
 
-## Available Scripts
+PinkLemonadeWeb use:
 
-In the project directory, you can run:
+- Nx: It's a set of extensible dev tools for monorepos.
+- Typescript: Superset javascript for types and abstraction.
+- React: A JavaScript library for building user interfaces
+- Styled Components: Powerful preprocessor css (Css-in-Js) in javascript
+- Others...?
 
-### `yarn start`
+## Running unit tests
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run `nx test <PROJECT>` to execute the unit tests via [Jest](https://jestjs.io).
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Run `nx affected:test` to execute the unit tests affected by a change.
 
-### `yarn test`
+## Running end-to-end tests
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Run `ng e2e <PROJECT>` to execute the end-to-end tests via [Cypress](https://www.cypress.io).
 
-### `yarn build`
+Run `nx affected:e2e` to execute the end-to-end tests affected by a change.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running Doc Storybook
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Run `nx run <PROJECT>:storybook` to execute the storybook via [Storybook](https://storybook.js.org).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> You can use `nx run ui:storybook` for make your components
 
-### `yarn eject`
+## Generate an component in UI
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Run `nx g component --name=<Component> --project=ui --pascalCaseFiles --export --directory=<Category>/<component>` to generate an application.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+> exemple: `nx g component --name=Button --project=ui --pascalCaseFiles --export --directory=myCategory/button`
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Components are sharable across libraries and applications. They can be imported from npm using `npm i @pink-lemonade-web/ui`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Generate a library
 
-## Learn More
+Run `nx g @nrwl/workspace:lib <LIB_NAME> --pascalCaseFiles --publishable` to generate a library typescript.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> You can also use any code parts to reuse in others project through npm.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Libraries are sharable across libraries and applications. They can be imported from npm using `npm i @pink-lemonade-web/<LIB_NAME>`.
+
+## Generate a new library UI
+
+Run `nx g @nrwl/react:lib --name=Ui --pascalCaseFiles --publishable` to generate a library React.
+
+## Build
+
+Run `nx build <PROJECT|LIB>` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Understand your workspace
+
+Run `nx dep-graph` to see a diagram of the dependencies of your projects.
+
+## Further help
+
+Visit the [Nx Documentation](https://nx.dev) to learn more.
