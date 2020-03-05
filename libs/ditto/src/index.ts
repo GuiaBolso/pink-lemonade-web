@@ -1,1 +1,1 @@
-export * from './lib/ditto'
+export * from './lib/ditto';
