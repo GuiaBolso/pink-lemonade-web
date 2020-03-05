@@ -6,15 +6,57 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["@typescript-eslint", "@nrwl/nx"],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "@nrwl/nx"
+  ],
   "extends": [
     "eslint:recommended",
+    "airbnb",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
   "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".jsx",
+          ".js",
+          ".tsx",
+          ".ts"
+        ]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
+    "react/button-has-type": "off",
+    "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/no-parameter-properties": "off",
@@ -24,14 +66,21 @@
         "enforceBuildableLibDependency": true,
         "allow": [],
         "depConstraints": [
-          { "sourceTag": "*", "onlyDependOnLibsWithTags": ["*"] }
+          {
+            "sourceTag": "*",
+            "onlyDependOnLibsWithTags": [
+              "*"
+            ]
+          }
         ]
       }
     ]
   },
   "overrides": [
     {
-      "files": ["*.tsx"],
+      "files": [
+        "*.tsx"
+      ],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"
       }

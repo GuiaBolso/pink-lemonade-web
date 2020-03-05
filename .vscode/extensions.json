@@ -2,8 +2,6 @@
   "recommendations": [
     "stylelint.vscode-stylelint",
     "jpoissonnier.vscode-styled-components",
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-typescript-tslint-plugin"
+    "dbaeumer.vscode-eslint"
   ]
 }
