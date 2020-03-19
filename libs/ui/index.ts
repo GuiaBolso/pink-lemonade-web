@@ -1,1 +1,1 @@
-export * from './lib/myCategory/button/Button'
+export * from './lib/myCategory/button/Button';
