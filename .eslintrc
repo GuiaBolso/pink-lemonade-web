@@ -20,7 +20,6 @@
     "plugin:prettier/recommended"
   ],
   "settings": {
-    "import/internal-regex": "^@pink-lemonade-web",
     "import/resolver": {
       "node": {
         "extensions": [

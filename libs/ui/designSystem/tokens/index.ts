@@ -1,4 +1,7 @@
-import utils from '@pink-lemonade-web/utils';
+/**
+ * TODO: configure eslint to enable internal import
+ */
+import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
 
 const { pxToRem } = utils.scales;
 

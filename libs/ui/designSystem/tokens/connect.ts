@@ -1,6 +1,9 @@
-import tokens from '.';
+/**
+ * TODO: configure eslint to enable internal import
+ */
+import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
 
-import utils from '@pink-lemonade-web/utils';
+import tokens from '.';
 
 const { pxToRem } = utils.scales;
 
