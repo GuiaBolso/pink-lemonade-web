@@ -3,7 +3,7 @@
  */
 import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
 
-import tokens from '.';
+import tokens from './guiaBolso';
 
 const { pxToRem } = utils.scales;
 
