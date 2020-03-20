@@ -17,7 +17,8 @@
     "baseUrl": ".",
     "paths": {
       "@pink-lemonade-web/ui": ["libs/ui/index.ts"],
-      "@pink-lemonade-web/ditto": ["libs/ditto/src/index.ts"]
+      "@pink-lemonade-web/ditto": ["libs/ditto/src/index.ts"],
+      "@pink-lemonade-web/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
