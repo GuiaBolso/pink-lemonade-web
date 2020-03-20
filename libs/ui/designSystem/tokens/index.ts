@@ -1,4 +1,6 @@
-import { pxToRem } from '../../utils/scale';
+import utils from '@pink-lemonade-web/utils';
+
+const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
