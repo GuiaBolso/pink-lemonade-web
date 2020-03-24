@@ -8,6 +8,8 @@ const { pxToRem } = utils.scales;
 const baseFontSize = 16;
 
 export default {
+  name: 'guiaBolso',
+
   type: {
     baseFontSize,
 

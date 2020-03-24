@@ -30,7 +30,15 @@ export interface TextProps {
     | 'button-text'
     | 'caption'
     | 'overline'
-    | 'link';
+    | 'link'
+    | 'body-medium'
+    | 'body-small'
+    | 'subtitle-medium'
+    | 'subtitle-small'
+    | 'overline-medium'
+    | 'overline-small'
+    | 'link-medium'
+    | 'link-small';
 }
 
 const Text = ({

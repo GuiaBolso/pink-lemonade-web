@@ -25,7 +25,8 @@
     "workspace-schematic": "nx workspace-schematic",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "use-global-gb-web-cli": "npm link"
+    "use-global-gb-web-cli": "npm link",
+    "storybook:ui": "nx run ui:storybook"
   },
   "private": true,
   "bin": {

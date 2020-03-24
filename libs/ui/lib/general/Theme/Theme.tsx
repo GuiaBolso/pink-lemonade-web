@@ -6,26 +6,17 @@ import GlobalStyle from '../../../globalStyles';
 
 type ThemeProps = {
   children: React.ReactNode;
-  theme: 'guiaBolso' | 'connect';
+  theme?: 'guiaBolso' | 'connect';
 };
 
 const Theme = ({ children, theme = 'guiaBolso' }: ThemeProps) => {
-  let tokens: object;
+  const themeName: object = {
+    connect,
+    guiaBolso,
+  };
 
-  switch (theme) {
-    case 'guiaBolso':
-      tokens = guiaBolso;
-      break;
-
-    case 'connect':
-      tokens = connect;
-      break;
-
-    default:
-      break;
-  }
   return (
-    <ThemeProvider theme={tokens}>
+    <ThemeProvider theme={themeName[theme]}>
       <GlobalStyle />
       {children}
     </ThemeProvider>

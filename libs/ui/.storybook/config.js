@@ -7,8 +7,8 @@ import { Theme } from '../lib/general';
 // automatically import all files ending in *.stories.js
 const req = require.context('../lib', true, /\.stories\.(mdx|jsx|tsx)$/);
 
-const withGlobal = cb => <Theme>{cb()}</Theme>;
+const withGlobal = cb => <>{cb()}</>;
 
 addDecorator(withKnobs);
 addDecorator(withGlobal);
-configure(require.context('../lib', true, /\.stories\.tsx?$/), module);
+configure(req, module);

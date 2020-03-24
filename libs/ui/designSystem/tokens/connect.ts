@@ -12,6 +12,8 @@ const baseFontSize = 16;
 export default {
   ...tokens,
 
+  name: 'connect',
+
   type: {
     ...tokens.type,
 

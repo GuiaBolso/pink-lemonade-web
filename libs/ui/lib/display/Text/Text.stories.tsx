@@ -1,24 +1,87 @@
 import React from 'react';
 import { Text } from '.';
+import { Theme } from '../../general';
 
 export default {
-  title: 'Display/Text',
+  title: 'Display/Text/GuiaBolso',
 };
 
-export const display00 = () => <Text variant="display-00">display-00</Text>;
-export const display01 = () => <Text variant="display-01">display-01</Text>;
-export const display02 = () => <Text variant="display-02">display-02</Text>;
-export const heading01 = () => <Text variant="heading-01">heading-01</Text>;
-export const heading02 = () => <Text variant="heading-02">heading-02</Text>;
-export const heading03 = () => <Text variant="heading-03">heading-03</Text>;
-export const heading04 = () => <Text variant="heading-04">heading-04</Text>;
-export const heading05 = () => <Text variant="heading-05">heading-05</Text>;
-export const heading06 = () => <Text variant="heading-06">heading-06</Text>;
-export const body01 = () => <Text variant="body-01">body-01</Text>;
-export const body02 = () => <Text variant="body-02">body-02</Text>;
-export const subtitle01 = () => <Text variant="subtitle-01">subtitle-01</Text>;
-export const subtitle02 = () => <Text variant="subtitle-02">subtitle-02</Text>;
-export const buttonText = () => <Text variant="button-text">button-text</Text>;
-export const caption = () => <Text variant="caption">caption</Text>;
-export const overline = () => <Text variant="overline">overline</Text>;
-export const link = () => <Text variant="link">link</Text>;
+export const display01 = () => (
+  <Theme>
+    <Text variant="display-01">display-01</Text>
+  </Theme>
+);
+export const display02 = () => (
+  <Theme>
+    <Text variant="display-02">display-02</Text>
+  </Theme>
+);
+export const heading01 = () => (
+  <Theme>
+    <Text variant="heading-01">heading-01</Text>
+  </Theme>
+);
+export const heading02 = () => (
+  <Theme>
+    <Text variant="heading-02">heading-02</Text>
+  </Theme>
+);
+export const heading03 = () => (
+  <Theme>
+    <Text variant="heading-03">heading-03</Text>
+  </Theme>
+);
+export const heading04 = () => (
+  <Theme>
+    <Text variant="heading-04">heading-04</Text>
+  </Theme>
+);
+export const heading05 = () => (
+  <Theme>
+    <Text variant="heading-05">heading-05</Text>
+  </Theme>
+);
+export const bodyMedium = () => (
+  <Theme>
+    <Text variant="body-medium">body-medium</Text>
+  </Theme>
+);
+export const bodySmall = () => (
+  <Theme>
+    <Text variant="body-small">body-small</Text>
+  </Theme>
+);
+export const subtitleMedium = () => (
+  <Theme>
+    <Text variant="subtitle-medium">subtitle-medium</Text>
+  </Theme>
+);
+export const subtitleSmall = () => (
+  <Theme>
+    <Text variant="subtitle-small">subtitle-small</Text>
+  </Theme>
+);
+export const OverlineMedium = () => (
+  <Theme>
+    <Text variant="overline-medium">overline-medium</Text>
+  </Theme>
+);
+export const OverlineSmall = () => (
+  <Theme>
+    <Text variant="overline-small">overline-small</Text>
+  </Theme>
+);
+export const LinkMedium = () => (
+  <Theme>
+    <Text variant="link-medium" component="a" href="#">
+      link-medium
+    </Text>
+  </Theme>
+);
+export const LinkSmall = () => (
+  <Theme>
+    <Text variant="link-small" component="a" href="#">
+      link-small
+    </Text>
+  </Theme>
+);
