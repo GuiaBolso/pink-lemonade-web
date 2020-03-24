@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text Component renders connect theme correctly 1`] = `
+<span
+  className="css-1brelsu"
+  data-testid="text"
+>
+  Componente de texto
+</span>
+`;
+
+exports[`Text Component renders correctly 1`] = `
+<span
+  className="css-w02y8p"
+  data-testid="text"
+>
+  Componente de texto
+</span>
+`;
