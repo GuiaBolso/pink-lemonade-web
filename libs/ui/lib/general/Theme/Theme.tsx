@@ -24,7 +24,6 @@ const Theme = ({ children, theme = 'guiaBolso' }: ThemeProps) => {
     default:
       break;
   }
-  console.log('theme theme', theme);
   return (
     <ThemeProvider theme={tokens}>
       <GlobalStyle />

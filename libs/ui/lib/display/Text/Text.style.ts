@@ -174,8 +174,5 @@ export const Text = styled.span<{ variant: string }>`
   padding: 0;
 
   /* stylelint-disable-next-line */
-  ${props => {
-    console.log('fgdfgfdgdfgdf', variants[props.variant]);
-    return variants[props.variant];
-  }}
+  ${props => variants[props.variant]}
 `;
