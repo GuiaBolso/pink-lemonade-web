@@ -1,7 +1,11 @@
 import React from 'react';
 import * as Styled from './Text.style';
 
-export interface TextProps {
+/**
+ * TODO: Refactorar type e componente para funcionar corretamente com ...rest props
+ */
+
+export type TextProps = {
   /**
    * Component tag that will be rendered
    */
@@ -39,7 +43,7 @@ export interface TextProps {
     | 'overline-small'
     | 'link-medium'
     | 'link-small';
-}
+};
 
 const Text = ({
   children,
