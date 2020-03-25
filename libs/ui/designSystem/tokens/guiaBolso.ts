@@ -7,7 +7,120 @@ const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
-export default {
+export type TokensGuiaBolsoProps = {
+  name?: string;
+  type?: {
+    baseFontSize?: string | number;
+    sizes?: {
+      xxxl?: string;
+      xxl?: string;
+      xl?: string;
+      lg?: string;
+      md?: string;
+      sm?: string;
+      xs?: string;
+      xxs?: string;
+      xxxs?: string;
+    };
+    lineHeight?: {
+      rule1?: string;
+      rule2?: string;
+      rule3?: string;
+      rule4?: string;
+    };
+    fontFamily?: {
+      brand?: string;
+      neutral?: string;
+    };
+    fontWeight?: {
+      bold?: string | number;
+      semibold?: string | number;
+      regular?: string | number;
+    };
+  };
+  colors?: {
+    brand?: {
+      primary?: {
+        lightest?: string;
+        lighter?: string;
+        light?: string;
+        default?: string;
+        dark?: string;
+        darker?: string;
+      };
+      secondary?: {
+        lightest?: string;
+        lighter?: string;
+        light?: string;
+        default?: string;
+        dark?: string;
+        darker?: string;
+      };
+      tertiary?: {
+        lightest?: string;
+        lighter?: string;
+        light?: string;
+        default?: string;
+        dark?: string;
+        darker?: string;
+      };
+    };
+
+    neutral?: {
+      blank?: string;
+      lightest?: string;
+      light?: string;
+      regular?: string;
+      medium?: string;
+      dark?: string;
+      darkest?: string;
+    };
+
+    background?: {
+      neutral?: {
+        lightest?: string;
+        blank?: string;
+      };
+      brand?: {
+        primary?: string;
+        secondary?: string;
+        tertiary?: string;
+      };
+    };
+
+    feedback?: {
+      error?: {
+        default?: string;
+        lightest?: string;
+      };
+      success?: {
+        default?: string;
+        lightest?: string;
+      };
+      alert?: {
+        default?: string;
+        lightest?: string;
+      };
+      notification?: {
+        default?: string;
+        lightest?: string;
+      };
+    };
+
+    font?: {
+      brand?: {
+        primary?: string;
+        secondary?: string;
+        neutral?: string;
+      };
+    };
+  };
+  breakpoints?: any;
+  zIndex?: any;
+  spacing?: any;
+};
+
+const tokens: TokensGuiaBolsoProps = {
   name: 'guiaBolso',
 
   type: {
@@ -134,3 +247,5 @@ export default {
     scale: [],
   },
 };
+
+export default tokens;

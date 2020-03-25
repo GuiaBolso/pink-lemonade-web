@@ -3,13 +3,88 @@
  */
 import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
 
-import tokens from './guiaBolso';
+import tokens, { TokensGuiaBolsoProps } from './guiaBolso';
+
+export type TokensConnectProps = TokensGuiaBolsoProps & {
+  type?: {
+    baseFontSize?: string | number;
+    sizes?: {
+      /** Connect Theme */
+      fontSize12?: string;
+      /** Connect Theme */
+      fontSize14?: string;
+      /** Connect Theme */
+      fontSize16?: string;
+      /** Connect Theme */
+      fontSize18?: string;
+      /** Connect Theme */
+      fontSize20?: string;
+      /** Connect Theme */
+      fontSize24?: string;
+      /** Connect Theme */
+      fontSize32?: string;
+      /** Connect Theme */
+      fontSize36?: string;
+      /** Connect Theme */
+      fontSize42?: string;
+      /** Connect Theme */
+      fontSize48?: string;
+      /** Connect Theme */
+      fontSize52?: string;
+      /** Connect Theme */
+      fontSize64?: string;
+      /** Connect Theme */
+      fontSize68?: string;
+      /** Connect Theme */
+      fontSize80?: string;
+    };
+    fontWeight?: {
+      bold?: number;
+      semibold?: number;
+      regular?: number;
+      light?: number;
+    };
+  };
+
+  colors?: {
+    brand?: {
+      secondary?: {
+        lightest?: string;
+        lighter?: string;
+        light?: string;
+        default?: string;
+        dark?: string;
+        darker?: string;
+      };
+    };
+    neutral?: {
+      blank?: string;
+      lightest?: string;
+      /** Connect Theme */
+      lighter?: string;
+      light?: string;
+      /** Connect Theme */
+      brand?: string;
+      dark?: string;
+      /** Connect Theme */
+      darker?: string;
+      darkest?: string;
+    };
+    font?: {
+      brand?: {
+        primary?: string;
+        secondary?: string;
+        neutral?: string;
+      };
+    };
+  };
+};
 
 const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
-export default {
+const connectTokens: TokensConnectProps = {
   ...tokens,
 
   name: 'connect',
@@ -80,3 +155,5 @@ export default {
     },
   },
 };
+
+export default connectTokens;
