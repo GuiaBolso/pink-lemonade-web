@@ -2,22 +2,22 @@ import React from 'react';
 import { TextField } from '.';
 import { Theme } from '../../general';
 
-export default { title: 'Forms/TextField/GuiaBolso' };
+export default { title: 'Forms/TextField/Connect' };
 
 export const base = () => (
-  <Theme>
+  <Theme theme="connect">
     <TextField label="Nome" />
   </Theme>
 );
 
 export const error = () => (
-  <Theme>
+  <Theme theme="connect">
     <TextField label="Nome" error />
   </Theme>
 );
 
 export const disabled = () => (
-  <Theme>
+  <Theme theme="connect">
     <TextField label="Nome" disabled />
   </Theme>
 );
