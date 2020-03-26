@@ -3,16 +3,13 @@ import { css } from '@emotion/core';
 import { customThemeProps } from '../../general/Theme';
 
 type TextProps = {
-  variant: string;
-  as: React.ElementType;
-};
-
-type ThemeProps = {
+  variant?: string;
+  as?: React.ElementType;
   theme: customThemeProps;
 };
 
 const variants: object = {
-  'display-00': ({ theme }: ThemeProps) => {
+  'display-00': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize80};
@@ -27,7 +24,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'display-01': ({ theme }: ThemeProps) => {
+  'display-01': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize64};
@@ -50,7 +47,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'display-02': ({ theme }: ThemeProps) => {
+  'display-02': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize48};
@@ -73,7 +70,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-01': ({ theme }: ThemeProps) => {
+  'heading-01': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize42};
@@ -96,7 +93,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-02': ({ theme }: ThemeProps) => {
+  'heading-02': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize32};
@@ -119,7 +116,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-03': ({ theme }: ThemeProps) => {
+  'heading-03': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize24};
@@ -142,7 +139,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-04': ({ theme }: ThemeProps) => {
+  'heading-04': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize20};
@@ -166,7 +163,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-05': ({ theme }: ThemeProps) => {
+  'heading-05': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize18};
@@ -189,7 +186,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'heading-06': ({ theme }: ThemeProps) => {
+  'heading-06': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize14};
@@ -205,7 +202,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'body-01': ({ theme }: ThemeProps) => {
+  'body-01': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize16};
@@ -221,7 +218,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'body-02': ({ theme }: ThemeProps) => {
+  'body-02': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize14};
@@ -237,7 +234,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'subtitle-01': ({ theme }: ThemeProps) => {
+  'subtitle-01': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize18};
@@ -253,7 +250,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'subtitle-02': ({ theme }: ThemeProps) => {
+  'subtitle-02': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize16};
@@ -269,7 +266,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'button-text': ({ theme }: ThemeProps) => {
+  'button-text': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize16};
@@ -285,7 +282,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  caption: ({ theme }: ThemeProps) => {
+  caption: ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize12};
@@ -301,7 +298,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  overline: ({ theme }: ThemeProps) => {
+  overline: ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize12};
@@ -318,7 +315,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  link: ({ theme }: ThemeProps) => {
+  link: ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
         --fontSize: ${theme?.type?.sizes?.fontSize16};
@@ -346,7 +343,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'body-medium': ({ theme }: ThemeProps) => {
+  'body-medium': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -361,7 +358,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'body-small': ({ theme }: ThemeProps) => {
+  'body-small': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -376,7 +373,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'subtitle-medium': ({ theme }: ThemeProps) => {
+  'subtitle-medium': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -391,7 +388,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'subtitle-small': ({ theme }: ThemeProps) => {
+  'subtitle-small': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -406,7 +403,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'overline-medium': ({ theme }: ThemeProps) => {
+  'overline-medium': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -422,7 +419,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'overline-small': ({ theme }: ThemeProps) => {
+  'overline-small': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -438,7 +435,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'link-medium': ({ theme }: ThemeProps) => {
+  'link-medium': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
@@ -455,7 +452,7 @@ const variants: object = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'link-small': ({ theme }: ThemeProps) => {
+  'link-small': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => null,
       guiaBolso: () => css`
