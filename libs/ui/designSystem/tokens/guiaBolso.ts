@@ -125,7 +125,7 @@ const tokens = {
     },
   },
 
-  breakpoints: {
+  /* breakpoints: {
     key: '',
   },
 
@@ -135,7 +135,7 @@ const tokens = {
 
   spacing: {
     scale: [],
-  },
+  }, */
 };
 
 export default tokens;
