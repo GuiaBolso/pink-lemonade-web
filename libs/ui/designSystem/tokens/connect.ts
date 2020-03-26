@@ -3,13 +3,17 @@
  */
 import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
 
-import tokens from './guiaBolso';
+import tokens, { TokensGuiaBolsoProps } from './guiaBolso';
+import { DeepPartial } from '../../typings/DeepPartial';
+
+export type TokensConnectProps = TokensGuiaBolsoProps &
+  DeepPartial<typeof connectTokens>;
 
 const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
-export default {
+const connectTokens = {
   ...tokens,
 
   name: 'connect',
@@ -80,3 +84,5 @@ export default {
     },
   },
 };
+
+export default connectTokens;

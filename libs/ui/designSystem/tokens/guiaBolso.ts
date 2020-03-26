@@ -2,12 +2,15 @@
  * TODO: configure eslint to enable internal import
  */
 import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
+import { DeepPartial } from '../../typings/DeepPartial';
 
 const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
-export default {
+export type TokensGuiaBolsoProps = DeepPartial<typeof tokens>;
+
+const tokens = {
   name: 'guiaBolso',
 
   type: {
@@ -134,3 +137,5 @@ export default {
     scale: [],
   },
 };
+
+export default tokens;
