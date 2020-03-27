@@ -26,7 +26,8 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "use-global-gb-web-cli": "npm link",
-    "storybook:ui": "nx run ui:storybook"
+    "storybook:ui": "nx run ui:storybook",
+    "build:libs": "nx run-many --target build --projects ui,utils"
   },
   "private": true,
   "bin": {
@@ -35,8 +36,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {

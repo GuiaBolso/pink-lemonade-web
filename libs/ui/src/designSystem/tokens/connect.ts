@@ -1,7 +1,7 @@
 /**
  * TODO: configure eslint to enable internal import
  */
-import utils from '@pink-lemonade-web/utils'; // eslint-disable-line
+import utils from '@guiabolsobr/utils'; // eslint-disable-line
 
 import tokens, { TokensGuiaBolsoProps } from './guiaBolso';
 import { DeepPartial } from '../../typings/DeepPartial';
