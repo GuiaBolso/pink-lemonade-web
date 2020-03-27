@@ -52,6 +52,7 @@
     "@material-ui/icons": "^4.9.1",
     "document-register-element": "1.13.1",
     "emotion-theming": "^10.0.27",
+    "prop-types": "^15.7.2",
     "react": "16.12.0",
     "react-dom": "16.12.0",
     "styled-components": "5.0.0"
@@ -98,6 +99,9 @@
     "lint-staged": "^10.0.8",
     "prettier": "1.19.1",
     "react-test-renderer": "^16.13.1",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
     "stylelint": "^13.2.0",
     "stylelint-config-airbnb": "0.0.0",
     "stylelint-config-styled-components": "^0.1.1",

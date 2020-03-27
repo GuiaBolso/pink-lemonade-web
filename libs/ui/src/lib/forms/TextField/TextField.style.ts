@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import MuiTextField from '@material-ui/core/TextField';
-import { customThemeProps } from '../../general/Theme';
+import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type TextFieldProps = {
-  theme: customThemeProps;
+  theme: CustomThemeProps;
 };
 
 export const TextFiled = styled(MuiTextField)`
