@@ -1,7 +1,7 @@
 {
   "name": "@pink-lemonade-web/ui",
   "version": "0.0.1",
-  "dependencies": {
+  "peerDependencies": {
     "@material-ui/core": "*",
     "@material-ui/icons": "*"
   }
