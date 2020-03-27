@@ -16,9 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pink-lemonade-web/ui": ["libs/ui/index.ts"],
-      "@pink-lemonade-web/ditto": ["libs/ditto/src/index.ts"],
-      "@pink-lemonade-web/utils": ["libs/utils/src/index.ts"]
+      "@guiabolsobr/ui": ["libs/ui/index.ts"],
+      "@guiabolsobr/ditto": ["libs/ditto/src/index.ts"],
+      "@guiabolsobr/utils": ["libs/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,5 +1,1 @@
-import * as scales from './lib/scales';
-
-export default {
-  scales,
-};
+export * from './lib/scales/pxToRem';

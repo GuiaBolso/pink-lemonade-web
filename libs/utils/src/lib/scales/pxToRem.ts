@@ -5,6 +5,5 @@
  * @param {number} base base px value. (Ex: 16)
  * @returns {string} return rem value
  */
-const pxToRem = (value: number, base = 16): string => `${value / base}rem`;
-
-export default pxToRem;
+export const pxToRem = (value: number, base = 16): string =>
+  `${value / base}rem`;
