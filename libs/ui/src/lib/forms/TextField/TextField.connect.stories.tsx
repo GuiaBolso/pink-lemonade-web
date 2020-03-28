@@ -1,11 +1,12 @@
 import React from 'react';
 import { TextField } from '.';
 import { Theme } from '../../general';
+import { connect } from '../../../designSystem/tokens';
 
 export default { title: 'Forms/TextField/Connect' };
 
 export const base = () => (
-  <Theme theme="connect">
+  <Theme theme={connect}>
     <TextField label="Nome" />
   </Theme>
 );
