@@ -1,10 +1,8 @@
 /**
  * TODO: configure eslint to enable internal import
  */
-import utils from '@guiabolsobr/utils'; // eslint-disable-line
+import { pxToRem } from '@guiabolsobr/utils'; // eslint-disable-line
 import { DeepPartial } from '../../typings/DeepPartial';
-
-const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 

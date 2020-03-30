@@ -1,15 +1,13 @@
 /**
  * TODO: configure eslint to enable internal import
  */
-import utils from '@guiabolsobr/utils'; // eslint-disable-line
+import { pxToRem } from '@guiabolsobr/utils'; // eslint-disable-line
 
 import tokens, { TokensGuiaBolsoProps } from './guiaBolso';
 import { DeepPartial } from '../../typings/DeepPartial';
 
 export type TokensConnectProps = TokensGuiaBolsoProps &
   DeepPartial<typeof connectTokens>;
-
-const { pxToRem } = utils.scales;
 
 const baseFontSize = 16;
 
