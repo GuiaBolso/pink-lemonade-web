@@ -2,24 +2,17 @@ import React from 'react';
 
 import { ThemeProvider } from 'emotion-theming';
 
-import { guiaBolso, connect } from '../../../designSystem/tokens';
+// import { guiaBolso, connect } from '../../../designSystem/tokens';
 import GlobalStyle from '../../../globalStyles';
 
 type ThemeProps = {
   children: React.ReactNode;
-  theme?: 'guiaBolso' | 'connect';
+  theme: any;
 };
 
-const Theme = ({ children, theme = 'guiaBolso' }: ThemeProps) => {
-  const themeName: object = {
-    connect,
-    guiaBolso,
-  };
-
-  const customTheme = themeName[theme];
-
+const Theme = ({ children, theme }: ThemeProps) => {
   return (
-    <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       {children}
     </ThemeProvider>
