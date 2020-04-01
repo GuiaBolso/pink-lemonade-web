@@ -18,7 +18,7 @@ export const ExpansionPanel = styled(MuiExpansionPanel)`
         theme?.colors?.neutral?.lightest};
     }
 
-    &:first-child {
+    &:first-of-type {
       .MuiExpansionPanelSummary-content {
         margin: 20px 0;
 
