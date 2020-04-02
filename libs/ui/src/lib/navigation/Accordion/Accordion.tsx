@@ -10,7 +10,6 @@ export interface AccordionProps {
   summary: React.ReactNode;
   /**
    * Set if panel will init onpened.
-   * Default: false.
    */
   initOpened?: boolean;
 }
@@ -22,9 +21,8 @@ export const Accordion = ({
 }: AccordionProps) => {
   const [expanded, setExpanded] = useState<true | false>(initOpened);
 
-  const handleChange = () => {
-    setExpanded(!expanded);
-  };
+  const handleChange = () => setExpanded(!expanded);
+
   return (
     <Styled.ExpansionPanel
       className="testePanel"
@@ -36,7 +34,7 @@ export const Accordion = ({
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
-        <span>{summary}</span>
+        {summary}
       </Styled.ExpansionPanelSummary>
       <Styled.ExpansionPanelDetails>{children}</Styled.ExpansionPanelDetails>
     </Styled.ExpansionPanel>
