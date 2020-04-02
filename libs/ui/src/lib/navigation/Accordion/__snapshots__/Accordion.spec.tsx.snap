@@ -2,7 +2,7 @@
 
 exports[`Text Component renders connect theme correctly 1`] = `
 <div
-  className="MuiPaper-root MuiExpansionPanel-root testePanel css-1ai8759 Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiExpansionPanel-root testePanel css-tgd5hx Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     aria-controls="panel1a-content"
@@ -29,9 +29,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
       className="MuiExpansionPanelSummary-content Mui-expanded"
     >
       <span>
-        <span>
-          Lorem Ipsum
-        </span>
+        Lorem Ipsum
       </span>
     </div>
     <div
@@ -107,7 +105,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
 
 exports[`Text Component renders correctly 1`] = `
 <div
-  className="MuiPaper-root MuiExpansionPanel-root testePanel css-pzeb0m Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiExpansionPanel-root testePanel css-192dlty Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     aria-controls="panel1a-content"
@@ -134,9 +132,7 @@ exports[`Text Component renders correctly 1`] = `
       className="MuiExpansionPanelSummary-content Mui-expanded"
     >
       <span>
-        <span>
-          Lorem Ipsum
-        </span>
+        Lorem Ipsum
       </span>
     </div>
     <div
