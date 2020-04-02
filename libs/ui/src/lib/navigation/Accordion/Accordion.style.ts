@@ -29,6 +29,7 @@ export const ExpansionPanel = styled(MuiExpansionPanel)`
     }
 
     &.MuiPaper-elevation1 {
+      background-color: transparent;
       box-shadow: none;
     }
 
