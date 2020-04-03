@@ -4,23 +4,24 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import { Theme } from '../../general';
+import { connect, guiaBolso } from '../../../designSystem/tokens';
 import { Text } from '.';
 
 describe('Text Component', () => {
   const TextDisplay01 = () => (
-    <Theme>
+    <Theme theme={guiaBolso}>
       <Text variant="display-01">Componente de texto</Text>
     </Theme>
   );
 
   const TextDisplay01Connect = () => (
-    <Theme theme="connect">
+    <Theme theme={connect}>
       <Text variant="display-01">Componente de texto</Text>
     </Theme>
   );
 
   const Texth1 = () => (
-    <Theme>
+    <Theme theme={guiaBolso}>
       <Text component="h1">Componente h1</Text>
     </Theme>
   );
