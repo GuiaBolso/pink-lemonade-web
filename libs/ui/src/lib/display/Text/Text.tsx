@@ -1,11 +1,7 @@
 import React from 'react';
 import * as Styled from './Text.style';
 
-/**
- * TODO: Refactorar type e componente para funcionar corretamente com ...rest props
- */
-
-export type TextProps = {
+export type TextProps = React.ComponentProps<'span'> & {
   /**
    * Component tag that will be rendered
    */
