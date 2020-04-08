@@ -1,6 +1,4 @@
 import React from 'react';
-import { Theme } from '../../general';
-import { guiaBolso } from '../../../designSystem/tokens';
 import Accordion from './Accordion';
 
 export default {
@@ -20,18 +18,18 @@ const loremIpsum = {
 };
 
 export const base = () => (
-  <Theme theme={guiaBolso}>
+  <>
     <Accordion summary={loremIpsum.title}>{loremIpsum.smallText}</Accordion>
     <Accordion summary={loremIpsum.title}>{loremIpsum.mediumText}</Accordion>
     <Accordion summary={loremIpsum.title}>{loremIpsum.largeText}</Accordion>
     <Accordion summary={loremIpsum.title}>
       {loremIpsum.extraLargeText}
     </Accordion>
-  </Theme>
+  </>
 );
 
 export const expanded = () => (
-  <Theme theme={guiaBolso}>
+  <>
     <Accordion initOpened summary={loremIpsum.title}>
       {loremIpsum.smallText}
     </Accordion>
@@ -44,5 +42,5 @@ export const expanded = () => (
     <Accordion initOpened summary={loremIpsum.title}>
       {loremIpsum.extraLargeText}
     </Accordion>
-  </Theme>
+  </>
 );

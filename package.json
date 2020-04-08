@@ -69,6 +69,7 @@
     "@nrwl/web": "9.0.4",
     "@nrwl/workspace": "9.0.5-beta.2",
     "@storybook/addon-knobs": "^5.3.14",
+    "@storybook/addon-notes": "^5.3.18",
     "@storybook/angular": "5.3.9",
     "@storybook/react": "^5.3.14",
     "@testing-library/jest-dom": "^5.1.1",
