@@ -44,6 +44,7 @@
           "options": {
             "uiFramework": "@storybook/react",
             "port": 4400,
+            "staticDir": ["libs/ui/src/assets"],
             "config": {
               "configFolder": "libs/ui/.storybook"
             }
