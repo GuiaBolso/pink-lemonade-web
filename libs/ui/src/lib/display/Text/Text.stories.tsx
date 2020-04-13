@@ -3,6 +3,7 @@ import { Text } from '.';
 
 export default {
   title: 'Display/Text',
+  component: Text,
 };
 
 const guiaBolsoParameters = {
@@ -44,14 +45,14 @@ export const OverlineSmall = () => (
 OverlineSmall.story = guiaBolsoParameters;
 
 export const LinkMedium = () => (
-  <Text variant="link-medium" component="a" href="#">
+  <Text variant="link-medium" component="a">
     link-medium
   </Text>
 );
 LinkMedium.story = guiaBolsoParameters;
 
 export const LinkSmall = () => (
-  <Text variant="link-small" component="a" href="#">
+  <Text variant="link-small" component="a">
     link-small
   </Text>
 );

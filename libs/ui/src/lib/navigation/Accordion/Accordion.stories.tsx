@@ -3,6 +3,7 @@ import Accordion from './Accordion';
 
 export default {
   title: 'Navigation/Accordion/GuiaBolso',
+  component: Accordion,
 };
 
 const loremIpsum = {

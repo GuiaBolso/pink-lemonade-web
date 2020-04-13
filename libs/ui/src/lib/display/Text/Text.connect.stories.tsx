@@ -3,6 +3,7 @@ import { Text } from '.';
 
 export default {
   title: 'Display/Text',
+  component: Text,
 };
 
 const connectParamaters = {
@@ -44,7 +45,7 @@ export const overline = () => <Text variant="overline">overline</Text>;
 overline.story = connectParamaters;
 
 export const link = () => (
-  <Text variant="link" component="a" href="#">
+  <Text variant="link" component="a">
     link
   </Text>
 );
