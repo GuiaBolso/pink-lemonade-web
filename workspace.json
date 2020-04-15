@@ -163,7 +163,7 @@
             "outputPath": "dist/libs/utils",
             "tsConfig": "libs/utils/tsconfig.lib.json",
             "project": "libs/utils/package.json",
-            "entryFile": "libs/utils/src/index.ts",
+            "entryFile": "libs/utils/index.ts",
             "external": ["react", "react-dom", "styled-components"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
@@ -174,46 +174,6 @@
           "options": {
             "jestConfig": "libs/utils/jest.config.js",
             "tsConfig": "libs/utils/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
-    "create-store-hooks": {
-      "root": "libs/create-store-hooks",
-      "sourceRoot": "libs/create-store-hooks/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "config": "libs/create-store-hooks/.eslintrc",
-            "tsConfig": [
-              "libs/create-store-hooks/tsconfig.lib.json",
-              "libs/create-store-hooks/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/create-store-hooks/**"]
-          }
-        },
-        "build": {
-          "builder": "@nrwl/web:package",
-          "options": {
-            "outputPath": "dist/libs/create-store-hooks",
-            "tsConfig": "libs/create-store-hooks/tsconfig.lib.json",
-            "project": "libs/create-store-hooks/package.json",
-            "entryFile": "libs/create-store-hooks/src/index.ts",
-            "external": ["react", "react-dom", "styled-components"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/create-store-hooks/jest.config.js",
-            "tsConfig": "libs/create-store-hooks/tsconfig.spec.json",
             "passWithNoTests": true
           }
         }
