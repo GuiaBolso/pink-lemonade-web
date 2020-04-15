@@ -18,7 +18,7 @@
     "paths": {
       "@guiabolsobr/ui": ["libs/ui/index.ts"],
       "@guiabolsobr/ditto": ["libs/ditto/src/index.ts"],
-      "@guiabolsobr/utils": ["libs/utils/src/index.ts"]
+      "@guiabolsobr/utils": ["libs/utils/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
