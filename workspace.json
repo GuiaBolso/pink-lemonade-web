@@ -3,7 +3,7 @@
   "projects": {
     "ui": {
       "root": "libs/ui",
-      "sourceRoot": "libs/ui",
+      "sourceRoot": "libs/ui/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -141,7 +141,7 @@
     },
     "utils": {
       "root": "libs/utils",
-      "sourceRoot": "libs/utils",
+      "sourceRoot": "libs/utils/src",
       "projectType": "library",
       "schematics": {},
       "architect": {
@@ -163,7 +163,7 @@
             "outputPath": "dist/libs/utils",
             "tsConfig": "libs/utils/tsconfig.lib.json",
             "project": "libs/utils/package.json",
-            "entryFile": "libs/utils/index.ts",
+            "entryFile": "libs/utils/src/index.ts",
             "external": ["react", "react-dom", "styled-components"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
