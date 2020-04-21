@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField Component renders correctly 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root css-mk8ri5"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-filled"
+    data-shrink={false}
+  >
+    Lorem Ipsum
+  </label>
+  <div
+    className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoFocus={false}
+      className="MuiInputBase-input MuiOutlinedInput-input"
+      disabled={false}
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      type="text"
+    />
+    <fieldset
+      aria-hidden={true}
+      className="PrivateNotchedOutline-root-269 MuiOutlinedInput-notchedOutline"
+    >
+      <legend
+        className="PrivateNotchedOutline-legendLabelled-271"
+      >
+        <span>
+          Lorem Ipsum
+        </span>
+      </legend>
+    </fieldset>
+  </div>
+  <p
+    className="MuiFormHelperText-root MuiFormHelperText-contained"
+  >
+    Lorem ipsum dolor sit amet.
+  </p>
+</div>
+`;
