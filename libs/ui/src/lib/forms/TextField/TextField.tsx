@@ -22,9 +22,17 @@ export const TextField = ({
   helperText,
   icon,
   iconPosition,
+  ...rest
 }: TextFieldProps) => {
   let inputProps = {};
-  let rootProps = {};
+  let rootProps = {
+    label,
+    error,
+    disabled,
+    variant: 'outlined' as 'outlined',
+    inputRef,
+    helperText,
+  };
   let inputLabelProps = {
     variant: 'filled' as 'filled',
   };
@@ -54,8 +62,10 @@ export const TextField = ({
       };
       rootProps = {
         ...rootProps,
-        classes: {
-          root: 'icon-start',
+        ...{
+          classes: {
+            root: 'icon-start',
+          },
         },
       };
       inputProps = {
@@ -71,13 +81,8 @@ export const TextField = ({
     <Styled.TextFiled
       {...rootProps}
       InputLabelProps={{ ...inputLabelProps }}
-      label={label}
-      error={error}
-      disabled={disabled}
-      variant="outlined"
       InputProps={{ ...inputProps }}
-      inputRef={inputRef}
-      helperText={helperText}
+      {...rest}
     />
   );
 };
