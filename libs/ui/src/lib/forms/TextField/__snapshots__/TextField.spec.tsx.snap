@@ -28,10 +28,10 @@ exports[`TextField Component renders correctly 1`] = `
     />
     <fieldset
       aria-hidden={true}
-      className="PrivateNotchedOutline-root-269 MuiOutlinedInput-notchedOutline"
+      className="PrivateNotchedOutline-root-129 MuiOutlinedInput-notchedOutline"
     >
       <legend
-        className="PrivateNotchedOutline-legendLabelled-271"
+        className="PrivateNotchedOutline-legendLabelled-131"
       >
         <span>
           Lorem Ipsum
