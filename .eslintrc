@@ -6,14 +6,10 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "prettier",
-    "@nrwl/nx"
-  ],
+  "plugins": ["@typescript-eslint", "prettier", "@nrwl/nx"],
   "extends": [
     "eslint:recommended",
-    "airbnb",
+    "airbnb-typescript",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
@@ -22,12 +18,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   },
@@ -51,12 +42,7 @@
     "react/jsx-filename-extension": [
       "error",
       {
-        "extensions": [
-          ".jsx",
-          ".js",
-          ".tsx",
-          ".ts"
-        ]
+        "extensions": [".jsx", ".js", ".tsx", ".ts"]
       }
     ],
     "react/jsx-props-no-spreading": "off",
@@ -74,9 +60,7 @@
         "depConstraints": [
           {
             "sourceTag": "*",
-            "onlyDependOnLibsWithTags": [
-              "*"
-            ]
+            "onlyDependOnLibsWithTags": ["*"]
           }
         ]
       }
@@ -84,9 +68,7 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.tsx"
-      ],
+      "files": ["*.tsx"],
       "rules": {
         "@typescript-eslint/no-unused-vars": "off"
       }
