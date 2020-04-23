@@ -24,7 +24,6 @@ export const Button = ({
       fullWidth={fullWidth}
       disabled={disabled}
       disableElevation
-      disableRipple
     >
       {label}
     </Styled.Button>
