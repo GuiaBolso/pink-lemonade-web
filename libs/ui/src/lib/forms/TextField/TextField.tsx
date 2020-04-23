@@ -5,46 +5,55 @@ import EditOutlined from '@material-ui/icons/EditOutlined';
 import * as Styled from './TextField.style';
 
 type TextFieldProps = {
-  label: string;
-  error?: boolean;
   disabled?: boolean;
-  inputRef?: React.RefObject<HTMLInputElement>;
+  error?: boolean;
   helperText?: string;
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
+  inputComponent?: any;
+  inputRef?: React.RefObject<HTMLInputElement>;
+  label: string;
+  name?: string;
 };
 
 export const TextField = ({
-  label,
-  error = false,
   disabled = false,
-  inputRef,
+  error = false,
   helperText,
   icon,
   iconPosition,
+  inputComponent,
+  inputRef,
+  label,
+  name,
   ...rest
 }: TextFieldProps) => {
-  let inputProps = {};
   let rootProps = {
-    label,
-    error,
     disabled,
-    variant: 'outlined' as 'outlined',
-    inputRef,
+    error,
     helperText,
+    inputRef,
+    label,
+    variant: 'outlined' as 'outlined',
+    name,
   };
   let inputLabelProps = {
     variant: 'filled' as 'filled',
+  };
+  let inputProps = {
+    inputComponent,
   };
 
   if (error) {
     inputProps = {
       ...inputProps,
-      endAdornment: (
-        <InputAdornment position="end">
-          <EditOutlined />
-        </InputAdornment>
-      ),
+      ...{
+        endAdornment: (
+          <InputAdornment position="end">
+            <EditOutlined />
+          </InputAdornment>
+        ),
+      },
     };
   }
 
@@ -52,7 +61,9 @@ export const TextField = ({
     if (iconPosition === 'end' && !error) {
       inputProps = {
         ...inputProps,
-        endAdornment: <InputAdornment position="end">{icon}</InputAdornment>,
+        ...{
+          endAdornment: <InputAdornment position="end">{icon}</InputAdornment>,
+        },
       };
     }
     if (iconPosition === 'start') {
@@ -70,9 +81,11 @@ export const TextField = ({
       };
       inputProps = {
         ...inputProps,
-        startAdornment: (
-          <InputAdornment position="start">{icon}</InputAdornment>
-        ),
+        ...{
+          startAdornment: (
+            <InputAdornment position="start">{icon}</InputAdornment>
+          ),
+        },
       };
     }
   }
