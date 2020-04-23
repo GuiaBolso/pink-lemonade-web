@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+import { pxToRem } from '@guiabolsobr/utils';
 
 import MuiButton from '@material-ui/core/Button';
 
@@ -14,9 +15,9 @@ export const Button = styled(MuiButton)`
     return css`
       &.MuiButton {
         &-root {
-          border-radius: 8px;
-          min-height: 48px;
-          padding: 0 24px;
+          border-radius: ${pxToRem(8)};
+          min-height: ${pxToRem(48)};
+          padding: 0 ${pxToRem(24)};
 
           &:not(.MuiButton-fullWidth) {
             width: 300px;
@@ -73,7 +74,7 @@ export const Button = styled(MuiButton)`
         }
 
         &-sizeSmall {
-          min-height: 40px;
+          min-height: ${pxToRem(40)};
         }
 
         &-fullWidth {
