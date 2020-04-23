@@ -1,8 +1,13 @@
-export * from './lib/forms/Button';
 export * from './lib/containers/Card';
+
 export * from './lib/display/Text';
+
+export * from './lib/forms/Button';
+export * from './lib/forms/Checkbox';
 export * from './lib/forms/TextField';
+
 export * from './lib/general/Theme';
+
 export * from './lib/navigation/Accordion';
 export * from './lib/navigation/Steps';
 
