@@ -13,12 +13,24 @@ export const TextFiled = styled(MuiTextField)`
     theme?.type?.fontFamily?.neutral};
 
   .MuiInputBase-root {
+    color: inherit;
     font-family: inherit;
 
     &.Mui-error {
       .MuiInputAdornment-root {
         color: ${({ theme }: TextFieldProps) =>
           theme?.colors?.feedback?.error?.default};
+      }
+    }
+  }
+
+  &.icon-start {
+    & > .MuiInputLabel-filled {
+      transform: translate(45px, 20px) scale(1);
+
+      &.Mui-focused,
+      &.MuiFormLabel-filled {
+        transform: translate(45px, 10px) scale(0.75);
       }
     }
   }
@@ -39,10 +51,10 @@ export const TextFiled = styled(MuiTextField)`
     }};
 
     padding: 27px 12px 10px;
-  }
 
-  & > .MuiInputLabel-outlined.MuiInputLabel-shrink {
-    transform: translate(12px, 10px) scale(0.75);
+    &.MuiInputBase-inputAdornedStart {
+      padding-left: 0;
+    }
   }
 
   .MuiOutlinedInput-notchedOutline > legend > span {
@@ -121,6 +133,16 @@ export const TextFiled = styled(MuiTextField)`
         };
         return (themeName[theme?.name] || themeName.guiaBolso)();
       }}
+    }
+  }
+
+  .MuiFormHelperText-root {
+    font-family: inherit;
+    margin-left: 0;
+
+    &.Mui-error {
+      color: ${({ theme }: TextFieldProps) =>
+        theme?.colors?.feedback?.error?.default};
     }
   }
 `;
