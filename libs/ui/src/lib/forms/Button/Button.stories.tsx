@@ -13,7 +13,7 @@ export const Secondary = () => (
   <Button label="Secondary" appearance="secondary" />
 );
 
-export const Tertiary = () => <Button label="Tertiary" appearance="terdiary" />;
+export const Tertiary = () => <Button label="Tertiary" appearance="tertiary" />;
 
 export const Disabled = () => (
   <Button label="Disabled" appearance="primary" disabled />

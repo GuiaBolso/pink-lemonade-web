@@ -5,7 +5,7 @@ import * as Styled from './Button.style';
 
 type ButtonProps = MuiButtonProps & {
   label?: string;
-  appearance?: 'primary' | 'secondary' | 'terdiary';
+  appearance?: 'primary' | 'secondary' | 'tertiary';
   scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';
 };
 
