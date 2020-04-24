@@ -1,31 +1,53 @@
 import React from 'react';
 
+import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import * as Styled from './Button.style';
 
-type ButtonProps = {
-  disabled?: boolean;
-  fullWidth?: boolean;
-  label: string;
-  size?: 'small' | 'medium' | 'large';
-  variant?: 'contained' | 'outlined' | 'text';
+type ButtonProps = MuiButtonProps & {
+  label?: string;
+  appearance?: 'primary' | 'secondary' | 'tertiary';
+  scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';
 };
 
 export const Button = ({
   disabled = false,
-  fullWidth,
   label,
-  size,
-  variant,
+  appearance = 'primary',
+  children,
+  scale = 'wide-regular',
+  ...rest
 }: ButtonProps) => {
+  const mapVariants = {
+    primary: 'contained' as 'contained',
+    secondary: 'outlined' as 'outlined',
+    terdiary: 'text' as 'text',
+  };
+
+  const getScale = () => {
+    const mapScale = {
+      fixed: {
+        fullWidth: true,
+      },
+      'wide-thin': {
+        size: 'small',
+      },
+      narrow: {
+        narrow: true,
+      },
+    };
+
+    return mapScale[scale] || {};
+  };
+
   return (
     <Styled.Button
-      variant={variant}
-      size={size}
-      fullWidth={fullWidth}
+      {...rest}
+      {...getScale()}
+      variant={mapVariants[appearance]}
       disabled={disabled}
       disableElevation
     >
-      {label}
+      {label || children}
     </Styled.Button>
   );
 };

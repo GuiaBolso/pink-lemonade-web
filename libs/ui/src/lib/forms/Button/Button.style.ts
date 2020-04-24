@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
+// eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 
 import MuiButton from '@material-ui/core/Button';
@@ -8,10 +9,11 @@ import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type ButtonProps = {
   theme: CustomThemeProps;
+  narrow: boolean | undefined;
 };
 
 export const Button = styled(MuiButton)`
-  ${({ theme }: ButtonProps) => {
+  ${({ theme, narrow }: ButtonProps) => {
     return css`
       &.MuiButton {
         &-root {
@@ -20,7 +22,7 @@ export const Button = styled(MuiButton)`
           padding: 0 ${pxToRem(24)};
 
           &:not(.MuiButton-fullWidth) {
-            width: 300px;
+            min-width: ${narrow ? 'auto' : '300px'};
           }
         }
 
