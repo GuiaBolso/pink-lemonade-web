@@ -1,81 +1,117 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import EditOutlined from '@material-ui/icons/EditOutlined';
+import { InputBaseComponentProps } from '@material-ui/core';
 
 import * as Styled from './TextField.style';
 
-type TextFieldProps = {
-  label: string;
-  error?: boolean;
+type InputComponent = React.ElementType<InputBaseComponentProps>;
+
+type ComomProps = {
   disabled?: boolean;
-  inputRef?: React.RefObject<HTMLInputElement>;
+  error?: boolean;
   helperText?: string;
+  inputRef?: React.RefObject<HTMLInputElement>;
+  label: string;
+  name?: string;
+};
+
+type TextFieldProps = ComomProps & {
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
+  inputComponent?: InputComponent;
+};
+
+type RootProps = ComomProps & {
+  classes?: {
+    root: string;
+  };
+  variant: 'outlined';
+};
+
+type InputLabelProps = {
+  variant: 'filled';
+  shrink?: boolean;
+};
+
+type InputProps = {
+  endAdornment?: React.ReactElement;
+  startAdornment?: React.ReactElement;
+  inputComponent?: InputComponent;
 };
 
 export const TextField = ({
-  label,
-  error = false,
   disabled = false,
-  inputRef,
+  error = false,
   helperText,
   icon,
   iconPosition,
+  inputComponent,
+  inputRef,
+  label,
+  name,
   ...rest
 }: TextFieldProps) => {
-  let inputProps = {};
-  let rootProps = {
-    label,
-    error,
+  let rootProps: RootProps = {
     disabled,
-    variant: 'outlined' as 'outlined',
-    inputRef,
+    error,
     helperText,
+    inputRef,
+    label,
+    variant: 'outlined',
+    name,
   };
-  let inputLabelProps = {
-    variant: 'filled' as 'filled',
+  let inputLabelProps: InputLabelProps = {
+    variant: 'filled',
+  };
+  let inputProps: InputProps = {
+    inputComponent,
   };
 
-  if (error) {
-    inputProps = {
+  const setIconPosition = () => {
+    const positions = {
+      start: () => {
+        inputLabelProps = {
+          ...inputLabelProps,
+          shrink: false,
+        };
+        rootProps = {
+          ...rootProps,
+          classes: {
+            root: 'icon-start',
+          },
+        };
+        inputProps = {
+          ...inputProps,
+          startAdornment: (
+            <InputAdornment position={iconPosition}>{icon}</InputAdornment>
+          ),
+        };
+      },
+      end: () => {
+        !error &&
+          (inputProps = {
+            ...inputProps,
+            endAdornment: (
+              <InputAdornment position={iconPosition}>{icon}</InputAdornment>
+            ),
+          });
+      },
+    };
+    return (positions[iconPosition] || positions.start)();
+  };
+
+  error &&
+    (inputProps = {
       ...inputProps,
       endAdornment: (
         <InputAdornment position="end">
           <EditOutlined />
         </InputAdornment>
       ),
-    };
-  }
+    });
 
-  if (icon) {
-    if (iconPosition === 'end' && !error) {
-      inputProps = {
-        ...inputProps,
-        endAdornment: <InputAdornment position="end">{icon}</InputAdornment>,
-      };
-    }
-    if (iconPosition === 'start') {
-      inputLabelProps = {
-        ...inputLabelProps,
-        ...{ shrink: false },
-      };
-      rootProps = {
-        ...rootProps,
-        ...{
-          classes: {
-            root: 'icon-start',
-          },
-        },
-      };
-      inputProps = {
-        ...inputProps,
-        startAdornment: (
-          <InputAdornment position="start">{icon}</InputAdornment>
-        ),
-      };
-    }
-  }
+  icon && setIconPosition();
 
   return (
     <Styled.TextFiled
