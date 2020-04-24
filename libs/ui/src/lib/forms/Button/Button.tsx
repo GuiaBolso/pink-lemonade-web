@@ -1,11 +1,8 @@
 import React from 'react';
 
-// import { ExtendButtonBase, ButtonTypeMap } from '@material-ui/core';
-
 import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import * as Styled from './Button.style';
 
-// type ButtonProps = ExtendButtonBase<ButtonTypeMap<{}, 'button'>> & {
 type ButtonProps = MuiButtonProps & {
   label?: string;
   appearance?: 'primary' | 'secondary' | 'terdiary';
