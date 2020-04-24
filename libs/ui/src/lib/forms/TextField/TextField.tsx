@@ -11,7 +11,7 @@ type ComomProps = {
   disabled?: boolean;
   error?: boolean;
   helperText?: string;
-  inputRef?: React.RefObject<HTMLInputElement>;
+  inputRef?: React.Ref<any>;
   label: string;
   name?: string;
 };
