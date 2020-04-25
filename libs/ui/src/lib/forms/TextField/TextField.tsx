@@ -16,7 +16,6 @@ type TextFieldProps = {
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
-  teste?: 'teste1' | 'teste2' | 'teste3';
 } & MuiTextFieldProps;
 
 export const TextField = ({
