@@ -1,65 +1,34 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import EditOutlined from '@material-ui/icons/EditOutlined';
-import { InputBaseComponentProps } from '@material-ui/core';
+import {
+  InputBaseComponentProps,
+  TextFieldProps as MuiTextFieldProps,
+  InputLabelProps,
+  InputProps,
+} from '@material-ui/core';
 
 import * as Styled from './TextField.style';
 
 type InputComponent = React.ElementType<InputBaseComponentProps>;
 
-type ComomProps = {
-  disabled?: boolean;
-  error?: boolean;
-  helperText?: string;
-  inputRef?: React.Ref<any>;
-  label: string;
-  name?: string;
-};
-
-type TextFieldProps = ComomProps & {
+type TextFieldProps = {
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
-};
-
-type RootProps = ComomProps & {
-  classes?: {
-    root: string;
-  };
-  variant: 'outlined';
-};
-
-type InputLabelProps = {
-  variant: 'filled';
-  shrink?: boolean;
-};
-
-type InputProps = {
-  endAdornment?: React.ReactElement;
-  startAdornment?: React.ReactElement;
-  inputComponent?: InputComponent;
-};
+  teste?: 'teste1' | 'teste2' | 'teste3';
+} & MuiTextFieldProps;
 
 export const TextField = ({
-  disabled = false,
-  error = false,
-  helperText,
   icon,
   iconPosition,
   inputComponent,
-  inputRef,
-  label,
-  name,
+  error = false,
   ...rest
 }: TextFieldProps) => {
-  let rootProps: RootProps = {
-    disabled,
+  let rootProps: MuiTextFieldProps = {
     error,
-    helperText,
-    inputRef,
-    label,
     variant: 'outlined',
-    name,
   };
   let inputLabelProps: InputLabelProps = {
     variant: 'filled',
@@ -115,10 +84,10 @@ export const TextField = ({
 
   return (
     <Styled.TextFiled
+      {...rest}
       {...rootProps}
       InputLabelProps={{ ...inputLabelProps }}
       InputProps={{ ...inputProps }}
-      {...rest}
     />
   );
 };

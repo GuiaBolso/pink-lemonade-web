@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import { FormControlLabel } from '@material-ui/core';
+import { FormControlLabelProps } from '@material-ui/core';
 
 import * as S from './Checkbox.style';
 
 type CheckboxProps = {
-  label?: React.ReactElement;
   name: string;
   checked?: boolean;
-  disabled?: boolean;
   variant?: 'simple' | 'stand-alone';
-};
+} & Partial<FormControlLabelProps>;
 
 const Checkbox = ({
   label,
@@ -17,6 +15,7 @@ const Checkbox = ({
   checked = false,
   disabled = false,
   variant = 'simple',
+  ...rest
 }: CheckboxProps) => {
   const [isChecked, setIsChecked] = useState<boolean>(checked);
 
@@ -25,6 +24,7 @@ const Checkbox = ({
   };
   return (
     <S.FormControlLabel
+      {...rest}
       label={label}
       disabled={disabled}
       variant={variant}

@@ -3,11 +3,11 @@ import React from 'react';
 import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import * as Styled from './Button.style';
 
-type ButtonProps = MuiButtonProps & {
+type ButtonProps = {
   label?: string;
   appearance?: 'primary' | 'secondary' | 'tertiary';
   scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';
-};
+} & MuiButtonProps;
 
 export const Button = ({
   disabled = false,
