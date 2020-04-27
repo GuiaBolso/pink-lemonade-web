@@ -19,7 +19,11 @@ export const standAlone = () => (
 );
 
 export const checked = () => (
-  <Checkbox checked label={<span>Receber newsletter</span>} name="newsletter" />
+  <Checkbox
+    defaultChecked
+    label={<span>Receber newsletter</span>}
+    name="newsletter"
+  />
 );
 
 export const disabled = () => (
