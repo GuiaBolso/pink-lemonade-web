@@ -4,7 +4,7 @@ import { FormControlLabelProps } from '@material-ui/core';
 import * as S from './Checkbox.style';
 
 type CheckboxProps = {
-  name: string;
+  name?: string;
   checked?: boolean;
   variant?: 'simple' | 'stand-alone';
 } & Partial<FormControlLabelProps>;
