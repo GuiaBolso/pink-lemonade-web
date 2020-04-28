@@ -14,7 +14,7 @@ const Steps = ({ totalSteps, currentStep }: Steps) => {
         Array(totalSteps)
           .fill('')
           .map((_, step) => (
-            <S.Step {...(step === currentStep && { active: true })}>
+            <S.Step key={step} {...(step === currentStep && { active: true })}>
               {step}
             </S.Step>
           ))}
