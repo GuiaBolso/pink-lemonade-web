@@ -14,13 +14,15 @@ interface Card {
 const Card = ({ title, icon, content, children }: Card) => {
   return (
     <S.Card>
-      <S.Header>
-        <S.Title component="h4" variant="heading-05">
-          {title}
-        </S.Title>
+      {title && (
+        <S.Header className={title && content && 'min-height'}>
+          <S.Title component="h4" variant="heading-05">
+            {title}
+          </S.Title>
 
-        {icon && <S.IconContainer>{icon}</S.IconContainer>}
-      </S.Header>
+          {icon && <S.IconContainer>{icon}</S.IconContainer>}
+        </S.Header>
+      )}
 
       {title && content && <S.Spacer />}
 
