@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
 
+// eslint-disable-next-line import/no-unresolved
+import { pxToRem } from '@guiabolsobr/utils';
+
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 import { Text } from '../../display/Text';
@@ -10,18 +13,23 @@ type CardTheme = {
 
 export const Card = styled.article`
   background: #fff;
-  border: 1px solid ${({ theme }: CardTheme) => theme?.colors?.neutral?.light};
+  border: ${pxToRem(1)} solid
+    ${({ theme }: CardTheme) => theme?.colors?.neutral?.light};
   border-radius: 6px;
-  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: ${pxToRem(2)} ${pxToRem(6)} ${pxToRem(6)} rgba(0, 0, 0, 0.05);
   box-sizing: border-box;
-  flex: 1 1 235px;
-  margin: 12px;
-  padding: 24px;
+  flex: 1 1 ${pxToRem(235)};
+  margin: ${pxToRem(12)};
+  padding: ${pxToRem(24)};
 `;
 
 export const Header = styled.header`
   display: flex;
   justify-content: space-between;
+
+  &.min-height {
+    min-height: ${pxToRem(45)};
+  }
 `;
 
 export const Title = styled(Text)`
@@ -29,14 +37,14 @@ export const Title = styled(Text)`
 `;
 
 export const Spacer = styled.div`
-  height: 9px;
+  height: ${pxToRem(9)};
 `;
 
 export const IconContainer = styled.div`
-  align-items: center;
+  align-items: flex-start;
   display: flex;
-  height: 40px;
+  height: ${pxToRem(40)};
   justify-content: center;
-  margin-left: 8px;
-  width: 40px;
+  margin-left: ${pxToRem(8)};
+  width: ${pxToRem(40)};
 `;
