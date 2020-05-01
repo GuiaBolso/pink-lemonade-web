@@ -1,6 +1,7 @@
 import React from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import EditOutlined from '@material-ui/icons/EditOutlined';
+import masker from 'vanilla-masker';
 import {
   InputBaseComponentProps,
   TextFieldProps as MuiTextFieldProps,
@@ -16,6 +17,7 @@ type TextFieldProps = {
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
+  mask?: string;
 } & MuiTextFieldProps;
 
 export const TextField = ({
@@ -23,6 +25,7 @@ export const TextField = ({
   iconPosition,
   inputComponent,
   error = false,
+  mask,
   ...rest
 }: TextFieldProps) => {
   let rootProps: MuiTextFieldProps = {
@@ -87,6 +90,11 @@ export const TextField = ({
       {...rootProps}
       InputLabelProps={{ ...inputLabelProps }}
       InputProps={{ ...inputProps }}
+      onChange={e => {
+        e.target.value = mask
+          ? masker.toPattern(e.target.value, mask)
+          : e.target.value;
+      }}
     />
   );
 };

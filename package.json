@@ -54,7 +54,8 @@
     "emotion-theming": "^10.0.27",
     "react": "16.12.0",
     "react-dom": "16.12.0",
-    "styled-components": "5.0.0"
+    "styled-components": "5.0.0",
+    "vanilla-masker": "^1.2.0"
   },
   "devDependencies": {
     "@angular/forms": "*",
@@ -82,6 +83,7 @@
     "@types/react-dom": "16.9.4",
     "@types/react-test-renderer": "^16.9.2",
     "@types/styled-components": "4.4.2",
+    "@types/vanilla-masker": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "2.26.0",
     "@typescript-eslint/parser": "2.26.0",
     "babel-loader": "8.0.6",
