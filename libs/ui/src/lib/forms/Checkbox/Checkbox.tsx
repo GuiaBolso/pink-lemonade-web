@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   FormControlLabelProps,
   CheckboxProps as MuiCheckboxProps,
@@ -40,4 +40,4 @@ const Checkbox = ({
   );
 };
 
-export default Checkbox;
+export default memo(Checkbox);

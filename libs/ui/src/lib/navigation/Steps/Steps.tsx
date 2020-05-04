@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import * as S from './Steps.style';
 
@@ -22,4 +22,4 @@ const Steps = ({ totalSteps, currentStep }: Steps) => {
   );
 };
 
-export default Steps;
+export default memo(Steps);
