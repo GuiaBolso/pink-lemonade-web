@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import * as Styled from './Button.style';
@@ -52,4 +52,4 @@ export const Button = ({
   );
 };
 
-export default Button;
+export default memo(Button);

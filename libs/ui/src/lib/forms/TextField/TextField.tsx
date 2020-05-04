@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import EditOutlined from '@material-ui/icons/EditOutlined';
 import masker from 'vanilla-masker';
@@ -99,4 +99,4 @@ export const TextField = ({
   );
 };
 
-export default TextField;
+export default memo(TextField);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import * as Styled from './Text.style';
 
 export type TextProps = React.ComponentProps<'span'> & {
@@ -54,4 +54,4 @@ const Text = ({
   );
 };
 
-export default Text;
+export default memo(Text);
