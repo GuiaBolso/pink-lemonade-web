@@ -22,6 +22,8 @@ export const error = () => (
   <TextField label="Nome" error helperText="Digite o campo corretamente" />
 );
 
+export const password = () => <TextField label="Senha" type="password" />;
+
 export const masked = () => <TextField label="CPF" mask="999.999.999-99" />;
 
 export const disabled = () => <TextField label="Nome" disabled />;
