@@ -1,7 +1,10 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import MuiTextField from '@material-ui/core/TextField';
+import {
+  TextField as MuiTextField,
+  InputAdornment as MuiInputAdornment,
+} from '@material-ui/core';
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type TextFieldProps = {
@@ -145,4 +148,10 @@ export const TextFiled = styled(MuiTextField)`
         theme?.colors?.feedback?.error?.default};
     }
   }
+`;
+
+export const PasswordAdornment = styled(MuiInputAdornment)`
+  color: ${({ theme }: TextFieldProps) =>
+    theme?.colors?.brand?.secondary?.default};
+  cursor: pointer;
 `;

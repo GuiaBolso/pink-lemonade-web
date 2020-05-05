@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import EditOutlined from '@material-ui/icons/EditOutlined';
+import { EditOutlined, VisibilityOff, Visibility } from '@material-ui/icons';
 import masker from 'vanilla-masker';
 import {
   InputBaseComponentProps,
@@ -26,10 +26,25 @@ export const TextField = ({
   inputComponent,
   error = false,
   mask,
+  type,
   ...rest
 }: TextFieldProps) => {
+  const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
+  const [inputType, setInputType] = useState<string>(type);
+
+  useEffect(() => {
+    if (type === 'password') {
+      visiblePassword ? setInputType('text') : setInputType('password');
+    }
+  }, [type, visiblePassword]);
+
+  const handlePasswordVisibility = () => {
+    type === 'password' && setVisiblePassword(!visiblePassword);
+  };
+
   let rootProps: MuiTextFieldProps = {
     error,
+    type: inputType,
     variant: 'outlined',
   };
   let inputLabelProps: InputLabelProps = {
@@ -71,6 +86,19 @@ export const TextField = ({
     };
     return (positions[iconPosition] || positions.start)();
   };
+
+  type === 'password' &&
+    (inputProps = {
+      ...inputProps,
+      endAdornment: (
+        <Styled.PasswordAdornment
+          position="end"
+          onClick={handlePasswordVisibility}
+        >
+          {visiblePassword ? <Visibility /> : <VisibilityOff />}
+        </Styled.PasswordAdornment>
+      ),
+    });
 
   error &&
     (inputProps = {
