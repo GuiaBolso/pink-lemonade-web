@@ -1,4 +1,4 @@
-import { pxToRem } from '@guiabolsobr/utils';
+import { pxToRem } from '@guiabolsobr/utils'; // eslint-disable-line
 import { DeepPartial } from '../../typings/DeepPartial';
 
 const baseFontSize = 16;
@@ -31,7 +31,7 @@ const tokens = {
     },
 
     fontFamily: {
-      brand: 'Axiforma',
+      brand: 'Montserrat',
       neutral: 'Open Sans',
     },
 

@@ -4,7 +4,9 @@ import { Global, css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 
 const makeGlobalStyles = theme => css`
-  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
 
   body,
   html {
