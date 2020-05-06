@@ -18,6 +18,7 @@ type TextFieldProps = {
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
   mask?: string;
+  errorMessage?: string;
 } & MuiTextFieldProps;
 
 export const TextField = ({
@@ -25,12 +26,18 @@ export const TextField = ({
   iconPosition,
   inputComponent,
   error = false,
+  errorMessage,
   mask,
   type,
+  helperText,
   ...rest
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
+  const [inputError, setInputError] = useState<true | false>(error);
+  const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
+    helperText,
+  );
 
   useEffect(() => {
     if (type === 'password') {
@@ -38,13 +45,22 @@ export const TextField = ({
     }
   }, [type, visiblePassword]);
 
+  useEffect(() => {
+    if (inputError && errorMessage) {
+      setInputHelperText(errorMessage);
+    } else {
+      setInputHelperText(helperText);
+    }
+  }, [errorMessage, helperText, inputError]);
+
   const handlePasswordVisibility = () => {
     type === 'password' && setVisiblePassword(!visiblePassword);
   };
 
   let rootProps: MuiTextFieldProps = {
-    error,
+    error: inputError,
     type: inputType,
+    helperText: inputHelperText,
     variant: 'outlined',
   };
   let inputLabelProps: InputLabelProps = {
@@ -75,7 +91,7 @@ export const TextField = ({
         };
       },
       end: () => {
-        !error &&
+        !inputError &&
           (inputProps = {
             ...inputProps,
             endAdornment: (
@@ -100,7 +116,7 @@ export const TextField = ({
       ),
     });
 
-  error &&
+  inputError &&
     (inputProps = {
       ...inputProps,
       endAdornment: (
@@ -123,6 +139,7 @@ export const TextField = ({
           ? masker.toPattern(e.target.value, mask)
           : e.target.value;
       }}
+      onFocus={() => setInputError(false)}
     />
   );
 };
