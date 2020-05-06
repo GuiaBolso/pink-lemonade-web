@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect, memo, ReactNode } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { EditOutlined, VisibilityOff, Visibility } from '@material-ui/icons';
 import masker from 'vanilla-masker';
@@ -18,6 +18,7 @@ type TextFieldProps = {
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
   mask?: string;
+  errorMessage?: string;
 } & MuiTextFieldProps;
 
 export const TextField = ({
@@ -25,19 +26,30 @@ export const TextField = ({
   iconPosition,
   inputComponent,
   error = false,
+  errorMessage,
   mask,
   type,
+  helperText,
   ...rest
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
   const [inputError, setInputError] = useState<true | false>(error);
+  const [inputHelperText, setInputHelperText] = useState<ReactNode>(helperText);
 
   useEffect(() => {
     if (type === 'password') {
       visiblePassword ? setInputType('text') : setInputType('password');
     }
   }, [type, visiblePassword]);
+
+  useEffect(() => {
+    if (inputError && errorMessage) {
+      setInputHelperText(errorMessage);
+    } else {
+      setInputHelperText(helperText);
+    }
+  }, [errorMessage, helperText, inputError]);
 
   const handlePasswordVisibility = () => {
     type === 'password' && setVisiblePassword(!visiblePassword);
@@ -46,6 +58,7 @@ export const TextField = ({
   let rootProps: MuiTextFieldProps = {
     error: inputError,
     type: inputType,
+    helperText: inputHelperText,
     variant: 'outlined',
   };
   let inputLabelProps: InputLabelProps = {
