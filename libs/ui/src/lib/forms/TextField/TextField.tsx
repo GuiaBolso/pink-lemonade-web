@@ -34,7 +34,6 @@ export const TextField = ({
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
-  const [inputError, setInputError] = useState<true | false>(error);
   const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
     helperText,
   );
@@ -46,19 +45,19 @@ export const TextField = ({
   }, [type, visiblePassword]);
 
   useEffect(() => {
-    if (inputError && errorMessage) {
+    if (error && errorMessage) {
       setInputHelperText(errorMessage);
     } else {
       setInputHelperText(helperText);
     }
-  }, [errorMessage, helperText, inputError]);
+  }, [errorMessage, helperText, error]);
 
   const handlePasswordVisibility = () => {
     type === 'password' && setVisiblePassword(!visiblePassword);
   };
 
   let rootProps: MuiTextFieldProps = {
-    error: inputError,
+    error,
     type: inputType,
     helperText: inputHelperText,
     variant: 'outlined',
@@ -91,7 +90,7 @@ export const TextField = ({
         };
       },
       end: () => {
-        !inputError &&
+        !error &&
           (inputProps = {
             ...inputProps,
             endAdornment: (
@@ -116,7 +115,7 @@ export const TextField = ({
       ),
     });
 
-  inputError &&
+  error &&
     (inputProps = {
       ...inputProps,
       endAdornment: (
@@ -139,7 +138,6 @@ export const TextField = ({
           ? masker.toPattern(e.target.value, mask)
           : e.target.value;
       }}
-      onFocus={() => setInputError(false)}
     />
   );
 };
