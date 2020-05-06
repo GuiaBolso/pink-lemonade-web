@@ -31,6 +31,7 @@ export const TextField = ({
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
+  const [inputError, setInputError] = useState<true | false>(error);
 
   useEffect(() => {
     if (type === 'password') {
@@ -43,7 +44,7 @@ export const TextField = ({
   };
 
   let rootProps: MuiTextFieldProps = {
-    error,
+    error: inputError,
     type: inputType,
     variant: 'outlined',
   };
@@ -75,7 +76,7 @@ export const TextField = ({
         };
       },
       end: () => {
-        !error &&
+        !inputError &&
           (inputProps = {
             ...inputProps,
             endAdornment: (
@@ -100,7 +101,7 @@ export const TextField = ({
       ),
     });
 
-  error &&
+  inputError &&
     (inputProps = {
       ...inputProps,
       endAdornment: (
@@ -123,6 +124,7 @@ export const TextField = ({
           ? masker.toPattern(e.target.value, mask)
           : e.target.value;
       }}
+      onFocus={() => setInputError(false)}
     />
   );
 };

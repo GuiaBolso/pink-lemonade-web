@@ -18,9 +18,7 @@ export const iconLading = () => (
   <TextField label="Nome" icon={<AlternateEmail />} iconPosition="end" />
 );
 
-export const error = () => (
-  <TextField label="Nome" error helperText="Digite o campo corretamente" />
-);
+export const error = () => <TextField label="Nome" error />;
 
 export const password = () => <TextField label="Senha" type="password" />;
 
