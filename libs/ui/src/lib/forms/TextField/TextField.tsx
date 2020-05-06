@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo, ReactNode } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import { EditOutlined, VisibilityOff, Visibility } from '@material-ui/icons';
 import masker from 'vanilla-masker';
@@ -35,7 +35,9 @@ export const TextField = ({
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
   const [inputError, setInputError] = useState<true | false>(error);
-  const [inputHelperText, setInputHelperText] = useState<ReactNode>(helperText);
+  const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
+    helperText,
+  );
 
   useEffect(() => {
     if (type === 'password') {
