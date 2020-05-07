@@ -27,7 +27,12 @@ export const Button = styled(MuiButton)`
           padding: 0 ${pxToRem(24)};
 
           &:not(.MuiButton-fullWidth) {
-            min-width: ${narrow ? 'auto' : '300px'};
+            @media all and (min-width: 312px) {
+              min-width: ${narrow ? 'auto' : '312px'};
+            }
+            @media all and (max-width: 312px) {
+              width: ${narrow ? 'auto' : '100%'};
+            }
           }
         }
 
