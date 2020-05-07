@@ -19,7 +19,12 @@ export const iconLading = () => (
 );
 
 export const error = () => (
-  <TextField label="Nome" error helperText="Digite o campo corretamente" />
+  <TextField
+    label="Nome"
+    error
+    helperText="insira seu nome completo"
+    errorMessage="campo inválido"
+  />
 );
 
 export const password = () => <TextField label="Senha" type="password" />;

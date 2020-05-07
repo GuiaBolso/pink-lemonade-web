@@ -18,6 +18,7 @@ type TextFieldProps = {
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;
   mask?: string;
+  errorMessage?: string;
 } & MuiTextFieldProps;
 
 export const TextField = ({
@@ -25,18 +26,31 @@ export const TextField = ({
   iconPosition,
   inputComponent,
   error = false,
+  errorMessage,
   mask,
   type,
+  helperText,
   ...rest
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
+  const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
+    helperText,
+  );
 
   useEffect(() => {
     if (type === 'password') {
       visiblePassword ? setInputType('text') : setInputType('password');
     }
   }, [type, visiblePassword]);
+
+  useEffect(() => {
+    if (error && errorMessage) {
+      setInputHelperText(errorMessage);
+    } else {
+      setInputHelperText(helperText);
+    }
+  }, [errorMessage, helperText, error]);
 
   const handlePasswordVisibility = () => {
     type === 'password' && setVisiblePassword(!visiblePassword);
@@ -45,6 +59,7 @@ export const TextField = ({
   let rootProps: MuiTextFieldProps = {
     error,
     type: inputType,
+    helperText: inputHelperText,
     variant: 'outlined',
   };
   let inputLabelProps: InputLabelProps = {
