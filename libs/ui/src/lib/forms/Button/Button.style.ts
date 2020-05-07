@@ -10,10 +10,15 @@ import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 type ButtonProps = {
   theme: CustomThemeProps;
   narrow: boolean | undefined;
+  customColor?: {
+    base: string;
+    hover: string;
+    active: string;
+  };
 };
 
 export const Button = styled(MuiButton)`
-  ${({ theme, narrow }: ButtonProps) => {
+  ${({ theme, narrow, customColor }: ButtonProps) => {
     return css`
       &.MuiButton {
         &-root {
@@ -27,15 +32,19 @@ export const Button = styled(MuiButton)`
         }
 
         &-contained {
-          background-color: ${theme?.colors?.brand.secondary.default};
+          background-color: ${customColor?.base ||
+            customColor?.base ||
+            theme?.colors?.brand.secondary.default};
           color: #fff;
 
           &:hover {
-            background-color: ${theme?.colors?.brand.secondary.light};
+            background-color: ${customColor?.hover ||
+              theme?.colors?.brand.secondary.light};
           }
 
           &:active {
-            background-color: ${theme?.colors?.brand.secondary.dark};
+            background-color: ${customColor?.active ||
+              theme?.colors?.brand.secondary.dark};
           }
 
           &.Mui-disabled {
@@ -46,15 +55,17 @@ export const Button = styled(MuiButton)`
 
         &-outlined,
         &-text {
-          color: ${theme?.colors?.brand.secondary.default};
+          color: ${customColor?.base || theme?.colors?.brand.secondary.default};
 
           &:hover {
             background-color: transparent;
-            color: ${theme?.colors?.brand.secondary.light};
+            color: ${customColor?.hover ||
+              theme?.colors?.brand.secondary.light};
           }
 
           &:active {
-            color: ${theme?.colors?.brand.secondary.dark};
+            color: ${customColor?.active ||
+              theme?.colors?.brand.secondary.dark};
           }
 
           .MuiButton-label {
@@ -63,15 +74,18 @@ export const Button = styled(MuiButton)`
         }
 
         &-outlined {
-          border-color: ${theme?.colors?.brand.secondary.default};
+          border-color: ${customColor?.base ||
+            theme?.colors?.brand.secondary.default};
 
           &:hover {
-            border-color: ${theme?.colors?.brand.secondary.light};
+            border-color: ${customColor?.hover ||
+              theme?.colors?.brand.secondary.light};
             border-width: 2px;
           }
 
           &:active {
-            border-color: ${theme?.colors?.brand.secondary.dark};
+            border-color: ${customColor?.active ||
+              theme?.colors?.brand.secondary.dark};
           }
         }
 
