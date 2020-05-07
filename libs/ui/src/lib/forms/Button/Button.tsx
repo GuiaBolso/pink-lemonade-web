@@ -7,6 +7,11 @@ type ButtonProps = {
   label?: string;
   appearance?: 'primary' | 'secondary' | 'tertiary';
   scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';
+  customColor?: {
+    base: string;
+    hover: string;
+    active: string;
+  };
 } & MuiButtonProps;
 
 export const Button = ({
@@ -15,6 +20,7 @@ export const Button = ({
   appearance = 'primary',
   children,
   scale = 'wide-regular',
+  customColor,
   ...rest
 }: ButtonProps) => {
   const mapVariants = {
@@ -43,6 +49,7 @@ export const Button = ({
     <Styled.Button
       {...rest}
       {...getScale()}
+      customColor={customColor}
       variant={mapVariants[appearance]}
       disabled={disabled}
       disableElevation
