@@ -37,10 +37,6 @@ export const Button = styled(MuiButton)`
           }
         }
 
-        &-label {
-          font-size: ${pxToRem(theme?.type?.baseFontSize)};
-        }
-
         &-contained {
           background-color: ${customColor?.base ||
             customColor?.base ||
