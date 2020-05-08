@@ -23,6 +23,7 @@ export const Button = styled(MuiButton)`
       &.MuiButton {
         &-root {
           border-radius: ${pxToRem(8)};
+          font-size: ${pxToRem(theme?.type?.baseFontSize)};
           min-height: ${pxToRem(48)};
           padding: 0 ${pxToRem(24)};
 
