@@ -3,16 +3,14 @@ import React, { memo } from 'react';
 import { ButtonProps as MuiButtonProps } from '@material-ui/core/Button';
 import * as Styled from './Button.style';
 
+import { ButtonColorProps } from '../../../typings/ButtonColorProps';
+
 type ButtonProps = {
   label?: string;
   appearance?: 'primary' | 'secondary' | 'tertiary';
   scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';
-  customColor?: {
-    base: string;
-    hover: string;
-    active: string;
-  };
-} & MuiButtonProps;
+} & ButtonColorProps &
+  MuiButtonProps;
 
 export const Button = ({
   disabled = false,
