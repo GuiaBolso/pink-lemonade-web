@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 // eslint-disable-next-line import/no-unresolved
@@ -6,19 +7,19 @@ import { pxToRem } from '@guiabolsobr/utils';
 import MuiButton from '@material-ui/core/Button';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { ButtonColorProps } from '../../../typings/ButtonColorProps';
 
-type ButtonProps = {
+type ButtonStyledProps = {
   theme: CustomThemeProps;
   narrow: boolean | undefined;
-  customColor?: {
-    base: string;
-    hover: string;
-    active: string;
-  };
-};
+} & ButtonColorProps;
 
-export const Button = styled(MuiButton)`
-  ${({ theme, narrow, customColor }: ButtonProps) => {
+const ProxyMuiButton = ({ customColor: _, ...rest }: ButtonColorProps) => (
+  <MuiButton {...rest} />
+);
+
+export const Button = styled(ProxyMuiButton)`
+  ${({ theme, narrow, customColor }: ButtonStyledProps) => {
     return css`
       &.MuiButton {
         &-root {
