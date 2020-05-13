@@ -4,8 +4,6 @@ import styled from '@emotion/styled';
 import { pxToRem } from '@guiabolsobr/utils';
 import { Text } from '../../display/Text';
 
-// eslint-disable-next-line import/no-unresolved
-
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type FloatingCardTheme = {
