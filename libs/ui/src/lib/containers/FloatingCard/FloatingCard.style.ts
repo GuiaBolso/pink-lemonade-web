@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
 // eslint-disable-next-line import/no-unresolved
-import { Text } from '@guiabolsobr/ui';
+import { pxToRem } from '@guiabolsobr/utils';
+import { Text } from '../../display/Text';
 
 // eslint-disable-next-line import/no-unresolved
-import { pxToRem } from '@guiabolsobr/utils';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
