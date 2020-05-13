@@ -1,4 +1,5 @@
 export * from './lib/containers/Card';
+export * from './lib/containers/FloatingCard';
 
 export * from './lib/display/Text';
 
