@@ -1,4 +1,5 @@
-import styled, { css } from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
