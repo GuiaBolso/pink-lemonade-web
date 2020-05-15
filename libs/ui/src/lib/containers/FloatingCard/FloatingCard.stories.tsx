@@ -4,24 +4,44 @@ import { FloatingCard } from './index';
 export default {
   title: 'Containers/FloatingCard',
   component: FloatingCard,
-  decorators: [
-    /* eslint-disable-next-line */
-    (story: any) => (
-      <div
-        style={{
-          maxWidth: '300px',
-        }}
-      >
-        {story()}
-      </div>
-    ),
-  ],
 };
 
-export const Complete = () => (
-  <FloatingCard
-    category="Overview"
-    title="Sobre as tecnologias utilizadas"
-    description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
-  />
+export const SingleCard = () => (
+  <div
+    style={{
+      display: 'flex',
+      maxWidth: '300px',
+    }}
+  >
+    <FloatingCard
+      category="Overview"
+      title="Sobre as tecnologias utilizadas"
+      description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
+    />
+  </div>
+);
+
+export const MultipleCards = () => (
+  <div
+    style={{
+      display: 'flex',
+      maxWidth: '1200px',
+    }}
+  >
+    <FloatingCard
+      category="Overview"
+      title="Sobre as tecnologias utilizadas"
+      description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
+    />
+    <FloatingCard
+      category="Overview"
+      title="Sobre"
+      description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
+    />
+    <FloatingCard
+      category="Overview"
+      title="Sobre todas as tecnologias que são utilizadas"
+      description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
+    />
+  </div>
 );
