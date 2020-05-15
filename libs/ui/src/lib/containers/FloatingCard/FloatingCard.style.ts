@@ -13,7 +13,9 @@ type FloatingCardTheme = {
 export const FloatingCard = styled.article`
   background: #fff;
   border-radius: ${pxToRem(4)};
+  display: flex;
   flex: 1;
+  flex-direction: column;
   margin: 0 ${pxToRem(2)};
   padding: ${pxToRem(16)} ${pxToRem(20)} ${pxToRem(24)} ${pxToRem(20)};
   transition: box-shadow 0.2s, transform 0.3s;
@@ -47,4 +49,5 @@ export const Title = styled(Text)`
 export const Description = styled(Text)`
   color: ${({ theme }: FloatingCardTheme) => theme?.colors?.neutral?.darker};
   margin: ${pxToRem(8)} 0;
+  margin-top: auto;
 `;
