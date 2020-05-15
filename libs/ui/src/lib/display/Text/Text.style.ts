@@ -15,7 +15,7 @@ const variants: object = {
         --fontSize: ${theme?.type?.sizes?.fontSize80};
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.light};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => null,
@@ -31,7 +31,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => css`
@@ -54,7 +54,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => css`
@@ -77,7 +77,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => css`
@@ -100,7 +100,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => css`
@@ -123,7 +123,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule3};
       `,
       guiaBolso: () => css`
@@ -147,7 +147,7 @@ const variants: object = {
         color: ${theme?.colors?.neutral.darkest};
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule1};
       `,
       guiaBolso: () => css`
@@ -226,7 +226,7 @@ const variants: object = {
         font-family: ${theme?.type?.fontFamily?.neutral};
         font-size: var(--fontSize);
         font-weight: ${theme?.type?.fontWeight?.regular};
-        line-height: ${theme?.type?.lineHeight?.rule1};
+        line-height: ${theme?.type?.lineHeight?.rule2};
       `,
       guiaBolso: () => null,
     };
@@ -257,7 +257,7 @@ const variants: object = {
 
         font-family: ${theme?.type?.fontFamily?.brand};
         font-size: var(--fontSize);
-        font-weight: ${theme?.type?.fontWeight?.regular};
+        font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule2};
       `,
       guiaBolso: () => null,
