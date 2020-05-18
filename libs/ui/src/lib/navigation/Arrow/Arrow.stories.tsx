@@ -24,22 +24,22 @@ const IconMock = () => (
   </div>
 );
 
-export const Prev = () => <Arrow label="Anterior" index={1} content="Token" />;
+export const Prev = () => <Arrow label="Anterior" content="Token" />;
 
-export const Next = () => <Arrow label="Próximo" index={1} content="Token" />;
+export const Next = () => <Arrow label="Próximo" content="Token" />;
 
 export const PrevAndNext = () => (
   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-    <Arrow label="Anterior" index={1} content="Token" />
+    <Arrow label="Anterior" content="Token" />
 
-    <Arrow label="Próximo" index={1} content="Token" />
+    <Arrow label="Próximo" content="Token" />
   </div>
 );
 
 export const PrevAndNextCustomIcon = () => (
   <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-    <Arrow label="Anterior" index={1} content="Token" icon={<IconMock />} />
+    <Arrow label="Anterior" content="Token" icon={<IconMock />} />
 
-    <Arrow label="Próximo" index={1} content="Token" icon={<IconMock />} />
+    <Arrow label="Próximo" content="Token" icon={<IconMock />} />
   </div>
 );

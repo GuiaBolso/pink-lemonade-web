@@ -34,13 +34,11 @@ export const Label = styled(Text)`
 export const Content = styled(Text)`
   color: ${({ theme }: ArrowTheme) => theme?.colors?.neutral?.darkest};
   display: block;
+  min-height: 24px;
+`;
 
-  span {
-    display: inline-block;
-    margin-right: ${pxToRem(6)};
-    margin-top: ${pxToRem(12)};
-    min-height: ${pxToRem(26)};
-  }
+export const VerticalSpace = styled.div`
+  margin-top: ${pxToRem(12)};
 `;
 
 export const IconContainer = styled.div`

@@ -6,20 +6,20 @@ import * as S from './Arrow.style';
 
 type ArrowProps = {
   label: 'Anterior' | 'Próximo';
-  index: number;
   content: string;
   icon?: React.ReactNode;
 };
 
-const Arrow = ({ label = 'Anterior', index, content, icon }: ArrowProps) => (
+const Arrow = ({ label = 'Anterior', content, icon }: ArrowProps) => (
   <S.ArrowContainer label={label}>
     <div>
       <S.Label variant="body-02" component="span">
         {label}
       </S.Label>
 
+      <S.VerticalSpace />
+
       <S.Content variant="heading-05" component="strong">
-        <span>{`${index}. `}</span>
         {content}
       </S.Content>
     </div>
