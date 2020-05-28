@@ -1,3 +1,4 @@
+export * from './lib/array/get-last-value/get-last-value';
 export * from './lib/hooks/create-store-hooks/create-store-hooks';
 export * from './lib/hooks/use-did-mount/use-did-mount';
 export * from './lib/hooks/use-did-update/use-did-update';
