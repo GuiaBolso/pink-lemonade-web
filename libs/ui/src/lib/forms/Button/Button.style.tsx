@@ -29,10 +29,10 @@ export const Button = styled(ProxyMuiButton)`
           padding: 0 ${pxToRem(24)};
 
           &:not(.MuiButton-fullWidth) {
-            @media all and (min-width: 321px) {
+            @media all and (min-width: 361px) {
               min-width: ${narrow ? 'auto' : '312px'};
             }
-            @media all and (max-width: 320px) {
+            @media all and (max-width: 360px) {
               width: ${narrow ? 'auto' : '100%'};
             }
           }
