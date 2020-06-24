@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InfoPanel Component Renders Connect Theme correctly 1`] = `
+<div
+  className="css-aqtonj"
+>
+  <img
+    alt="aviso"
+    className="css-totz6w"
+    src="test-file-stub"
+  />
+  <span
+    className="css-9wn2e6"
+    data-testid="text"
+  >
+    <h3
+      className="css-q33bl2"
+      data-testid="text"
+      style={
+        Object {
+          "marginBottom": "10px",
+        }
+      }
+    >
+      Não precisa autorizar mais nada
+    </h3>
+    <p
+      className="css-78di6l"
+      data-testid="text"
+    >
+      Talvez você receba um sms do seu banco solicitando para autorizar ou habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos nenhum tipo de transação na conta.
+    </p>
+  </span>
+</div>
+`;
+
+exports[`InfoPanel Component Renders correctly 1`] = `
+<div
+  className="css-12j4tx"
+>
+  <img
+    alt="aviso"
+    className="css-totz6w"
+    src="test-file-stub"
+  />
+  <span
+    className="css-1nrdplv"
+    data-testid="text"
+  >
+    <h3
+      className="css-1t5ydug"
+      data-testid="text"
+      style={
+        Object {
+          "marginBottom": "10px",
+        }
+      }
+    >
+      Não precisa autorizar mais nada
+    </h3>
+    <p
+      className="css-1t5ydug"
+      data-testid="text"
+    >
+      Talvez você receba um sms do seu banco solicitando para autorizar ou habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos nenhum tipo de transação na conta.
+    </p>
+  </span>
+</div>
+`;
