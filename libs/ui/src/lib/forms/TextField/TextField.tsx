@@ -1,6 +1,6 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, useEffect, useRef, memo } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { EditOutlined, VisibilityOff, Visibility } from '@material-ui/icons';
+import { EditOutlined, VisibilityOff, Visibility, Search } from '@material-ui/icons';
 import masker from 'vanilla-masker';
 import {
   InputBaseComponentProps,
@@ -34,9 +34,12 @@ export const TextField = ({
 }: TextFieldProps) => {
   const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
   const [inputType, setInputType] = useState<string>(type);
+  const [filledInput, setFilledInput] = useState<string>('');
   const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
     helperText,
   );
+
+  let textFieldRef = useRef<any>(null);
 
   useEffect(() => {
     if (type === 'password') {
@@ -54,6 +57,12 @@ export const TextField = ({
 
   const handlePasswordVisibility = () => {
     type === 'password' && setVisiblePassword(!visiblePassword);
+  };
+
+  const clearSearchInput = () => {
+    setFilledInput('');
+    textFieldRef.current.value = '';
+    textFieldRef.current.focus();
   };
 
   let rootProps: MuiTextFieldProps = {
@@ -113,6 +122,20 @@ export const TextField = ({
           {visiblePassword ? <Visibility /> : <VisibilityOff />}
         </Styled.PasswordAdornment>
       ),
+    });
+
+  type === 'search' &&
+    (inputProps = {
+      ...inputProps,
+      endAdornment: (
+        <Styled.SearchAdornment position="end">
+          {!filledInput ? <Search /> : <Styled.ClearSearch onClick={clearSearchInput} />}
+        </Styled.SearchAdornment>
+      ),
+      onChange: (
+        e => setFilledInput(e.target.value)
+      ),
+      inputRef: textFieldRef,
     });
 
   error &&
