@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef, memo } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { EditOutlined, VisibilityOff, Visibility, Search } from '@material-ui/icons';
+import {
+  EditOutlined,
+  VisibilityOff,
+  Visibility,
+  Search,
+} from '@material-ui/icons';
 import masker from 'vanilla-masker';
 import {
   InputBaseComponentProps,
@@ -129,12 +134,14 @@ export const TextField = ({
       ...inputProps,
       endAdornment: (
         <Styled.SearchAdornment position="end">
-          {!filledInput ? <Search /> : <Styled.ClearSearch onClick={clearSearchInput} />}
+          {!filledInput ? (
+            <Search />
+          ) : (
+            <Styled.ClearSearch onClick={clearSearchInput} />
+          )}
         </Styled.SearchAdornment>
       ),
-      onChange: (
-        e => setFilledInput(e.target.value)
-      ),
+      onChange: e => setFilledInput(e.target.value),
       inputRef: textFieldRef,
     });
 
