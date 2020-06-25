@@ -37,7 +37,7 @@ export const TextField = ({
   helperText,
   ...rest
 }: TextFieldProps) => {
-  const [visiblePassword, setVisiblePassword] = useState<true | false>(false);
+  const [visiblePassword, setVisiblePassword] = useState<boolean>(false);
   const [inputType, setInputType] = useState<string>(type);
   const [filledInput, setFilledInput] = useState<string>('');
   const [inputHelperText, setInputHelperText] = useState<React.ReactNode>(
@@ -124,7 +124,7 @@ export const TextField = ({
           position="end"
           onClick={handlePasswordVisibility}
         >
-          {visiblePassword ? <Visibility /> : <VisibilityOff />}
+          {visiblePassword ? <VisibilityOff /> : <Visibility />}
         </Styled.PasswordAdornment>
       ),
     });
