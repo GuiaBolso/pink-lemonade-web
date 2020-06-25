@@ -32,3 +32,5 @@ export const password = () => <TextField label="Senha" type="password" />;
 export const masked = () => <TextField label="CPF" mask="999.999.999-99" />;
 
 export const disabled = () => <TextField label="Nome" disabled />;
+
+export const search = () => <TextField label="Busca" type="search" />;
