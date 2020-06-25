@@ -44,7 +44,7 @@ export const TextField = ({
     helperText,
   );
 
-  let textFieldRef = useRef<any>(null);
+  const textFieldRef = useRef<any>(null);
 
   useEffect(() => {
     if (type === 'password') {
