@@ -20,6 +20,7 @@ type Selectors<State, S extends Selector<State, S>> = Selector<
   ReturnType<S>
 >;
 
+console.log('console mais descritivo');
 export interface CreateUseContext<
   State,
   A extends Actions<State, A>,
