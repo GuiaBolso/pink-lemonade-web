@@ -1,0 +1,123 @@
+name: Pull Request on master
+
+on:
+  pull_request:
+    paths: 'libs/**'
+    branches:
+      - master
+    types: [opened, reopened, synchronize]
+
+jobs:
+  dependencies:
+    name: Cache dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - uses: actions/cache@master
+        id: yarn-cache
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Yarn Install
+        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        run: yarn install
+
+  # sonarcloud:
+  #     name: Sonar Scan
+  #     runs-on: ubuntu-latest
+  #     steps:
+  #       - uses: actions/checkout@v2
+  #         with:
+  #           fetch-depth: 0
+  #       - name: SonarCloud Scan
+  #         uses: sonarsource/sonarcloud-github-action@master
+  #         env:
+  #           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+  #           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  build:
+    name: Build applications & libraries
+    runs-on: ubuntu-latest
+    needs: [dependencies]
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - run: git fetch --no-tags --prune --depth=5 origin master
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - name: Restore dependencies from cache
+        uses: actions/cache@master
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Run builders
+        run: yarn affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+
+  lint:
+    name: Linter
+    runs-on: ubuntu-latest
+    needs: [dependencies]
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - run: git fetch --no-tags --prune --depth=5 origin master
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - name: Restore dependencies from cache
+        uses: actions/cache@master
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Run linting
+        run: yarn affected:lint --base=origin/master --head=${{ github.event.pull_request.head.ref }}
+
+  test:
+    name: Test applications & libraries
+    runs-on: ubuntu-latest
+    needs: [dependencies]
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - run: git fetch --no-tags --prune --depth=5 origin master
+
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+
+      - name: Restore dependencies from cache
+        uses: actions/cache@master
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Run tests
+        run: yarn affected:test --base=origin/master --head=${{ github.event.pull_request.head.ref }}
