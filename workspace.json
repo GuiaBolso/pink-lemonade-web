@@ -22,7 +22,7 @@
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/ui",
+            "outputPath": "libs/ui/dist",
             "tsConfig": "libs/ui/tsconfig.lib.json",
             "project": "libs/ui/package.json",
             "entryFile": "libs/ui/src/index.ts",
@@ -59,7 +59,7 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/ui",
+            "outputPath": "storybook/ui/dist",
             "config": {
               "configFolder": "libs/ui/.storybook"
             }
@@ -120,7 +120,7 @@
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/ditto",
+            "outputPath": "libs/ditto/dist",
             "tsConfig": "libs/ditto/tsconfig.lib.json",
             "project": "libs/ditto/package.json",
             "entryFile": "libs/ditto/src/index.ts",
@@ -160,7 +160,7 @@
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/utils",
+            "outputPath": "libs/utils/dist",
             "tsConfig": "libs/utils/tsconfig.lib.json",
             "project": "libs/utils/package.json",
             "entryFile": "libs/utils/src/index.ts",
