@@ -40,18 +40,18 @@ export const Button = styled(ProxyMuiButton)`
 
         &-contained {
           background-color: ${customColor?.base ||
-            customColor?.base ||
-            theme?.colors?.brand.secondary.default};
+          customColor?.base ||
+          theme?.colors?.brand.secondary.default};
           color: #fff;
 
           &:hover {
             background-color: ${customColor?.hover ||
-              theme?.colors?.brand.secondary.light};
+            theme?.colors?.brand.secondary.light};
           }
 
           &:active {
             background-color: ${customColor?.active ||
-              theme?.colors?.brand.secondary.dark};
+            theme?.colors?.brand.secondary.dark};
           }
 
           &.Mui-disabled {
@@ -67,12 +67,12 @@ export const Button = styled(ProxyMuiButton)`
           &:hover {
             background-color: transparent;
             color: ${customColor?.hover ||
-              theme?.colors?.brand.secondary.light};
+            theme?.colors?.brand.secondary.light};
           }
 
           &:active {
             color: ${customColor?.active ||
-              theme?.colors?.brand.secondary.dark};
+            theme?.colors?.brand.secondary.dark};
           }
 
           .MuiButton-label {
@@ -82,17 +82,17 @@ export const Button = styled(ProxyMuiButton)`
 
         &-outlined {
           border-color: ${customColor?.base ||
-            theme?.colors?.brand.secondary.default};
+          theme?.colors?.brand.secondary.default};
 
           &:hover {
             border-color: ${customColor?.hover ||
-              theme?.colors?.brand.secondary.light};
+            theme?.colors?.brand.secondary.light};
             border-width: 2px;
           }
 
           &:active {
             border-color: ${customColor?.active ||
-              theme?.colors?.brand.secondary.dark};
+            theme?.colors?.brand.secondary.dark};
           }
         }
 
