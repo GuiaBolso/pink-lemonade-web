@@ -2,7 +2,7 @@ name: Pull Request on master
 
 on:
   pull_request:
-    paths: 'libs/**'
+    paths: "libs/**"
     branches:
       - master
     types: [opened, reopened, synchronize]
@@ -16,17 +16,17 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-      - uses: actions/cache@master
-        id: yarn-cache
+      - uses: actions/cache@v2
+        id: npm-cache
         with:
-          path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-node-
 
-      - name: Yarn Install
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
-        run: yarn install
+      - name: Npm Install
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm install
 
   # sonarcloud:
   #     name: Sonar Scan
@@ -61,12 +61,12 @@ jobs:
         uses: actions/cache@master
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-node-
 
       - name: Run builders
-        run: yarn affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+        run: npm run affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
@@ -88,12 +88,12 @@ jobs:
         uses: actions/cache@master
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-node-
 
       - name: Run linting
-        run: yarn affected:lint --base=origin/master --head=${{ github.event.pull_request.head.ref }}
+        run: npm run affected:lint --base=origin/master --head=${{ github.event.pull_request.head.ref }}
 
   test:
     name: Test applications & libraries
@@ -115,9 +115,9 @@ jobs:
         uses: actions/cache@master
         with:
           path: node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-node-
 
       - name: Run tests
-        run: yarn affected:test --base=origin/master --head=${{ github.event.pull_request.head.ref }}
+        run: npm run affected:test --base=origin/master --head=${{ github.event.pull_request.head.ref }}
