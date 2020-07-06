@@ -66,7 +66,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Run builders
-        run: npm run nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+        run: nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
