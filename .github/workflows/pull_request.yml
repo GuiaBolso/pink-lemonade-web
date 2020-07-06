@@ -58,7 +58,7 @@ jobs:
           node-version: 12
 
       - name: Restore dependencies from cache
-        uses: actions/cache@master
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -85,7 +85,7 @@ jobs:
           node-version: 12
 
       - name: Restore dependencies from cache
-        uses: actions/cache@master
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -112,7 +112,7 @@ jobs:
           node-version: 12
 
       - name: Restore dependencies from cache
-        uses: actions/cache@master
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
