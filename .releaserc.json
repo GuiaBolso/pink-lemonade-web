@@ -1,0 +1,59 @@
+{
+  "branches": ["master", "next"],
+  "debug": "true",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "npm-shrinkwrap.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.gitTag} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    [
+      "@semantic-release/github",
+      {
+        "assets": "dist/*.tgz"
+      }
+    ],
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "dist",
+        "tarballDir": "dist",
+        "allowSameVersion": true
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "echo \"//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN\" > .npmrc"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "cat .npmrc"
+      }
+    ],
+    [
+      "@semantic-release/exec",
+      {
+        "successCmd": "npm publish --@guiabolsobr:registry='https://npm.pkg.github.com' --access=public"
+      }
+    ]
+  ],
+  "preset": "conventionalcommits"
+}
