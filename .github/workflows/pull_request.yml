@@ -26,7 +26,7 @@ jobs:
 
       - name: Npm Install
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm install -g @nrwl/cli & npm install
 
   # sonarcloud:
   #     name: Sonar Scan
