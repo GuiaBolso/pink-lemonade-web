@@ -167,6 +167,11 @@
             "external": ["react", "react-dom", "styled-components"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true
+            }
           }
         },
         "test": {
