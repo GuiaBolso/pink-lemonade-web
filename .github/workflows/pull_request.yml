@@ -12,8 +12,8 @@ jobs:
     name: Cache dependencies
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
       - uses: actions/cache@v2
@@ -46,14 +46,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [dependencies]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
 
@@ -66,21 +66,21 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Run builders
-        run: npx nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+        run: nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
     runs-on: ubuntu-latest
     needs: [dependencies]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
 
@@ -100,14 +100,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [dependencies]
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
-      - uses: actions/setup-node@master
+      - uses: actions/setup-node@v1
         with:
           node-version: 12
 
