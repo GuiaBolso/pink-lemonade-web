@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Npm Install
-        if: steps.npm-cache.outputs.cache-hit != 'true'
+        # if: steps.npm-cache.outputs.cache-hit != 'true'
         run: sudo npm install -g @nrwl/nx && npm install
 
   # sonarcloud:
