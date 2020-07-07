@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Npm Install
-        # if: steps.npm-cache.outputs.cache-hit != 'true'
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm install
 
   # sonarcloud:
@@ -69,7 +69,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install -g @nrwl/nx
+      - run: npm install -g @nrwl/cli
 
       - name: Run builders
         run: nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
