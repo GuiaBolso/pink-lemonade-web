@@ -65,6 +65,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
+      - name: Install NX globally
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install -g @nrwl/nx
+
       - name: Run builders
         run: nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
