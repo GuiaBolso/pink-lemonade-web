@@ -49,7 +49,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 1
+          fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
@@ -69,10 +69,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install -g @nrwl/cli
+        run: npm install -g @nrwl/cli
 
       - name: Run builders
-        run: nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+        run: npm run nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
@@ -82,7 +82,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 1
+          fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
@@ -109,7 +109,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 1
+          fetch-depth: 0
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
