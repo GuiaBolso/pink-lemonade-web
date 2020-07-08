@@ -11,6 +11,7 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
+            "config": "libs/ui/.eslintrc",
             "tsConfig": [
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
@@ -147,6 +148,7 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
+            "config": "libs/utils/.eslintrc",
             "tsConfig": [
               "libs/utils/tsconfig.lib.json",
               "libs/utils/tsconfig.spec.json"
