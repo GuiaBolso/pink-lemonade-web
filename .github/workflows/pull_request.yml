@@ -72,7 +72,7 @@ jobs:
       #   run: npm install -g @nrwl/cli
       - run: npm install
       - name: Run builders
-        run: npm run nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
+        run: npm run nx affected:build -- --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
