@@ -11,12 +11,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/ui/.eslintrc",
             "tsConfig": [
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
           }
         },
         "build": {
@@ -94,7 +93,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["apps/ui-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**"]
+            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**/*"]
           }
         }
       }
@@ -109,12 +108,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/ditto/.eslintrc",
             "tsConfig": [
               "libs/ditto/tsconfig.lib.json",
               "libs/ditto/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ditto/**"]
+            "exclude": ["**/node_modules/**", "!libs/ditto/**/*"]
           }
         },
         "build": {
@@ -149,12 +147,11 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/utils/.eslintrc",
             "tsConfig": [
               "libs/utils/tsconfig.lib.json",
               "libs/utils/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/utils/**"]
+            "exclude": ["**/node_modules/**", "!libs/utils/**/*"]
           }
         },
         "build": {
