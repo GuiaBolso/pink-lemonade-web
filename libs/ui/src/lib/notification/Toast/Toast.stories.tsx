@@ -6,68 +6,144 @@ import { ToastProvider, useToast } from './Toast.context';
 export default {
   title: 'Notification/Toast',
   component: ToastProvider,
-  decorators: [
-    /* eslint-disable-next-line */
-    (story: any) => (
-      <div
-        style={{
-          border: '1px solid #d0d',
-          maxWidth: '450px',
-          position: 'relative',
-          minHeight: '400px',
-        }}
-      >
-        {story()}
-      </div>
-    ),
-  ],
 };
 
-export const Info = () => {
+const ActionButtonsToast = () => {
   const { addToast } = useToast();
 
-  console.log('@ addToast', addToast);
-
-  const handleAddToast = () => {
-    console.log('@ story');
-
-    addToast({
-      title: 'Mensagem de sucesso',
-      description: 'Esse é um exemplo de uma mensagem de sucesso',
-      type: 'SUCCESS',
-    });
-  };
-
   return (
-    <div>
-      <ToastProvider>
-        <button onClick={handleAddToast}>Adicionar Toast de sucesso</button>
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        maxWidth: '500px',
+      }}
+    >
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Mensagem de INFORMAÇÃO',
+            description: 'Esse é um exemplo de uma mensagem de INFORMAÇÃO',
+            type: 'INFO',
+          });
+        }}
+      >
+        Info
+      </button>
 
-        <Toast
-          message={{
-            id: '10',
-            title: 'Toast teste',
-            description:
-              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-          }}
-        />
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Mensagem de SUCESSO',
+            description: 'Esse é um exemplo de uma mensagem de SUCESSO',
+            type: 'SUCCESS',
+          });
+        }}
+      >
+        Sucesso
+      </button>
 
-        <Toast
-          message={{
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Mensagem de AVISO',
+            description: 'Esse é um exemplo de uma mensagem de AVISO',
+            type: 'WARNING',
+          });
+        }}
+      >
+        Warning
+      </button>
+
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Mensagem de ERRO',
+            description: 'Esse é um exemplo de uma mensagem de ERRO',
             type: 'ERROR',
-            id: '10',
-            title: 'Toast teste',
+          });
+        }}
+      >
+        Error
+      </button>
+
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Abrir e NÃO fechar automaticamente',
             description:
-              'Lorem ipsum dolor sit amet, consectetur adipisicing elit. ',
-          }}
-        />
-      </ToastProvider>
+              'Esse é um exemplo de uma mensagem que vai abrir e NÃO vai fechar automaticamente',
+            type: 'INFO',
+            autoClose: false,
+          });
+        }}
+      >
+        Não fechar
+      </button>
+
+      <button
+        onClick={() => {
+          addToast({
+            title: 'Fechar depois de 10 segundos',
+            description:
+              'Esse é um exemplo de uma mensagem que vai abrir e, fechar somende depois de 10 segundos',
+            type: 'INFO',
+            timeToClose: 10000,
+          });
+        }}
+      >
+        Fechar depois de 10 segundos
+      </button>
     </div>
   );
 };
 
-export const ComponentToast = () => (
+export const ActionToast = () => (
   <ToastProvider>
-    <Info />
+    <ActionButtonsToast />
   </ToastProvider>
+);
+
+export const Info = () => (
+  <Toast
+    message={{
+      id: '10',
+      title: 'Toast teste',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+    }}
+  />
+);
+
+export const Success = () => (
+  <Toast
+    message={{
+      id: '10',
+      title: 'Toast teste',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'SUCCESS',
+    }}
+  />
+);
+
+export const Warning = () => (
+  <Toast
+    message={{
+      id: '10',
+      title: 'Toast teste',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'WARNING',
+    }}
+  />
+);
+
+export const Error = () => (
+  <Toast
+    message={{
+      id: '10',
+      title: 'Toast teste',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      type: 'ERROR',
+    }}
+  />
 );

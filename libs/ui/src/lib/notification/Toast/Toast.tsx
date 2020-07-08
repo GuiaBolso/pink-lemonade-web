@@ -36,18 +36,22 @@ const toastIcons = {
   ERROR: <Icon>ERROR</Icon>,
 };
 
-const Toast = ({ message: { id, title, description, type } }: ToastProps) => {
+const Toast = ({
+  message: { id, title, description, type, autoClose, timeToClose },
+}: ToastProps) => {
   const { removeToast } = useToast();
 
-  // useEffect(() => {
-  //   const toastTime = setTimeout(() => {
-  //     removeToast(id);
-  //   }, 3000);
+  useEffect(() => {
+    if (!autoClose) return () => {};
 
-  //   return () => {
-  //     clearTimeout(toastTime);
-  //   };
-  // }, [removeToast, id]);
+    const toastTime = setTimeout(() => {
+      removeToast(id);
+    }, timeToClose);
+
+    return () => {
+      clearTimeout(toastTime);
+    };
+  }, [removeToast, id, autoClose, timeToClose]);
 
   return (
     <S.Toast key={id} {...(type && { type })}>

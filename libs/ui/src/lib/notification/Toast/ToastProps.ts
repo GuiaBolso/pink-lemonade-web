@@ -5,6 +5,8 @@ export type ToastMessageProps = {
   type?: ToastTypeProps;
   title: string;
   description?: string;
+  autoClose?: boolean;
+  timeToClose?: number;
 };
 
 export type ToastContainerProps = {

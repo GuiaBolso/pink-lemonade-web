@@ -10,8 +10,8 @@ import * as S from './Toast.style';
 const ToastContainer = ({ messages }: ToastContainerProps) => {
   return (
     <S.ToastContainer>
-      {messages.map(({ id, title, description, type }) => (
-        <Toast key={id} message={{ id, title, description, type }} />
+      {messages.map(message => (
+        <Toast key={message.id} message={message} />
       ))}
     </S.ToastContainer>
   );

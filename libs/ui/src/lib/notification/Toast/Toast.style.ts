@@ -1,40 +1,42 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
+import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 import { ToastTypeProps } from './ToastProps';
 
 type ToastType = {
   type: ToastTypeProps;
+  theme: CustomThemeProps;
 };
 
 const toastTypes = {
-  INFO: css`
-    background-color: #005eeb;
+  INFO: ({ theme }: ToastType) => css`
+    background-color: ${theme?.colors?.feedback?.notification?.default};
     color: #fff;
   `,
-  SUCCESS: css`
-    background-color: #19bd54;
+  SUCCESS: ({ theme }: ToastType) => css`
+    background-color: ${theme?.colors?.feedback?.success?.default};
     color: #fff;
   `,
-  WARNING: css`
-    background-color: #fec01a;
+  WARNING: ({ theme }: ToastType) => css`
+    background-color: ${theme?.colors?.feedback?.alert?.default};
     color: #404040;
   `,
-  ERROR: css`
-    background-color: #e20b10;
+  ERROR: ({ theme }: ToastType) => css`
+    background-color: ${theme?.colors?.feedback?.error?.default};
     color: #fff;
   `,
 };
 
 export const ToastContainer = styled.div`
   border: 1px solid #0dd;
-  padding: 30px;
+  padding: 15px;
   position: absolute;
   right: 0;
   top: 0;
 `;
 
-export const Toast = styled.div<ToastType>`
+export const Toast = styled.div`
   border-radius: 4px;
   box-shadow: 0px 4px 4px #f2f2f2;
   display: flex;
@@ -44,7 +46,7 @@ export const Toast = styled.div<ToastType>`
   width: 100%;
 
   /* stylelint-disable-next-line */
-  ${({ type }) => (type && toastTypes[type]) || toastTypes.INFO}
+  ${({ type }: ToastType) => (type && toastTypes[type]) || toastTypes.INFO}
 
   & + div {
     margin-top: 10px;

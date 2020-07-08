@@ -16,19 +16,23 @@ const ToastContext = createContext<ToastContextData>({} as ToastContextData);
 const ToastProvider: React.FC = ({ children }) => {
   const [messages, setMessages] = useState<ToastMessageProps[]>([]);
 
-  console.log('@ Toast Provider aqui...');
-
   const addToast = useCallback(
-    ({ type, title, description }: Omit<ToastMessageProps, 'id'>) => {
+    ({
+      type,
+      title,
+      description,
+      autoClose = true,
+      timeToClose = 3000,
+    }: Omit<ToastMessageProps, 'id'>) => {
       const id = uuid();
-
-      console.log('## Add Toast');
 
       const toast = {
         id,
         type,
         title,
         description,
+        autoClose,
+        timeToClose,
       };
 
       setMessages(prevMessages => [...prevMessages, toast]);
@@ -45,8 +49,6 @@ const ToastProvider: React.FC = ({ children }) => {
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
       {children}
-
-      {console.log('%% Toast context')}
 
       <ToastContainer messages={messages} />
     </ToastContext.Provider>
