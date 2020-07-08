@@ -19,14 +19,16 @@ jobs:
       - uses: actions/cache@v2
         id: npm-cache
         with:
-          path: ~/.npm
+          path: |-
+            ~/.npm
+            node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Npm Install
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+        run: npm ci
 
   # sonarcloud:
   #     name: Sonar Scan
@@ -44,7 +46,7 @@ jobs:
   build:
     name: Build applications & libraries
     runs-on: ubuntu-latest
-    # needs: [dependencies]
+    needs: dependencies
     steps:
       - uses: actions/checkout@v2
         with:
@@ -61,14 +63,16 @@ jobs:
         uses: actions/cache@v2
         id: npm-cache
         with:
-          path: ~/.npm
+          path: |-
+            ~/.npm
+            node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Npm Install
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm install
+      # - name: Npm Install
+      #   if: steps.npm-cache.outputs.cache-hit != 'true'
+      #   run: npm install
 
       - name: Run builders
         run: npm run nx affected:build -- --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
