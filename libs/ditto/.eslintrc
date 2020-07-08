@@ -14,6 +14,13 @@
   "plugins": ["import", "jsx-a11y", "react", "react-hooks"],
   "rules": {
     "array-callback-return": "warn",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "packageDir": "./"
+      }
+    ],
     "dot-location": ["warn", "property"],
     "eqeqeq": ["warn", "smart"],
     "new-parens": "warn",
@@ -190,6 +197,7 @@
     "import/first": "error",
     "import/no-amd": "error",
     "import/no-webpack-loader-syntax": "error",
+    "import/no-named-as-default": "off",
     "react/forbid-foreign-prop-types": [
       "warn",
       {
@@ -269,5 +277,5 @@
     "@typescript-eslint/no-useless-constructor": "warn"
   },
   "extends": ["../../.eslintrc"],
-  "ignorePatterns": ["!**/*"]
+  "ignorePatterns": ["!**/*", "dist/"]
 }

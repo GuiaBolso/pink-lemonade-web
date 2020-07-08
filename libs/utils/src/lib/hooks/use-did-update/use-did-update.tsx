@@ -20,5 +20,5 @@ export const useDidUpdate = (
     return unmount;
   };
 
-  React.useEffect(mount, when);
+  React.useEffect(mount, [callbackMount, unmount]);
 };

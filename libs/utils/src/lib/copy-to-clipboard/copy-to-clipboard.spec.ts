@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-ignore */
 // https://github.com/gatsbyjs/gatsby/blob/master/www/src/utils/__tests__/copy-to-clipboard.js
 
 import { copyToClipboard } from './copy-to-clipboard';

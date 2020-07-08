@@ -17,10 +17,10 @@ type ConfigMagicState = {
   allowDeep?: boolean;
 };
 
-export const useMagicState = <S extends {}>(
+export const useMagicState = <S extends Record<string, unknown>>(
   initialState: S,
   { allowDeep }: ConfigMagicState = {},
-) => {
+): S | [S, SetMagicState<S>] => {
   const [$state, setState] = React.useState(initialState);
 
   const setMagicState = (mutate: MutateDeep<S>) => {

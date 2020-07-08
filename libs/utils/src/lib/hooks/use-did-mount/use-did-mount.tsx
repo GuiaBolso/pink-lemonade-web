@@ -16,5 +16,5 @@ export const useDidMount = (callbackMount: Callback, unmount?: Callback) => {
     return unmount;
   };
 
-  React.useEffect(mount, []);
+  React.useEffect(mount, [callbackMount, unmount]);
 };
