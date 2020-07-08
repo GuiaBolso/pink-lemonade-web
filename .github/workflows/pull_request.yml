@@ -44,7 +44,7 @@ jobs:
   build:
     name: Build applications & libraries
     runs-on: ubuntu-latest
-    needs: [dependencies]
+    # needs: [dependencies]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -57,20 +57,20 @@ jobs:
         with:
           node-version: 12
 
-      - name: Restore dependencies from cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Restore dependencies from cache
+      #   uses: actions/cache@v2
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
 
-      - name: Install NX globally
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12
-        run: npm install -g @nrwl/cli
-
+      # - name: Install NX globally
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: 12
+      #   run: npm install -g @nrwl/cli
+      - run: npm install
       - name: Run builders
         run: npm run nx affected:build --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
