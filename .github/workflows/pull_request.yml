@@ -70,17 +70,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      # - name: Npm Install
-      #   if: steps.npm-cache.outputs.cache-hit != 'true'
-      #   run: npm install
-
       - name: Run builders
         run: npm run nx affected:build -- --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
 
   lint:
     name: Linter
     runs-on: ubuntu-latest
-    # needs: [dependencies]
+    needs: dependencies
     steps:
       - uses: actions/checkout@v2
         with:
@@ -96,18 +92,20 @@ jobs:
       - name: Restore dependencies from cache
         uses: actions/cache@v2
         with:
-          path: ~/.npm
+          path: |-
+            ~/.npm
+            node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Run linting
-        run: npm run affected:lint --base=origin/master --head=${{ github.event.pull_request.head.ref }}
+        run: npm run affected:lint -- --base=origin/master --head=${{ github.event.pull_request.head.ref }}
 
   test:
     name: Test applications & libraries
     runs-on: ubuntu-latest
-    needs: [dependencies]
+    needs: dependencies
     steps:
       - uses: actions/checkout@v2
         with:
@@ -123,10 +121,12 @@ jobs:
       - name: Restore dependencies from cache
         uses: actions/cache@v2
         with:
-          path: ~/.npm
+          path: |-
+            ~/.npm
+            node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
 
       - name: Run tests
-        run: npm run affected:test --base=origin/master --head=${{ github.event.pull_request.head.ref }}
+        run: npm run affected:test -- --base=origin/master --head=${{ github.event.pull_request.head.ref }}
