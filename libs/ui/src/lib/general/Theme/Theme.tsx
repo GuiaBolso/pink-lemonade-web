@@ -4,10 +4,11 @@ import { ThemeProvider } from 'emotion-theming';
 
 // import { guiaBolso, connect } from '../../../designSystem/tokens';
 import GlobalStyle from '../../../globalStyles';
+import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type ThemeProps = {
   children: React.ReactNode;
-  theme: any;
+  theme: CustomThemeProps;
 };
 
 const Theme = ({ children, theme }: ThemeProps) => {

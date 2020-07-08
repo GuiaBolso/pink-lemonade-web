@@ -198,6 +198,7 @@
     "import/first": "error",
     "import/no-amd": "error",
     "import/no-webpack-loader-syntax": "error",
+    "import/no-named-as-default": "off",
     "react/forbid-foreign-prop-types": [
       "warn",
       {
@@ -256,6 +257,8 @@
     "@typescript-eslint/no-array-constructor": "warn",
     "@typescript-eslint/no-namespace": "error",
     "no-use-before-define": "off",
+    "react/require-default-props": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-use-before-define": [
       "warn",
       {
