@@ -17,10 +17,11 @@ type ConfigMagicState = {
   allowDeep?: boolean;
 };
 
-export const useMagicState = <S extends Record<string, unknown>>(
+// eslint-disable-next-line @typescript-eslint/ban-types
+export const useMagicState = <S extends {}>(
   initialState: S,
   { allowDeep }: ConfigMagicState = {},
-): S | [S, SetMagicState<S>] => {
+) => {
   const [$state, setState] = React.useState(initialState);
 
   const setMagicState = (mutate: MutateDeep<S>) => {

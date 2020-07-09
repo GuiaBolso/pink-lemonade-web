@@ -20,5 +20,6 @@ export const useDidUpdate = (
     return unmount;
   };
 
-  React.useEffect(mount, [callbackMount, unmount]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  React.useEffect(mount, [when]);
 };
