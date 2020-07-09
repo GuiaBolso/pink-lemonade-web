@@ -3,7 +3,7 @@
 /**
  * Copy to clipboard
  */
-export const copyToClipboard = (str: string) => {
+export const copyToClipboard = (str: string): Promise<void | boolean> => {
   const { clipboard } = window.navigator;
   /*
    * fallback to older browsers (including Safari)

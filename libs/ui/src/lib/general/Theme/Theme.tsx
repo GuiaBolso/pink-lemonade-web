@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { ThemeProvider } from 'emotion-theming';
+import { ThemeProvider, ThemeProviderProps } from 'emotion-theming';
 
-// import { guiaBolso, connect } from '../../../designSystem/tokens';
+import { guiaBolso, connect } from '../../../designSystem/tokens';
 import GlobalStyle from '../../../globalStyles';
 
 type ThemeProps = {
   children: React.ReactNode;
-  theme: any;
-};
+} & ThemeProviderProps<typeof guiaBolso | typeof connect>;
 
 const Theme = ({ children, theme }: ThemeProps) => {
   return (
