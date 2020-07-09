@@ -39,19 +39,7 @@
     [
       "@semantic-release/exec",
       {
-        "successCmd": "echo \"//npm.pkg.github.com/:_authToken=$GITHUB_TOKEN\" > .npmrc"
-      }
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "successCmd": "cat .npmrc"
-      }
-    ],
-    [
-      "@semantic-release/exec",
-      {
-        "successCmd": "npm publish --@guiabolsobr:registry='https://npm.pkg.github.com' --access=public"
+        "successCmd": "echo \"success\""
       }
     ]
   ],
