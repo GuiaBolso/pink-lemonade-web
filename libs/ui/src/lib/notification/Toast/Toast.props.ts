@@ -1,10 +1,11 @@
-export type ToastTypeProps = 'INFO' | 'SUCCESS' | 'WARNING' | 'ERROR';
+export type ToastTypeProps = 'SUCCESS' | 'ALERT' | 'ERROR' | 'NOTIFICATION';
 
 export type ToastMessageProps = {
   id: string;
-  type?: ToastTypeProps;
   title: string;
   description?: string;
+  type?: ToastTypeProps;
+  noIcon?: boolean;
   autoClose?: boolean;
   timeToClose?: number;
 };
