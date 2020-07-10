@@ -4,7 +4,7 @@ import { uuid } from 'uuidv4';
 // eslint-disable-next-line import/no-cycle
 import ToastContainer from './Toast.container';
 
-import { ToastMessageProps } from './ToastProps';
+import { ToastMessageProps } from './Toast.props';
 
 interface ToastContextData {
   addToast(message: Omit<ToastMessageProps, 'id'>): void;
@@ -18,24 +18,26 @@ const ToastProvider: React.FC = ({ children }) => {
 
   const addToast = useCallback(
     ({
-      type,
       title,
       description,
+      type = 'NOTIFICATION',
+      noIcon = false,
       autoClose = true,
-      timeToClose = 3000,
+      timeToClose = 4000,
     }: Omit<ToastMessageProps, 'id'>) => {
       const id = uuid();
 
-      const toast = {
+      const newToast = {
         id,
-        type,
         title,
         description,
+        type,
+        noIcon,
         autoClose,
         timeToClose,
       };
 
-      setMessages(prevMessages => [...prevMessages, toast]);
+      setMessages(prevMessages => [...prevMessages, newToast]);
     },
     [],
   );
@@ -49,7 +51,6 @@ const ToastProvider: React.FC = ({ children }) => {
   return (
     <ToastContext.Provider value={{ addToast, removeToast }}>
       {children}
-
       <ToastContainer messages={messages} />
     </ToastContext.Provider>
   );
