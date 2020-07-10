@@ -3,7 +3,7 @@ import React from 'react';
 // eslint-disable-next-line import/no-cycle
 import Toast from './Toast';
 
-import { ToastContainerProps } from './ToastProps';
+import { ToastContainerProps } from './Toast.props';
 
 import * as S from './Toast.style';
 
