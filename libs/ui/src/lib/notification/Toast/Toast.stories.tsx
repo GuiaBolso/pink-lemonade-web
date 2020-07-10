@@ -3,9 +3,15 @@ import React from 'react';
 import Toast from './Toast';
 import { ToastProvider, useToast } from './Toast.context';
 
+import { Button } from '../../forms/Button';
+
 export default {
   title: 'Notification/Toast',
   component: ToastProvider,
+  decorators: [
+    /* eslint-disable-next-line */
+    (story: any) => <ToastProvider>{story()}</ToastProvider>,
+  ],
 };
 
 const ActionButtonsToast = () => {
@@ -16,23 +22,13 @@ const ActionButtonsToast = () => {
       style={{
         display: 'flex',
         flexDirection: 'column',
+        height: '350px',
         justifyContent: 'space-between',
-        maxWidth: '500px',
+        maxWidth: '380px',
       }}
     >
-      <button
-        onClick={() => {
-          addToast({
-            title: 'Mensagem de INFORMAÇÃO',
-            description: 'Esse é um exemplo de uma mensagem de INFORMAÇÃO',
-            type: 'INFO',
-          });
-        }}
-      >
-        Info
-      </button>
-
-      <button
+      <Button
+        appearance="primary"
         onClick={() => {
           addToast({
             title: 'Mensagem de SUCESSO',
@@ -41,22 +37,24 @@ const ActionButtonsToast = () => {
           });
         }}
       >
-        Sucesso
-      </button>
+        SUCCESS
+      </Button>
 
-      <button
+      <Button
+        appearance="primary"
         onClick={() => {
           addToast({
             title: 'Mensagem de AVISO',
             description: 'Esse é um exemplo de uma mensagem de AVISO',
-            type: 'WARNING',
+            type: 'ALERT',
           });
         }}
       >
-        Warning
-      </button>
+        ALERT
+      </Button>
 
-      <button
+      <Button
+        appearance="primary"
         onClick={() => {
           addToast({
             title: 'Mensagem de ERRO',
@@ -65,51 +63,62 @@ const ActionButtonsToast = () => {
           });
         }}
       >
-        Error
-      </button>
+        ERROR
+      </Button>
 
-      <button
+      <Button
+        appearance="primary"
+        onClick={() => {
+          addToast({
+            title: 'Mensagem de INFORMAÇÃO',
+            description: 'Esse é um exemplo de uma mensagem de INFORMAÇÃO',
+            type: 'NOTIFICATION',
+          });
+        }}
+      >
+        NOTIFICATION
+      </Button>
+
+      <Button
+        appearance="primary"
         onClick={() => {
           addToast({
             title: 'Abrir e NÃO fechar automaticamente',
             description:
               'Esse é um exemplo de uma mensagem que vai abrir e NÃO vai fechar automaticamente',
-            type: 'INFO',
+            type: 'NOTIFICATION',
             autoClose: false,
           });
         }}
       >
         Não fechar
-      </button>
+      </Button>
 
-      <button
+      <Button
+        appearance="primary"
         onClick={() => {
           addToast({
             title: 'Fechar depois de 10 segundos',
             description:
               'Esse é um exemplo de uma mensagem que vai abrir e, fechar somende depois de 10 segundos',
-            type: 'INFO',
+            type: 'NOTIFICATION',
             timeToClose: 10000,
           });
         }}
       >
         Fechar depois de 10 segundos
-      </button>
+      </Button>
     </div>
   );
 };
 
-export const ActionToast = () => (
-  <ToastProvider>
-    <ActionButtonsToast />
-  </ToastProvider>
-);
+export const ActionToast = () => <ActionButtonsToast />;
 
-export const Info = () => (
+export const Notification = () => (
   <Toast
     message={{
       id: '10',
-      title: 'Toast teste',
+      title: 'Notification tost',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     }}
   />
@@ -118,21 +127,21 @@ export const Info = () => (
 export const Success = () => (
   <Toast
     message={{
-      id: '10',
-      title: 'Toast teste',
+      id: '11',
+      title: 'Success toast',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       type: 'SUCCESS',
     }}
   />
 );
 
-export const Warning = () => (
+export const Alert = () => (
   <Toast
     message={{
-      id: '10',
-      title: 'Toast teste',
+      id: '12',
+      title: 'Alert toast',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      type: 'WARNING',
+      type: 'ALERT',
     }}
   />
 );
@@ -140,10 +149,30 @@ export const Warning = () => (
 export const Error = () => (
   <Toast
     message={{
-      id: '10',
-      title: 'Toast teste',
+      id: '13',
+      title: 'Error toast',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
       type: 'ERROR',
+    }}
+  />
+);
+
+export const TitleOnly = () => (
+  <Toast
+    message={{
+      id: '14',
+      title: 'Notification title only',
+    }}
+  />
+);
+
+export const NoIcon = () => (
+  <Toast
+    message={{
+      id: '15',
+      title: 'Notification no icon',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      noIcon: true,
     }}
   />
 );
