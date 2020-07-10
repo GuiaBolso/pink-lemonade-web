@@ -2,42 +2,15 @@ import React, { useEffect } from 'react';
 
 // eslint-disable-next-line import/no-cycle
 import { useToast } from './Toast.context';
+import { CloseIcon } from './icons';
+import Icon from './Toast.icon';
 
 import * as S from './Toast.style';
 
-import { ToastProps } from './ToastProps';
-
-type IconProps = {
-  children: React.ReactNode;
-};
-
-const Icon = ({ children }: IconProps) => (
-  <span
-    className="toast-icon"
-    style={{
-      background: '#000',
-      display: 'flex',
-      fontSize: '9px',
-      height: '20px',
-      placeContent: 'center',
-      placeItems: 'center',
-      width: '20px',
-      wordBreak: 'break-all',
-    }}
-  >
-    {children}
-  </span>
-);
-
-const toastIcons = {
-  INFO: <Icon>INFO</Icon>,
-  SUCCESS: <Icon>SUCCESS</Icon>,
-  WARNING: <Icon>WARNING</Icon>,
-  ERROR: <Icon>ERROR</Icon>,
-};
+import { ToastProps } from './Toast.props';
 
 const Toast = ({
-  message: { id, title, description, type, autoClose, timeToClose },
+  message: { id, title, description, type, noIcon, autoClose, timeToClose },
 }: ToastProps) => {
   const { removeToast } = useToast();
 
@@ -51,19 +24,30 @@ const Toast = ({
     return () => {
       clearTimeout(toastTime);
     };
-  }, [removeToast, id, autoClose, timeToClose]);
+  }, [autoClose, removeToast, id, timeToClose]);
 
   return (
     <S.Toast key={id} {...(type && { type })}>
-      {toastIcons[type || 'INFO']}
+      {!noIcon && (
+        <S.IconContainer>
+          <Icon type={type} />
+        </S.IconContainer>
+      )}
 
-      <div>
-        <S.ToastTitle>{title}</S.ToastTitle>
-        {description && <S.ToastContent>{description}</S.ToastContent>}
-      </div>
+      <S.ContentContainer>
+        <S.ToastTitle component="strong" variant="heading-06">
+          {title}
+        </S.ToastTitle>
+
+        {description && (
+          <S.ToastContent component="p" variant="subtitle-medium">
+            {description}
+          </S.ToastContent>
+        )}
+      </S.ContentContainer>
 
       <S.CloseToast onClick={() => removeToast(id)}>
-        <Icon>Fechar</Icon>
+        <CloseIcon />
       </S.CloseToast>
     </S.Toast>
   );
