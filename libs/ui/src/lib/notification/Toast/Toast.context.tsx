@@ -6,14 +6,18 @@ import ToastContainer from './Toast.container';
 
 import { ToastMessageProps } from './Toast.props';
 
-interface ToastContextData {
+type ToastContextData = {
   addToast(message: Omit<ToastMessageProps, 'id'>): void;
   removeToast(id: string): void;
 }
 
+type ToastProviderProps = {
+  children: React.ReactNode;
+}
+
 const ToastContext = createContext<ToastContextData>({} as ToastContextData);
 
-const ToastProvider: React.FC = ({ children }) => {
+const ToastProvider = ({ children }: ToastProviderProps) => {
   const [messages, setMessages] = useState<ToastMessageProps[]>([]);
 
   const addToast = useCallback(
