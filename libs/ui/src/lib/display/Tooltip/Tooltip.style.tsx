@@ -12,8 +12,10 @@ type TooltipProps = {
 export const Popper = styled(MuiPopper)`
   .MuiTooltip {
     &-tooltip {
-      background-color: ${({ theme }: TooltipProps) => theme?.colors?.feedback?.notification?.default};
-      box-shadow: 0 4px 4px ${({ theme }: TooltipProps) => theme?.colors?.neutral?.lightest};
+      background-color: ${({ theme }: TooltipProps) =>
+        theme?.colors?.feedback?.notification?.default};
+      box-shadow: 0 4px 4px ${({ theme }: TooltipProps) =>
+        theme?.colors?.neutral?.lightest};
       box-sizing: border-box;
       font-size: ${pxToRem(12)};
       line-height: ${pxToRem(20)};
@@ -22,7 +24,8 @@ export const Popper = styled(MuiPopper)`
     }
 
     &-arrow {
-      color: ${({ theme }: TooltipProps) => theme?.colors?.feedback?.notification?.default};
+      color: ${({ theme }: TooltipProps) =>
+        theme?.colors?.feedback?.notification?.default};
 
       &:before {
         border-radius: 2px;
