@@ -1,4 +1,5 @@
 import React from 'react';
+import MuiTooltip from '@material-ui/core/Tooltip';
 
 import { Text } from '../../display/Text';
 
@@ -14,7 +15,7 @@ const PopperComponent = (props: any) => {
 };
 
 const Tooltip = ({ content, children }: TooltipProps) => (
-  <S.Tooltip
+  <MuiTooltip
     arrow
     PopperComponent={PopperComponent}
     title={
@@ -22,7 +23,7 @@ const Tooltip = ({ content, children }: TooltipProps) => (
     }
   >
     {children}
-  </S.Tooltip>
+  </MuiTooltip>
 );
 
 
