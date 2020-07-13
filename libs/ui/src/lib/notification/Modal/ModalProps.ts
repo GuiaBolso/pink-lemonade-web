@@ -1,8 +1,11 @@
+export type ModalTypesProps = 'dialog' | 'alert' | 'blank';
+
 export type ModalProps = {
   id?: string;
-  type: 'dialog' | 'alert' | 'blank';
+  type: ModalTypesProps;
   title: string;
   children: React.ReactNode;
+  disableBackdropClick?: boolean;
   confirm?: {
     label: string;
     handler?: () => void;
@@ -37,4 +40,8 @@ export type ModalContextProps = ModalContainerProps & {
 
 export type ModalProviderProps = {
   children: React.ReactNode;
+};
+
+export type HandleModalProps = (DialogProps | AlertProps | BlankModalProps) & {
+  type: ModalTypesProps;
 };

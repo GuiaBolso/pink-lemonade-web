@@ -8,6 +8,7 @@ import {
   DialogProps,
   AlertProps,
   BlankModalProps,
+  HandleModalProps,
 } from './ModalProps';
 import ModalContainer from './Modal.container';
 
@@ -16,50 +17,32 @@ const ModalContext = createContext({} as ModalContextProps);
 const ModalProvider = ({ children }: ModalProviderProps) => {
   const [modals, setModals] = useState([]);
 
-  const addDialog = useCallback(
-    ({ title, confirm, dismiss, id = uuid(), content }: DialogProps) => {
+  const handleModal = useCallback(
+    ({ id = uuid(), content, ...rest }: HandleModalProps) => {
       const modal: ModalProps = {
+        ...rest,
         id,
-        type: 'dialog',
-        title,
-        confirm,
-        dismiss,
         children: content,
       };
 
       setModals(prevModals => [...prevModals, modal]);
     },
     [],
+  );
+
+  const addDialog = useCallback(
+    (props: DialogProps) => handleModal({ ...props, type: 'dialog' }),
+    [handleModal],
   );
 
   const addAlert = useCallback(
-    ({ title, confirm, id = uuid(), content }: AlertProps) => {
-      const modal: ModalProps = {
-        id,
-        type: 'alert',
-        title,
-        confirm,
-        children: content,
-      };
-
-      setModals(prevModals => [...prevModals, modal]);
-    },
-    [],
+    (props: AlertProps) => handleModal({ ...props, type: 'alert' }),
+    [handleModal],
   );
 
   const addModal = useCallback(
-    ({ title, id = uuid(), content }: BlankModalProps) => {
-      console.log('content', content);
-      const modal: ModalProps = {
-        id,
-        type: 'blank',
-        title,
-        children: content,
-      };
-
-      setModals(prevModals => [...prevModals, modal]);
-    },
-    [],
+    (props: BlankModalProps) => handleModal({ ...props, type: 'blank' }),
+    [handleModal],
   );
 
   const removeModal = useCallback((id: string) => {

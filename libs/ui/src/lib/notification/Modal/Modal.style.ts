@@ -9,7 +9,9 @@ type ModalStyleProps = {
   fade?: boolean;
 };
 
-export const Overlay = styled.div`
+const SPACING_ELEMENT = 24;
+
+export const Backdrop = styled.div`
   align-items: center;
   background-color: ${({ theme }: ModalStyleProps) => {
     const overlayColor = hexToRgb(theme?.colors?.neutral?.darkest);
@@ -28,20 +30,26 @@ export const Overlay = styled.div`
 export const Container = styled.section`
   background-color: ${({ theme }: ModalStyleProps) =>
     theme?.colors?.neutral?.blank};
+  box-shadow: 0px 8px 10px rgba(13, 13, 13, 0.14),
+    0px 0px 2px rgba(13, 13, 13, 0.2);
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-height: 100vh;
+  max-width: 600px;
   min-height: 300px;
   opacity: ${({ fade }: ModalStyleProps) => (fade ? 1 : 0)};
-  padding: ${pxToRem(24)};
+  overflow: auto;
+  padding: ${pxToRem(SPACING_ELEMENT)};
   position: relative;
   transition: opacity 0.3s ease;
-  width: 600px;
+  width: 100%;
 `;
 
 export const Header = styled.header`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darkest};
+  margin-bottom: ${pxToRem(SPACING_ELEMENT)};
 `;
 
 export const Containt = styled.article`
@@ -50,10 +58,17 @@ export const Containt = styled.article`
 
 export const Footer = styled.footer`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 25px;
+  justify-content: end;
+  margin-top: ${pxToRem(SPACING_ELEMENT)};
 `;
 
 export const Close = styled(MuiClose)`
+  color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.regular};
   cursor: pointer;
+  line-height: 145%;
   position: absolute;
   right: 20px;
   top: 20px;
