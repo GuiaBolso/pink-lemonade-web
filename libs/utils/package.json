@@ -5,10 +5,16 @@
   "publishConfig": {
     "access": "public"
   },
+  "peerDependencies": {
+    "react": "*"
+  },
   "bugs": {
     "url": "https://github.com/gbprojectbr/pink-lemonade-web/issues"
   },
   "keywords": [
     "utils"
-  ]
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
 }

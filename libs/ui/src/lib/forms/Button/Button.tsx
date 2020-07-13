@@ -22,9 +22,9 @@ export const Button = ({
   ...rest
 }: ButtonProps) => {
   const mapVariants = {
-    primary: 'contained' as 'contained',
-    secondary: 'outlined' as 'outlined',
-    terdiary: 'text' as 'text',
+    primary: 'contained' as const,
+    secondary: 'outlined' as const,
+    terdiary: 'text' as const,
   };
 
   const getScale = () => {

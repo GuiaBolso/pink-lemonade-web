@@ -120,6 +120,7 @@ export const CloseToast = styled.button`
   background: transparent;
   border: 0;
   color: inherit;
+  cursor: pointer;
   height: 24px;
   margin-left: 8px;
   padding: 0;

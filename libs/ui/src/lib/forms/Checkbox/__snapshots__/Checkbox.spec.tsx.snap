@@ -7,7 +7,7 @@ exports[`Checkbox Component renders correctly 1`] = `
 >
   <span
     aria-disabled={false}
-    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-90 MuiCheckbox-root MuiCheckbox-colorSecondary css-0 MuiIconButton-colorSecondary"
+    className="MuiButtonBase-root MuiIconButton-root PrivateSwitchBase-root-5 MuiCheckbox-root MuiCheckbox-colorSecondary css-0 MuiIconButton-colorSecondary"
     onBlur={[Function]}
     onDragLeave={[Function]}
     onFocus={[Function]}
@@ -25,8 +25,7 @@ exports[`Checkbox Component renders correctly 1`] = `
       className="MuiIconButton-label"
     >
       <input
-        checked={false}
-        className="PrivateSwitchBase-input-93"
+        className="PrivateSwitchBase-input-8"
         data-indeterminate={false}
         disabled={false}
         name="newsletter"
@@ -34,10 +33,9 @@ exports[`Checkbox Component renders correctly 1`] = `
         type="checkbox"
       />
       <svg
-        aria-hidden="true"
+        aria-hidden={true}
         className="MuiSvgIcon-root"
         focusable="false"
-        role="presentation"
         viewBox="0 0 24 24"
       >
         <path

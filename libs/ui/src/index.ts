@@ -14,6 +14,7 @@ export * from './lib/navigation/Steps';
 export * from './lib/navigation/Arrow';
 
 export * from './lib/notification/infoPanel';
+export * from './lib/notification/Toast';
 
 export { default as themeGuiaBolso } from './designSystem/tokens/guiaBolso';
 export { default as themeConnect } from './designSystem/tokens/connect';

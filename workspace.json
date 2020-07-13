@@ -16,13 +16,13 @@
               "libs/ui/tsconfig.lib.json",
               "libs/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui/**"]
+            "exclude": ["**/node_modules/**", "!libs/ui/**/*"]
           }
         },
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/ui",
+            "outputPath": "libs/ui/dist",
             "tsConfig": "libs/ui/tsconfig.lib.json",
             "project": "libs/ui/package.json",
             "entryFile": "libs/ui/src/index.ts",
@@ -59,7 +59,7 @@
           "builder": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/ui",
+            "outputPath": "storybook/ui/dist",
             "config": {
               "configFolder": "libs/ui/.storybook"
             }
@@ -94,7 +94,7 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": ["apps/ui-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**"]
+            "exclude": ["**/node_modules/**", "!apps/ui-e2e/**/*"]
           }
         }
       }
@@ -109,18 +109,17 @@
           "builder": "@nrwl/linter:lint",
           "options": {
             "linter": "eslint",
-            "config": "libs/ditto/.eslintrc",
             "tsConfig": [
               "libs/ditto/tsconfig.lib.json",
               "libs/ditto/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ditto/**"]
+            "exclude": ["**/node_modules/**", "!libs/ditto/**/*"]
           }
         },
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/ditto",
+            "outputPath": "libs/ditto/dist",
             "tsConfig": "libs/ditto/tsconfig.lib.json",
             "project": "libs/ditto/package.json",
             "entryFile": "libs/ditto/src/index.ts",
@@ -154,19 +153,24 @@
               "libs/utils/tsconfig.lib.json",
               "libs/utils/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/utils/**"]
+            "exclude": ["**/node_modules/**", "!libs/utils/**/*"]
           }
         },
         "build": {
           "builder": "@nrwl/web:package",
           "options": {
-            "outputPath": "dist/libs/utils",
+            "outputPath": "libs/utils/dist",
             "tsConfig": "libs/utils/tsconfig.lib.json",
             "project": "libs/utils/package.json",
             "entryFile": "libs/utils/src/index.ts",
             "external": ["react", "react-dom", "styled-components"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
+          },
+          "configurations": {
+            "production": {
+              "optimization": true
+            }
           }
         },
         "test": {

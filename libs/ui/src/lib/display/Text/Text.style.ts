@@ -8,7 +8,7 @@ type TextProps = {
   theme: CustomThemeProps;
 };
 
-const variants: object = {
+const variants = {
   'display-00': ({ theme }: TextProps) => {
     const themeName = {
       connect: () => css`
