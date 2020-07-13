@@ -7,11 +7,17 @@ import Icon from './Toast.icon';
 
 import * as S from './Toast.style';
 
-import { ToastProps } from './Toast.props';
+import { ToastMessageProps } from './Toast.props';
 
 const Toast = ({
-  message: { id, title, description, type, noIcon, autoClose, timeToClose },
-}: ToastProps) => {
+  id,
+  title,
+  description,
+  type,
+  noIcon,
+  autoClose,
+  timeToClose,
+}: ToastMessageProps) => {
   const { removeToast } = useToast();
 
   useEffect(() => {

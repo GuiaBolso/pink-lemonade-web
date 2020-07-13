@@ -116,63 +116,48 @@ export const ActionToast = () => <ActionButtonsToast />;
 
 export const Notification = () => (
   <Toast
-    message={{
-      id: '10',
-      title: 'Notification tost',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-    }}
+    id="10"
+    title="Notification tost"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
   />
 );
 
 export const Success = () => (
   <Toast
-    message={{
-      id: '11',
-      title: 'Success toast',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      type: 'SUCCESS',
-    }}
+    id="11"
+    title="Success toast"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    type="SUCCESS"
   />
 );
 
 export const Alert = () => (
   <Toast
-    message={{
-      id: '12',
-      title: 'Alert toast',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      type: 'ALERT',
-    }}
+    id="12"
+    title="Alert toast"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    type="ALERT"
   />
 );
 
 export const Error = () => (
   <Toast
-    message={{
-      id: '13',
-      title: 'Error toast',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      type: 'ERROR',
-    }}
+    id="13"
+    title="Error toast"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    type="ERROR"
   />
 );
 
 export const TitleOnly = () => (
-  <Toast
-    message={{
-      id: '14',
-      title: 'Notification title only',
-    }}
-  />
+  <Toast id="14" title="Notification title only" />
 );
 
 export const NoIcon = () => (
   <Toast
-    message={{
-      id: '15',
-      title: 'Notification no icon',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-      noIcon: true,
-    }}
+    id="15"
+    title="Notification no icon"
+    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    noIcon
   />
 );

@@ -13,7 +13,3 @@ export type ToastMessageProps = {
 export type ToastContainerProps = {
   messages: ToastMessageProps[];
 };
-
-export type ToastProps = {
-  message: ToastMessageProps;
-};

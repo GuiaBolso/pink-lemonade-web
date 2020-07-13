@@ -11,7 +11,7 @@ const ToastContainer = ({ messages }: ToastContainerProps) => {
   return (
     <S.ToastContainer>
       {messages.map(message => (
-        <Toast key={message.id} message={message} />
+        <Toast key={message.id} {...message} />
       ))}
     </S.ToastContainer>
   );
