@@ -20,6 +20,8 @@ type Selectors<State, S extends Selector<State, S>> = Selector<
   ReturnType<S>
 >;
 
+// eslint-disable-next-line no-console
+console.log('console mais descritivo');
 export interface CreateUseContext<
   State,
   A extends Actions<State, A>,
@@ -46,7 +48,7 @@ export const useCreateStore = <
   return { $state, actions: actions(setState), selectors: selectors($state) };
 };
 
-const addReactContextDevTools = <T extends {}>(
+const addReactContextDevTools = <T extends Record<string, unknown>>(
   values: T,
   name: string,
   id: string,
@@ -82,7 +84,11 @@ export const createUseContext = <
 }: CreateUseContext<State, A, S>) => {
   const Context = React.createContext({} as ValuesReturn<State, A, S>);
   // eslint-disable-next-line react/prop-types
-  const Provider: React.FunctionComponent<{}> = ({ children }) => {
+  const Provider: React.FunctionComponent<Record<string, unknown>> = ({
+    children,
+  }: {
+    children: React.ReactNode;
+  }) => {
     const values: ValuesReturn<State, A, S> = useCreateStore({
       name,
       actions,
@@ -90,6 +96,7 @@ export const createUseContext = <
       initialState,
     });
 
+    // @ts-ignore
     addReactContextDevTools(values, name, 'idUser');
 
     return <Context.Provider value={values}>{children}</Context.Provider>;
