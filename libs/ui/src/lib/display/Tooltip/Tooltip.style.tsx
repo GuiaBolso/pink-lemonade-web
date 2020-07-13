@@ -14,8 +14,8 @@ export const Popper = styled(MuiPopper)`
     &-tooltip {
       background-color: ${({ theme }: TooltipProps) =>
         theme?.colors?.feedback?.notification?.default};
-      box-shadow: 0 4px 4px ${({ theme }: TooltipProps) =>
-        theme?.colors?.neutral?.lightest};
+      box-shadow: 0 4px 4px
+        ${({ theme }: TooltipProps) => theme?.colors?.neutral?.lightest};
       box-sizing: border-box;
       font-size: ${pxToRem(12)};
       line-height: ${pxToRem(20)};

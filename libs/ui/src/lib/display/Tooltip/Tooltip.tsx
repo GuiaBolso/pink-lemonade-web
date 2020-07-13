@@ -10,7 +10,7 @@ type TooltipProps = {
   children: React.ReactElement;
 };
 
-const PopperComponent = (props) => {
+const PopperComponent = props => {
   return <S.Popper {...props} />;
 };
 
