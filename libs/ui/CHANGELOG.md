@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [1.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.0.0...@guiabolsobr/ui@1.1.0) (2020-07-14)
+
+### Features
+
+- create tooltip component ([13c96bd](https://github.com/GuiaBolso/pink-lemonade-web/commit/13c96bda657c2a3c3fd8339743dc4d608de1cf58))
+- tooltip adjusts ([d2754b7](https://github.com/GuiaBolso/pink-lemonade-web/commit/d2754b79498550cdfe905547818f6aea8a5cce52))
+
 ## @guiabolsobr/ui 1.0.0 (2020-07-09)
 
 ### Features

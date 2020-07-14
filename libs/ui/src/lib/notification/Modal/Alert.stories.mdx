@@ -1,0 +1,68 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { ModalProvider, useModal, Modal } from '.';
+import { Text } from '../../display';
+
+<Meta title="Notification/Modal" component={Modal} />
+
+# Alert
+
+O modal de `alert` renderiza um único botão para dispensar o mesmo. É possível passar uma função para ser executada quando o modal fechar.
+
+<Preview>
+  <Story
+    name="Alert"
+    decorators={[
+      story => (
+        <div
+          style={{
+            minHeight: '400px',
+          }}
+        >
+          {story()}
+        </div>
+      ),
+    ]}
+  >
+    <Modal id="alert" title="Lorem ipsum dolor" type="alert">
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa
+        elit, tempor placerat semper vel, lacinia eget nulla. Phasellus nec.
+      </Text>
+    </Modal>
+  </Story>
+</Preview>
+
+## Alert com Hook
+
+Para usar o modal Alert com hook, importe o provider `ModalProvider` e adicione em volta do seu componente. Você pode importar o `useModal` e utilizar da sua função `addAlert`.
+
+```jsx
+import { useModal, ModalProvider } from '@guiabolsobr/ui';
+
+const App = () => {
+  const { addAlert } = useModal()
+
+  return (
+    <ModalProvider>
+      <button onClick={
+        addAlert({
+          title: 'Lorem ipsum dolor',
+          content: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa elit, tempor placerat semper vel, lacinia eget nulla. Phasellus nec.</p>,
+        });
+      }>
+        Abrir modal
+      </button>
+    </ModalProvider>
+  )
+}
+```
+
+Propriedades aceitos no `addAlert` :
+
+| Propriedade                       | Descrição                                                                                    |
+| --------------------------------- | -------------------------------------------------------------------------------------------- |
+| `id` - opcional                   | Identificador único para o modal                                                             |
+| `title` - obrigatório             | Título do modal                                                                              |
+| `content` - obrigatório           | Componente com o conteúdo que será renderizado                                               |
+| `disableBackdropClick` - opcional | Desabilita o click no backdrop                                                               |
+| `confirm` - opcional              | Objeto que espera uma label e uma função (optional) que será passada no botão de confirmação |
