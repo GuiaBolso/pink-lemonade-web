@@ -1,11 +1,9 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { ModalProvider, useModal, Modal } from '.';
+import { Text } from '../../display';
+import { Button } from '../../forms';
 
 <Meta title="Notification/Modal" component={Modal} />
-
-# Modal
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dignissim viverra sem eget malesuada. Etiam purus quam, ultricies sit amet eros sit amet, elementum faucibus quam. Donec convallis lorem metus, nec auctor mi tincidunt vehicula. Curabitur sapien leo, fermentum vel rhoncus sed, scelerisque ut velit.
 
 export const ModalContent = () => {
   const { addModal } = useModal();
@@ -33,7 +31,8 @@ export const ModalContent = () => {
         molestie et justo eu finibus. Cras interdum orci vitae tincidunt
         eleifend.
       </p>
-      <button
+      <Button
+        scale="narrow"
         onClick={() => {
           addModal({
             title: 'Teste de modal',
@@ -42,18 +41,18 @@ export const ModalContent = () => {
         }}
       >
         Clique aqui
-      </button>
+      </Button>
     </>
   );
 };
 
 export const ActionButtonModal = () => {
   const { addModal, addAlert, addDialog, modals } = useModal();
-  console.log('useModal', addModal, addAlert, addDialog, modals);
   const fechou = () => console.log('fechou');
   return (
     <>
-      <button
+      <Button
+        scale="narrow"
         onClick={() => {
           addModal({
             title: 'Teste de modal',
@@ -62,8 +61,9 @@ export const ActionButtonModal = () => {
         }}
       >
         Modal
-      </button>
-      <button
+      </Button>
+      <Button
+        scale="narrow"
         onClick={() => {
           addAlert({
             title: 'Teste de modal',
@@ -76,8 +76,9 @@ export const ActionButtonModal = () => {
         }}
       >
         Alert
-      </button>
-      <button
+      </Button>
+      <Button
+        scale="narrow"
         onClick={() => {
           addDialog({
             title: 'Teste de modal',
@@ -86,15 +87,24 @@ export const ActionButtonModal = () => {
         }}
       >
         Dialog
-      </button>
+      </Button>
     </>
   );
 };
 
 <Preview>
-  <Story name="base">
+  <Story name="Hook Exemplo">
     <ModalProvider>
-      <ActionButtonModal />
+      <div
+        style={{
+          display: 'grid',
+          gridGap: '10px',
+          gridAutoFlow: 'column',
+          justifyContent: 'flex-start',
+        }}
+      >
+        <ActionButtonModal />
+      </div>
     </ModalProvider>
   </Story>
 </Preview>

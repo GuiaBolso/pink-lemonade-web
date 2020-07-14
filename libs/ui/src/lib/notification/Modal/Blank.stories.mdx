@@ -1,0 +1,90 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { ModalProvider, useModal, Modal } from '.';
+import { Text } from '../../display';
+
+<Meta title="Notification/Modal" component={Modal} />
+
+# Modal
+
+<Preview>
+  <Story
+    name="Modal"
+    decorators={[
+      story => (
+        <div
+          style={{
+            minHeight: '400px',
+          }}
+        >
+          {story()}
+        </div>
+      ),
+    ]}
+  >
+    <Modal id="blank" title="Lorem ipsum dolor" type="blank">
+      <Text>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa
+        elit, tempor placerat semper vel, lacinia eget nulla. Phasellus nec.
+      </Text>
+      <Text>
+        Sed nec metus eu arcu porta feugiat id vel erat. Aliquam ut ornare urna.
+        Sed iaculis risus erat, eget imperdiet odio finibus sit amet. Fusce
+        felis purus, pellentesque semper accumsan ac, elementum sit amet diam.
+        Etiam sed erat vitae arcu dictum varius nec sed purus. Nam et feugiat
+        neque. Donec tincidunt efficitur felis et ullamcorper. Duis eget
+        vestibulum mauris. Fusce tristique fermentum erat. Phasellus nec sapien
+        est.
+      </Text>
+    </Modal>
+  </Story>
+</Preview>
+
+## Modal com Hook
+
+Para usar o modal com hook, importe o provider `ModalProvider` e adicione em volta do seu componente. Você pode importar o `useModal` e utilizar da sua função `addModal`.
+
+```jsx
+import { useModal, ModalProvider } from '@guiabolsobr/ui';
+
+const App = () => {
+  const { addModal } = useModal()
+
+  return (
+    <ModalProvider>
+      <button onClick={
+        addAlert({
+          title: 'Lorem ipsum dolor',
+          content: (
+            <>
+              <Text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa
+                elit, tempor placerat semper vel, lacinia eget nulla. Phasellus nec.
+              </Text>
+              <Text>
+                Sed nec metus eu arcu porta feugiat id vel erat. Aliquam ut ornare urna.
+                Sed iaculis risus erat, eget imperdiet odio finibus sit amet. Fusce
+                felis purus, pellentesque semper accumsan ac, elementum sit amet diam.
+                Etiam sed erat vitae arcu dictum varius nec sed purus. Nam et feugiat
+                neque. Donec tincidunt efficitur felis et ullamcorper. Duis eget
+                vestibulum mauris. Fusce tristique fermentum erat. Phasellus nec sapien
+                est.
+              </Text>
+            </>
+          ),
+        });
+      }>
+        Abrir modal
+      </button>
+    </ModalProvider>
+  )
+}
+```
+
+Propriedades aceitos no `addAlert` :
+
+| Propriedade                       | Descrição                                      |
+| --------------------------------- | ---------------------------------------------- |
+| `id` - opcional                   | Identificador único para o modal               |
+| `title` - obrigatório             | Título do modal                                |
+| `content` - obrigatório           | Componente com o conteúdo que será renderizado |
+| `disableBackdropClick` - opcional | Desabilita o click no backdrop                 |

@@ -7,6 +7,7 @@ import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 type ModalStyleProps = {
   theme: CustomThemeProps;
   fade?: boolean;
+  opened?: boolean;
 };
 
 const SPACING_ELEMENT = 24;
@@ -17,13 +18,15 @@ export const Backdrop = styled.div`
     const overlayColor = hexToRgb(theme?.colors?.neutral?.darkest);
     return `rgba(${overlayColor.r}, ${overlayColor.g}, ${overlayColor.b}, 0.22)`;
   }};
-  display: flex;
+  display: ${({ opened }: ModalStyleProps) => (opened ? 'flex' : 'none')};
   height: 100vh;
   justify-content: center;
   left: 0;
+  max-width: 100%;
   opacity: ${({ fade }: ModalStyleProps) => (fade ? 1 : 0)};
   position: fixed;
   top: 0;
+  transition: opacity 0.3s ease;
   width: 100vw;
 `;
 
@@ -54,6 +57,7 @@ export const Header = styled.header`
 
 export const Containt = styled.article`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
+  flex: 1;
 `;
 
 export const Footer = styled.footer`

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, memo } from 'react';
+import React, { useEffect, useState, memo, useCallback } from 'react';
 
 import { Text } from '../../display';
 import { Button } from '../../forms';
@@ -15,28 +15,46 @@ const Modal = ({
   dismiss,
   children,
   disableBackdropClick,
+  opened = false,
 }: ModalProps) => {
   const [fade, setFade] = useState<boolean>(false);
+  const [isOpened, setIsOpened] = useState<boolean>(opened);
   const { removeModal } = useModal();
+  const DELAY_TO_FADE_IN = 100;
+  const DELAY_TO_FADE_OUT = 300;
 
   useEffect(() => {
-    setFade(true);
+    setIsOpened(true);
+    setTimeout(() => {
+      setFade(true);
+    }, DELAY_TO_FADE_IN);
   }, []);
 
-  const backdropClicked = (e: React.MouseEvent) => {
-    if (disableBackdropClick && e.target === e.currentTarget) {
-      removeModal(id);
-    }
-  };
+  const closeModal = useCallback(() => {
+    setFade(false);
+    setTimeout(() => {
+      removeModal?.(id);
+      setIsOpened(false);
+    }, DELAY_TO_FADE_OUT);
+  }, []);
+
+  const backdropClicked = useCallback(
+    (e: React.MouseEvent) => {
+      if (disableBackdropClick && e.target === e.currentTarget) {
+        closeModal();
+      }
+    },
+    [closeModal, disableBackdropClick],
+  );
 
   return (
-    <S.Backdrop fade={fade} onClick={backdropClicked}>
+    <S.Backdrop fade={fade} onClick={backdropClicked} opened={isOpened}>
       <S.Container fade={fade} id={id}>
         <S.Header>
           <Text variant="heading-05" component="h5">
             {title}
           </Text>
-          <S.Close onClick={() => removeModal(id)} />
+          <S.Close onClick={closeModal} />
         </S.Header>
         <S.Containt>{children}</S.Containt>
         {type !== 'blank' && (
@@ -48,7 +66,7 @@ const Modal = ({
                   appearance="tertiary"
                   onClick={() => {
                     dismiss?.handler?.();
-                    removeModal(id);
+                    closeModal();
                   }}
                 >
                   {dismiss?.label || 'Cancelar'}
@@ -57,7 +75,8 @@ const Modal = ({
                   scale="narrow"
                   onClick={() => {
                     confirm?.handler?.();
-                    removeModal(id);
+                    removeModal?.(id);
+                    setFade(false);
                   }}
                 >
                   {confirm?.label || 'Confirmar'}
@@ -71,7 +90,8 @@ const Modal = ({
                 appearance="tertiary"
                 onClick={() => {
                   confirm?.handler?.();
-                  removeModal(id);
+                  removeModal?.(id);
+                  setFade(false);
                 }}
               >
                 {confirm?.label || 'Confirmar'}

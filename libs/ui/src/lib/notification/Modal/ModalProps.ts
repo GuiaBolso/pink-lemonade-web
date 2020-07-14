@@ -6,6 +6,7 @@ export type ModalProps = {
   title: string;
   children: React.ReactNode;
   disableBackdropClick?: boolean;
+  opened?: boolean;
   confirm?: {
     label: string;
     handler?: () => void;
@@ -18,12 +19,15 @@ export type ModalProps = {
 
 export type BlankModalProps = Omit<
   ModalProps,
-  'confirm' | 'dismiss' | 'type' | 'children'
+  'confirm' | 'dismiss' | 'type' | 'children' | 'opened'
 > & { content: React.ReactNode };
-export type AlertProps = Omit<ModalProps, 'dismiss' | 'type' | 'children'> & {
+export type AlertProps = Omit<
+  ModalProps,
+  'dismiss' | 'type' | 'children' | 'opened'
+> & {
   content: React.ReactNode;
 };
-export type DialogProps = Omit<ModalProps, 'type' | 'children'> & {
+export type DialogProps = Omit<ModalProps, 'type' | 'children' | 'opened'> & {
   content: React.ReactNode;
 };
 
