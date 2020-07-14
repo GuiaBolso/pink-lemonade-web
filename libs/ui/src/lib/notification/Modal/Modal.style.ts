@@ -41,8 +41,8 @@ export const Container = styled.section`
   flex-direction: column;
   justify-content: space-between;
   max-height: 100vh;
-  max-width: 600px;
-  min-height: 300px;
+  max-width: ${pxToRem(600)};
+  min-height: ${pxToRem(300)};
   opacity: ${({ fade }: ModalStyleProps) => (fade ? 1 : 0)};
   overflow: auto;
   padding: ${pxToRem(SPACING_ELEMENT)};
@@ -65,7 +65,7 @@ export const Footer = styled.footer`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
   display: grid;
   grid-auto-flow: column;
-  grid-gap: 25px;
+  grid-gap: ${pxToRem(SPACING_ELEMENT)};
   justify-content: end;
   margin-top: ${pxToRem(SPACING_ELEMENT)};
 `;
@@ -75,6 +75,6 @@ export const Close = styled(MuiClose)`
   cursor: pointer;
   line-height: 145%;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: ${pxToRem(20)};
+  top: ${pxToRem(20)};
 `;
