@@ -1,9 +1,9 @@
 import React from 'react';
-
-import Toast from './Toast';
-import { ToastProvider, useToast } from './Toast.context';
+import { uuid } from 'uuidv4';
 
 import { Button } from '../../forms/Button';
+import { ToastProvider, useToast } from './Toast.context';
+import Toast from './Toast';
 
 export default {
   title: 'Notification/Toast',
@@ -14,8 +14,19 @@ export default {
   ],
 };
 
+const TXT = {
+  title: 'Um título bem bacanudo',
+  description:
+    'Um conteúdo tão ou ainda mais bacanudo que o título do toast que é bem bacanudo',
+};
+
 const ActionButtonsToast = () => {
-  const { addToast } = useToast();
+  const {
+    toastSuccess,
+    toastAlert,
+    toastError,
+    toastNotification,
+  } = useToast();
 
   return (
     <div
@@ -27,66 +38,28 @@ const ActionButtonsToast = () => {
         maxWidth: '380px',
       }}
     >
-      <Button
-        appearance="primary"
-        onClick={() => {
-          addToast({
-            title: 'Mensagem de SUCESSO',
-            description: 'Esse é um exemplo de uma mensagem de SUCESSO',
-            type: 'SUCCESS',
-          });
-        }}
-      >
+      <Button appearance="primary" onClick={() => toastSuccess(TXT)}>
         SUCCESS
       </Button>
 
-      <Button
-        appearance="primary"
-        onClick={() => {
-          addToast({
-            title: 'Mensagem de AVISO',
-            description: 'Esse é um exemplo de uma mensagem de AVISO',
-            type: 'ALERT',
-          });
-        }}
-      >
+      <Button appearance="primary" onClick={() => toastAlert(TXT)}>
         ALERT
       </Button>
 
-      <Button
-        appearance="primary"
-        onClick={() => {
-          addToast({
-            title: 'Mensagem de ERRO',
-            description: 'Esse é um exemplo de uma mensagem de ERRO',
-            type: 'ERROR',
-          });
-        }}
-      >
+      <Button appearance="primary" onClick={() => toastError(TXT)}>
         ERROR
       </Button>
 
-      <Button
-        appearance="primary"
-        onClick={() => {
-          addToast({
-            title: 'Mensagem de INFORMAÇÃO',
-            description: 'Esse é um exemplo de uma mensagem de INFORMAÇÃO',
-            type: 'NOTIFICATION',
-          });
-        }}
-      >
+      <Button appearance="primary" onClick={() => toastNotification(TXT)}>
         NOTIFICATION
       </Button>
 
       <Button
         appearance="primary"
         onClick={() => {
-          addToast({
-            title: 'Abrir e NÃO fechar automaticamente',
-            description:
-              'Esse é um exemplo de uma mensagem que vai abrir e NÃO vai fechar automaticamente',
-            type: 'NOTIFICATION',
+          toastSuccess({
+            title: 'Esse toast não vai fechar automaticamente',
+            description: TXT.description,
             autoClose: false,
           });
         }}
@@ -97,11 +70,9 @@ const ActionButtonsToast = () => {
       <Button
         appearance="primary"
         onClick={() => {
-          addToast({
-            title: 'Fechar depois de 10 segundos',
-            description:
-              'Esse é um exemplo de uma mensagem que vai abrir e, fechar somende depois de 10 segundos',
-            type: 'NOTIFICATION',
+          toastNotification({
+            title: 'Esse toast vai fechar depois de 10 segundos',
+            description: TXT.description,
             timeToClose: 10000,
           });
         }}
@@ -114,50 +85,16 @@ const ActionButtonsToast = () => {
 
 export const ActionToast = () => <ActionButtonsToast />;
 
-export const Notification = () => (
-  <Toast
-    id="10"
-    title="Notification tost"
-    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-  />
-);
+export const Success = () => <Toast id={uuid()} type="SUCCESS" {...TXT} />;
 
-export const Success = () => (
-  <Toast
-    id="11"
-    title="Success toast"
-    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    type="SUCCESS"
-  />
-);
+export const Alert = () => <Toast id={uuid()} type="ALERT" {...TXT} />;
 
-export const Alert = () => (
-  <Toast
-    id="12"
-    title="Alert toast"
-    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    type="ALERT"
-  />
-);
+export const Error = () => <Toast id={uuid()} type="ERROR" {...TXT} />;
 
-export const Error = () => (
-  <Toast
-    id="13"
-    title="Error toast"
-    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    type="ERROR"
-  />
-);
+export const Notification = () => <Toast id={uuid()} {...TXT} />;
+
+export const NoIcon = () => <Toast id={uuid()} type="ERROR" noIcon {...TXT} />;
 
 export const TitleOnly = () => (
-  <Toast id="14" title="Notification title only" />
-);
-
-export const NoIcon = () => (
-  <Toast
-    id="15"
-    title="Notification no icon"
-    description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    noIcon
-  />
+  <Toast id={uuid()} title={TXT.title} type="SUCCESS" />
 );
