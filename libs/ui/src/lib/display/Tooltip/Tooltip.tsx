@@ -6,7 +6,7 @@ import { Text } from '../Text';
 import * as S from './Tooltip.style';
 
 type TooltipProps = {
-  content: string;
+  content: string | React.ReactNode | React.ReactNode[];
   children: React.ReactElement;
 };
 
