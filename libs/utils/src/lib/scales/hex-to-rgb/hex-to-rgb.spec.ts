@@ -2,6 +2,9 @@ import { hexToRgb } from './hex-to-rgb';
 
 describe(' PxToRem', () => {
   it('should be convert hex in rgb', () => {
-    expect(hexToRgb('#222299')).toBe({ r: 34, g: 34, b: 153 });
+    const color = hexToRgb('#222299');
+    expect(color.r).toBe(34);
+    expect(color.g).toBe(34);
+    expect(color.b).toBe(153);
   });
 });
