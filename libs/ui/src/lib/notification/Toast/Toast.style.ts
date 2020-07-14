@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 import { Text } from '../../display/Text';
@@ -69,17 +69,35 @@ const toastTypes = {
 };
 
 export const ToastContainer = styled.div`
+  overflow: hidden;
   padding: 16px;
   position: absolute;
   right: 0;
   top: 0;
+
+  & > div {
+    margin-bottom: 10px;
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0.2;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 `;
 
 export const Toast = styled.div`
   align-items: stretch;
+  animation: ${slideIn} 0.3s ease;
   border-radius: 4px;
   box-shadow: 0px 4px 4px
-    ${({ theme }: ToastType) => theme.colors.neutral.lightest};
+    ${({ theme }: ToastType) => theme?.colors?.neutral?.lightest};
   box-sizing: border-box;
   display: flex;
   max-width: 312px;
@@ -90,10 +108,6 @@ export const Toast = styled.div`
   /* stylelint-disable-next-line */
   ${({ type }: ToastType) =>
     (type && toastTypes[type]) || toastTypes.NOTIFICATION}
-
-  & + div {
-    margin-top: 10px;
-  }
 `;
 
 export const IconContainer = styled.div`
