@@ -27,8 +27,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Npm Install
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
+        # if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm i
 
   # sonarcloud:
   #     name: Sonar Scan
