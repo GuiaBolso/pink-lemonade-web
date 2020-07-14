@@ -56,7 +56,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "styled-components": "5.1.1",
-    "uuidv4": "^6.1.1",
+    "uniqid": "^5.2.0",
     "vanilla-masker": "^1.2.0"
   },
   "devDependencies": {
@@ -93,7 +93,6 @@
     "@types/react-dom": "16.9.8",
     "@types/react-test-renderer": "^16.9.2",
     "@types/styled-components": "5.1.1",
-    "@types/uuid": "^8.0.0",
     "@types/vanilla-masker": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "3.6.0",
     "@typescript-eslint/parser": "3.6.0",

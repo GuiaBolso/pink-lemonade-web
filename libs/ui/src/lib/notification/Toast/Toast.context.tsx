@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
-import { uuid } from 'uuidv4';
+import uniqid from 'uniqid';
 
 // eslint-disable-next-line import/no-cycle
 import ToastContainer from './Toast.container';
@@ -33,7 +33,7 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
       autoClose = true,
       timeToClose = 4000,
     }: Omit<ToastMessageProps, 'id'>) => {
-      const id = uuid();
+      const id = uniqid();
 
       const newToast = {
         id,
