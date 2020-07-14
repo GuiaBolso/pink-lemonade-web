@@ -10,7 +10,10 @@ type ModalStyleProps = {
   opened?: boolean;
 };
 
-const SPACING_ELEMENT = 24;
+enum ModalConsts {
+  spacingBetweenElements = 24,
+  zIndex = 9999,
+}
 
 export const Backdrop = styled.div`
   align-items: center;
@@ -28,7 +31,7 @@ export const Backdrop = styled.div`
   top: 0;
   transition: opacity 0.3s ease;
   width: 100vw;
-  z-index: 9999;
+  z-index: ${ModalConsts.zIndex};
 `;
 
 export const Container = styled.section`
@@ -45,7 +48,7 @@ export const Container = styled.section`
   min-height: ${pxToRem(300)};
   opacity: ${({ fade }: ModalStyleProps) => (fade ? 1 : 0)};
   overflow: auto;
-  padding: ${pxToRem(SPACING_ELEMENT)};
+  padding: ${pxToRem(ModalConsts.spacingBetweenElements)};
   position: relative;
   transition: opacity 0.3s ease;
   width: 100%;
@@ -53,7 +56,7 @@ export const Container = styled.section`
 
 export const Header = styled.header`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darkest};
-  margin-bottom: ${pxToRem(SPACING_ELEMENT)};
+  margin-bottom: ${pxToRem(ModalConsts.spacingBetweenElements)};
 `;
 
 export const Containt = styled.article`
@@ -65,9 +68,9 @@ export const Footer = styled.footer`
   color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
   display: grid;
   grid-auto-flow: column;
-  grid-gap: ${pxToRem(SPACING_ELEMENT)};
+  grid-gap: ${pxToRem(ModalConsts.spacingBetweenElements)};
   justify-content: end;
-  margin-top: ${pxToRem(SPACING_ELEMENT)};
+  margin-top: ${pxToRem(ModalConsts.spacingBetweenElements)};
 `;
 
 export const Close = styled(MuiClose)`
