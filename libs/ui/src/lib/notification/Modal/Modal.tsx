@@ -36,7 +36,7 @@ const Modal = ({
       removeModal?.(id);
       setIsOpened(false);
     }, DELAY_TO_FADE_OUT);
-  }, []);
+  }, [id, removeModal]);
 
   const backdropClicked = useCallback(
     (e: React.MouseEvent) => {
@@ -60,43 +60,29 @@ const Modal = ({
         {type !== 'blank' && (
           <S.Footer>
             {type === 'dialog' && (
-              <>
-                <Button
-                  scale="narrow"
-                  appearance="tertiary"
-                  onClick={() => {
-                    dismiss?.handler?.();
-                    closeModal();
-                  }}
-                >
-                  {dismiss?.label || 'Cancelar'}
-                </Button>
-                <Button
-                  scale="narrow"
-                  onClick={() => {
-                    confirm?.handler?.();
-                    removeModal?.(id);
-                    setFade(false);
-                  }}
-                >
-                  {confirm?.label || 'Confirmar'}
-                </Button>
-              </>
-            )}
-
-            {type === 'alert' && (
               <Button
                 scale="narrow"
                 appearance="tertiary"
                 onClick={() => {
-                  confirm?.handler?.();
-                  removeModal?.(id);
-                  setFade(false);
+                  dismiss?.handler?.();
+                  closeModal();
                 }}
               >
-                {confirm?.label || 'Confirmar'}
+                {dismiss?.label || 'Cancelar'}
               </Button>
             )}
+
+            <Button
+              scale="narrow"
+              appearance={type === 'alert' ? 'tertiary' : 'primary'}
+              onClick={() => {
+                confirm?.handler?.();
+                removeModal?.(id);
+                setFade(false);
+              }}
+            >
+              {confirm?.label || 'Confirmar'}
+            </Button>
           </S.Footer>
         )}
       </S.Container>
