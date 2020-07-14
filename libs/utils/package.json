@@ -1,1 +1,20 @@
-{"name":"@guiabolsobr/utils","version":"0.1.0","author":"Guiabolso <frontmonstrao@guiabolso.com.br>","publishConfig":{"access":"public"},"peerDependencies":{"react":"*"},"bugs":{"url":"https://github.com/gbprojectbr/pink-lemonade-web/issues"},"keywords":["utils"],"dependencies":{},"devDependencies":{},"optionalDependencies":{}}
+{
+  "name": "@guiabolsobr/utils",
+  "version": "0.1.0",
+  "author": "Guiabolso <frontmonstrao@guiabolso.com.br>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/gbprojectbr/pink-lemonade-web/issues"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
