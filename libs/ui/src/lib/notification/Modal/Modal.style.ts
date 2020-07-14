@@ -28,6 +28,7 @@ export const Backdrop = styled.div`
   top: 0;
   transition: opacity 0.3s ease;
   width: 100vw;
+  z-index: 9999;
 `;
 
 export const Container = styled.section`
