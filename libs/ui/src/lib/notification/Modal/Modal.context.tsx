@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
-import { uuid } from 'uuidv4';
+import uniqid from 'uniqid';
 
 import {
   ModalContextProps,
@@ -18,7 +18,7 @@ const ModalProvider = ({ children }: ModalProviderProps) => {
   const [modals, setModals] = useState([]);
 
   const handleModal = useCallback(
-    ({ id = uuid(), content, ...rest }: HandleModalProps) => {
+    ({ id = uniqid(), content, ...rest }: HandleModalProps) => {
       const modal: ModalProps = {
         ...rest,
         id,
