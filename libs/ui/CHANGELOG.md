@@ -1,3 +1,13 @@
+### @guiabolsobr/ui [1.2.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.1...@guiabolsobr/ui@1.2.2) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 add react to peerDependence ([0852ac6](https://github.com/GuiaBolso/pink-lemonade-web/commit/0852ac6c0e08b7c2ac0a83e28a301c4b226b8a18))
+* 🐛 peerDependence ([88c0a72](https://github.com/GuiaBolso/pink-lemonade-web/commit/88c0a7212f5dd1fcf0a55a7bbccfe9e594128837))
+* conflict ([604f751](https://github.com/GuiaBolso/pink-lemonade-web/commit/604f751fe5391e26666f79743fe803bdb1e64f4f))
+* peerDependence ([fa1b43b](https://github.com/GuiaBolso/pink-lemonade-web/commit/fa1b43bfee0d613723c1babab1133647a4455ae4))
+
 ### @guiabolsobr/ui [1.2.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.0...@guiabolsobr/ui@1.2.1) (2020-07-15)
 
 ### Bug Fixes
