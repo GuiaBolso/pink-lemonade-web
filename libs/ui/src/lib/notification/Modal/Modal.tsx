@@ -40,7 +40,7 @@ const Modal = ({
 
   const backdropClicked = useCallback(
     (e: React.MouseEvent) => {
-      if (disableBackdropClick && e.target === e.currentTarget) {
+      if (!disableBackdropClick && e.target === e.currentTarget) {
         closeModal();
       }
     },
@@ -77,8 +77,7 @@ const Modal = ({
               appearance={type === 'alert' ? 'tertiary' : 'primary'}
               onClick={() => {
                 confirm?.handler?.();
-                removeModal?.(id);
-                setFade(false);
+                closeModal();
               }}
             >
               {confirm?.label || 'Confirmar'}
