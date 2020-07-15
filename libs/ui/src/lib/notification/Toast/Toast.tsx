@@ -33,7 +33,7 @@ const Toast = ({
   }, [autoClose, removeToast, id, timeToClose]);
 
   return (
-    <S.Toast className="gb-toast__toast" key={id} {...(type && { type })}>
+    <S.Toast key={id} {...(type && { type })} className="gb-toast__toast">
       {!noIcon && (
         <S.IconContainer>
           <Icon type={type} />
