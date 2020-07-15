@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [1.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.4...@guiabolsobr/ui@1.3.0) (2020-07-15)
+
+
+### Features
+
+* 🎸 css class to cutomize ([2ab018e](https://github.com/GuiaBolso/pink-lemonade-web/commit/2ab018e21763c78a2e4e7078421b57c8f3b6b614))
+
 ### @guiabolsobr/ui [1.2.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.3...@guiabolsobr/ui@1.2.4) (2020-07-15)
 
 
