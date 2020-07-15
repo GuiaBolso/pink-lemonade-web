@@ -20,6 +20,7 @@ jobs:
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
+        id: npm-cache
         with:
           # npm cache files are stored in `~/.npm` on Linux/macOS
           path: |-
@@ -32,6 +33,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Install Dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm install
 
   # sonarcloud:
