@@ -48,8 +48,13 @@ const Modal = ({
   );
 
   return (
-    <S.Backdrop fade={fade} onClick={backdropClicked} opened={isOpened}>
-      <S.Container fade={fade} id={id}>
+    <S.Backdrop
+      className="gb-modal"
+      fade={fade}
+      onClick={backdropClicked}
+      opened={isOpened}
+    >
+      <S.Container className="gb-modal__container" fade={fade} id={id}>
         <S.Header>
           <Text variant="heading-05" component="h5">
             {title}
