@@ -1,3 +1,16 @@
+## @guiabolsobr/utils [1.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.0.0...@guiabolsobr/utils@1.1.0) (2020-07-15)
+
+
+### Features
+
+* 🎸 create modal component and hook ([dae2aaf](https://github.com/GuiaBolso/pink-lemonade-web/commit/dae2aafb3c620ce64d998264fa07182647785b0c))
+* 🎸 hex to rgb ([b155996](https://github.com/GuiaBolso/pink-lemonade-web/commit/b155996e915c6299b485dd762bc53781b3051109))
+
+
+### Bug Fixes
+
+* 🐛 pull request changes ([a206b9b](https://github.com/GuiaBolso/pink-lemonade-web/commit/a206b9b4e1e3871eed8bf0daf9f47afe48809d93))
+
 ## @guiabolsobr/utils 1.0.0 (2020-07-09)
 
 ### Features
