@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
-import uniqid from 'uniqid';
+import { createId } from '@guiabolsobr/utils';
 
 import {
   ModalContextProps,
@@ -18,7 +18,7 @@ const ModalProvider = ({ children }: ModalProviderProps) => {
   const [modals, setModals] = useState([]);
 
   const handleModal = useCallback(
-    ({ id = uniqid(), content, ...rest }: HandleModalProps) => {
+    ({ id = createId('modal'), content, ...rest }: HandleModalProps) => {
       const modal: ModalProps = {
         ...rest,
         id,

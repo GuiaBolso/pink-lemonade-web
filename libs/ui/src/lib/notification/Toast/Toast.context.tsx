@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useCallback, useState } from 'react';
-import uniqid from 'uniqid';
+import { createId } from '@guiabolsobr/utils';
 
 // eslint-disable-next-line import/no-cycle
 import ToastContainer from './Toast.container';
@@ -33,7 +33,7 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
       autoClose = true,
       timeToClose = 4000,
     }: Omit<ToastMessageProps, 'id'>) => {
-      const id = uniqid();
+      const id = createId('toast');
 
       const newToast = {
         id,

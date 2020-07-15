@@ -1,5 +1,5 @@
 import React from 'react';
-import uniqid from 'uniqid';
+import { createId } from '@guiabolsobr/utils';
 
 import { Button } from '../../forms/Button';
 import { ToastProvider, useToast } from './Toast.context';
@@ -85,18 +85,18 @@ const ActionButtonsToast = () => {
 
 export const ActionToast = () => <ActionButtonsToast />;
 
-export const Success = () => <Toast id={uniqid()} type="SUCCESS" {...TXT} />;
+export const Success = () => <Toast id={createId()} type="SUCCESS" {...TXT} />;
 
-export const Alert = () => <Toast id={uniqid()} type="ALERT" {...TXT} />;
+export const Alert = () => <Toast id={createId()} type="ALERT" {...TXT} />;
 
-export const Error = () => <Toast id={uniqid()} type="ERROR" {...TXT} />;
+export const Error = () => <Toast id={createId()} type="ERROR" {...TXT} />;
 
-export const Notification = () => <Toast id={uniqid()} {...TXT} />;
+export const Notification = () => <Toast id={createId()} {...TXT} />;
 
 export const NoIcon = () => (
-  <Toast id={uniqid()} type="ERROR" noIcon {...TXT} />
+  <Toast id={createId()} type="ERROR" noIcon {...TXT} />
 );
 
 export const TitleOnly = () => (
-  <Toast id={uniqid()} title={TXT.title} type="SUCCESS" />
+  <Toast id={createId()} title={TXT.title} type="SUCCESS" />
 );
