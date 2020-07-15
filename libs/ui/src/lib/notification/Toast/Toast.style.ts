@@ -105,13 +105,13 @@ export const Toast = styled.div`
   position: relative;
   width: 100%;
 
-  /* stylelint-disable-next-line */
-  ${({ type }: ToastType) =>
-    (type && toastTypes[type]) || toastTypes.NOTIFICATION}
-
   @media all and (min-width: 640px) {
     max-width: 312px;
   }
+
+  /* stylelint-disable-next-line */
+  ${({ type }: ToastType) =>
+    (type && toastTypes[type]) || toastTypes.NOTIFICATION}
 `;
 
 export const IconContainer = styled.div`
