@@ -24,10 +24,18 @@ const Modal = ({
   const DELAY_TO_FADE_OUT = 300;
 
   useEffect(() => {
-    setIsOpened(true);
-    setTimeout(() => {
-      setFade(true);
-    }, DELAY_TO_FADE_IN);
+    let isSubscribed = true;
+
+    if (isSubscribed) {
+      setIsOpened(true);
+      setTimeout(() => {
+        setFade(true);
+      }, DELAY_TO_FADE_IN);
+    }
+
+    return () => {
+      isSubscribed = false;
+    };
   }, []);
 
   const closeModal = useCallback(() => {
