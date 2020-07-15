@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.1.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.1.2...@guiabolsobr/utils@1.1.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 remove props bolean from dom ([9d5d915](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d5d915e3c9255941e21557cca756b30f88440d7))
+
 ### @guiabolsobr/utils [1.1.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.1.1...@guiabolsobr/utils@1.1.2) (2020-07-15)
 
 
