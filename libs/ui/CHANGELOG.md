@@ -1,3 +1,11 @@
+### @guiabolsobr/ui [1.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.0...@guiabolsobr/ui@1.3.1) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 mobile improvements ([7de2df1](https://github.com/GuiaBolso/pink-lemonade-web/commit/7de2df19a16996ab885f642cd362d2bf5f1922da))
+* mobile min-width responsive rule ([721e7d5](https://github.com/GuiaBolso/pink-lemonade-web/commit/721e7d5a8569c53d082999d2e2ee015883fc0fb9))
+
 ## @guiabolsobr/ui [1.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.4...@guiabolsobr/ui@1.3.0) (2020-07-15)
 
 
