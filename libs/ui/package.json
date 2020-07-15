@@ -5,6 +5,8 @@
     "email": "tooling-dev@guiabolso.com.br"
   },
   "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
     "@material-ui/core": "*",
     "@material-ui/icons": "*"
   },
