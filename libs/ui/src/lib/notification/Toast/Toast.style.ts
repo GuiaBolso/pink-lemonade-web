@@ -101,7 +101,6 @@ export const Toast = styled.div`
     ${({ theme }: ToastType) => theme?.colors?.neutral?.lightest};
   box-sizing: border-box;
   display: flex;
-  max-width: 312px;
   padding: 16px;
   position: relative;
   width: 100%;
@@ -110,8 +109,8 @@ export const Toast = styled.div`
   ${({ type }: ToastType) =>
     (type && toastTypes[type]) || toastTypes.NOTIFICATION}
 
-  @media all and (max-width: 360px) {
-    max-width: 100%;
+  @media all and (min-width: 640px) {
+    max-width: 312px;
   }
 `;
 
