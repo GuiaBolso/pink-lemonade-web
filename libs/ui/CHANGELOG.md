@@ -1,3 +1,17 @@
+### @guiabolsobr/ui [1.2.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.3...@guiabolsobr/ui@1.2.4) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 cancel subscribe ([8f86c6e](https://github.com/GuiaBolso/pink-lemonade-web/commit/8f86c6e745bd02645d9183974708340bc07aa047))
+
+### @guiabolsobr/ui [1.2.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.2...@guiabolsobr/ui@1.2.3) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 remove props bolean from dom ([9d5d915](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d5d915e3c9255941e21557cca756b30f88440d7))
+
 ### @guiabolsobr/ui [1.2.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.1...@guiabolsobr/ui@1.2.2) (2020-07-15)
 
 

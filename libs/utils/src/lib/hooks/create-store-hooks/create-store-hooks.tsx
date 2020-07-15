@@ -21,7 +21,7 @@ type Selectors<State, S extends Selector<State, S>> = Selector<
 >;
 
 // eslint-disable-next-line no-console
-console.log('console mais descritivo');
+// console.log('console mais descritivo');
 export interface CreateUseContext<
   State,
   A extends Actions<State, A>,

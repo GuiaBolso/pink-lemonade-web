@@ -24,10 +24,18 @@ const Modal = ({
   const DELAY_TO_FADE_OUT = 300;
 
   useEffect(() => {
-    setIsOpened(true);
-    setTimeout(() => {
-      setFade(true);
-    }, DELAY_TO_FADE_IN);
+    let isSubscribed = true;
+
+    if (isSubscribed) {
+      setIsOpened(true);
+      setTimeout(() => {
+        setFade(true);
+      }, DELAY_TO_FADE_IN);
+    }
+
+    return () => {
+      isSubscribed = false;
+    };
   }, []);
 
   const closeModal = useCallback(() => {
@@ -40,7 +48,7 @@ const Modal = ({
 
   const backdropClicked = useCallback(
     (e: React.MouseEvent) => {
-      if (disableBackdropClick && e.target === e.currentTarget) {
+      if (!disableBackdropClick && e.target === e.currentTarget) {
         closeModal();
       }
     },
@@ -82,8 +90,7 @@ const Modal = ({
               appearance={type === 'alert' ? 'tertiary' : 'primary'}
               onClick={() => {
                 confirm?.handler?.();
-                removeModal?.(id);
-                setFade(false);
+                closeModal();
               }}
             >
               {confirm?.label || 'Confirmar'}

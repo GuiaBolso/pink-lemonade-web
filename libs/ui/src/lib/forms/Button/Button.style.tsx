@@ -14,9 +14,15 @@ type ButtonStyledProps = {
   narrow: boolean | undefined;
 } & ButtonColorProps;
 
-const ProxyMuiButton = ({ customColor: _, ...rest }: ButtonColorProps) => (
-  <MuiButton {...rest} />
-);
+type ProxyButtonProps = ButtonColorProps & {
+  narrow?: boolean | undefined;
+};
+
+const ProxyMuiButton = ({
+  customColor: _,
+  narrow: __,
+  ...rest
+}: ProxyButtonProps) => <MuiButton {...rest} />;
 
 export const Button = styled(ProxyMuiButton)`
   ${({ theme, narrow, customColor }: ButtonStyledProps) => {
