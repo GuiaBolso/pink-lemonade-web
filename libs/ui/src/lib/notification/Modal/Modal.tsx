@@ -62,7 +62,7 @@ const Modal = ({
       onClick={backdropClicked}
       opened={isOpened}
     >
-      <S.Container fade={fade} id={id} className="gb-modal__container">
+      <S.Container className="gb-modal__container" fade={fade} id={id}>
         <S.Header>
           <Text variant="heading-05" component="h5">
             {title}
