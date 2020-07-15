@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.1.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.1.0...@guiabolsobr/utils@1.1.1) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 remove package version ([598d8f3](https://github.com/GuiaBolso/pink-lemonade-web/commit/598d8f307cdec73894d066c9d30db1dbed2b3941))
+
 ## @guiabolsobr/utils [1.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.0.0...@guiabolsobr/utils@1.1.0) (2020-07-15)
 
 ### Features
