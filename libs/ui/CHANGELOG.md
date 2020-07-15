@@ -1,9 +1,8 @@
 ### @guiabolsobr/ui [1.2.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.0...@guiabolsobr/ui@1.2.1) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 remove package version ([598d8f3](https://github.com/GuiaBolso/pink-lemonade-web/commit/598d8f307cdec73894d066c9d30db1dbed2b3941))
+- 🐛 remove package version ([598d8f3](https://github.com/GuiaBolso/pink-lemonade-web/commit/598d8f307cdec73894d066c9d30db1dbed2b3941))
 
 ## @guiabolsobr/ui [1.2.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.1.0...@guiabolsobr/ui@1.2.0) (2020-07-15)
 
