@@ -74,6 +74,7 @@ export const ToastContainer = styled.div`
   position: absolute;
   right: 0;
   top: 0;
+  z-index: 100;
 
   & > div {
     margin-bottom: 10px;
@@ -108,6 +109,10 @@ export const Toast = styled.div`
   /* stylelint-disable-next-line */
   ${({ type }: ToastType) =>
     (type && toastTypes[type]) || toastTypes.NOTIFICATION}
+
+  @media all and (max-width: 360px) {
+    max-width: 100%;
+  }
 `;
 
 export const IconContainer = styled.div`

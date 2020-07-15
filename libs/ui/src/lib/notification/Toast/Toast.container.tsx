@@ -9,7 +9,7 @@ import * as S from './Toast.style';
 
 const ToastContainer = ({ messages }: ToastContainerProps) => {
   return (
-    <S.ToastContainer>
+    <S.ToastContainer className="gb-toast__container">
       {messages.map(message => (
         <Toast key={message.id} {...message} />
       ))}
