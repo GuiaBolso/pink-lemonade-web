@@ -8,3 +8,4 @@ export * from './lib/scales/px-to-rem/px-to-rem';
 export * from './lib/scales/hex-to-rgb/hex-to-rgb';
 
 export * from './lib/copy-to-clipboard/copy-to-clipboard';
+export * from './lib/create-id/create-id';
