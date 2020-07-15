@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.3.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.1...@guiabolsobr/ui@1.3.2) (2020-07-15)
+
+
+### Bug Fixes
+
+* 🐛 remove modal from portal ([63300fe](https://github.com/GuiaBolso/pink-lemonade-web/commit/63300fe2bc4d497ca07ce2d8dcfa04553e68fcaa))
+
 ### @guiabolsobr/ui [1.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.0...@guiabolsobr/ui@1.3.1) (2020-07-15)
 
 
