@@ -2,7 +2,7 @@ name: Pull Request on master
 
 on:
   pull_request:
-    paths: 'libs/**'
+    paths: "libs/**"
     branches:
       - master
     types: [opened, reopened, synchronize]
@@ -16,19 +16,25 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - uses: actions/cache@v2
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         id: npm-cache
         with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: |-
             ~/.npm
             node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
-      - name: Npm Install
+      - name: Install Dependencies
         if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
+        run: npm install
 
   # sonarcloud:
   #     name: Sonar Scan
@@ -53,22 +59,20 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - run: git fetch --no-tags --prune --depth=5 origin master
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-
-      - name: Restore dependencies from cache
+      - name: Restore cache node modules
         uses: actions/cache@v2
-        id: npm-cache
+        env:
+          cache-name: cache-node-modules
         with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: |-
             ~/.npm
             node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Run builders
         run: npm run nx affected:build -- --base=origin/master --head=${{ github.event.pull_request.head.ref }} --prod --with-deps
@@ -89,15 +93,20 @@ jobs:
         with:
           node-version: 12
 
-      - name: Restore dependencies from cache
+      - name: Restore cache node modules
         uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: |-
             ~/.npm
             node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Run linting
         run: npm run affected:lint -- --base=origin/master --head=${{ github.event.pull_request.head.ref }}
@@ -118,15 +127,20 @@ jobs:
         with:
           node-version: 12
 
-      - name: Restore dependencies from cache
+      - name: Restore cache node modules
         uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: |-
             ~/.npm
             node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-node-
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: Run tests
         run: npm run affected:test -- --base=origin/master --head=${{ github.event.pull_request.head.ref }}
