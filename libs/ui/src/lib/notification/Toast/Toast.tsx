@@ -21,6 +21,7 @@ const Toast = ({
   const { removeToast } = useToast();
 
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
     if (!autoClose) return () => {};
 
     const toastTime = setTimeout(() => {

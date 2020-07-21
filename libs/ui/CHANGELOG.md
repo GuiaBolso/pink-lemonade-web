@@ -1,48 +1,42 @@
 ### @guiabolsobr/ui [1.3.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.1...@guiabolsobr/ui@1.3.2) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 remove modal from portal ([63300fe](https://github.com/GuiaBolso/pink-lemonade-web/commit/63300fe2bc4d497ca07ce2d8dcfa04553e68fcaa))
+- 🐛 remove modal from portal ([63300fe](https://github.com/GuiaBolso/pink-lemonade-web/commit/63300fe2bc4d497ca07ce2d8dcfa04553e68fcaa))
 
 ### @guiabolsobr/ui [1.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.0...@guiabolsobr/ui@1.3.1) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 mobile improvements ([7de2df1](https://github.com/GuiaBolso/pink-lemonade-web/commit/7de2df19a16996ab885f642cd362d2bf5f1922da))
-* mobile min-width responsive rule ([721e7d5](https://github.com/GuiaBolso/pink-lemonade-web/commit/721e7d5a8569c53d082999d2e2ee015883fc0fb9))
+- 🐛 mobile improvements ([7de2df1](https://github.com/GuiaBolso/pink-lemonade-web/commit/7de2df19a16996ab885f642cd362d2bf5f1922da))
+- mobile min-width responsive rule ([721e7d5](https://github.com/GuiaBolso/pink-lemonade-web/commit/721e7d5a8569c53d082999d2e2ee015883fc0fb9))
 
 ## @guiabolsobr/ui [1.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.4...@guiabolsobr/ui@1.3.0) (2020-07-15)
 
-
 ### Features
 
-* 🎸 css class to cutomize ([2ab018e](https://github.com/GuiaBolso/pink-lemonade-web/commit/2ab018e21763c78a2e4e7078421b57c8f3b6b614))
+- 🎸 css class to cutomize ([2ab018e](https://github.com/GuiaBolso/pink-lemonade-web/commit/2ab018e21763c78a2e4e7078421b57c8f3b6b614))
 
 ### @guiabolsobr/ui [1.2.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.3...@guiabolsobr/ui@1.2.4) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 cancel subscribe ([8f86c6e](https://github.com/GuiaBolso/pink-lemonade-web/commit/8f86c6e745bd02645d9183974708340bc07aa047))
+- 🐛 cancel subscribe ([8f86c6e](https://github.com/GuiaBolso/pink-lemonade-web/commit/8f86c6e745bd02645d9183974708340bc07aa047))
 
 ### @guiabolsobr/ui [1.2.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.2...@guiabolsobr/ui@1.2.3) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 remove props bolean from dom ([9d5d915](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d5d915e3c9255941e21557cca756b30f88440d7))
+- 🐛 remove props bolean from dom ([9d5d915](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d5d915e3c9255941e21557cca756b30f88440d7))
 
 ### @guiabolsobr/ui [1.2.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.1...@guiabolsobr/ui@1.2.2) (2020-07-15)
 
-
 ### Bug Fixes
 
-* 🐛 add react to peerDependence ([0852ac6](https://github.com/GuiaBolso/pink-lemonade-web/commit/0852ac6c0e08b7c2ac0a83e28a301c4b226b8a18))
-* 🐛 peerDependence ([88c0a72](https://github.com/GuiaBolso/pink-lemonade-web/commit/88c0a7212f5dd1fcf0a55a7bbccfe9e594128837))
-* conflict ([604f751](https://github.com/GuiaBolso/pink-lemonade-web/commit/604f751fe5391e26666f79743fe803bdb1e64f4f))
-* peerDependence ([fa1b43b](https://github.com/GuiaBolso/pink-lemonade-web/commit/fa1b43bfee0d613723c1babab1133647a4455ae4))
+- 🐛 add react to peerDependence ([0852ac6](https://github.com/GuiaBolso/pink-lemonade-web/commit/0852ac6c0e08b7c2ac0a83e28a301c4b226b8a18))
+- 🐛 peerDependence ([88c0a72](https://github.com/GuiaBolso/pink-lemonade-web/commit/88c0a7212f5dd1fcf0a55a7bbccfe9e594128837))
+- conflict ([604f751](https://github.com/GuiaBolso/pink-lemonade-web/commit/604f751fe5391e26666f79743fe803bdb1e64f4f))
+- peerDependence ([fa1b43b](https://github.com/GuiaBolso/pink-lemonade-web/commit/fa1b43bfee0d613723c1babab1133647a4455ae4))
 
 ### @guiabolsobr/ui [1.2.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.2.0...@guiabolsobr/ui@1.2.1) (2020-07-15)
 
