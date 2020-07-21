@@ -2,7 +2,6 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const rootWebpackConfig = require('../../../.storybook/webpack.config');
 const path = require('path');
 
-// Export a function. Accept the base config as the only param.
 module.exports = async ({ config, mode }) => {
   const tsPaths = new TsconfigPathsPlugin();
 
@@ -21,7 +20,13 @@ module.exports = async ({ config, mode }) => {
       ],
     },
   });
-  config.module.rules.push({
+
+  /**
+   * TODO: Enable when plugin fix: https://github.com/strothj/react-docgen-typescript-loader/issues/107
+   *
+   */
+
+  /* config.module.rules.push({
     test: /\.tsx?$/,
     include: path.resolve(__dirname, '../src'),
     use: [
@@ -35,7 +40,7 @@ module.exports = async ({ config, mode }) => {
         },
       },
     ],
-  });
+  }); */
 
   config.resolve.plugins
     ? config.resolve.plugins.push(tsPaths)
