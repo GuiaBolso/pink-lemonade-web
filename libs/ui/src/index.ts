@@ -20,3 +20,4 @@ export * from './lib/notification/Modal';
 
 export { default as themeGuiaBolso } from './designSystem/tokens/guiaBolso';
 export { default as themeConnect } from './designSystem/tokens/connect';
+export { CustomThemeProps as themeProps } from './typings/CustomThemeProps';
