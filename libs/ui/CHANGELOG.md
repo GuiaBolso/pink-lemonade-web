@@ -1,9 +1,8 @@
 ### @guiabolsobr/ui [1.3.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.2...@guiabolsobr/ui@1.3.3) (2020-07-21)
 
-
 ### Bug Fixes
 
-* 🐛 docgen error ([1c2c0e6](https://github.com/GuiaBolso/pink-lemonade-web/commit/1c2c0e612464c08ebbd07fd78b3643120681edab))
+- 🐛 docgen error ([1c2c0e6](https://github.com/GuiaBolso/pink-lemonade-web/commit/1c2c0e612464c08ebbd07fd78b3643120681edab))
 
 ### @guiabolsobr/ui [1.3.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.1...@guiabolsobr/ui@1.3.2) (2020-07-15)
 
