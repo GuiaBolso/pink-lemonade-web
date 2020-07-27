@@ -37,8 +37,8 @@ const tokens = {
 
     fontWeight: {
       bold: 'bold',
-      semibold: 'semibold',
-      regular: 'regular',
+      semibold: 600,
+      regular: 'normal',
     },
   },
 
