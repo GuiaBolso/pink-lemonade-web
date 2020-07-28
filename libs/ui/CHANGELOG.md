@@ -1,10 +1,9 @@
 ## @guiabolsobr/ui [1.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.3...@guiabolsobr/ui@1.4.0) (2020-07-24)
 
-
 ### Features
 
-* 🎸 progress bar component ([ae05c40](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae05c40092f6036a991d35ea17e1f9e8c5c0a1cc))
-* 🎸 progressBar ([203b56f](https://github.com/GuiaBolso/pink-lemonade-web/commit/203b56f91ba64c246cdcac20e1ca8728fe0fc403))
+- 🎸 progress bar component ([ae05c40](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae05c40092f6036a991d35ea17e1f9e8c5c0a1cc))
+- 🎸 progressBar ([203b56f](https://github.com/GuiaBolso/pink-lemonade-web/commit/203b56f91ba64c246cdcac20e1ca8728fe0fc403))
 
 ### @guiabolsobr/ui [1.3.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.2...@guiabolsobr/ui@1.3.3) (2020-07-21)
 
