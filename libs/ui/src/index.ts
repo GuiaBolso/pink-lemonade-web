@@ -13,6 +13,7 @@ export * from './lib/general/Theme';
 export * from './lib/navigation/Accordion';
 export * from './lib/navigation/Steps';
 export * from './lib/navigation/Arrow';
+export * from './lib/navigation/DropMenu';
 
 export * from './lib/notification/infoPanel';
 export * from './lib/notification/Toast';
