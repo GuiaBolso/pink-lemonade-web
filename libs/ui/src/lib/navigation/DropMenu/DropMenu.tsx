@@ -1,20 +1,28 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 import * as S from './DropMenu.style';
 
-const DropMenu: React.FC = () => {
-  const handleMenu = () => {
-    console.log('Fechar o menu');
-  };
+type DropMenuItemProps = {
+  children: React.ReactNode;
+  onClick?: () => void;
+};
 
+type DropMenuProps = {
+  children: React.ReactNode;
+  executeOnClose: () => void;
+};
+
+const DropMenuItem = ({ children, onClick }: DropMenuItemProps) => (
+  <S.MenuItem onClick={onClick}>{children}</S.MenuItem>
+);
+
+const DropMenu = ({ children, executeOnClose }: DropMenuProps) => {
   return (
     <>
-      <S.Menu>
-        <S.MenuItem>Lorem</S.MenuItem>
-      </S.Menu>
-      <S.MenuMask onClick={handleMenu} />
+      <S.Menu>{children}</S.Menu>
+      <S.MenuMask onClick={executeOnClose} />
     </>
   );
 };
 
-export default memo(DropMenu);
+export { DropMenu, DropMenuItem };

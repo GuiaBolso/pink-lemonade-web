@@ -22,10 +22,9 @@ export const ActionButton = styled.div`
   width: 32px;
 `;
 
-export const MenuIcon = styled(DropMenuIcon)`
+export const MenuIcon = styled(DropMenuIcon)<DropMenuProps>`
   path {
-    fill: ${({ theme }: DropMenuProps) =>
-      theme?.colors?.brand?.tertiary?.default};
+    fill: ${({ theme }) => theme?.colors?.brand?.tertiary?.default};
   }
 `;
 
@@ -42,10 +41,15 @@ export const Menu = styled.ul`
   z-index: 20;
 `;
 
-export const MenuItem = styled(Text)`
-  color: ${({ theme }: DropMenuProps) => theme?.colors?.neutral?.medium};
+export const MenuItem = styled(Text)<DropMenuProps>`
+  color: ${({ theme }) => theme?.colors?.neutral?.medium};
   font-size: 16px;
   padding: 16px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: ${({ theme }) => theme?.colors?.neutral?.light};
+  }
 `;
 
 MenuItem.defaultProps = {
