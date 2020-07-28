@@ -27,7 +27,9 @@
     "help": "nx help",
     "use-global-gb-web-cli": "npm link",
     "storybook:ui": "nx run ui:storybook",
-    "semantic-release": "nx-semantic-release"
+    "storybook-build:ui": "nx run ui:build-storybook",
+    "semantic-release": "nx-semantic-release",
+    "chromatic": "npx chromatic -d storybook/ui/dist --project-token=txa6ns7itg"
   },
   "private": true,
   "bin": {
@@ -98,6 +100,7 @@
     "@typescript-eslint/eslint-plugin": "3.6.0",
     "@typescript-eslint/parser": "3.6.0",
     "babel-loader": "8.1.0",
+    "chromatic": "^5.0.0",
     "cypress": "^4.10.0",
     "dotenv": "8.2.0",
     "editorconfig": "^0.15.3",

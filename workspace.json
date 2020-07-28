@@ -60,6 +60,7 @@
           "options": {
             "uiFramework": "@storybook/react",
             "outputPath": "storybook/ui/dist",
+            "staticDir": ["libs/ui/src/assets"],
             "config": {
               "configFolder": "libs/ui/.storybook"
             }
