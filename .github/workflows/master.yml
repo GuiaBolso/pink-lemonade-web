@@ -157,7 +157,7 @@ jobs:
 
   publish-storybook:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
-    name: Build & Publish
+    name: Publish Storybook
     runs-on: ubuntu-latest
     needs: [publish]
     steps:
@@ -187,8 +187,8 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Build Storybook
+      - name: Build
         run: npm run storybook-build:ui
 
-      - name: Publish Storybook
+      - name: Publish
         run: npm run chromatic

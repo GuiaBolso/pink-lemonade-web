@@ -29,7 +29,7 @@
     "storybook:ui": "nx run ui:storybook",
     "storybook-build:ui": "nx run ui:build-storybook",
     "semantic-release": "nx-semantic-release",
-    "chromatic": "npx chromatic -d storybook/ui/dist --project-token=txa6ns7itg"
+    "chromatic": "npx chromatic -d storybook/ui/dist --project-token=txa6ns7itg --exit-once-uploaded"
   },
   "private": true,
   "bin": {
