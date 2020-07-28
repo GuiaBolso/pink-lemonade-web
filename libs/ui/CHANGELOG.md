@@ -1,3 +1,20 @@
+## @guiabolsobr/ui [1.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.4.0...@guiabolsobr/ui@1.5.0) (2020-07-28)
+
+### Features
+
+- 🎸 add CardHeader ([a5856bb](https://github.com/GuiaBolso/pink-lemonade-web/commit/a5856bbf9b305c420de861d807535931d5ddc6f7))
+
+### Bug Fixes
+
+- 🐛 remove console ([0f0cb60](https://github.com/GuiaBolso/pink-lemonade-web/commit/0f0cb60fca49f4762ce0ffb8ae14392fd2d4f459))
+
+## @guiabolsobr/ui [1.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.3...@guiabolsobr/ui@1.4.0) (2020-07-24)
+
+### Features
+
+- 🎸 progress bar component ([ae05c40](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae05c40092f6036a991d35ea17e1f9e8c5c0a1cc))
+- 🎸 progressBar ([203b56f](https://github.com/GuiaBolso/pink-lemonade-web/commit/203b56f91ba64c246cdcac20e1ca8728fe0fc403))
+
 ### @guiabolsobr/ui [1.3.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.2...@guiabolsobr/ui@1.3.3) (2020-07-21)
 
 ### Bug Fixes
