@@ -17,10 +17,10 @@ const CardHeader = ({
   suptitle,
   suptitleIcon,
 }: CardHeaderProps) => {
-  console.log(typeof titleIcon);
   const theme = useTheme<themeProps>();
   const SUPTITLE_VARIATION =
     theme.name === 'connect' ? 'overline' : 'overline-small';
+
   return (
     <S.Header hasSuptitle={!!suptitle}>
       {suptitle && (
