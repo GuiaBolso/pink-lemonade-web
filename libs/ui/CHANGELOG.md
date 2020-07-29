@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.6.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.0...@guiabolsobr/ui@1.6.1) (2020-07-29)
+
+
+### Bug Fixes
+
+* 🐛 some types and properties needed ([c0f4064](https://github.com/GuiaBolso/pink-lemonade-web/commit/c0f4064cd72cd3b989edbdc59c03d1e37e8fc6a5))
+
 ## @guiabolsobr/ui [1.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.5.0...@guiabolsobr/ui@1.6.0) (2020-07-29)
 
 
