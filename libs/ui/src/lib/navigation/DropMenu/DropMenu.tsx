@@ -1,25 +1,27 @@
 import React from 'react';
 
+import { Text } from '../../display/Text';
+
 import * as S from './DropMenu.style';
 
-type DropMenuItemProps = {
-  children: React.ReactNode;
-  onClick?: () => void;
-};
+type DropMenuItemProps = React.ComponentProps<'li'>;
 
-type DropMenuProps = {
-  children: React.ReactNode;
+type DropMenuProps = React.ComponentProps<'ul'> & {
   executeOnClose: () => void;
 };
 
-const DropMenuItem = ({ children, onClick }: DropMenuItemProps) => (
-  <S.MenuItem onClick={onClick}>{children}</S.MenuItem>
+const DropMenuItem = ({ children, ...rest }: DropMenuItemProps) => (
+  <S.MenuItem {...rest}>
+    <Text component="div" variant="body-01">
+      {children}
+    </Text>
+  </S.MenuItem>
 );
 
-const DropMenu = ({ children, executeOnClose }: DropMenuProps) => {
+const DropMenu = ({ children, executeOnClose, ...rest }: DropMenuProps) => {
   return (
     <>
-      <S.Menu>{children}</S.Menu>
+      <S.Menu {...rest}>{children}</S.Menu>
       <S.MenuMask onClick={executeOnClose} />
     </>
   );
