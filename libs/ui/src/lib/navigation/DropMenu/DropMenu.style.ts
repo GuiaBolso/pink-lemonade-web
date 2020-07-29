@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 import DropMenuIcon from './DropMenuIcon';
-import { Text } from '../../display/Text';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
@@ -41,9 +40,8 @@ export const Menu = styled.ul`
   z-index: 20;
 `;
 
-export const MenuItem = styled(Text)<DropMenuProps>`
+export const MenuItem = styled.li<DropMenuProps>`
   color: ${({ theme }) => theme?.colors?.neutral?.medium};
-  font-size: 16px;
   padding: 16px;
   transition: background-color 0.2s;
 
@@ -51,11 +49,6 @@ export const MenuItem = styled(Text)<DropMenuProps>`
     background-color: ${({ theme }) => theme?.colors?.neutral?.light};
   }
 `;
-
-MenuItem.defaultProps = {
-  component: 'li',
-  variant: 'body-01',
-};
 
 export const MenuMask = styled.div`
   height: 100%;
