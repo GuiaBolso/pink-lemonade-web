@@ -13,13 +13,15 @@ type ActionProps = {
   wide?: boolean;
 } & ButtonProps;
 
-export const Action = ({ label, wide, arrowPosition }: ActionProps) => (
+export const Action = ({ label, wide, arrowPosition, ...rest}: ActionProps) => (
   <S.Action
     label={label}
     arrowPosition={arrowPosition}
     startIcon={arrowPosition === 'leading' && <ArrowLeft />}
     endIcon={arrowPosition === 'trailing' && <ArrowRight />}
     wide={wide}
+    disableRipple
+    {...rest}
   ></S.Action>
 );
 

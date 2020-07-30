@@ -16,6 +16,7 @@ export const Action = styled(Button)`
     display: flex;
     justify-content: ${({ wide }: ActionProps) =>
       wide ? 'space-between' : ''};
+    min-height: auto;
     padding: 0;
   }
 `;
