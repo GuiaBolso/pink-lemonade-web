@@ -18,6 +18,13 @@ export const Action = styled(Button)`
       wide ? 'space-between' : ''};
     min-height: auto;
     padding: 0;
+
+    .MuiButton-iconSizeMedium {
+      svg path {
+        fill: ${({ theme }: ActionProps) =>
+          theme?.colors?.brand?.secondary?.default};
+      }
+    }
   }
 `;
 
