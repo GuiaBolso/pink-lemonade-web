@@ -4,6 +4,7 @@ export * from './lib/containers/FloatingCard';
 export * from './lib/display/Text';
 export * from './lib/display/Tooltip';
 
+export * from './lib/forms/Action';
 export * from './lib/forms/Button';
 export * from './lib/forms/Checkbox';
 export * from './lib/forms/TextField';
