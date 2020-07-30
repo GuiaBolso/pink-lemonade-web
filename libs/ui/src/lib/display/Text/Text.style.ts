@@ -375,14 +375,21 @@ const variants = {
 
   'subtitle-medium': ({ theme }: TextProps) => {
     const themeName = {
-      connect: () => null,
+      connect: () => css`
+        --fontSize: ${theme?.type?.sizes?.fontSize14};
+
+        font-family: ${theme?.type?.fontFamily?.neutral};
+        font-size: var(--fontSize);
+        font-weight: ${theme?.type?.fontWeight?.regular};
+        line-height: ${theme?.type?.lineHeight?.rule2};
+      `,
       guiaBolso: () => css`
         --fontSize: ${theme?.type?.sizes?.xxs};
 
         font-family: ${theme?.type?.fontFamily?.neutral};
         font-size: var(--fontSize);
         font-weight: ${theme?.type?.fontWeight?.regular};
-        line-height: ${theme?.type?.lineHeight?.rule1};
+        line-height: ${theme?.type?.lineHeight?.rule2};
       `,
     };
     return (themeName[theme?.name] || themeName.guiaBolso)();
@@ -421,13 +428,22 @@ const variants = {
 
   'overline-small': ({ theme }: TextProps) => {
     const themeName = {
-      connect: () => null,
+      connect: () => css`
+        --fontSize: ${theme?.type?.sizes?.fontSize12};
+
+        font-family: ${theme?.type?.fontFamily?.neutral};
+        font-size: var(--fontSize);
+        font-weight: ${theme?.type?.fontWeight?.regular};
+        letter-spacing: 0.04em;
+        line-height: ${theme?.type?.lineHeight?.rule1};
+      `,
       guiaBolso: () => css`
         --fontSize: ${theme?.type?.sizes?.xxxs};
 
         font-family: ${theme?.type?.fontFamily?.neutral};
         font-size: var(--fontSize);
         font-weight: ${theme?.type?.fontWeight?.regular};
+        letter-spacing: 0.04em;
         line-height: ${theme?.type?.lineHeight?.rule1};
         text-transform: uppercase;
       `,
