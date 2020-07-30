@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardFooter } from './index';
 
-import { Action } from "../../forms/Action";
-import { Button } from "../../forms/Button";
+import { Action } from '../../forms/Action';
+import { Button } from '../../forms/Button';
 
 import { ListAlt, MoreVert } from '@material-ui/icons';
 
@@ -31,13 +31,15 @@ export const Complete = () => (
     titleIcon={<MoreVert />}
     overlineText="Overview"
     overlineTextIcon={<ListAlt />}
-    content="Texto secundário do card que pode conter ate 2 linhas.">
-      <CardFooter
-        addendum
-        description="Você utiliza outro banco? Aproveite para adicionar enquanto carrega a conta acima"
-        action={
-          <Action scale="narrow" label="Action label" arrowPosition="trailing" />
-        }/>
+    content="Texto secundário do card que pode conter ate 2 linhas."
+  >
+    <CardFooter
+      addendum
+      description="Você utiliza outro banco? Aproveite para adicionar enquanto carrega a conta acima"
+      action={
+        <Action scale="narrow" label="Action label" arrowPosition="trailing" />
+      }
+    />
   </Card>
 );
 
@@ -47,8 +49,9 @@ export const CompleteWithButton = () => (
     titleIcon={<MoreVert />}
     overlineText="Overview"
     overlineTextIcon={<ListAlt />}
-    content="Texto secundário do card que pode conter ate 2 linhas.">
-      <CardFooter action={<Button label="Action label" scale="wide-thin" />} />
+    content="Texto secundário do card que pode conter ate 2 linhas."
+  >
+    <CardFooter action={<Button label="Action label" scale="wide-thin" />} />
   </Card>
 );
 

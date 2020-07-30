@@ -14,7 +14,7 @@ type CardProps = {
 };
 
 const variants = {
-  'default': ({ theme }: CardProps) => {
+  default: ({ theme }: CardProps) => {
     const themeName = {
       connect: () => css`
         line-height: ${theme?.type?.lineHeight?.rule3};
@@ -25,7 +25,7 @@ const variants = {
     return (themeName[theme?.name] || themeName.guiaBolso)();
   },
 
-  'outlined': ({ theme }: CardProps) => {
+  outlined: ({ theme }: CardProps) => {
     const themeName = {
       connect: () => css`
         border: 1px solid ${theme?.colors?.neutral?.light};
@@ -34,8 +34,8 @@ const variants = {
     };
 
     return (themeName[theme?.name] || themeName.guiaBolso)();
-  }
-}
+  },
+};
 
 export const Card = styled.article`
   background: #fff;
@@ -51,7 +51,7 @@ export const Card = styled.article`
           0 0 2px rgba(13, 13, 13, 0.2);
       `,
       guiaBolso: () => css`
-        box-shadow: 0px .5px 1px #D9D9D9;
+        box-shadow: 0px 0.5px 1px #d9d9d9;
       `,
     };
     return (themeName[theme?.name] || themeName.guiaBolso)();

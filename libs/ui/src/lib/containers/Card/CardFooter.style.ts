@@ -15,9 +15,7 @@ type CardFooterProps = {
 
 export const CardFooter = styled.footer`
   background: ${({ addendum, theme }: CardFooterProps) =>
-    addendum
-      ? theme?.colors?.brand?.secondary?.lightest
-      : 'none'};
+    addendum ? theme?.colors?.brand?.secondary?.lightest : 'none'};
   border-radius: 0 0 ${pxToRem(4)} ${pxToRem(4)};
   padding: 0 ${pxToRem(16)} ${pxToRem(16)};
 `;
@@ -42,5 +40,5 @@ export const CardFooterText = styled(Text)`
 
 CardFooterText.defaultProps = {
   variant: 'subtitle-medium',
-  component: 'p'
-}
+  component: 'p',
+};

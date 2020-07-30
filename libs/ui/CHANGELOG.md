@@ -1,9 +1,41 @@
-### @guiabolsobr/ui [1.3.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.2...@guiabolsobr/ui@1.3.3) (2020-07-21)
-
+### @guiabolsobr/ui [1.6.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.0...@guiabolsobr/ui@1.6.1) (2020-07-29)
 
 ### Bug Fixes
 
-* 🐛 docgen error ([1c2c0e6](https://github.com/GuiaBolso/pink-lemonade-web/commit/1c2c0e612464c08ebbd07fd78b3643120681edab))
+- 🐛 some types and properties needed ([c0f4064](https://github.com/GuiaBolso/pink-lemonade-web/commit/c0f4064cd72cd3b989edbdc59c03d1e37e8fc6a5))
+
+## @guiabolsobr/ui [1.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.5.0...@guiabolsobr/ui@1.6.0) (2020-07-29)
+
+### Features
+
+- 🎸 component dropmenu and dropmenuitem ([77cf813](https://github.com/GuiaBolso/pink-lemonade-web/commit/77cf81351c4a8b2938b388cfb8b437378774cdf2))
+- 🎸 componente usage ([527402a](https://github.com/GuiaBolso/pink-lemonade-web/commit/527402a8ded75e4f2e10f0072dcb62b7bf8fe2ba))
+- 🎸 dropmenu export component ([e7f1965](https://github.com/GuiaBolso/pink-lemonade-web/commit/e7f1965e61d1865f087f826e57a9c36bbba990c6))
+- dropmenu component draft ([c3c5309](https://github.com/GuiaBolso/pink-lemonade-web/commit/c3c5309cd87cb433d2369e2446a105a5ac8a86af))
+- merge master into branch ([38f75a2](https://github.com/GuiaBolso/pink-lemonade-web/commit/38f75a2dc3bac99bd78dba109da8f786d80aac15))
+
+## @guiabolsobr/ui [1.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.4.0...@guiabolsobr/ui@1.5.0) (2020-07-28)
+
+### Features
+
+- 🎸 add CardHeader ([a5856bb](https://github.com/GuiaBolso/pink-lemonade-web/commit/a5856bbf9b305c420de861d807535931d5ddc6f7))
+
+### Bug Fixes
+
+- 🐛 remove console ([0f0cb60](https://github.com/GuiaBolso/pink-lemonade-web/commit/0f0cb60fca49f4762ce0ffb8ae14392fd2d4f459))
+
+## @guiabolsobr/ui [1.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.3...@guiabolsobr/ui@1.4.0) (2020-07-24)
+
+### Features
+
+- 🎸 progress bar component ([ae05c40](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae05c40092f6036a991d35ea17e1f9e8c5c0a1cc))
+- 🎸 progressBar ([203b56f](https://github.com/GuiaBolso/pink-lemonade-web/commit/203b56f91ba64c246cdcac20e1ca8728fe0fc403))
+
+### @guiabolsobr/ui [1.3.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.2...@guiabolsobr/ui@1.3.3) (2020-07-21)
+
+### Bug Fixes
+
+- 🐛 docgen error ([1c2c0e6](https://github.com/GuiaBolso/pink-lemonade-web/commit/1c2c0e612464c08ebbd07fd78b3643120681edab))
 
 ### @guiabolsobr/ui [1.3.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.3.1...@guiabolsobr/ui@1.3.2) (2020-07-15)
 

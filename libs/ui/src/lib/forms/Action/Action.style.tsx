@@ -29,6 +29,5 @@ export const Action = styled(Button)`
 `;
 
 Action.defaultProps = {
-  appearance: 'tertiary'
+  appearance: 'tertiary',
 };
-

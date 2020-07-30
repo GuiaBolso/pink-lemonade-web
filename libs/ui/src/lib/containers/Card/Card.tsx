@@ -12,17 +12,17 @@ export type CardProps = {
   content?: React.ReactNode;
   children?: React.ReactNode;
   variant?: 'default' | 'outlined';
-}
+};
 
 const Card = ({
-    title,
-    titleIcon,
-    overlineText,
-    overlineTextIcon,
-    content,
-    children,
-    variant = 'default'
-  }: CardProps) => {
+  title,
+  titleIcon,
+  overlineText,
+  overlineTextIcon,
+  content,
+  children,
+  variant = 'default',
+}: CardProps) => {
   return (
     <S.Card variant={variant}>
       {title && (
@@ -31,7 +31,9 @@ const Card = ({
             <S.OverlineText variant="overline-small">
               {overlineText}
 
-              {overlineTextIcon && <S.IconContainer>{overlineTextIcon}</S.IconContainer>}
+              {overlineTextIcon && (
+                <S.IconContainer>{overlineTextIcon}</S.IconContainer>
+              )}
             </S.OverlineText>
           )}
 
@@ -40,7 +42,6 @@ const Card = ({
 
             {titleIcon && <S.IconContainer>{titleIcon}</S.IconContainer>}
           </S.CardTitle>
-
         </S.CardHeader>
       )}
 
