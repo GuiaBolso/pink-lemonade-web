@@ -1,4 +1,5 @@
 import React from 'react';
+import { StoryFn } from '@storybook/addons';
 
 import { CardContent } from '../index';
 
@@ -6,7 +7,7 @@ export default {
   title: 'Containers/CardContent',
   component: CardContent,
   decorators: [
-    (story: any) => (
+    (story: StoryFn) => (
       <div
         style={{
           maxWidth: '328px',

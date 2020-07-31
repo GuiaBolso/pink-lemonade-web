@@ -7,15 +7,8 @@ export type CardProps = {
   variant?: 'default' | 'outlined';
 };
 
-const Card = ({
-  children,
-  variant = 'default',
-}: CardProps) => {
-  return (
-    <S.Card variant={variant}>
-      {children}
-    </S.Card>
-  );
+const Card = ({ children, variant = 'default' }: CardProps) => {
+  return <S.Card variant={variant}>{children}</S.Card>;
 };
 
 export default Card;

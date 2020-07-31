@@ -6,8 +6,6 @@ import { pxToRem } from '@guiabolsobr/utils';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
-import { Text } from '../../display/Text';
-
 type CardProps = {
   variant?: string;
   theme: CustomThemeProps;

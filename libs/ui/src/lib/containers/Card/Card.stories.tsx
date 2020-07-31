@@ -50,7 +50,7 @@ export const Complete = () => (
 
 export const CompleteWithButton = () => (
   <Card>
-     <CardHeader
+    <CardHeader
       title="Card com botão"
       titleIcon={<MoreVert />}
       overline="Título do card"
@@ -67,13 +67,12 @@ export const CompleteWithButton = () => (
 
 export const Outlined = () => (
   <Card variant="outlined">
-    <CardHeader
-      title="Análise completa"
-      titleIcon={<MoreVert />}
-    />
+    <CardHeader title="Análise completa" titleIcon={<MoreVert />} />
 
     <CardContent>
-      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você.
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
     </CardContent>
   </Card>
 );
@@ -83,12 +82,14 @@ export const NoIcon = () => (
     <CardHeader title="Análise completa" />
 
     <CardContent>
-      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você.
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
     </CardContent>
   </Card>
 );
 
-export const TitleOnly = () =>  (
+export const TitleOnly = () => (
   <Card>
     <CardHeader title="Análise completa" />
   </Card>
@@ -97,7 +98,9 @@ export const TitleOnly = () =>  (
 export const ContentOnly = () => (
   <Card>
     <CardContent>
-      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você.
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
     </CardContent>
   </Card>
 );
