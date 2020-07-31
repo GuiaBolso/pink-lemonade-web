@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArrowLeft = (props) => (
+const ArrowLeft = props => (
   <svg
     width={24}
     height={24}
