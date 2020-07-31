@@ -2,11 +2,11 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import { CardHeader } from '.';
+import { CardHeader } from '../';
 
 describe('<CardHeader />', () => {
   const { container } = render(
-    <CardHeader title="Overview" suptitle="Título do card" />,
+    <CardHeader title="Overview" overline="Título do card" />,
   );
 
   it('Should render title', () => {

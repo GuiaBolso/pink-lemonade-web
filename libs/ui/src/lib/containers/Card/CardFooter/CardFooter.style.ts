@@ -4,9 +4,9 @@ import { css } from '@emotion/core';
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 
-import { Text } from '../../display/Text';
+import { Text } from '../../../display/Text';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { CustomThemeProps } from '../../../../typings/CustomThemeProps';
 
 type CardFooterProps = {
   addendum?: boolean;

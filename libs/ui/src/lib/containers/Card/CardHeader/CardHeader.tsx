@@ -2,39 +2,39 @@ import React, { memo } from 'react';
 import { useTheme } from 'emotion-theming';
 
 import { Text, themeProps } from '@guiabolsobr/ui';
-import * as S from './CarHeader.style';
+import * as S from './CardHeader.style';
 
 type CardHeaderProps = {
   title: React.ReactNode;
   titleIcon?: React.ReactNode;
-  suptitle?: React.ReactNode;
-  suptitleIcon?: React.ReactNode;
+  overline?: React.ReactNode;
+  overlineIcon?: React.ReactNode;
 };
 
 const CardHeader = ({
   title,
   titleIcon,
-  suptitle,
-  suptitleIcon,
+  overline,
+  overlineIcon,
 }: CardHeaderProps) => {
   const theme = useTheme<themeProps>();
-  const SUPTITLE_VARIATION =
+  const OVERLINE_VARIATION =
     theme.name === 'connect' ? 'overline' : 'overline-small';
 
   return (
-    <S.Header hasSuptitle={!!suptitle}>
-      {suptitle && (
+    <S.Header hasOverlineText={!!overline}>
+      {overline && (
         <>
-          <S.Suptitle>
-            {typeof suptitle === 'string' ? (
-              <Text variant={SUPTITLE_VARIATION} component="p" role="paragraph">
-                {suptitle}
+          <S.Overline>
+            {typeof overline === 'string' ? (
+              <Text variant={OVERLINE_VARIATION} component="p" role="paragraph">
+                {overline}
               </Text>
             ) : (
-              suptitle
+              overline
             )}
-          </S.Suptitle>
-          <S.SuptitleIcon>{suptitleIcon}</S.SuptitleIcon>
+          </S.Overline>
+          <S.OverlineIcon>{overlineIcon}</S.OverlineIcon>
         </>
       )}
 
