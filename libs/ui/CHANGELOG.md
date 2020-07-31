@@ -1,3 +1,21 @@
+## @guiabolsobr/ui [1.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.1...@guiabolsobr/ui@1.7.0) (2020-07-31)
+
+
+### Features
+
+* adjust Action arrow icon color ([36ef0b0](https://github.com/GuiaBolso/pink-lemonade-web/commit/36ef0b07263e795b723fa61ded1c461b6038dcc9))
+* adjust Action props ([ae07a67](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae07a67872175bebde57194cf2435de68e753fd5))
+* create Action Component ([f3835ee](https://github.com/GuiaBolso/pink-lemonade-web/commit/f3835ee64ffb5027f24a1b3148167413e53584a2))
+* create CardContent component and refactor CardHeader ([1ab090c](https://github.com/GuiaBolso/pink-lemonade-web/commit/1ab090cd930afd73b32584ffeeedabf5280a447e))
+
+
+### Bug Fixes
+
+* adjust lint alerts ([1e8efff](https://github.com/GuiaBolso/pink-lemonade-web/commit/1e8efffd2217baebd64d30c2993222de7129ad57))
+* format ([8c6b8d4](https://github.com/GuiaBolso/pink-lemonade-web/commit/8c6b8d47848dd89ba382fef78b8b348302658e84))
+* replace (props) with props ([2fed0c2](https://github.com/GuiaBolso/pink-lemonade-web/commit/2fed0c2c819061afdd881db434caa311de322ec2))
+* replace px values to pxToRem ([ae95ada](https://github.com/GuiaBolso/pink-lemonade-web/commit/ae95ada455ce6ef040adbe300d8e72534b066286))
+
 ### @guiabolsobr/ui [1.6.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.0...@guiabolsobr/ui@1.6.1) (2020-07-29)
 
 ### Bug Fixes
