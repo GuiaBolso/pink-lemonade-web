@@ -1,50 +1,60 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
-import { Text } from '../../display/Text';
-
-type CardTheme = {
+type CardProps = {
+  variant?: string;
   theme: CustomThemeProps;
+};
+
+const variants = {
+  default: ({ theme }: CardProps) => {
+    const themeName = {
+      connect: () => css`
+        line-height: ${theme?.type?.lineHeight?.rule3};
+      `,
+      guiaBolso: () => null,
+    };
+
+    return (themeName[theme?.name] || themeName.guiaBolso)();
+  },
+
+  outlined: ({ theme }: CardProps) => {
+    const themeName = {
+      connect: () => css`
+        border: 1px solid ${theme?.colors?.neutral?.light};
+      `,
+      guiaBolso: () => null,
+    };
+
+    return (themeName[theme?.name] || themeName.guiaBolso)();
+  },
 };
 
 export const Card = styled.article`
   background: #fff;
-  border: ${pxToRem(1)} solid
-    ${({ theme }: CardTheme) => theme?.colors?.neutral?.light};
-  border-radius: 6px;
-  box-shadow: ${pxToRem(2)} ${pxToRem(6)} ${pxToRem(6)} rgba(0, 0, 0, 0.05);
+  border-radius: ${pxToRem(4)};
   box-sizing: border-box;
   flex: 1 1 ${pxToRem(235)};
   margin: ${pxToRem(12)};
-  padding: ${pxToRem(24)};
-`;
 
-export const Header = styled.header`
-  display: flex;
-  justify-content: space-between;
+  ${({ theme }: CardProps) => {
+    const themeName = {
+      connect: () => css`
+        box-shadow: 0 ${pxToRem(4)} ${pxToRem(4)} rgba(13, 13, 13, 0.14),
+          0 0 ${pxToRem(2)} rgba(13, 13, 13, 0.2);
+      `,
+      guiaBolso: () => css`
+        box-shadow: 0 0.5px ${pxToRem(1)} #d9d9d9;
+      `,
+    };
+    return (themeName[theme?.name] || themeName.guiaBolso)();
+  }};
 
-  &.min-height {
-    min-height: ${pxToRem(45)};
-  }
-`;
-
-export const Title = styled(Text)`
-  color: ${({ theme }: CardTheme) => theme?.colors?.neutral?.dark};
-`;
-
-export const Spacer = styled.div`
-  height: ${pxToRem(9)};
-`;
-
-export const IconContainer = styled.div`
-  align-items: flex-start;
-  display: flex;
-  height: ${pxToRem(40)};
-  justify-content: center;
-  margin-left: ${pxToRem(8)};
-  width: ${pxToRem(40)};
+  /* stylelint-disable-next-line */
+  ${props => variants[props.variant]}
 `;

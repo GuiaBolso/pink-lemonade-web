@@ -1,20 +1,18 @@
 ### @guiabolsobr/ui [1.6.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.0...@guiabolsobr/ui@1.6.1) (2020-07-29)
 
-
 ### Bug Fixes
 
-* 🐛 some types and properties needed ([c0f4064](https://github.com/GuiaBolso/pink-lemonade-web/commit/c0f4064cd72cd3b989edbdc59c03d1e37e8fc6a5))
+- 🐛 some types and properties needed ([c0f4064](https://github.com/GuiaBolso/pink-lemonade-web/commit/c0f4064cd72cd3b989edbdc59c03d1e37e8fc6a5))
 
 ## @guiabolsobr/ui [1.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.5.0...@guiabolsobr/ui@1.6.0) (2020-07-29)
 
-
 ### Features
 
-* 🎸 component dropmenu and dropmenuitem ([77cf813](https://github.com/GuiaBolso/pink-lemonade-web/commit/77cf81351c4a8b2938b388cfb8b437378774cdf2))
-* 🎸 componente usage ([527402a](https://github.com/GuiaBolso/pink-lemonade-web/commit/527402a8ded75e4f2e10f0072dcb62b7bf8fe2ba))
-* 🎸 dropmenu export component ([e7f1965](https://github.com/GuiaBolso/pink-lemonade-web/commit/e7f1965e61d1865f087f826e57a9c36bbba990c6))
-* dropmenu component draft ([c3c5309](https://github.com/GuiaBolso/pink-lemonade-web/commit/c3c5309cd87cb433d2369e2446a105a5ac8a86af))
-* merge master into branch ([38f75a2](https://github.com/GuiaBolso/pink-lemonade-web/commit/38f75a2dc3bac99bd78dba109da8f786d80aac15))
+- 🎸 component dropmenu and dropmenuitem ([77cf813](https://github.com/GuiaBolso/pink-lemonade-web/commit/77cf81351c4a8b2938b388cfb8b437378774cdf2))
+- 🎸 componente usage ([527402a](https://github.com/GuiaBolso/pink-lemonade-web/commit/527402a8ded75e4f2e10f0072dcb62b7bf8fe2ba))
+- 🎸 dropmenu export component ([e7f1965](https://github.com/GuiaBolso/pink-lemonade-web/commit/e7f1965e61d1865f087f826e57a9c36bbba990c6))
+- dropmenu component draft ([c3c5309](https://github.com/GuiaBolso/pink-lemonade-web/commit/c3c5309cd87cb433d2369e2446a105a5ac8a86af))
+- merge master into branch ([38f75a2](https://github.com/GuiaBolso/pink-lemonade-web/commit/38f75a2dc3bac99bd78dba109da8f786d80aac15))
 
 ## @guiabolsobr/ui [1.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.4.0...@guiabolsobr/ui@1.5.0) (2020-07-28)
 

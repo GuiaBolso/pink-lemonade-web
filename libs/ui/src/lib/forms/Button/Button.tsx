@@ -5,7 +5,7 @@ import * as Styled from './Button.style';
 
 import { ButtonColorProps } from '../../../typings/ButtonColorProps';
 
-type ButtonProps = {
+export type ButtonProps = {
   label?: string;
   appearance?: 'primary' | 'secondary' | 'tertiary';
   scale?: 'wide-regular' | 'fixed' | 'wide-thin' | 'narrow';

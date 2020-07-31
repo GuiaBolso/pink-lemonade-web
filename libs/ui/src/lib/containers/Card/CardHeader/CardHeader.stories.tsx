@@ -2,7 +2,7 @@ import React from 'react';
 import { StoryFn } from '@storybook/addons';
 import { Cached, MoreVert } from '@material-ui/icons';
 
-import { CardHeader } from './index';
+import { CardHeader } from '../index';
 
 export default {
   title: 'Containers/CardHeader',
@@ -25,7 +25,7 @@ export const base = () => (
   <CardHeader
     title="Overview"
     titleIcon={<MoreVert />}
-    suptitle="Título do card"
-    suptitleIcon={<Cached />}
+    overline="Título do card"
+    overlineIcon={<Cached />}
   />
 );

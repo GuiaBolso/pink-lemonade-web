@@ -1,21 +1,10 @@
 import React from 'react';
-import { Card } from './index';
+import { Card, CardHeader, CardContent, CardFooter } from './index';
 
-const MockIcon = () => (
-  <div
-    style={{
-      alignItems: 'center',
-      background: '#d0d',
-      color: '#fff',
-      display: 'flex',
-      height: '40px',
-      justifyContent: 'center',
-      width: '40px',
-    }}
-  >
-    <span>Hello</span>
-  </div>
-);
+import { Action } from '../../forms/Action';
+import { Button } from '../../forms/Button';
+
+import { ListAlt, MoreVert } from '@material-ui/icons';
 
 export default {
   title: 'Containers/Card',
@@ -27,7 +16,7 @@ export default {
         style={{
           display: 'flex',
           flexWrap: 'wrap',
-          maxWidth: '250px',
+          maxWidth: '325px',
         }}
       >
         {story()}
@@ -37,22 +26,81 @@ export default {
 };
 
 export const Complete = () => (
-  <Card
-    title="Análise completa"
-    icon={<MockIcon />}
-    content="Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você."
-  />
+  <Card>
+    <CardHeader
+      title="Título do card"
+      titleIcon={<MoreVert />}
+      overline="Overview"
+      overlineIcon={<ListAlt />}
+    />
+
+    <CardContent>
+      Texto secundário do card que pode conter ate 2 linhas.
+    </CardContent>
+
+    <CardFooter
+      addendum
+      description="Você utiliza outro banco? Aproveite para adicionar enquanto carrega a conta acima"
+      action={
+        <Action scale="narrow" label="Action label" arrowPosition="trailing" />
+      }
+    />
+  </Card>
+);
+
+export const CompleteWithButton = () => (
+  <Card>
+    <CardHeader
+      title="Card com botão"
+      titleIcon={<MoreVert />}
+      overline="Título do card"
+      overlineIcon={<ListAlt />}
+    />
+
+    <CardContent>
+      Texto secundário do card que pode conter ate 2 linhas.
+    </CardContent>
+
+    <CardFooter action={<Button label="Action label" scale="wide-thin" />} />
+  </Card>
+);
+
+export const Outlined = () => (
+  <Card variant="outlined">
+    <CardHeader title="Análise completa" titleIcon={<MoreVert />} />
+
+    <CardContent>
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
+    </CardContent>
+  </Card>
 );
 
 export const NoIcon = () => (
-  <Card
-    title="Análise completa"
-    content="Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você."
-  />
+  <Card>
+    <CardHeader title="Análise completa" />
+
+    <CardContent>
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
+    </CardContent>
+  </Card>
 );
 
-export const TitleOnly = () => <Card title="Análise completa" />;
+export const TitleOnly = () => (
+  <Card>
+    <CardHeader title="Análise completa" />
+  </Card>
+);
 
 export const ContentOnly = () => (
-  <Card content="Nossa tecnologia realiza a leitura do extrato da sua conta corrente e entende seus hábitos e o momento financeiro para ajudar o Parceiro a encontrar a melhor oferta para você." />
+  <Card>
+    <CardContent>
+      Nossa tecnologia realiza a leitura do extrato da sua conta corrente e
+      entende seus hábitos e o momento financeiro para ajudar o Parceiro a
+      encontrar a melhor oferta para você.
+    </CardContent>
+  </Card>
 );

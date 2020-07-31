@@ -1,42 +1,14 @@
 import React from 'react';
 
-import { Text } from '../../display/Text';
-
 import * as S from './Card.style';
 
-interface Card {
-  title?: string;
-  icon?: React.ReactNode;
-  content?: string;
+export type CardProps = {
   children?: React.ReactNode;
-}
+  variant?: 'default' | 'outlined';
+};
 
-const Card = ({ title, icon, content, children }: Card) => {
-  return (
-    <S.Card>
-      {title && (
-        <S.Header className={title && content && 'min-height'}>
-          <S.Title component="h4" variant="heading-05">
-            {title}
-          </S.Title>
-
-          {icon && <S.IconContainer>{icon}</S.IconContainer>}
-        </S.Header>
-      )}
-
-      {title && content && <S.Spacer />}
-
-      {content && (
-        <>
-          <Text component="p" variant="body-02">
-            {content}
-          </Text>
-        </>
-      )}
-
-      {children}
-    </S.Card>
-  );
+const Card = ({ children, variant = 'default' }: CardProps) => {
+  return <S.Card variant={variant}>{children}</S.Card>;
 };
 
 export default Card;

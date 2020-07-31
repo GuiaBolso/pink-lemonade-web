@@ -4,12 +4,12 @@ import { css } from '@emotion/core';
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 import { themeProps } from '@guiabolsobr/ui';
-import { Text } from '../../display/Text';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { CustomThemeProps } from '../../../../typings/CustomThemeProps';
 
 type HeaderProps = {
-  hasSuptitle: boolean;
+  hasOverlineText: boolean;
+  theme: CustomThemeProps;
 };
 
 const iconStyle = ({ theme }: { theme: themeProps }) => css`
@@ -27,19 +27,23 @@ const title = ({ theme }: { theme: themeProps }) => css`
 
 export const Header = styled.header`
   display: grid;
-  grid-gap: ${({ hasSuptitle }: HeaderProps) =>
-    hasSuptitle ? pxToRem(8) : `0 ${pxToRem(8)}`};
-  grid-template-columns: 1fr 30px;
+  grid-gap: ${({ hasOverlineText }: HeaderProps) =>
+    hasOverlineText ? pxToRem(8) : `0 ${pxToRem(8)}`};
+  grid-template-columns: 1fr ${pxToRem(30)};
   margin: ${pxToRem(16)} ${pxToRem(16)} 0 ${pxToRem(16)};
+
+  &:last-child {
+    padding-bottom: ${pxToRem(16)};
+  }
 `;
 
-export const Suptitle = styled.div`
+export const Overline = styled.div`
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   ${title}
 `;
 
-export const SuptitleIcon = styled.div`
+export const OverlineIcon = styled.div`
   grid-column: 2 / 3;
   grid-row: 1 / 2;
   ${iconStyle};
