@@ -15,9 +15,11 @@ export const Action = styled(Button)`
   && {
     display: flex;
     min-height: auto;
-    ${({ wide }: ActionProps) => wide && css`
-      justify-content: 'space-between';
-    `}
+    ${({ wide }: ActionProps) =>
+      wide &&
+      css`
+        justify-content: 'space-between';
+      `}
     padding: 0;
 
     .MuiButton-iconSizeMedium {
