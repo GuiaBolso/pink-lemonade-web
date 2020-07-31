@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { Button } from '../Button';
 
@@ -13,9 +14,10 @@ type ActionProps = {
 export const Action = styled(Button)`
   && {
     display: flex;
-    justify-content: ${({ wide }: ActionProps) =>
-      wide ? 'space-between' : ''};
     min-height: auto;
+    ${({ wide }: ActionProps) => wide && css`
+      justify-content: 'space-between';
+    `}
     padding: 0;
 
     .MuiButton-iconSizeMedium {

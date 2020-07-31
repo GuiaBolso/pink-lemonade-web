@@ -29,7 +29,7 @@ export const Header = styled.header`
   display: grid;
   grid-gap: ${({ hasOverlineText }: HeaderProps) =>
     hasOverlineText ? pxToRem(8) : `0 ${pxToRem(8)}`};
-  grid-template-columns: 1fr 30px;
+  grid-template-columns: 1fr ${pxToRem(30)};
   margin: ${pxToRem(16)} ${pxToRem(16)} 0 ${pxToRem(16)};
 
   &:last-child {

@@ -37,7 +37,7 @@ const variants = {
 
 export const Card = styled.article`
   background: #fff;
-  border-radius: 4px;
+  border-radius: ${pxToRem(4)};
   box-sizing: border-box;
   flex: 1 1 ${pxToRem(235)};
   margin: ${pxToRem(12)};
@@ -45,11 +45,11 @@ export const Card = styled.article`
   ${({ theme }: CardProps) => {
     const themeName = {
       connect: () => css`
-        box-shadow: 0 4px 4px rgba(13, 13, 13, 0.14),
-          0 0 2px rgba(13, 13, 13, 0.2);
+        box-shadow: 0 ${pxToRem(4)} ${pxToRem(4)} rgba(13, 13, 13, 0.14),
+          0 0 ${pxToRem(2)} rgba(13, 13, 13, 0.2);
       `,
       guiaBolso: () => css`
-        box-shadow: 0px 0.5px 1px #d9d9d9;
+        box-shadow: 0 0.5px ${pxToRem(1)} #d9d9d9;
       `,
     };
     return (themeName[theme?.name] || themeName.guiaBolso)();
