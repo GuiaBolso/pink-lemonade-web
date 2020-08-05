@@ -11,9 +11,13 @@ export type CardFooterProps = {
 const Card = ({ children }: CardFooterProps) => {
   return (
     <S.CardContent>
-      <Text component="p" variant="subtitle-medium">
-        {children}
-      </Text>
+      {typeof children === 'string' ? (
+        <Text component="p" variant="subtitle-medium">
+          {children}
+        </Text>
+      ) : (
+        children
+      )}
     </S.CardContent>
   );
 };
