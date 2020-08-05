@@ -1,3 +1,22 @@
+## @guiabolsobr/ui [1.8.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.7.1...@guiabolsobr/ui@1.8.0) (2020-08-05)
+
+
+### Features
+
+* 🎸 add Divider component ([0156417](https://github.com/GuiaBolso/pink-lemonade-web/commit/0156417b1d2aa0a8e45ae1d538d83455f81e9222))
+
+
+### Bug Fixes
+
+* 🐛 Accordion storybook path ([88d32f4](https://github.com/GuiaBolso/pink-lemonade-web/commit/88d32f4be2e1944a226d7a1e929b71ee9e11279c))
+
+### @guiabolsobr/ui [1.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.7.0...@guiabolsobr/ui@1.7.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* 🐛 card display ([6ccd1ca](https://github.com/GuiaBolso/pink-lemonade-web/commit/6ccd1cab009e3d2024e7ab34a19574b461ec2feb))
+
 ## @guiabolsobr/ui [1.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.1...@guiabolsobr/ui@1.7.0) (2020-07-31)
 
 
