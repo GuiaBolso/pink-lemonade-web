@@ -39,6 +39,7 @@ export const Card = styled.article`
   background: #fff;
   border-radius: ${pxToRem(4)};
   box-sizing: border-box;
+  display: inline-block;
   flex: 1 1 ${pxToRem(235)};
   margin: ${pxToRem(12)};
 
