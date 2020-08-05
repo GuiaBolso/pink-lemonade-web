@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.7.0...@guiabolsobr/ui@1.7.1) (2020-08-05)
+
+
+### Bug Fixes
+
+* 🐛 card display ([6ccd1ca](https://github.com/GuiaBolso/pink-lemonade-web/commit/6ccd1cab009e3d2024e7ab34a19574b461ec2feb))
+
 ## @guiabolsobr/ui [1.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.6.1...@guiabolsobr/ui@1.7.0) (2020-07-31)
 
 
