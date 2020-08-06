@@ -43,9 +43,7 @@ const animations = css`
 `;
 
 export const Container = styled.div`
-  --spacing: ${pxToRem(16)};
-  margin: 0 var(--spacing);
-  width: calc(100% - (var(--spacing) * 2));
+  width: 100%;
 `;
 
 export const Line = styled.div`
