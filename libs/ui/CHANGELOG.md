@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.8.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.0...@guiabolsobr/ui@1.8.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* 🐛 card content child ([ca28ec2](https://github.com/GuiaBolso/pink-lemonade-web/commit/ca28ec2e51dd39cff0a8531f99a070a139c1abc6))
+
 ## @guiabolsobr/ui [1.8.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.7.1...@guiabolsobr/ui@1.8.0) (2020-08-05)
 
 ### Features
