@@ -4,6 +4,7 @@ import { pxToRem } from '@guiabolsobr/utils';
 import MuiPopper from '@material-ui/core/Popper';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { Text } from '../Text';
 
 type TooltipProps = {
   theme: CustomThemeProps;
@@ -11,6 +12,10 @@ type TooltipProps = {
 
 export const Popper = styled(MuiPopper)`
   .MuiTooltip {
+    &-tooltipPlacementBottom {
+      margin: ${pxToRem(8)} 0;
+    }
+
     &-tooltip {
       background-color: ${({ theme }: TooltipProps) =>
         theme?.colors?.feedback?.notification?.default};
@@ -32,4 +37,10 @@ export const Popper = styled(MuiPopper)`
       }
     }
   }
+`;
+
+export const Title = styled(Text)`
+  color: ${({ color }) => color};
+  display: block;
+  margin-bottom: ${pxToRem(4)};
 `;
