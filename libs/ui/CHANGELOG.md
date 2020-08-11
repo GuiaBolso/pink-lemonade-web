@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [1.9.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.1...@guiabolsobr/ui@1.9.0) (2020-08-11)
+
+
+### Features
+
+* 🎸 Adding new story in Tooltip ([673992a](https://github.com/GuiaBolso/pink-lemonade-web/commit/673992aa4316b2c450f027b804d2b62d50665b2a))
+
 ### @guiabolsobr/ui [1.8.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.0...@guiabolsobr/ui@1.8.1) (2020-08-06)
 
 
