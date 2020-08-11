@@ -196,7 +196,14 @@ const variants = {
         font-weight: ${theme?.type?.fontWeight?.semibold};
         line-height: ${theme?.type?.lineHeight?.rule2};
       `,
-      guiaBolso: () => null,
+      guiaBolso: () => css`
+        --fontSize: ${theme?.type?.sizes?.xxs};
+
+        font-family: ${theme?.type?.fontFamily?.brand};
+        font-size: var(--fontSize);
+        font-weight: ${theme?.type?.fontWeight?.semibold};
+        line-height: ${theme?.type?.lineHeight?.rule2};
+      `,
     };
 
     return (themeName[theme?.name] || themeName.guiaBolso)();

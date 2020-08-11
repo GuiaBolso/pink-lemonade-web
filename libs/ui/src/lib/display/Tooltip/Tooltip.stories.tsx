@@ -13,3 +13,12 @@ export const DefaultTooltip = () => (
     <HelpOutline />
   </Tooltip>
 );
+
+export const TooltipWithTitle = () => (
+  <Tooltip
+    title="Lorem ipsum dolor sit"
+    content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat."
+  >
+    <HelpOutline />
+  </Tooltip>
+);
