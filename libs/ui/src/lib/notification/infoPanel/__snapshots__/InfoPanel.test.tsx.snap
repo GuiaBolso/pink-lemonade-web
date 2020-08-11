@@ -48,7 +48,7 @@ exports[`InfoPanel Component Renders correctly 1`] = `
     data-testid="text"
   >
     <h3
-      className="css-1t5ydug"
+      className="css-q33bl2"
       data-testid="text"
       style={
         Object {
