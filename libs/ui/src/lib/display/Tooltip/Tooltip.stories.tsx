@@ -22,3 +22,18 @@ export const TooltipWithTitle = () => (
     <HelpOutline />
   </Tooltip>
 );
+
+export const TooltipWithContentBold = () => (
+  <Tooltip
+    title="Lorem ipsum dolor sit"
+    content={
+      <p>
+        <b>Lorem: </b>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem
+        fugiat.
+      </p>
+    }
+  >
+    <HelpOutline />
+  </Tooltip>
+);
