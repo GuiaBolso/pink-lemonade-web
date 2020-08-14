@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.9.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.0...@guiabolsobr/ui@1.9.1) (2020-08-14)
+
+
+### Bug Fixes
+
+* 🐛 Toast position ([25af658](https://github.com/GuiaBolso/pink-lemonade-web/commit/25af658f46f6e094f92942e44f4310358c011b62))
+
 ## @guiabolsobr/ui [1.9.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.1...@guiabolsobr/ui@1.9.0) (2020-08-11)
 
 
