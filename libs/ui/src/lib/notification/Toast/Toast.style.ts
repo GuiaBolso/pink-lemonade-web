@@ -71,7 +71,7 @@ const toastTypes = {
 export const ToastContainer = styled.div`
   overflow: hidden;
   padding: 16px;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 100;
