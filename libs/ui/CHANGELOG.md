@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [1.10.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.1...@guiabolsobr/ui@1.10.0) (2020-08-21)
+
+
+### Features
+
+* 🎸 add clear toasts and custom id ([7b770d3](https://github.com/GuiaBolso/pink-lemonade-web/commit/7b770d31c69f832e33cd95c3b6c507015664f87e))
+
 ### @guiabolsobr/ui [1.9.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.0...@guiabolsobr/ui@1.9.1) (2020-08-14)
 
 
