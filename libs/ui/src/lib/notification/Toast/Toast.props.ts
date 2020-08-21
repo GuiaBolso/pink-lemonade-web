@@ -1,7 +1,7 @@
 export type ToastTypeProps = 'SUCCESS' | 'ALERT' | 'ERROR' | 'NOTIFICATION';
 
 export type ToastMessageProps = {
-  id: string;
+  id?: string;
   title: string;
   description?: string;
   type?: ToastTypeProps;
