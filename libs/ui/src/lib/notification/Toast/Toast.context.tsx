@@ -7,12 +7,13 @@ import ToastContainer from './Toast.container';
 import { ToastMessageProps } from './Toast.props';
 
 type ToastContextData = {
-  addToast(message: Omit<ToastMessageProps, 'id'>): void;
-  toastSuccess(props: Omit<ToastMessageProps, 'type' | 'id'>): void;
-  toastAlert(props: Omit<ToastMessageProps, 'type' | 'id'>): void;
-  toastError(props: Omit<ToastMessageProps, 'type' | 'id'>): void;
-  toastNotification(props: Omit<ToastMessageProps, 'type' | 'id'>): void;
+  addToast(message: ToastMessageProps): void;
+  toastSuccess(props: Omit<ToastMessageProps, 'type'>): void;
+  toastAlert(props: Omit<ToastMessageProps, 'type'>): void;
+  toastError(props: Omit<ToastMessageProps, 'type'>): void;
+  toastNotification(props: Omit<ToastMessageProps, 'type'>): void;
   removeToast(id: string): void;
+  clearToasts(): void;
 };
 
 type ToastProviderProps = {
@@ -32,9 +33,8 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
       noIcon = false,
       autoClose = true,
       timeToClose = 4000,
-    }: Omit<ToastMessageProps, 'id'>) => {
-      const id = createId('toast');
-
+      id = createId('toast'),
+    }: ToastMessageProps) => {
       const newToast = {
         id,
         title,
@@ -45,31 +45,34 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
         timeToClose,
       };
 
-      setMessages(prevMessages => [...prevMessages, newToast]);
+      setMessages(prevMessages => [
+        ...prevMessages.filter(({ id }) => id !== newToast.id),
+        newToast,
+      ]);
     },
     [],
   );
 
   const toastSuccess = useCallback(
-    (props: Omit<ToastMessageProps, 'type' | 'id'>) =>
+    (props: Omit<ToastMessageProps, 'type'>) =>
       addToast({ ...props, type: 'SUCCESS' }),
     [addToast],
   );
 
   const toastAlert = useCallback(
-    (props: Omit<ToastMessageProps, 'type' | 'id'>) =>
+    (props: Omit<ToastMessageProps, 'type'>) =>
       addToast({ ...props, type: 'ALERT' }),
     [addToast],
   );
 
   const toastError = useCallback(
-    (props: Omit<ToastMessageProps, 'type' | 'id'>) =>
+    (props: Omit<ToastMessageProps, 'type'>) =>
       addToast({ ...props, type: 'ERROR' }),
     [addToast],
   );
 
   const toastNotification = useCallback(
-    (props: Omit<ToastMessageProps, 'type' | 'id'>) =>
+    (props: Omit<ToastMessageProps, 'type'>) =>
       addToast({ ...props, type: 'NOTIFICATION' }),
     [addToast],
   );
@@ -78,6 +81,10 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
     setMessages(prevMessages =>
       prevMessages.filter(message => message.id !== id),
     );
+  }, []);
+
+  const clearToasts = useCallback(() => {
+    setMessages([]);
   }, []);
 
   return (
@@ -89,6 +96,7 @@ const ToastProvider = ({ children }: ToastProviderProps) => {
         toastError,
         toastNotification,
         removeToast,
+        clearToasts,
       }}
     >
       {children}

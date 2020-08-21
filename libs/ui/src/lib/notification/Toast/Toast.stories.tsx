@@ -26,6 +26,7 @@ const ActionButtonsToast = () => {
     toastAlert,
     toastError,
     toastNotification,
+    clearToasts,
   } = useToast();
 
   return (
@@ -78,6 +79,10 @@ const ActionButtonsToast = () => {
         }}
       >
         Fechar depois de 10 segundos
+      </Button>
+
+      <Button appearance="primary" onClick={clearToasts}>
+        Limpar todos os Toasts
       </Button>
     </div>
   );
