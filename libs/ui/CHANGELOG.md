@@ -1,30 +1,26 @@
 ## @guiabolsobr/ui [1.10.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.1...@guiabolsobr/ui@1.10.0) (2020-08-21)
 
-
 ### Features
 
-* 🎸 add clear toasts and custom id ([7b770d3](https://github.com/GuiaBolso/pink-lemonade-web/commit/7b770d31c69f832e33cd95c3b6c507015664f87e))
+- 🎸 add clear toasts and custom id ([7b770d3](https://github.com/GuiaBolso/pink-lemonade-web/commit/7b770d31c69f832e33cd95c3b6c507015664f87e))
 
 ### @guiabolsobr/ui [1.9.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.0...@guiabolsobr/ui@1.9.1) (2020-08-14)
 
-
 ### Bug Fixes
 
-* 🐛 Toast position ([25af658](https://github.com/GuiaBolso/pink-lemonade-web/commit/25af658f46f6e094f92942e44f4310358c011b62))
+- 🐛 Toast position ([25af658](https://github.com/GuiaBolso/pink-lemonade-web/commit/25af658f46f6e094f92942e44f4310358c011b62))
 
 ## @guiabolsobr/ui [1.9.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.1...@guiabolsobr/ui@1.9.0) (2020-08-11)
 
-
 ### Features
 
-* 🎸 Adding new story in Tooltip ([673992a](https://github.com/GuiaBolso/pink-lemonade-web/commit/673992aa4316b2c450f027b804d2b62d50665b2a))
+- 🎸 Adding new story in Tooltip ([673992a](https://github.com/GuiaBolso/pink-lemonade-web/commit/673992aa4316b2c450f027b804d2b62d50665b2a))
 
 ### @guiabolsobr/ui [1.8.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.8.0...@guiabolsobr/ui@1.8.1) (2020-08-06)
 
-
 ### Bug Fixes
 
-* 🐛 card content child ([ca28ec2](https://github.com/GuiaBolso/pink-lemonade-web/commit/ca28ec2e51dd39cff0a8531f99a070a139c1abc6))
+- 🐛 card content child ([ca28ec2](https://github.com/GuiaBolso/pink-lemonade-web/commit/ca28ec2e51dd39cff0a8531f99a070a139c1abc6))
 
 ## @guiabolsobr/ui [1.8.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.7.1...@guiabolsobr/ui@1.8.0) (2020-08-05)
 
