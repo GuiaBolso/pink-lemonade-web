@@ -8,13 +8,13 @@
 
 # Guiabolso UI
 
-Componentes React para a construção de layouts baseado no Design System do Guiabolso.
+React components for the construction of layouts based on the Design System of Guiabolso.
 
-## Componentes
+## Components
 
-Veja os componentes no nosso [Chromatic](https://www.chromatic.com/library?appId=5f1f22ccab17b9002215a487) e [Storybook](https://5f1f22ccab17b9002215a487-mwedezrmbd.chromatic.com/)
+Check the components in our [Chromatic](https://www.chromatic.com/library?appId=5f1f22ccab17b9002215a487) and [Storybook](https://5f1f22ccab17b9002215a487-mwedezrmbd.chromatic.com/)
 
-## Instalação
+## Installation
 
 ```bash
 # with npm
@@ -26,11 +26,11 @@ npm install @material-ui/core @material-ui/icons @guiabolsobr/ui
 yarn add @material-ui/core @material-ui/icons @guiabolsobr/ui
 ```
 
-O `@guiabolsobr/ui` utiliza o [material-ui](https://material-ui.com/) como _peer dependency_. Portanto é necessário a instalação dele também.
+`@guiabolsobr/ui` uses [material-ui](https://material-ui.com/) as a _peer dependency_. So it is necessary to install it too.
 
-## Uso
+## Usage
 
-Para começar a usar é necessário primeiro encapsular o seu projeto com nosso **Provider** e passar o tema, que também é exportado pela nossa biblioteca, para ele:
+To get started you must first encapsulate your project with our **Provider** and pass the theme, which is also exported by our library, for it:
 
 ```jsx
 import React from 'react';
@@ -48,6 +48,6 @@ const App = () => (
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-## Perguntas
+## Questions
 
-Para qualquer dúvida ou sugestão acesse nossa página do [Github Issues](https://github.com/GuiaBolso/pink-lemonade-web/issues).
+For any questions or suggestions visit our [Github Issues](https://github.com/GuiaBolso/pink-lemonade-web/issues) page.
