@@ -2,13 +2,13 @@
 
 exports[`Text Component renders connect theme correctly 1`] = `
 <div
-  className="MuiPaper-root MuiExpansionPanel-root testePanel css-tgd5hx Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiAccordion-root testePanel css-19f2gti Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     aria-controls="panel1a-content"
     aria-disabled={false}
     aria-expanded={true}
-    className="MuiButtonBase-root MuiExpansionPanelSummary-root css-16kqoxr Mui-expanded"
+    className="MuiButtonBase-root MuiAccordionSummary-root css-16uzaqg Mui-expanded"
     id="panel1a-header"
     onBlur={[Function]}
     onClick={[Function]}
@@ -26,7 +26,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
     tabIndex={0}
   >
     <div
-      className="MuiExpansionPanelSummary-content Mui-expanded"
+      className="MuiAccordionSummary-content Mui-expanded"
     >
       <span>
         Lorem Ipsum
@@ -35,7 +35,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
     <div
       aria-disabled={false}
       aria-hidden={true}
-      className="MuiButtonBase-root MuiIconButton-root MuiExpansionPanelSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+      className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
       onBlur={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -89,7 +89,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
           role="region"
         >
           <div
-            className="MuiExpansionPanelDetails-root css-1d3fmc1"
+            className="MuiAccordionDetails-root css-12ely3a"
           >
             <span>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo.
@@ -104,13 +104,13 @@ exports[`Text Component renders connect theme correctly 1`] = `
 
 exports[`Text Component renders correctly 1`] = `
 <div
-  className="MuiPaper-root MuiExpansionPanel-root testePanel css-192dlty Mui-expanded MuiExpansionPanel-rounded MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiAccordion-root testePanel css-123qacc Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     aria-controls="panel1a-content"
     aria-disabled={false}
     aria-expanded={true}
-    className="MuiButtonBase-root MuiExpansionPanelSummary-root css-16kqoxr Mui-expanded"
+    className="MuiButtonBase-root MuiAccordionSummary-root css-16uzaqg Mui-expanded"
     id="panel1a-header"
     onBlur={[Function]}
     onClick={[Function]}
@@ -128,7 +128,7 @@ exports[`Text Component renders correctly 1`] = `
     tabIndex={0}
   >
     <div
-      className="MuiExpansionPanelSummary-content Mui-expanded"
+      className="MuiAccordionSummary-content Mui-expanded"
     >
       <span>
         Lorem Ipsum
@@ -137,7 +137,7 @@ exports[`Text Component renders correctly 1`] = `
     <div
       aria-disabled={false}
       aria-hidden={true}
-      className="MuiButtonBase-root MuiIconButton-root MuiExpansionPanelSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
+      className="MuiButtonBase-root MuiIconButton-root MuiAccordionSummary-expandIcon Mui-expanded MuiIconButton-edgeEnd"
       onBlur={[Function]}
       onDragLeave={[Function]}
       onFocus={[Function]}
@@ -188,7 +188,7 @@ exports[`Text Component renders correctly 1`] = `
           role="region"
         >
           <div
-            className="MuiExpansionPanelDetails-root css-1d3fmc1"
+            className="MuiAccordionDetails-root css-12ely3a"
           >
             <span
               data-testid="text-accordion"

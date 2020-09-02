@@ -2,7 +2,7 @@
 
 exports[`Checkbox Component renders correctly 1`] = `
 <label
-  className="MuiFormControlLabel-root css-1l8qi0x"
+  className="MuiFormControlLabel-root css-vpnmcr"
   variant="simple"
 >
   <span
