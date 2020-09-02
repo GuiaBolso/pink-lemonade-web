@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
 
-import MuiExpansionPanel from '@material-ui/core/ExpansionPanel';
-import MuiExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import MuiExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
 import MuiExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
@@ -11,15 +11,15 @@ type AccordionStyledProps = {
   theme: CustomThemeProps;
 };
 
-export const ExpansionPanel = styled(MuiExpansionPanel)`
-  &.MuiExpansionPanel-root {
+export const Accordion = styled(MuiAccordion)`
+  &.MuiAccordion-root {
     &::before {
       background-color: ${({ theme }: AccordionStyledProps) =>
         theme?.colors?.neutral?.lightest};
     }
 
     &:first-of-type {
-      .MuiExpansionPanelSummary-content {
+      .MuiAccordionSummary-content {
         margin: 20px 0;
 
         &.Mui-expanded {
@@ -40,15 +40,15 @@ export const ExpansionPanel = styled(MuiExpansionPanel)`
         opacity: 1;
       }
 
-      + .MuiExpansionPanel-root::before {
+      + .MuiAccordion-root::before {
         display: block;
       }
     }
   }
 `;
 
-export const ExpansionPanelSummary = styled(MuiExpansionPanelSummary)`
-  &.MuiExpansionPanelSummary-root {
+export const AccordionSummary = styled(MuiAccordionSummary)`
+  &.MuiAccordionSummary-root {
     align-items: flex-end;
     padding: 0;
 
@@ -57,7 +57,7 @@ export const ExpansionPanelSummary = styled(MuiExpansionPanelSummary)`
     }
   }
 
-  .MuiExpansionPanelSummary-content {
+  .MuiAccordionSummary-content {
     margin: 40px 0 20px 0;
 
     &.Mui-expanded {
@@ -66,8 +66,8 @@ export const ExpansionPanelSummary = styled(MuiExpansionPanelSummary)`
   }
 `;
 
-export const ExpansionPanelDetails = styled(MuiExpansionPanelDetails)`
-  &.MuiExpansionPanelDetails-root {
+export const AccordionDetails = styled(MuiAccordionDetails)`
+  &.MuiAccordionDetails-root {
     padding-left: 0;
     padding-right: 0;
   }

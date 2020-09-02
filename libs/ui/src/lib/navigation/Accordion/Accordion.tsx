@@ -24,20 +24,20 @@ export const Accordion = ({
   const handleChange = () => setExpanded(!expanded);
 
   return (
-    <Styled.ExpansionPanel
+    <Styled.Accordion
       className="testePanel"
       expanded={expanded}
       onChange={handleChange}
     >
-      <Styled.ExpansionPanelSummary
+      <Styled.AccordionSummary
         expandIcon={<Styled.ExpandMoreIcon />}
         aria-controls="panel1a-content"
         id="panel1a-header"
       >
         {summary}
-      </Styled.ExpansionPanelSummary>
-      <Styled.ExpansionPanelDetails>{children}</Styled.ExpansionPanelDetails>
-    </Styled.ExpansionPanel>
+      </Styled.AccordionSummary>
+      <Styled.AccordionDetails>{children}</Styled.AccordionDetails>
+    </Styled.Accordion>
   );
 };
 
