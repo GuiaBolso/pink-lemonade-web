@@ -20,13 +20,19 @@ export const FormControlLabel = styled(MuiFormControlLabel)`
     };
 
     return css`
-      .MuiCheckbox-root {
-        color: ${colors[variant] || colors.simple};
-        &.Mui-checked {
-          color: ${theme?.colors?.brand?.secondary?.default};
-        }
-        &.Mui-disabled {
-          color: ${theme?.colors?.neutral?.light};
+      && {
+        .MuiCheckbox-root {
+          color: ${colors[variant] || colors.simple};
+          &.Mui-checked {
+            color: ${theme?.colors?.brand?.secondary?.default};
+          }
+          &.Mui-disabled {
+            color: ${theme?.colors?.neutral?.light};
+          }
+
+          &:hover {
+            background-color: ${theme?.colors?.brand?.secondary?.lightest};
+          }
         }
       }
 
