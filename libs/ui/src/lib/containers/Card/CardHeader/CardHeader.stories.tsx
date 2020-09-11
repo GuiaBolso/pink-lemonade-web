@@ -6,7 +6,7 @@ import { CardHeader } from '../index';
 
 export default {
   title: 'Containers/CardHeader',
-  component: CardHeader,
+  component: CardHeader.type,
   decorators: [
     (story: StoryFn) => (
       <div

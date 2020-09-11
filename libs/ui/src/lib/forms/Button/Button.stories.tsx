@@ -5,7 +5,7 @@ import { guiaBolso } from '../../../designSystem/tokens';
 
 export default {
   title: 'Forms/Buttons',
-  component: Button,
+  component: Button.type,
 };
 
 export const Primary = () => <Button label="Primary" appearance="primary" />;
