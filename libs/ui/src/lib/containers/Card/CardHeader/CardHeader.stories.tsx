@@ -1,8 +1,9 @@
 import React from 'react';
 import { StoryFn } from '@storybook/addons';
+import { Meta } from '@storybook/react/types-6-0';
 import { Cached, MoreVert } from '@material-ui/icons';
 
-import { CardHeader } from '../index';
+import CardHeader from './CardHeader';
 
 export default {
   title: 'Containers/CardHeader',
@@ -19,7 +20,7 @@ export default {
       </div>
     ),
   ],
-};
+} as Meta;
 
 export const base = () => (
   <CardHeader
