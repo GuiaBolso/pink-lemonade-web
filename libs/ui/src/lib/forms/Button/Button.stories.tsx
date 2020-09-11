@@ -1,14 +1,22 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Button } from './index';
+import { Button } from './Button';
 import { guiaBolso } from '../../../designSystem/tokens';
 
 export default {
   title: 'Forms/Buttons',
-  component: Button.type,
-};
+  component: Button,
+} as Meta;
 
-export const Primary = () => <Button label="Primary" appearance="primary" />;
+const Template: Story<typeof Button> = args => <Button {...args} />;
+
+export const Primary = Template.bind({});
+
+Primary.args = {
+  label: 'Primary',
+  appearance: 'primary',
+};
 
 export const Secondary = () => (
   <Button label="Secondary" appearance="secondary" />
