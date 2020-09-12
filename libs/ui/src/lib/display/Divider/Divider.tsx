@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from '@guiabolsobr/ui';
 import * as S from './Divider.style';
 
-type DividerProps = React.ComponentProps<'div'> & {
+export type DividerProps = React.ComponentProps<'div'> & {
   label?: string;
 };
 
