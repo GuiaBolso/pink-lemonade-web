@@ -5,7 +5,7 @@ import { Text } from '../Text';
 
 import * as S from './Tooltip.style';
 
-type TooltipProps = {
+export type TooltipProps = {
   content: string | React.ReactNode | React.ReactNode[];
   children: React.ReactElement;
   title?: string | React.ReactNode | React.ReactNode[];

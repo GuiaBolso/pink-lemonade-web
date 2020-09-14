@@ -1,18 +1,32 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 
-import { Tooltip } from './index';
+import Tooltip, { TooltipProps } from './Tooltip';
 
 export default {
   title: 'Display/Tooltip',
   component: Tooltip,
-};
+} as Meta;
 
-export const DefaultTooltip = () => (
-  <Tooltip content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat.">
+const Template: Story<TooltipProps> = args => (
+  <Tooltip {...args}>
     <HelpOutline />
   </Tooltip>
 );
+
+export const DefaultTooltip = Template.bind({});
+
+DefaultTooltip.args = {
+  content:
+    'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat.',
+};
+
+/* export const DefaultTooltip = () => (
+  <Tooltip content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat.">
+    <HelpOutline />
+  </Tooltip>
+); */
 
 export const TooltipWithTitle = () => (
   <Tooltip
