@@ -1,13 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { ProgressBar } from './index';
+import { ProgressBar, ProgressBarProps } from './ProgressBar';
 
 export default {
   title: 'Notification/ProgressBar',
   component: ProgressBar,
+} as Meta;
+
+const Template: Story<ProgressBarProps> = args => <ProgressBar {...args} />;
+
+export const Indeterminate = Template.bind({});
+
+Indeterminate.args = {
+  label: 'Analisando dados',
 };
 
-export const Indeterminate = () => <ProgressBar label="Analisando dados" />;
+//export const Indeterminate = () => <ProgressBar label="Analisando dados" />;
 
 export const Determinate = () => {
   const [progress, setProgress] = useState<number>(0);
