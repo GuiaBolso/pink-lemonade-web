@@ -41,7 +41,7 @@ export type TextProps = React.ComponentProps<'span'> & {
     | 'link-small';
 };
 
-const Text = ({
+export const Text = ({
   children,
   component = 'span',
   variant = 'body-01',
