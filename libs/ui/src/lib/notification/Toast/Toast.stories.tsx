@@ -7,7 +7,7 @@ import Toast from './Toast';
 
 export default {
   title: 'Notification/Toast',
-  component: ToastProvider,
+  component: Toast,
   decorators: [
     /* eslint-disable-next-line */
     (story: any) => <ToastProvider>{story()}</ToastProvider>,
