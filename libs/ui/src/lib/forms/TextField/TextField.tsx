@@ -13,7 +13,7 @@ import * as Styled from './TextField.style';
 
 type InputComponent = React.ElementType<InputBaseComponentProps>;
 
-type TextFieldProps = {
+export type TextFieldProps = {
   icon?: React.ReactNode;
   iconPosition?: 'start' | 'end';
   inputComponent?: InputComponent;

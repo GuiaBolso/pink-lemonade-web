@@ -1,16 +1,23 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 import AlternateEmail from '@material-ui/icons/AlternateEmail';
-import { TextField } from '.';
+import TextField, { TextFieldProps } from './TextField';
 
-export default { title: 'Forms/TextField', component: TextField };
+export default { title: 'Forms/TextField', component: TextField.type } as Meta;
 
-export const base = () => <TextField label="Nome" />;
+const Template: Story<TextFieldProps> = args => <TextField {...args} />;
+
+export const base = Template.bind({});
+
+base.args = {
+  label: 'Nome',
+};
 
 export const helperText = () => (
   <TextField label="Nome" helperText="Digite o seu nome!" />
 );
 
-export const iconTrailling = () => (
+export const iconTrailing = () => (
   <TextField label="Nome" icon={<AlternateEmail />} iconPosition="start" />
 );
 
