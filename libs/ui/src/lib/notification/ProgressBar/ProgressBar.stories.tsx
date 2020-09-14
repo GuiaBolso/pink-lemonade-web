@@ -16,8 +16,6 @@ Indeterminate.args = {
   label: 'Analisando dados',
 };
 
-//export const Indeterminate = () => <ProgressBar label="Analisando dados" />;
-
 export const Determinate = () => {
   const [progress, setProgress] = useState<number>(0);
   const [color, setColor] = useState(null);
