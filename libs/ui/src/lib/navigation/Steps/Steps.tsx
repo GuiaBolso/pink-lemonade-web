@@ -2,12 +2,12 @@ import React, { memo } from 'react';
 
 import * as S from './Steps.style';
 
-interface Steps {
+export interface StepsProps {
   totalSteps: number;
   currentStep: number;
 }
 
-const Steps = ({ totalSteps, currentStep }: Steps) => {
+const Steps = ({ totalSteps, currentStep }: StepsProps) => {
   return (
     <S.StepsContainer>
       {totalSteps > 0 &&
