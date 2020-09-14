@@ -4,7 +4,7 @@ import ArrowIcon from './ArrowIcon';
 
 import * as S from './Arrow.style';
 
-type ArrowProps = {
+export type ArrowProps = {
   label: 'Anterior' | 'Próximo';
   content: string;
   icon?: React.ReactNode;

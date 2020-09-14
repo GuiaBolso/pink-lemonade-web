@@ -1,11 +1,12 @@
 import React from 'react';
+import { Story, Meta } from '@storybook/react/types-6-0';
 
-import { Arrow } from './index';
+import Arrow, { ArrowProps } from './Arrow';
 
 export default {
   title: 'Navigation/Arrow',
   component: Arrow,
-};
+} as Meta;
 
 const IconMock = () => (
   <div
@@ -24,7 +25,14 @@ const IconMock = () => (
   </div>
 );
 
-export const Prev = () => <Arrow label="Anterior" content="Token" />;
+const Template: Story<ArrowProps> = args => <Arrow {...args} />;
+
+export const Prev = Template.bind({});
+
+Prev.args = {
+  label: 'Anterior',
+  content: 'Token',
+};
 
 export const Next = () => <Arrow label="Próximo" content="Token" />;
 
