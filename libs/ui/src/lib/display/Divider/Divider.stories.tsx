@@ -15,5 +15,4 @@ withLabel.args = {
   label: 'ou',
 };
 
-//export const withLabel = () => <Divider label="ou" />;
 export const withoutLabel = () => <Divider />;

@@ -22,12 +22,6 @@ DefaultTooltip.args = {
     'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat.',
 };
 
-/* export const DefaultTooltip = () => (
-  <Tooltip content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dolorem fugiat.">
-    <HelpOutline />
-  </Tooltip>
-); */
-
 export const TooltipWithTitle = () => (
   <Tooltip
     title="Lorem ipsum dolor sit"
