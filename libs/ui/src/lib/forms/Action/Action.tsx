@@ -7,7 +7,7 @@ import ArrowRight from './ArrowRight.icon';
 
 import * as S from './Action.style';
 
-type ActionProps = {
+export type ActionProps = {
   label: string;
   arrowPosition?: 'leading' | 'trailing';
   wide?: boolean;
