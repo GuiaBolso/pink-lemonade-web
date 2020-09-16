@@ -1,3 +1,31 @@
+## @guiabolsobr/ui [1.11.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.10.1...@guiabolsobr/ui@1.11.0) (2020-09-16)
+
+
+### Features
+
+* 🎸 update Action storybook ([91db56a](https://github.com/GuiaBolso/pink-lemonade-web/commit/91db56af284506ef8ec0a210ca4b182ee5c03ae1))
+* 🎸 update Arrow storybook ([ad62ee9](https://github.com/GuiaBolso/pink-lemonade-web/commit/ad62ee921d607be4231579977ee44e3c05808afa))
+* 🎸 update button storybook ([193be89](https://github.com/GuiaBolso/pink-lemonade-web/commit/193be89537a3e9f5cc5cf57ec2afa67b0d822cd4))
+* 🎸 update Card storybook ([b377d1c](https://github.com/GuiaBolso/pink-lemonade-web/commit/b377d1c7b077b7d980ade31ab7ca9020e0884ece))
+* 🎸 update CardFooter storybook ([205235b](https://github.com/GuiaBolso/pink-lemonade-web/commit/205235b1c025834315710a28169910656abc81d2))
+* 🎸 update CardHeader storybook ([6b6ae51](https://github.com/GuiaBolso/pink-lemonade-web/commit/6b6ae51dac0d567a5732d53033c2ae7ad717df44))
+* 🎸 update Checkbox storybook ([533ab97](https://github.com/GuiaBolso/pink-lemonade-web/commit/533ab9789d40776509da1a531fab7dec1f17c66e))
+* 🎸 update Divider storybook ([71627e0](https://github.com/GuiaBolso/pink-lemonade-web/commit/71627e0641d9fb523052b4db6323b35e94c18269))
+* 🎸 update FloatingCard storybook ([9546a77](https://github.com/GuiaBolso/pink-lemonade-web/commit/9546a779f9c9d348e9fe7fa8a437a258e94e4f70))
+* 🎸 update ProgressBar storybook ([13243f2](https://github.com/GuiaBolso/pink-lemonade-web/commit/13243f2e228bbee78ecc9d6dfa772dc5791457ad))
+* 🎸 update ProgressBar storybook ([58b3f62](https://github.com/GuiaBolso/pink-lemonade-web/commit/58b3f62a1b779fdfe573d209c4ce84493c9070d8))
+* 🎸 update Steps storybook ([5ee4920](https://github.com/GuiaBolso/pink-lemonade-web/commit/5ee49202b6539eedecf6f78bbc7ca4e1102bb63e))
+* 🎸 update storybook ([5fc034e](https://github.com/GuiaBolso/pink-lemonade-web/commit/5fc034eafd232f961a72019b9794eed84d230b37))
+* 🎸 update Text storybook ([9a51385](https://github.com/GuiaBolso/pink-lemonade-web/commit/9a513855cdc1b5f8f9e245abea8f24ff34feb3cc))
+* 🎸 update TextField storybook ([54b8b1e](https://github.com/GuiaBolso/pink-lemonade-web/commit/54b8b1ea0dfcbfe6ab17fd81ef2fb9c7840a333c))
+* 🎸 update Toast storybook ([ca86845](https://github.com/GuiaBolso/pink-lemonade-web/commit/ca86845eba168c8d01b59505c90a36b5be4901b5))
+* 🎸 update Tooltip storybook ([4695c84](https://github.com/GuiaBolso/pink-lemonade-web/commit/4695c84e9f8515f1a86469a950561b5e89d091b0))
+
+
+### Bug Fixes
+
+* 🐛 remove comment ([77567be](https://github.com/GuiaBolso/pink-lemonade-web/commit/77567be50ff9f05bb589c49b9b815472571b6e5a))
+
 ### @guiabolsobr/ui [1.10.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.10.0...@guiabolsobr/ui@1.10.1) (2020-09-02)
 
 ### Bug Fixes
