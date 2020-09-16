@@ -3,7 +3,7 @@ import Checkbox from './Checkbox';
 
 export default {
   title: 'Forms/Checkbox',
-  component: Checkbox,
+  component: Checkbox.type,
 };
 
 export const simple = () => (

@@ -1,4 +1,6 @@
 import React from 'react';
+import { Meta } from '@storybook/react/types-6-0';
+
 import { Card, CardHeader, CardContent, CardFooter } from './index';
 
 import { Action } from '../../forms/Action';
@@ -23,7 +25,7 @@ export default {
       </div>
     ),
   ],
-};
+} as Meta;
 
 export const Complete = () => (
   <Card>

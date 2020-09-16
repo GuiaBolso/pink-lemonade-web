@@ -5,7 +5,7 @@ import check from '../../../assets/images/icons/check.svg';
 
 import * as S from './ProgressBar.style';
 
-type ProgressBarProps = {
+export type ProgressBarProps = {
   variant?: 'determinate' | 'indeterminate';
   value?: number;
   label: string;
@@ -15,7 +15,7 @@ type ProgressBarProps = {
   };
 };
 
-const ProgressBar = ({
+export const ProgressBar = ({
   variant = 'indeterminate',
   value,
   label,

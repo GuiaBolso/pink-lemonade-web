@@ -1,25 +1,31 @@
 import React from 'react';
-import { FloatingCard } from './index';
+import { Story, Meta } from '@storybook/react/types-6-0';
+import FloatingCard, { FloatingCardProps } from './FloatingCard';
 
 export default {
   title: 'Containers/FloatingCard',
   component: FloatingCard,
-};
+} as Meta;
 
-export const SingleCard = () => (
+const Template: Story<FloatingCardProps> = args => (
   <div
     style={{
       display: 'flex',
       maxWidth: '300px',
     }}
   >
-    <FloatingCard
-      category="Overview"
-      title="Sobre as tecnologias utilizadas"
-      description="O Guiabolso Connect utiliza um protocolo de autenticação chamado..."
-    />
+    <FloatingCard {...args} />
   </div>
 );
+
+export const SingleCard = Template.bind({});
+
+SingleCard.args = {
+  category: 'Overview',
+  title: 'Sobre as tecnologias utilizadas',
+  description:
+    'O Guiabolso Connect utiliza um protocolo de autenticação chamado...',
+};
 
 export const MultipleCards = () => (
   <div

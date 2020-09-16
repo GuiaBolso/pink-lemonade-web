@@ -1,9 +1,8 @@
 ### @guiabolsobr/ui [1.10.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.10.0...@guiabolsobr/ui@1.10.1) (2020-09-02)
 
-
 ### Bug Fixes
 
-* 🐛 adjust checkboxes hover color ([f1372cf](https://github.com/GuiaBolso/pink-lemonade-web/commit/f1372cfa9b9a81eaf4d3b2e4a1ca9345582eed4d))
+- 🐛 adjust checkboxes hover color ([f1372cf](https://github.com/GuiaBolso/pink-lemonade-web/commit/f1372cfa9b9a81eaf4d3b2e4a1ca9345582eed4d))
 
 ## @guiabolsobr/ui [1.10.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.9.1...@guiabolsobr/ui@1.10.0) (2020-08-21)
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as S from './FloatingCard.style';
 
-interface FloatingCardProps {
+export interface FloatingCardProps {
   category: string;
   title: string;
   description: string;

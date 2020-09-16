@@ -1,12 +1,8 @@
 import React from 'react';
 
-import { configure, addDecorator } from '@storybook/react';
 import { withKnobs, optionsKnob as options } from '@storybook/addon-knobs';
 import { Theme } from '../src/lib/general';
 import { guiaBolso, connect } from '../src/designSystem/tokens';
-
-// automatically import all files ending in *.stories.js
-const req = require.context('../src/lib', true, /\.stories\.(mdx|jsx|tsx)$/);
 
 const themes = {
   guiaBolso,
@@ -34,6 +30,4 @@ const withGlobal = cb => {
   return <Theme theme={themes[value]}>{cb()}</Theme>;
 };
 
-addDecorator(withKnobs);
-addDecorator(withGlobal);
-configure(req, module);
+export const decorators = [withKnobs, withGlobal];
