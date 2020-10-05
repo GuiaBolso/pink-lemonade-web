@@ -32,11 +32,11 @@ const InfoBanner = ({
   }, []);
 
   return (
-    <S.Container position={position} isOpen={isOpen} data-testid="container">
+    <S.Container position={position} isOpen={isOpen} >
       <S.Content>
         {children}
         {type !== 'text-button' && (
-          <S.Close data-testid="close-btn" onClick={handleClose} />
+          <S.Close  onClick={handleClose} />
         )}
         {type !== 'text-close' && (
           <S.ConfirmButton
