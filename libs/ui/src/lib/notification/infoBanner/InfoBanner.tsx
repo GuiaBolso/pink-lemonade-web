@@ -39,7 +39,7 @@ const InfoBanner = ({
           <S.Close data-testid="close-btn" onClick={handleClose} />
         )}
         {type !== 'text-close' && (
-          <S.BannerButton
+          <S.ConfirmButton
             label={confirm?.label || 'Concordo'}
             onClick={handleConfirm}
             size="small"

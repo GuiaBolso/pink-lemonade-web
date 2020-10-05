@@ -55,6 +55,16 @@ export const Close = styled(MuiClose)`
   cursor: pointer;
 `;
 
-export const BannerButton = styled(Button)`
+export const ConfirmButton = styled(Button)`
   grid-row: 2/3;
+
+  && {
+    background-color: ${({ theme }: InfoBannerTheme) =>
+      theme?.colors?.feedback?.notification?.default};
+
+    :hover {
+      background-color: ${({ theme }: InfoBannerTheme) =>
+        theme?.colors?.feedback?.notification?.default};
+    }
+  }
 `;
