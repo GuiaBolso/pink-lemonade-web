@@ -10,12 +10,16 @@ type InfoBannerTheme = {
   theme: CustomThemeProps;
 };
 
-export const Container = styled.div<InfoBannerTheme>`
+type ContainerProps = {
+  isOpen: boolean;
+};
+
+export const Container = styled.div<InfoBannerTheme & ContainerProps>`
   background-color: ${({ theme }) =>
     theme?.colors?.feedback?.notification?.lightest};
   box-sizing: border-box;
   bottom: 0;
-  display: flex;
+  display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   justify-content: center;
   left: 0;
   padding: ${pxToRem(24)};
