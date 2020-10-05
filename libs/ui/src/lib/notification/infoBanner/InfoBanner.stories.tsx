@@ -22,7 +22,7 @@ export default {
 };
 
 export const Base = () => (
-  <InfoBanner showActionBtn showCloseBtn>
+  <InfoBanner type="base">
     <Text variant="caption" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque
@@ -33,7 +33,7 @@ export const Base = () => (
 );
 
 export const TextButton = () => (
-  <InfoBanner showActionBtn>
+  <InfoBanner type="text-button">
     <Text variant="caption" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque
@@ -44,7 +44,7 @@ export const TextButton = () => (
 );
 
 export const TextClose = () => (
-  <InfoBanner showCloseBtn>
+  <InfoBanner type="text-close">
     <Text variant="caption" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque

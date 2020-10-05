@@ -4,20 +4,15 @@ import * as S from './InfoBanner.style';
 
 type InfoBannerProps = {
   children: React.ReactNode;
-  showActionBtn?: boolean;
-  showCloseBtn?: boolean;
+  type: 'base' | 'text-button' | 'text-close';
 };
 
-const InfoBanner = ({
-  children,
-  showActionBtn,
-  showCloseBtn,
-}: InfoBannerProps) => (
+const InfoBanner = ({ children, type }: InfoBannerProps) => (
   <S.Container>
     <S.Content>
       {children}
-      {showCloseBtn && <S.Close />}
-      {showActionBtn && (
+      {type !== 'text-button' && <S.Close />}
+      {type !== 'text-close' && (
         <S.BannerButton label="Button" size="small" scale="narrow" />
       )}
     </S.Content>
