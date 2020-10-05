@@ -8,7 +8,8 @@ type InfoBannerProps = {
     label: string;
     handler?: () => void;
   };
-  opened: boolean;
+  opened?: boolean;
+  position?: 'top' | 'bottom';
   type: 'base' | 'text-button' | 'text-close';
 };
 
@@ -16,6 +17,7 @@ const InfoBanner = ({
   children,
   confirm,
   opened = true,
+  position = 'bottom',
   type,
 }: InfoBannerProps) => {
   const [isOpen, setIsOpen] = useState(opened);
@@ -30,7 +32,7 @@ const InfoBanner = ({
   }, []);
 
   return (
-    <S.Container isOpen={isOpen}>
+    <S.Container position={position} isOpen={isOpen}>
       <S.Content>
         {children}
         {type !== 'text-button' && <S.Close onClick={handleClose} />}

@@ -1,4 +1,6 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
+
 import { Close as MuiClose } from '@material-ui/icons';
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
@@ -12,13 +14,13 @@ type InfoBannerTheme = {
 
 type ContainerProps = {
   isOpen: boolean;
+  position: 'top' | 'bottom';
 };
 
 export const Container = styled.div<InfoBannerTheme & ContainerProps>`
   background-color: ${({ theme }) =>
     theme?.colors?.feedback?.notification?.lightest};
   box-sizing: border-box;
-  bottom: 0;
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   justify-content: center;
   left: 0;
@@ -26,6 +28,15 @@ export const Container = styled.div<InfoBannerTheme & ContainerProps>`
   position: fixed;
   width: 100vw;
   word-break: break-word;
+
+  ${({ position }) =>
+    position === 'top'
+      ? css`
+          top: 0;
+        `
+      : css`
+          bottom: 0;
+        `}
 `;
 
 export const Content = styled.div`
