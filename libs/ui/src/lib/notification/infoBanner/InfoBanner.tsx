@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 
 import * as S from './InfoBanner.style';
 
-type InfoBannerProps = {
+export type InfoBannerProps = {
   children: React.ReactNode;
   confirm?: {
     label: string;
@@ -32,10 +32,12 @@ const InfoBanner = ({
   }, []);
 
   return (
-    <S.Container position={position} isOpen={isOpen}>
+    <S.Container position={position} isOpen={isOpen} data-testid="container">
       <S.Content>
         {children}
-        {type !== 'text-button' && <S.Close onClick={handleClose} />}
+        {type !== 'text-button' && (
+          <S.Close data-testid="close-btn" onClick={handleClose} />
+        )}
         {type !== 'text-close' && (
           <S.BannerButton
             label={confirm?.label || 'Concordo'}
