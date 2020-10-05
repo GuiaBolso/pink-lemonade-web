@@ -17,6 +17,7 @@ export * from './lib/navigation/Arrow';
 export * from './lib/navigation/DropMenu';
 export * from './lib/navigation/Steps';
 
+export * from './lib/notification/infoBanner';
 export * from './lib/notification/infoPanel';
 export * from './lib/notification/Modal';
 export * from './lib/notification/ProgressBar';
