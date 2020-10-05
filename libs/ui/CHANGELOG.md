@@ -1,3 +1,20 @@
+## @guiabolsobr/ui [1.12.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.11.0...@guiabolsobr/ui@1.12.0) (2020-10-05)
+
+
+### Features
+
+* handle close ([b36734f](https://github.com/GuiaBolso/pink-lemonade-web/commit/b36734fc3dafbe58420b400c13854a0f97913538))
+* handle confirm ([1497a32](https://github.com/GuiaBolso/pink-lemonade-web/commit/1497a32e24544f4244dda7e917c35c039799b5d0))
+* infobanner types ([5858167](https://github.com/GuiaBolso/pink-lemonade-web/commit/585816715bab9ee9cdd72e30880ee01bac744d05))
+* position ([3da116c](https://github.com/GuiaBolso/pink-lemonade-web/commit/3da116c6e935a5940776d36648a58358eb544c2e))
+
+
+### Bug Fixes
+
+* button color ([125f057](https://github.com/GuiaBolso/pink-lemonade-web/commit/125f0574f9a8034b8f90dd5669629168cc6323c3))
+* lint ([591b25c](https://github.com/GuiaBolso/pink-lemonade-web/commit/591b25c202a2c50979a99bbe459647da2f2ba54d))
+* remove testid ([1acbfcf](https://github.com/GuiaBolso/pink-lemonade-web/commit/1acbfcf751042fadebd908888415e82478faa090))
+
 ## @guiabolsobr/ui [1.11.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.10.1...@guiabolsobr/ui@1.11.0) (2020-09-16)
 
 
