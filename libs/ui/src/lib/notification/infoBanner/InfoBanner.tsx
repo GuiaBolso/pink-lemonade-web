@@ -29,15 +29,13 @@ const InfoBanner = ({
   const handleConfirm = useCallback(() => {
     confirm?.handler?.();
     handleClose();
-  }, []);
+  }, [confirm, handleClose]);
 
   return (
-    <S.Container position={position} isOpen={isOpen} >
+    <S.Container position={position} isOpen={isOpen}>
       <S.Content>
         {children}
-        {type !== 'text-button' && (
-          <S.Close  onClick={handleClose} />
-        )}
+        {type !== 'text-button' && <S.Close onClick={handleClose} />}
         {type !== 'text-close' && (
           <S.ConfirmButton
             label={confirm?.label || 'Concordo'}
