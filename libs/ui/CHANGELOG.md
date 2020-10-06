@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [1.12.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.12.0...@guiabolsobr/ui@1.12.1) (2020-10-06)
+
+
+### Bug Fixes
+
+* zindex missing ([ff5f3e8](https://github.com/GuiaBolso/pink-lemonade-web/commit/ff5f3e8d16b542146ee3dcd402bb65a9d1784a3b))
+
 ## @guiabolsobr/ui [1.12.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.11.0...@guiabolsobr/ui@1.12.0) (2020-10-05)
 
 
