@@ -28,7 +28,7 @@ export const Container = styled.div<InfoBannerTheme & ContainerProps>`
   position: fixed;
   width: 100vw;
   word-break: break-word;
-
+  z-index: 8000;
   ${({ position }) =>
     position === 'top'
       ? css`
