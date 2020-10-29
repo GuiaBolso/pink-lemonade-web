@@ -1,1 +1,3 @@
-export { default as Text } from './Text';
+import { Text, VariantProps } from './Text';
+
+export { Text, VariantProps };
