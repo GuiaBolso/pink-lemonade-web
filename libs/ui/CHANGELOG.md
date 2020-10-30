@@ -1,3 +1,16 @@
+## @guiabolsobr/ui [3.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@2.0.0...@guiabolsobr/ui@3.0.0) (2020-10-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 no
+
+✅ Closes: SEG-516
+
+### Bug Fixes
+
+* 🐛 Export variant text ([8641864](https://github.com/GuiaBolso/pink-lemonade-web/commit/8641864dcb9e96c6d3c8643771222d118106fdd6))
+
 ## @guiabolsobr/ui [2.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@1.12.1...@guiabolsobr/ui@2.0.0) (2020-10-27)
 
 
