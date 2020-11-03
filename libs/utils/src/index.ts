@@ -7,5 +7,6 @@ export * from './lib/object/merge-right/merge-right';
 export * from './lib/scales/px-to-rem/px-to-rem';
 export * from './lib/scales/hex-to-rgb/hex-to-rgb';
 
+export * from './lib/ab-test/ab-test';
 export * from './lib/copy-to-clipboard/copy-to-clipboard';
 export * from './lib/create-id/create-id';
