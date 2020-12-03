@@ -25,6 +25,7 @@ module.exports = {
   },
   stories: ['../src/lib/**/*.stories.@(mdx|jsx|tsx)'],
   addons: [
+    '@storybook/addon-essentials',
     '@storybook/addon-notes/register-panel',
     '@storybook/addon-docs',
     '@storybook/addon-a11y/register',

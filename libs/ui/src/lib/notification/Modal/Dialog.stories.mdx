@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { ModalProvider, useModal, Modal } from '.';
 import { Text } from '../../display';
 
@@ -8,7 +8,7 @@ import { Text } from '../../display';
 
 O modal de `dialog` renderiza um dois botões. um de sucesso outro para dispensar. É possível passar uma função para ser executada quando o modal fechar em ambos os casos.
 
-<Preview>
+<Canvas>
   <Story
     name="Dialog"
     decorators={[
@@ -39,7 +39,7 @@ O modal de `dialog` renderiza um dois botões. um de sucesso outro para dispensa
       </Text>
     </Modal>
   </Story>
-</Preview>
+</Canvas>
 
 ## Dialog com Hook
 

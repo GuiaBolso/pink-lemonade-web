@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { ModalProvider, useModal, Modal } from '.';
 import { Text } from '../../display';
 
@@ -8,7 +8,7 @@ import { Text } from '../../display';
 
 O modal de `alert` renderiza um único botão para dispensar o mesmo. É possível passar uma função para ser executada quando o modal fechar.
 
-<Preview>
+<Canvas>
   <Story
     name="Alert"
     decorators={[
@@ -30,7 +30,7 @@ O modal de `alert` renderiza um único botão para dispensar o mesmo. É possív
       </Text>
     </Modal>
   </Story>
-</Preview>
+</Canvas>
 
 ## Alert com Hook
 
