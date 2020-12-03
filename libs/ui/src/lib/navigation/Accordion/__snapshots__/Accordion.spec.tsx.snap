@@ -2,7 +2,7 @@
 
 exports[`Text Component renders connect theme correctly 1`] = `
 <div
-  className="MuiPaper-root MuiAccordion-root testePanel css-19f2gti Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
+  className="MuiPaper-root MuiAccordion-root testePanel css-123qacc Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     aria-controls="panel1a-content"

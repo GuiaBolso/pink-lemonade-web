@@ -2,7 +2,7 @@
 
 exports[`Text Component renders connect theme correctly 1`] = `
 <span
-  className="css-7l6bak"
+  className="css-95avy4"
   data-testid="text"
 >
   Componente de texto
@@ -11,7 +11,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
 
 exports[`Text Component renders correctly 1`] = `
 <span
-  className="css-jvt11d"
+  className="css-95avy4"
   data-testid="text"
 >
   Componente de texto
