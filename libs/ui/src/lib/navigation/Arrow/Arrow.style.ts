@@ -27,7 +27,7 @@ export const ArrowContainer = styled.div`
 `;
 
 export const Label = styled(Text)`
-  color: ${({ theme }: ArrowTheme) => theme?.colors?.neutral?.darker};
+  color: ${({ theme }: ArrowTheme) => theme?.colors?.neutral?.dark};
   display: block;
 `;
 

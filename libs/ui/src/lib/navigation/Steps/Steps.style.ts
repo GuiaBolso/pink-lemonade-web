@@ -20,7 +20,7 @@ export const Step = styled.li`
   background-color: ${({ active, theme }: StepsTheme) =>
     active
       ? theme?.colors?.brand?.secondary?.default
-      : theme?.colors?.neutral?.brand};
+      : theme?.colors?.neutral?.light};
   border-radius: 50%;
   color: transparent;
   display: block;

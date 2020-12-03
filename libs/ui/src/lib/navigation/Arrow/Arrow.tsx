@@ -13,7 +13,7 @@ export type ArrowProps = {
 const Arrow = ({ label = 'Anterior', content, icon }: ArrowProps) => (
   <S.ArrowContainer label={label}>
     <div>
-      <S.Label variant="body-02" component="span">
+      <S.Label variant="body-small" component="span">
         {label}
       </S.Label>
 
