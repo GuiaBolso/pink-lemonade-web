@@ -1,3 +1,15 @@
+## @guiabolsobr/ui [3.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.0.0...@guiabolsobr/ui@3.1.0) (2020-12-03)
+
+
+### Features
+
+* 🎸 atualização dos tokens ([f556dd6](https://github.com/GuiaBolso/pink-lemonade-web/commit/f556dd6f9a0844b1201df743b41a884eb4fd189a))
+
+
+### Bug Fixes
+
+* :bug: upgrade de Preview para Canvas em stories mdx ([6a270e3](https://github.com/GuiaBolso/pink-lemonade-web/commit/6a270e340be61252ddc103aa5953708a7fb5b650))
+
 ## @guiabolsobr/ui [3.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@2.0.0...@guiabolsobr/ui@3.0.0) (2020-10-30)
 
 
