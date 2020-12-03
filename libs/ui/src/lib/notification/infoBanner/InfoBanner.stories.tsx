@@ -23,7 +23,7 @@ export default {
 
 export const Base = () => (
   <InfoBanner type="base">
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque
       distinctio possimus exercitationem, in sint sequi expedita necessitatibus
@@ -34,7 +34,7 @@ export const Base = () => (
 
 export const TextButton = () => (
   <InfoBanner type="text-button">
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque
       distinctio possimus exercitationem, in sint sequi expedita necessitatibus
@@ -45,7 +45,7 @@ export const TextButton = () => (
 
 export const TextClose = () => (
   <InfoBanner type="text-close">
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
       ratione deserunt, quae consectetur culpa iure sit obcaecati neque
       distinctio possimus exercitationem, in sint sequi expedita necessitatibus

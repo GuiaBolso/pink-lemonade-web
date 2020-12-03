@@ -10,7 +10,7 @@ export interface FloatingCardProps {
 
 const FloatingCard = ({ category, title, description }: FloatingCardProps) => (
   <S.FloatingCard>
-    <S.Category variant="caption" component="h3">
+    <S.Category variant="subtitle-small" component="h3">
       {category}
     </S.Category>
 

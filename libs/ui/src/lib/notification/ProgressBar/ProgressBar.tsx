@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
-import { Text, themeProps } from '@guiabolsobr/ui';
-import { useTheme } from 'emotion-theming';
+import { Text } from '@guiabolsobr/ui';
+
 import check from '../../../assets/images/icons/check.svg';
 
 import * as S from './ProgressBar.style';
@@ -21,9 +21,6 @@ export const ProgressBar = ({
   label,
   color,
 }: ProgressBarProps) => {
-  const theme = useTheme<themeProps>();
-  const TEXT_VARIATION =
-    theme.name === 'connect' ? 'caption' : 'subtitle-small';
   if ((value && value < 0) || value > 100) {
     throw new Error('The value field must be an integer between 0 and 100');
   }
@@ -41,12 +38,12 @@ export const ProgressBar = ({
         )}
       </S.Line>
       <S.Info>
-        <Text variant={TEXT_VARIATION}>{label}</Text>
+        <Text variant="subtitle-small">{label}</Text>
         {value?.toString &&
           (value === 100 ? (
             <S.CheckIcon src={check} alt="sucesso" />
           ) : (
-            <Text variant={TEXT_VARIATION}>{value}%</Text>
+            <Text variant="subtitle-small">{value}%</Text>
           ))}
       </S.Info>
     </S.Container>

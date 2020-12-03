@@ -91,7 +91,7 @@ subtitle02.story = connectParameters;
 export const buttonText = () => <Text variant="button-text">button-text</Text>;
 buttonText.story = connectParameters;
 
-export const caption = () => <Text variant="caption">caption</Text>;
+export const caption = () => <Text variant="subtitle-small">caption</Text>;
 caption.story = connectParameters;
 
 export const overline = () => <Text variant="overline">overline</Text>;
