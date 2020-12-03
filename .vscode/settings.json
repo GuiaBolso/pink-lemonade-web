@@ -2,5 +2,14 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "cSpell.words": [
+    "testid",
+    "xxxl",
+    "xxxs",
+    "xxxxl",
+    "xxxxs",
+    "xxxxxl",
+    "xxxxxs"
+  ]
 }

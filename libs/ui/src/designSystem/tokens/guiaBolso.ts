@@ -1,4 +1,4 @@
-import { pxToRem } from '@guiabolsobr/utils'; // eslint-disable-line
+import { pxToRem } from '@guiabolsobr/utils';
 import { DeepPartial } from '../../typings/DeepPartial';
 
 const baseFontSize = 16;
@@ -12,15 +12,19 @@ const tokens = {
     baseFontSize,
 
     sizes: {
-      xxxl: pxToRem(64, baseFontSize),
-      xxl: pxToRem(48, baseFontSize),
-      xl: pxToRem(40, baseFontSize),
+      xxxxxl: pxToRem(80, baseFontSize),
+      xxxxl: pxToRem(64, baseFontSize),
+      xxxl: pxToRem(48, baseFontSize),
+      xxl: pxToRem(40, baseFontSize),
+      xl: pxToRem(36, baseFontSize),
       lg: pxToRem(32, baseFontSize),
       md: pxToRem(24, baseFontSize),
       sm: pxToRem(20, baseFontSize),
       xs: pxToRem(18, baseFontSize),
-      xxs: pxToRem(14, baseFontSize),
-      xxxs: pxToRem(12, baseFontSize),
+      xxs: pxToRem(16, baseFontSize),
+      xxxs: pxToRem(14, baseFontSize),
+      xxxxs: pxToRem(12, baseFontSize),
+      xxxxxs: pxToRem(10, baseFontSize),
     },
 
     lineHeight: {
@@ -36,9 +40,10 @@ const tokens = {
     },
 
     fontWeight: {
-      bold: 'bold',
+      bold: 700,
       semibold: 600,
-      regular: 'normal',
+      regular: 400,
+      light: 300,
     },
   },
 
@@ -110,27 +115,7 @@ const tokens = {
         lightest: '#f2f7fe',
       },
     },
-
-    font: {
-      brand: {
-        primary: '#f9386a',
-        secondary: '#3f1b68',
-        neutral: '#404040',
-      },
-    },
   },
-
-  /* breakpoints: {
-    key: '',
-  },
-
-  zIndex: {
-    key: 10,
-  },
-
-  spacing: {
-    scale: [],
-  }, */
 };
 
 export default tokens;
