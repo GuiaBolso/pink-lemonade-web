@@ -20,9 +20,7 @@ export const Divider = styled.div`
 
   &:before {
     background-color: ${({ theme }: { theme: themeProps }) =>
-      theme.name === 'connect'
-        ? theme?.colors?.neutral?.lighter
-        : theme?.colors?.neutral?.lightest};
+      theme?.colors?.neutral?.lightest};
     content: '';
     height: ${pxToRem(1)};
     position: absolute;

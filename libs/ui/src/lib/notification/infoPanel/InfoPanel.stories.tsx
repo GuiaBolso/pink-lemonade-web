@@ -28,7 +28,7 @@ export const Complete = () => (
       Não precisa autorizar mais nada
     </Text>
 
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Talvez você receba um sms do seu banco solicitando para autorizar ou
       habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos
       nenhum tipo de transação na conta.
@@ -46,7 +46,7 @@ export const TitleOnly = () => (
 
 export const TextOnly = () => (
   <InfoPanel>
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Talvez você receba um sms do seu banco solicitando para autorizar ou
       habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos
       nenhum tipo de transação na conta.
@@ -60,7 +60,7 @@ export const CustomIcon = () => (
       Não precisa autorizar mais nada
     </Text>
 
-    <Text variant="caption" component="p">
+    <Text variant="subtitle-small" component="p">
       Talvez você receba um sms do seu banco solicitando para autorizar ou
       habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos
       nenhum tipo de transação na conta.

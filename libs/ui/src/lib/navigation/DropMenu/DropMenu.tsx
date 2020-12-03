@@ -12,7 +12,7 @@ type DropMenuProps = React.ComponentProps<'ul'> & {
 
 const DropMenuItem = ({ children, ...rest }: DropMenuItemProps) => (
   <S.MenuItem {...rest}>
-    <Text component="div" variant="body-01">
+    <Text component="div" variant="body-small">
       {children}
     </Text>
   </S.MenuItem>

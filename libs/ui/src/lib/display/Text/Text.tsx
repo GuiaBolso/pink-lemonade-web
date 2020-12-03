@@ -2,7 +2,6 @@ import React, { memo } from 'react';
 import * as Styled from './Text.style';
 
 export type VariantProps =
-  | 'display-00'
   | 'display-01'
   | 'display-02'
   | 'heading-01'
@@ -11,14 +10,6 @@ export type VariantProps =
   | 'heading-04'
   | 'heading-05'
   | 'heading-06'
-  | 'body-01'
-  | 'body-02'
-  | 'subtitle-01'
-  | 'subtitle-02'
-  | 'button-text'
-  | 'caption'
-  | 'overline'
-  | 'link'
   | 'body-medium'
   | 'body-small'
   | 'subtitle-medium'
@@ -46,7 +37,7 @@ export type TextProps = React.ComponentProps<'span'> & {
 export const Text = ({
   children,
   component = 'span',
-  variant = 'body-01',
+  variant = 'body-medium',
   ...rest
 }: TextProps) => {
   return (

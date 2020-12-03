@@ -12,49 +12,26 @@ type CardProps = {
 };
 
 const variants = {
-  default: ({ theme }: CardProps) => {
-    const themeName = {
-      connect: () => css`
-        line-height: ${theme?.type?.lineHeight?.rule3};
-      `,
-      guiaBolso: () => null,
-    };
+  default: ({ theme }: CardProps) => css`
+    line-height: ${theme?.type?.lineHeight?.rule3};
+  `,
 
-    return (themeName[theme?.name] || themeName.guiaBolso)();
-  },
-
-  outlined: ({ theme }: CardProps) => {
-    const themeName = {
-      connect: () => css`
-        border: 1px solid ${theme?.colors?.neutral?.light};
-      `,
-      guiaBolso: () => null,
-    };
-
-    return (themeName[theme?.name] || themeName.guiaBolso)();
-  },
+  outlined: ({ theme }: CardProps) => css`
+    border: 1px solid ${theme?.colors?.neutral?.light};
+  `,
 };
 
 export const Card = styled.article`
-  background: #fff;
   border-radius: ${pxToRem(4)};
   box-sizing: border-box;
   display: inline-block;
   flex: 1 1 ${pxToRem(235)};
   margin: ${pxToRem(12)};
 
-  ${({ theme }: CardProps) => {
-    const themeName = {
-      connect: () => css`
-        box-shadow: 0 ${pxToRem(4)} ${pxToRem(4)} rgba(13, 13, 13, 0.14),
-          0 0 ${pxToRem(2)} rgba(13, 13, 13, 0.2);
-      `,
-      guiaBolso: () => css`
-        box-shadow: 0 0.5px ${pxToRem(1)} #d9d9d9;
-      `,
-    };
-    return (themeName[theme?.name] || themeName.guiaBolso)();
-  }};
+  ${({ theme }: CardProps) => css`
+    background: ${theme?.colors?.neutral?.blank};
+    box-shadow: 0 0.5px 1px ${theme?.colors?.neutral?.light};
+  `};
 
   /* stylelint-disable-next-line */
   ${props => variants[props.variant]}

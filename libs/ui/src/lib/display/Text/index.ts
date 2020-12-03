@@ -1,3 +1,10 @@
-import { Text, VariantProps } from './Text';
+import {
+  Text,
+  VariantProps as _VariantProps,
+  TextProps as _TextProps,
+} from './Text';
 
-export { Text, VariantProps };
+type VariantProps = _VariantProps;
+type TextProps = _TextProps;
+
+export { Text, VariantProps, TextProps };

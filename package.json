@@ -29,7 +29,7 @@
     "storybook:ui": "nx run ui:storybook",
     "storybook-build:ui": "nx run ui:build-storybook",
     "semantic-release": "nx-semantic-release",
-    "chromatic": "npx chromatic -d storybook/ui/dist --project-token=txa6ns7itg --exit-once-uploaded"
+    "chromatic": "npx chromatic -d storybook/ui/dist --project-token=txa6ns7itg --exit-once-uploaded --auto-accept-changes"
   },
   "private": true,
   "bin": {
@@ -82,6 +82,7 @@
     "@semantic-release/release-notes-generator": "^9.0.1",
     "@storybook/addon-a11y": "^6.0.21",
     "@storybook/addon-docs": "^6.0.21",
+    "@storybook/addon-essentials": "^6.1.9",
     "@storybook/addon-knobs": "^6.0.21",
     "@storybook/addon-notes": "^5.3.21",
     "@storybook/addons": "^6.0.21",

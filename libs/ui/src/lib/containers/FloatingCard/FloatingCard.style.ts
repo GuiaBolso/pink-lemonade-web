@@ -47,7 +47,7 @@ export const Title = styled(Text)`
 `;
 
 export const Description = styled(Text)`
-  color: ${({ theme }: FloatingCardTheme) => theme?.colors?.neutral?.darker};
+  color: ${({ theme }: FloatingCardTheme) => theme?.colors?.neutral?.dark};
   margin: ${pxToRem(8)} 0;
   margin-top: auto;
 `;

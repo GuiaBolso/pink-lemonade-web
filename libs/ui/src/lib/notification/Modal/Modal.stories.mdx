@@ -1,4 +1,4 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 import { ModalProvider, useModal, Modal } from '.';
 import { Text } from '../../display';
 import { Button } from '../../forms';
@@ -92,7 +92,7 @@ export const ActionButtonModal = () => {
   );
 };
 
-<Preview>
+<Canvas>
   <Story name="Hook Exemplo">
     <ModalProvider>
       <div
@@ -107,4 +107,4 @@ export const ActionButtonModal = () => {
       </div>
     </ModalProvider>
   </Story>
-</Preview>
+</Canvas>

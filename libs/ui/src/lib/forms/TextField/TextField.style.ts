@@ -41,19 +41,10 @@ export const TextFiled = styled(MuiTextField)`
   }
 
   .MuiOutlinedInput-input {
-    ${({ theme }: TextFieldProps) => {
-      const themeName = {
-        connect: () => css`
-          color: ${theme?.colors?.neutral?.darker};
-          font-size: ${theme?.type?.sizes?.fontSize16};
-        `,
-        guiaBolso: () => css`
-          color: ${theme?.colors?.neutral?.dark};
-          font-size: ${theme?.type?.sizes?.xs};
-        `,
-      };
-      return (themeName[theme?.name] || themeName.guiaBolso)();
-    }};
+    ${({ theme }: TextFieldProps) => css`
+      color: ${theme?.colors?.neutral?.dark};
+      font-size: ${theme?.type?.sizes?.xxs};
+    `};
 
     padding: 27px 12px 10px;
 
@@ -75,47 +66,23 @@ export const TextFiled = styled(MuiTextField)`
   .MuiFormLabel-root {
     font-family: inherit;
 
-    ${({ theme }: TextFieldProps) => {
-      const themeName = {
-        connect: () => css`
-          color: ${theme?.colors?.neutral?.dark};
-          font-size: ${theme?.type?.sizes?.fontSize16};
-          &.Mui-focused,
-          &.Mui-error {
-            color: ${theme?.colors?.neutral?.dark};
-          }
-          &.Mui-disabled {
-            color: ${theme?.colors?.neutral?.brand};
-          }
-        `,
-        guiaBolso: () => css`
-          color: ${theme?.colors?.neutral?.medium};
-          font-size: ${theme?.type?.sizes?.xs};
-          &.Mui-focused,
-          &.Mui-error {
-            color: ${theme?.colors?.neutral?.medium};
-          }
-          &.Mui-disabled {
-            color: ${theme?.colors?.neutral?.light};
-          }
-        `,
-      };
-      return (themeName[theme?.name] || themeName.guiaBolso)();
-    }}
+    ${({ theme }: TextFieldProps) => css`
+      color: ${theme?.colors?.neutral?.medium};
+      font-size: ${theme?.type?.sizes?.xxs};
+      &.Mui-focused,
+      &.Mui-error {
+        color: ${theme?.colors?.neutral?.medium};
+      }
+      &.Mui-disabled {
+        color: ${theme?.colors?.neutral?.light};
+      }
+    `}
   }
 
   .MuiOutlinedInput-notchedOutline {
-    ${({ theme }: TextFieldProps) => {
-      const themeName = {
-        connect: () => css`
-          border-color: ${theme?.colors?.neutral?.brand};
-        `,
-        guiaBolso: () => css`
-          border-color: ${theme?.colors?.neutral?.regular};
-        `,
-      };
-      return (themeName[theme?.name] || themeName.guiaBolso)();
-    }}
+    ${({ theme }: TextFieldProps) => css`
+      border-color: ${theme?.colors?.neutral?.regular};
+    `}
   }
 
   .MuiOutlinedInput-root {
@@ -133,17 +100,9 @@ export const TextFiled = styled(MuiTextField)`
       border-color: ${({ theme }: TextFieldProps) =>
         theme?.colors?.neutral?.lightest};
 
-      ${({ theme }: TextFieldProps) => {
-        const themeName = {
-          connect: () => css`
-            border-color: ${theme?.colors?.neutral?.light};
-          `,
-          guiaBolso: () => css`
-            border-color: ${theme?.colors?.neutral?.lighter};
-          `,
-        };
-        return (themeName[theme?.name] || themeName.guiaBolso)();
-      }}
+      ${({ theme }: TextFieldProps) => css`
+        border-color: ${theme?.colors?.neutral?.light};
+      `}
     }
   }
 

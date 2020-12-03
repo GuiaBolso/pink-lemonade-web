@@ -24,17 +24,9 @@ export const CardFooterText = styled(Text)`
   color: ${({ theme }: CardFooterProps) => theme?.colors?.neutral?.dark};
   font-family: ${({ theme }: CardFooterProps) =>
     theme?.type?.fontFamily?.neutral};
-  ${({ theme }: CardFooterProps) => {
-    const themeName = {
-      connect: () => css`
-        color: ${theme?.colors?.neutral?.darkest};
-      `,
-      guiaBolso: () => css`
-        color: ${theme?.colors?.neutral?.dark};
-      `,
-    };
-    return (themeName[theme?.name] || themeName.guiaBolso)();
-  }};
+  ${({ theme }: CardFooterProps) => css`
+    color: ${theme?.colors?.neutral?.dark};
+  `};
   padding: ${pxToRem(16)} 0;
 `;
 

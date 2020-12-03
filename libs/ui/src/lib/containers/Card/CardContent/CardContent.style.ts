@@ -11,17 +11,9 @@ type CardContentProps = {
 };
 
 export const CardContent = styled.div`
-  ${({ theme }: CardContentProps) => {
-    const themeName = {
-      connect: () => css`
-        color: ${theme?.colors?.neutral?.darkest};
-      `,
-      guiaBolso: () => css`
-        color: ${theme?.colors?.neutral?.dark};
-      `,
-    };
-    return (themeName[theme?.name] || themeName.guiaBolso)();
-  }};
+  ${({ theme }: CardContentProps) => css`
+    color: ${theme?.colors?.neutral?.dark};
+  `};
 
   padding: ${pxToRem(16)};
 `;

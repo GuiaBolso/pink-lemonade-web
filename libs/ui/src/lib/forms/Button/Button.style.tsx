@@ -61,7 +61,7 @@ export const Button = styled(ProxyMuiButton)`
           }
 
           &.Mui-disabled {
-            background-color: ${theme?.colors?.neutral.brand};
+            background-color: ${theme?.colors?.neutral?.light};
             color: ${theme?.colors?.neutral.blank};
           }
         }

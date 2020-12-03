@@ -60,12 +60,12 @@ export const Header = styled.header`
 `;
 
 export const Containt = styled.article`
-  color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
+  color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.dark};
   flex: 1;
 `;
 
 export const Footer = styled.footer`
-  color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.darker};
+  color: ${({ theme }: ModalStyleProps) => theme?.colors?.neutral?.dark};
   display: grid;
   grid-auto-flow: column;
   grid-gap: ${pxToRem(ModalConsts.spacingBetweenElements)};
