@@ -1,16 +1,14 @@
 ## @guiabolsobr/utils [1.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.2.0...@guiabolsobr/utils@1.3.0) (2020-11-04)
 
-
 ### Features
 
-* 🎸 add sessionStorage in ab test helper ([6a32379](https://github.com/GuiaBolso/pink-lemonade-web/commit/6a3237997f7fda6cd598c52f1a233678bcafe19b))
+- 🎸 add sessionStorage in ab test helper ([6a32379](https://github.com/GuiaBolso/pink-lemonade-web/commit/6a3237997f7fda6cd598c52f1a233678bcafe19b))
 
 ## @guiabolsobr/utils [1.2.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.1.3...@guiabolsobr/utils@1.2.0) (2020-11-03)
 
-
 ### Features
 
-* 🎸 add helper to ab test ([4ca1bc4](https://github.com/GuiaBolso/pink-lemonade-web/commit/4ca1bc43dbd09eff8ce676e16a7991cd199cda26))
+- 🎸 add helper to ab test ([4ca1bc4](https://github.com/GuiaBolso/pink-lemonade-web/commit/4ca1bc43dbd09eff8ce676e16a7991cd199cda26))
 
 ### @guiabolsobr/utils [1.1.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.1.2...@guiabolsobr/utils@1.1.3) (2020-07-15)
 
