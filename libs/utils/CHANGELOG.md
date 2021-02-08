@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.3.0...@guiabolsobr/utils@1.3.1) (2021-02-08)
+
+
+### Bug Fixes
+
+* toast container blocking clicks ([ce11b3d](https://github.com/GuiaBolso/pink-lemonade-web/commit/ce11b3d9eb678c978524b28790a7b462ce088f8a))
+
 ## @guiabolsobr/utils [1.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.2.0...@guiabolsobr/utils@1.3.0) (2020-11-04)
 
 ### Features
