@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Text } from '@guiabolsobr/ui';
 
 import check from '../../../assets/images/icons/check.svg';
-import error from '../../../assets/images/icons/alert.svg';
+import alert from '../../../assets/images/icons/alert.svg';
 
 import * as S from './ProgressBar.style';
 
@@ -47,7 +47,7 @@ export const ProgressBar = ({
         <Text variant="subtitle-small">{label}</Text>
         {customIcon ||
           (hasError ? (
-            <S.IconImg src={error} alt="error" />
+            <S.IconImg src={alert} alt="error" />
           ) : (
             value?.toString &&
             (value === 100 ? (
