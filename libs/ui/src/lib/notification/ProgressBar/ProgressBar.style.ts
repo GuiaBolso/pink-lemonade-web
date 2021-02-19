@@ -91,6 +91,6 @@ export const Info = styled.div`
   margin-top: ${pxToRem(8)};
 `;
 
-export const CheckIcon = styled.img`
+export const IconImg = styled.img`
   margin-right: ${pxToRem(5)};
 `;
