@@ -1,3 +1,15 @@
+## @guiabolsobr/ui [3.2.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.1.1...@guiabolsobr/ui@3.2.0) (2021-02-19)
+
+
+### Features
+
+* new props ([0937480](https://github.com/GuiaBolso/pink-lemonade-web/commit/0937480a29085f1ad73b79de28722d9d85f67aa2))
+
+
+### Bug Fixes
+
+* rename import ([0ab1806](https://github.com/GuiaBolso/pink-lemonade-web/commit/0ab18061d16fa00ad57eb42f6fade52c22e72ef4))
+
 ### @guiabolsobr/ui [3.1.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.1.0...@guiabolsobr/ui@3.1.1) (2021-02-08)
 
 
