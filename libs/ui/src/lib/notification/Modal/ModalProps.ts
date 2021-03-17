@@ -4,6 +4,7 @@ export type ModalProps = {
   id?: string;
   type: ModalTypesProps;
   title: string;
+  subtitle?: string;
   children: React.ReactNode;
   disableBackdropClick?: boolean;
   opened?: boolean;

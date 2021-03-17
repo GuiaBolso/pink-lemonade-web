@@ -10,6 +10,7 @@ import { ModalProps } from './ModalProps';
 const Modal = ({
   id,
   title,
+  subtitle,
   type,
   confirm,
   dismiss,
@@ -66,6 +67,9 @@ const Modal = ({
         <S.Header>
           <Text variant="heading-05" component="h5">
             {title}
+          </Text>
+          <Text variant="subtitle-medium" component="h6">
+            {subtitle}
           </Text>
           <S.Close onClick={closeModal} />
         </S.Header>
