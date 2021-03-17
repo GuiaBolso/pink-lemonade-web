@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { Close as MuiClose } from '@material-ui/icons';
 import { pxToRem, hexToRgb } from '@guiabolsobr/utils';
 
@@ -8,6 +9,7 @@ type ModalStyleProps = {
   theme: CustomThemeProps;
   fade?: boolean;
   opened?: boolean;
+  backdropMode?: boolean;
 };
 
 enum ModalConsts {
@@ -32,6 +34,12 @@ export const Backdrop = styled.div`
   transition: opacity 0.3s ease;
   width: 100vw;
   z-index: ${ModalConsts.zIndex};
+
+  @media all and (max-width: 768px) {
+    ${({ backdropMode }: ModalStyleProps) => backdropMode && `
+      align-items: flex-end;
+    `}
+  }
 `;
 
 export const Container = styled.section`
@@ -52,6 +60,40 @@ export const Container = styled.section`
   position: relative;
   transition: opacity 0.3s ease;
   width: 100%;
+
+  ::-webkit-scrollbar {
+    width: ${pxToRem(8)};
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }: ModalStyleProps) =>
+      theme?.colors?.neutral?.light};
+    border: 4px solid transparent;
+    border-radius: ${pxToRem(8)};
+  }
+
+  @media all and (max-width: 768px) {
+    ${({ backdropMode }: ModalStyleProps) => backdropMode && css`
+      animation: slide 300ms ease;
+      border-radius: ${pxToRem(8)} ${pxToRem(8)} 0 0;
+      max-height: 80vh;
+      transition: transform 210ms ease;
+
+      @keyframes slide {
+        from {
+          transform: translateY(80vh);
+        }
+
+        to {
+          transform: translateY(0);
+        }
+      }
+    `}
+  }
 `;
 
 export const Header = styled.header`

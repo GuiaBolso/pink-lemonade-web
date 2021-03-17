@@ -1,0 +1,32 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { ModalProvider, useModal, Modal } from '.';
+import { Text } from '../../display';
+
+<Meta title="Notification/Modal" component={Modal} />
+
+# Backdrop
+
+O `backdrop` apresenta uma conversa entre o sistema e o usuário de forma contextual e com uma ação ou tomada de decisão clara.
+
+<Canvas>
+  <Story
+    name="Backdrop"
+    decorators={[
+      story => (
+        <div
+          style={{
+            minHeight: '400px',
+          }}
+        >
+          {story()}
+        </div>
+      ),
+    ]}
+  >
+    <Modal id="backdrop" title="Lorem ipsum dolor" type="alert" backdropMode="true">
+      <Text>
+        O backdrop é um componente exclusivo da experiência mobile. No desktop, é apenas um modal comum. Diminua o viewport para vê-lo funcionando.
+      </Text>
+    </Modal>
+  </Story>
+</Canvas>
