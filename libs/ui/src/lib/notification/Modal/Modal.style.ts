@@ -36,7 +36,9 @@ export const Backdrop = styled.div`
   z-index: ${ModalConsts.zIndex};
 
   @media all and (max-width: 768px) {
-    ${({ backdropMode }: ModalStyleProps) => backdropMode && `
+    ${({ backdropMode }: ModalStyleProps) =>
+      backdropMode &&
+      `
       align-items: flex-end;
     `}
   }
@@ -77,22 +79,24 @@ export const Container = styled.section`
   }
 
   @media all and (max-width: 768px) {
-    ${({ backdropMode }: ModalStyleProps) => backdropMode && css`
-      animation: slide 300ms ease;
-      border-radius: ${pxToRem(8)} ${pxToRem(8)} 0 0;
-      max-height: 80vh;
-      transition: transform 210ms ease;
+    ${({ backdropMode }: ModalStyleProps) =>
+      backdropMode &&
+      css`
+        animation: slide 300ms ease;
+        border-radius: ${pxToRem(8)} ${pxToRem(8)} 0 0;
+        max-height: 80vh;
+        transition: transform 210ms ease;
 
-      @keyframes slide {
-        from {
-          transform: translateY(80vh);
-        }
+        @keyframes slide {
+          from {
+            transform: translateY(80vh);
+          }
 
-        to {
-          transform: translateY(0);
+          to {
+            transform: translateY(0);
+          }
         }
-      }
-    `}
+      `}
   }
 `;
 
