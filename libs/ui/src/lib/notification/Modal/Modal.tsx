@@ -10,11 +10,13 @@ import { ModalProps } from './ModalProps';
 const Modal = ({
   id,
   title,
+  subtitle,
   type,
   confirm,
   dismiss,
   children,
   disableBackdropClick,
+  backdropMode,
   opened = false,
 }: ModalProps) => {
   const [fade, setFade] = useState<boolean>(false);
@@ -61,11 +63,20 @@ const Modal = ({
       fade={fade}
       onClick={backdropClicked}
       opened={isOpened}
+      backdropMode={backdropMode}
     >
-      <S.Container className="gb-modal__container" fade={fade} id={id}>
+      <S.Container
+        className="gb-modal__container"
+        fade={fade}
+        id={id}
+        backdropMode={backdropMode}
+      >
         <S.Header>
           <Text variant="heading-05" component="h5">
             {title}
+          </Text>
+          <Text variant="subtitle-medium" component="h6">
+            {subtitle}
           </Text>
           <S.Close onClick={closeModal} />
         </S.Header>
