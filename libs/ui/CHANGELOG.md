@@ -1,3 +1,16 @@
+## @guiabolsobr/ui [3.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.2.0...@guiabolsobr/ui@3.3.0) (2021-03-19)
+
+
+### Features
+
+* 🎸 add subtitle prop to Modal component ([b8cc295](https://github.com/GuiaBolso/pink-lemonade-web/commit/b8cc295e22706d376690dad4665018e50f71399e))
+* 🎸 create Backdrop variant for Modal component ([5e597b1](https://github.com/GuiaBolso/pink-lemonade-web/commit/5e597b1a0d230c37c382b9c03a7b938733f23fb5))
+
+
+### Bug Fixes
+
+* 🐛 lint ([32ca724](https://github.com/GuiaBolso/pink-lemonade-web/commit/32ca724adb09dcf37d120f3dce5b9637f1ead5c0))
+
 ## @guiabolsobr/ui [3.2.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.1.1...@guiabolsobr/ui@3.2.0) (2021-02-19)
 
 
