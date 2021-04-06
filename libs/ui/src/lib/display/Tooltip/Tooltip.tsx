@@ -9,19 +9,21 @@ export type TooltipProps = {
   content: string | React.ReactNode | React.ReactNode[];
   children: React.ReactElement;
   title?: string | React.ReactNode | React.ReactNode[];
+  onOpen?: () => void;
 };
 
 const PopperComponent = props => {
   return <S.Popper {...props} />;
 };
 
-const Tooltip = ({ title, content, children }: TooltipProps) => (
+const Tooltip = ({ title, content, children, onOpen }: TooltipProps) => (
   <MuiTooltip
     arrow
     enterTouchDelay={1}
     leaveTouchDelay={1}
     interactive
     PopperComponent={PopperComponent}
+    onOpen={onOpen}
     title={
       <>
         {title && <S.Title variant="heading-06">{title}</S.Title>}
