@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [3.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.3.0...@guiabolsobr/ui@3.4.0) (2021-04-07)
+
+
+### Features
+
+* onOpen props ([9fd7bd3](https://github.com/GuiaBolso/pink-lemonade-web/commit/9fd7bd34b21939f543563520ecb6335069baeb4a))
+
 ## @guiabolsobr/ui [3.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.2.0...@guiabolsobr/ui@3.3.0) (2021-03-19)
 
 
