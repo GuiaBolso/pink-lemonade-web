@@ -45,3 +45,20 @@ export const expanded = () => (
     </Accordion>
   </>
 );
+
+export const accordion = () => (
+  <>
+    <Accordion summary={loremIpsum.title} panel="panel1">
+      {loremIpsum.smallText}
+    </Accordion>
+    <Accordion summary={loremIpsum.title} panel="panel2">
+      {loremIpsum.mediumText}
+    </Accordion>
+    <Accordion summary={loremIpsum.title} panel="panel3">
+      {loremIpsum.largeText}
+    </Accordion>
+    <Accordion summary={loremIpsum.title} panel="panel4">
+      {loremIpsum.extraLargeText}
+    </Accordion>
+  </>
+);
