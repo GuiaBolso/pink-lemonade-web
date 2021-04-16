@@ -13,6 +13,9 @@ export interface AccordionProps {
    */
   initOpened?: boolean;
   panel?: string;
+  whoIsExpanded?: boolean | string;
+  setWhoIsExpanded?: (value: boolean | string) => void;
+  singleExpand?: boolean;
 }
 
 export const Accordion = ({
@@ -20,22 +23,30 @@ export const Accordion = ({
   summary,
   initOpened = false,
   panel,
+  singleExpand,
+  whoIsExpanded,
+  setWhoIsExpanded,
 }: AccordionProps) => {
-  // const [expanded, setExpanded] = useState<true | false>(initOpened);
-  const [expanded, setExpanded] = useState<string | false>(false);
+  const [expanded, setExpanded] = useState<true | false>(initOpened);
+  const [expandedPanel, setExpandedPanel] = useState<string | false>(false);
 
-  // const handleChange = () => setExpanded(!expanded);
-
-  const handleAccordionChange = (panel: string) => (event: React.ChangeEvent<{}>, isExpanded: boolean) => {
-    setExpanded(isExpanded ? panel : false);
-    console.log('expanded?', expanded, '| panel = ', panel);
+  const handleChange = (panel?: string) => (
+    event: React.ChangeEvent<{}>,
+    isExpanded: boolean,
+  ) => {
+    if (singleExpand) {
+      setExpandedPanel(isExpanded ? panel : false);
+      setWhoIsExpanded(panel);
+    } else {
+      setExpanded(!expanded);
+    }
   };
 
   return (
     <Styled.Accordion
       className="testePanel"
-      expanded={expanded === panel}
-      onChange={handleAccordionChange(panel)}
+      expanded={singleExpand ? whoIsExpanded === panel : expanded}
+      onChange={handleChange(singleExpand ? panel : null)}
     >
       <Styled.AccordionSummary
         expandIcon={<Styled.ExpandMoreIcon />}

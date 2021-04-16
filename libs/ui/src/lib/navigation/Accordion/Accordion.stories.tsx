@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Accordion from './Accordion';
 
 export default {
@@ -46,19 +46,47 @@ export const expanded = () => (
   </>
 );
 
-export const accordion = () => (
-  <>
-    <Accordion summary={loremIpsum.title} panel="panel1">
-      {loremIpsum.smallText}
-    </Accordion>
-    <Accordion summary={loremIpsum.title} panel="panel2">
-      {loremIpsum.mediumText}
-    </Accordion>
-    <Accordion summary={loremIpsum.title} panel="panel3">
-      {loremIpsum.largeText}
-    </Accordion>
-    <Accordion summary={loremIpsum.title} panel="panel4">
-      {loremIpsum.extraLargeText}
-    </Accordion>
-  </>
-);
+export const singleExpand = () => {
+  const [whoIsExpanded, setWhoIsExpanded] = useState<string | boolean>(false);
+
+  return (
+    <>
+      <Accordion
+        singleExpand
+        summary={loremIpsum.title}
+        panel="panel1"
+        whoIsExpanded={whoIsExpanded}
+        setWhoIsExpanded={setWhoIsExpanded}
+      >
+        {loremIpsum.smallText}
+      </Accordion>
+      <Accordion
+        singleExpand
+        summary={loremIpsum.title}
+        panel="panel2"
+        whoIsExpanded={whoIsExpanded}
+        setWhoIsExpanded={setWhoIsExpanded}
+      >
+        {loremIpsum.mediumText}
+      </Accordion>
+      <Accordion
+        singleExpand
+        summary={loremIpsum.title}
+        panel="panel3"
+        whoIsExpanded={whoIsExpanded}
+        setWhoIsExpanded={setWhoIsExpanded}
+      >
+        {loremIpsum.largeText}
+      </Accordion>
+      <Accordion
+        singleExpand
+        summary={loremIpsum.title}
+        panel="panel4"
+        whoIsExpanded={whoIsExpanded}
+        setWhoIsExpanded={setWhoIsExpanded}
+      >
+        {loremIpsum.extraLargeText}
+      </Accordion>
+    </>
+  );
+};
