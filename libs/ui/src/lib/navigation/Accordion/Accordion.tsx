@@ -9,30 +9,51 @@ export interface AccordionProps {
    */
   summary: React.ReactNode;
   /**
-   * Set if panel will init onpened.
+   * Set if panel will init opened.
    */
   initOpened?: boolean;
+  panel?: string;
+  whoIsExpanded?: boolean | string;
+  setWhoIsExpanded?: (value: boolean | string) => void;
+  singleExpand?: boolean;
 }
 
 export const Accordion = ({
   children,
   summary,
   initOpened = false,
+  panel = 'panel',
+  singleExpand,
+  whoIsExpanded,
+  setWhoIsExpanded,
+  ...rest
 }: AccordionProps) => {
   const [expanded, setExpanded] = useState<true | false>(initOpened);
+  const [_expandedPanel, setExpandedPanel] = useState<string | false>(false);
 
-  const handleChange = () => setExpanded(!expanded);
+  const handleChange = (panel?: string) => (
+    event: React.ChangeEvent<unknown>,
+    isExpanded: boolean,
+  ) => {
+    if (singleExpand) {
+      setExpandedPanel(isExpanded ? panel : false);
+      setWhoIsExpanded(panel);
+    } else {
+      setExpanded(!expanded);
+    }
+  };
 
   return (
     <Styled.Accordion
       className="testePanel"
-      expanded={expanded}
-      onChange={handleChange}
+      expanded={singleExpand ? whoIsExpanded === panel : expanded}
+      onChange={handleChange(singleExpand ? panel : null)}
+      {...rest}
     >
       <Styled.AccordionSummary
         expandIcon={<Styled.ExpandMoreIcon />}
-        aria-controls="panel1a-content"
-        id="panel1a-header"
+        aria-controls={`${panel}-content`}
+        id={`${panel}-header`}
       >
         {summary}
       </Styled.AccordionSummary>
