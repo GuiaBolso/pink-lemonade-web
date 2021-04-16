@@ -26,6 +26,7 @@ export const Accordion = ({
   singleExpand,
   whoIsExpanded,
   setWhoIsExpanded,
+  ...rest
 }: AccordionProps) => {
   const [expanded, setExpanded] = useState<true | false>(initOpened);
   const [_expandedPanel, setExpandedPanel] = useState<string | false>(false);
@@ -47,6 +48,7 @@ export const Accordion = ({
       className="testePanel"
       expanded={singleExpand ? whoIsExpanded === panel : expanded}
       onChange={handleChange(singleExpand ? panel : null)}
+      {...rest}
     >
       <Styled.AccordionSummary
         expandIcon={<Styled.ExpandMoreIcon />}
