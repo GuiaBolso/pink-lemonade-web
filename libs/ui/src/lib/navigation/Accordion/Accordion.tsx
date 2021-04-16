@@ -28,7 +28,7 @@ export const Accordion = ({
   setWhoIsExpanded,
 }: AccordionProps) => {
   const [expanded, setExpanded] = useState<true | false>(initOpened);
-  const [expandedPanel, setExpandedPanel] = useState<string | false>(false);
+  const [_expandedPanel, setExpandedPanel] = useState<string | false>(false);
 
   const handleChange = (panel?: string) => (
     event: React.ChangeEvent<unknown>,
