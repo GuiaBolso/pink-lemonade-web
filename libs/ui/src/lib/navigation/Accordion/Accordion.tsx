@@ -31,7 +31,7 @@ export const Accordion = ({
   const [expandedPanel, setExpandedPanel] = useState<string | false>(false);
 
   const handleChange = (panel?: string) => (
-    event: React.ChangeEvent<{}>,
+    event: React.ChangeEvent<unknown>,
     isExpanded: boolean,
   ) => {
     if (singleExpand) {

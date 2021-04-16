@@ -46,7 +46,7 @@ export const expanded = () => (
   </>
 );
 
-export const singleExpand = () => {
+export const SingleExpand = () => {
   const [whoIsExpanded, setWhoIsExpanded] = useState<string | boolean>(false);
 
   return (
