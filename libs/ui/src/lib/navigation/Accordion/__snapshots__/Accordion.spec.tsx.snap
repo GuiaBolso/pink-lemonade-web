@@ -5,11 +5,11 @@ exports[`Text Component renders connect theme correctly 1`] = `
   className="MuiPaper-root MuiAccordion-root testePanel css-123qacc Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
-    aria-controls="undefined-content"
+    aria-controls="panel-content"
     aria-disabled={false}
     aria-expanded={true}
     className="MuiButtonBase-root MuiAccordionSummary-root css-16uzaqg Mui-expanded"
-    id="undefined-header"
+    id="panel-header"
     onBlur={[Function]}
     onClick={[Function]}
     onDragLeave={[Function]}
@@ -84,8 +84,8 @@ exports[`Text Component renders connect theme correctly 1`] = `
         className="MuiCollapse-wrapperInner"
       >
         <div
-          aria-labelledby="undefined-header"
-          id="undefined-content"
+          aria-labelledby="panel-header"
+          id="panel-content"
           role="region"
         >
           <div
@@ -107,11 +107,11 @@ exports[`Text Component renders correctly 1`] = `
   className="MuiPaper-root MuiAccordion-root testePanel css-123qacc Mui-expanded MuiAccordion-rounded MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
-    aria-controls="undefined-content"
+    aria-controls="panel-content"
     aria-disabled={false}
     aria-expanded={true}
     className="MuiButtonBase-root MuiAccordionSummary-root css-16uzaqg Mui-expanded"
-    id="undefined-header"
+    id="panel-header"
     onBlur={[Function]}
     onClick={[Function]}
     onDragLeave={[Function]}
@@ -183,8 +183,8 @@ exports[`Text Component renders correctly 1`] = `
         className="MuiCollapse-wrapperInner"
       >
         <div
-          aria-labelledby="undefined-header"
-          id="undefined-content"
+          aria-labelledby="panel-header"
+          id="panel-content"
           role="region"
         >
           <div

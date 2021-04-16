@@ -22,7 +22,7 @@ export const Accordion = ({
   children,
   summary,
   initOpened = false,
-  panel,
+  panel = 'panel',
   singleExpand,
   whoIsExpanded,
   setWhoIsExpanded,
