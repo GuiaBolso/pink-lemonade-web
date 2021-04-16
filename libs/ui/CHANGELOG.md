@@ -1,3 +1,15 @@
+## @guiabolsobr/ui [3.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.4.0...@guiabolsobr/ui@3.5.0) (2021-04-16)
+
+
+### Features
+
+* 🎸 new singleExpand accordion prop ([3eae764](https://github.com/GuiaBolso/pink-lemonade-web/commit/3eae7649a3df150f4524e038ddbd16b94a7a1940))
+
+
+### Bug Fixes
+
+* 🐛 lint ([c8e99c8](https://github.com/GuiaBolso/pink-lemonade-web/commit/c8e99c8e895f4a59e79f6135e90134b777e7fd65))
+
 ## @guiabolsobr/ui [3.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.3.0...@guiabolsobr/ui@3.4.0) (2021-04-07)
 
 
