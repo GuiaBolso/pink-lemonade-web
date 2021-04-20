@@ -29,15 +29,13 @@ export const Accordion = ({
   ...rest
 }: AccordionProps) => {
   const [expanded, setExpanded] = useState<true | false>(initOpened);
-  const [_expandedPanel, setExpandedPanel] = useState<string | false>(false);
 
   const handleChange = (panel?: string) => (
     event: React.ChangeEvent<unknown>,
     isExpanded: boolean,
   ) => {
     if (singleExpand) {
-      setExpandedPanel(isExpanded ? panel : false);
-      setWhoIsExpanded(panel);
+      setWhoIsExpanded(isExpanded ? panel : false);
     } else {
       setExpanded(!expanded);
     }
