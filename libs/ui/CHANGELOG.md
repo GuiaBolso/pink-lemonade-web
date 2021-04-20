@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [3.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.0...@guiabolsobr/ui@3.5.1) (2021-04-20)
+
+
+### Bug Fixes
+
+* 🐛 accordion single expand behavior ([143ffd7](https://github.com/GuiaBolso/pink-lemonade-web/commit/143ffd7b50726090ef2ff221c2242bbb4a6b5e39))
+
 ## @guiabolsobr/ui [3.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.4.0...@guiabolsobr/ui@3.5.0) (2021-04-16)
 
 
