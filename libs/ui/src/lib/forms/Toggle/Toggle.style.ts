@@ -1,10 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import {
-  Checkbox as MuiCheckbox,
-  FormControlLabel as MuiFormControlLabel,
-} from '@material-ui/core';
+import { FormControlLabel as MuiFormControlLabel } from '@material-ui/core';
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type ToggleStyledProps = {
@@ -46,5 +43,3 @@ export const FormControlLabel = styled(MuiFormControlLabel)`
     `;
   }};
 `;
-
-export const Checkbox = styled(MuiCheckbox)``;
