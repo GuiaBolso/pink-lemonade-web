@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { Close as MuiClose } from '@material-ui/icons';
+import { Close as MuiClose } from '../../icons';
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 
@@ -24,11 +24,7 @@ export const Container = styled.div<InfoBannerTheme & ContainerProps>`
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   justify-content: center;
   left: 0;
-  padding: ${pxToRem(24)};
-  position: fixed;
-  width: 100vw;
-  word-break: break-word;
-  z-index: 8000;
+
   ${({ position }) =>
     position === 'top'
       ? css`
@@ -37,6 +33,13 @@ export const Container = styled.div<InfoBannerTheme & ContainerProps>`
       : css`
           bottom: 0;
         `}
+
+  padding: ${pxToRem(24)};
+  position: fixed;
+  width: 100vw;
+  word-break: break-word;
+  z-index: 8000;
+
 `;
 
 export const Content = styled.div`

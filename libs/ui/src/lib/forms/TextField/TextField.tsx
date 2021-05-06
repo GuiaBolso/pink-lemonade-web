@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo } from 'react';
 import InputAdornment from '@material-ui/core/InputAdornment';
-import { EditOutlined, VisibilityOff, Visibility } from '@material-ui/icons';
+import { EditOutlined, VisibilityOff, Visibility } from '../../icons';
 import masker from 'vanilla-masker';
 import {
   InputBaseComponentProps,

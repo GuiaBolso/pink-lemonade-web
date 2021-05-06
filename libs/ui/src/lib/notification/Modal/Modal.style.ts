@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
-import { Close as MuiClose } from '@material-ui/icons';
+import { Close as MuiClose } from '../../icons';
 import { pxToRem, hexToRgb } from '@guiabolsobr/utils';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
