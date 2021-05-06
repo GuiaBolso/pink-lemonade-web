@@ -1,61 +1,52 @@
 ### @guiabolsobr/ui [3.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.0...@guiabolsobr/ui@3.5.1) (2021-04-20)
 
-
 ### Bug Fixes
 
-* 🐛 accordion single expand behavior ([143ffd7](https://github.com/GuiaBolso/pink-lemonade-web/commit/143ffd7b50726090ef2ff221c2242bbb4a6b5e39))
+- 🐛 accordion single expand behavior ([143ffd7](https://github.com/GuiaBolso/pink-lemonade-web/commit/143ffd7b50726090ef2ff221c2242bbb4a6b5e39))
 
 ## @guiabolsobr/ui [3.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.4.0...@guiabolsobr/ui@3.5.0) (2021-04-16)
 
-
 ### Features
 
-* 🎸 new singleExpand accordion prop ([3eae764](https://github.com/GuiaBolso/pink-lemonade-web/commit/3eae7649a3df150f4524e038ddbd16b94a7a1940))
-
+- 🎸 new singleExpand accordion prop ([3eae764](https://github.com/GuiaBolso/pink-lemonade-web/commit/3eae7649a3df150f4524e038ddbd16b94a7a1940))
 
 ### Bug Fixes
 
-* 🐛 lint ([c8e99c8](https://github.com/GuiaBolso/pink-lemonade-web/commit/c8e99c8e895f4a59e79f6135e90134b777e7fd65))
+- 🐛 lint ([c8e99c8](https://github.com/GuiaBolso/pink-lemonade-web/commit/c8e99c8e895f4a59e79f6135e90134b777e7fd65))
 
 ## @guiabolsobr/ui [3.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.3.0...@guiabolsobr/ui@3.4.0) (2021-04-07)
 
-
 ### Features
 
-* onOpen props ([9fd7bd3](https://github.com/GuiaBolso/pink-lemonade-web/commit/9fd7bd34b21939f543563520ecb6335069baeb4a))
+- onOpen props ([9fd7bd3](https://github.com/GuiaBolso/pink-lemonade-web/commit/9fd7bd34b21939f543563520ecb6335069baeb4a))
 
 ## @guiabolsobr/ui [3.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.2.0...@guiabolsobr/ui@3.3.0) (2021-03-19)
 
-
 ### Features
 
-* 🎸 add subtitle prop to Modal component ([b8cc295](https://github.com/GuiaBolso/pink-lemonade-web/commit/b8cc295e22706d376690dad4665018e50f71399e))
-* 🎸 create Backdrop variant for Modal component ([5e597b1](https://github.com/GuiaBolso/pink-lemonade-web/commit/5e597b1a0d230c37c382b9c03a7b938733f23fb5))
-
+- 🎸 add subtitle prop to Modal component ([b8cc295](https://github.com/GuiaBolso/pink-lemonade-web/commit/b8cc295e22706d376690dad4665018e50f71399e))
+- 🎸 create Backdrop variant for Modal component ([5e597b1](https://github.com/GuiaBolso/pink-lemonade-web/commit/5e597b1a0d230c37c382b9c03a7b938733f23fb5))
 
 ### Bug Fixes
 
-* 🐛 lint ([32ca724](https://github.com/GuiaBolso/pink-lemonade-web/commit/32ca724adb09dcf37d120f3dce5b9637f1ead5c0))
+- 🐛 lint ([32ca724](https://github.com/GuiaBolso/pink-lemonade-web/commit/32ca724adb09dcf37d120f3dce5b9637f1ead5c0))
 
 ## @guiabolsobr/ui [3.2.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.1.1...@guiabolsobr/ui@3.2.0) (2021-02-19)
 
-
 ### Features
 
-* new props ([0937480](https://github.com/GuiaBolso/pink-lemonade-web/commit/0937480a29085f1ad73b79de28722d9d85f67aa2))
-
+- new props ([0937480](https://github.com/GuiaBolso/pink-lemonade-web/commit/0937480a29085f1ad73b79de28722d9d85f67aa2))
 
 ### Bug Fixes
 
-* rename import ([0ab1806](https://github.com/GuiaBolso/pink-lemonade-web/commit/0ab18061d16fa00ad57eb42f6fade52c22e72ef4))
+- rename import ([0ab1806](https://github.com/GuiaBolso/pink-lemonade-web/commit/0ab18061d16fa00ad57eb42f6fade52c22e72ef4))
 
 ### @guiabolsobr/ui [3.1.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.1.0...@guiabolsobr/ui@3.1.1) (2021-02-08)
 
-
 ### Bug Fixes
 
-* remove container padding ([8062c55](https://github.com/GuiaBolso/pink-lemonade-web/commit/8062c55f0d3341ec0ba641a9f7d9b1a941637ec5))
-* toast container blocking clicks ([ce11b3d](https://github.com/GuiaBolso/pink-lemonade-web/commit/ce11b3d9eb678c978524b28790a7b462ce088f8a))
+- remove container padding ([8062c55](https://github.com/GuiaBolso/pink-lemonade-web/commit/8062c55f0d3341ec0ba641a9f7d9b1a941637ec5))
+- toast container blocking clicks ([ce11b3d](https://github.com/GuiaBolso/pink-lemonade-web/commit/ce11b3d9eb678c978524b28790a7b462ce088f8a))
 
 ## @guiabolsobr/ui [3.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.0.0...@guiabolsobr/ui@3.1.0) (2020-12-03)
 
