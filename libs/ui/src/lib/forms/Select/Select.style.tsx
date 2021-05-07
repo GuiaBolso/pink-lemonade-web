@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 import { pxToRem } from '@guiabolsobr/utils';
+import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+
+type Theme = {
+  theme: CustomThemeProps;
+  error?: boolean;
+};
 
 export const WrapperSelect = styled.div`
   & > .MuiFormControl-root {
@@ -13,11 +19,11 @@ export const WrapperSelect = styled.div`
 
     &.Mui-focused,
     .MuiFormLabel-root.Mui-focused {
-      color: ${({ theme }: any) => theme?.colors?.neutral?.medium} !important;
+      color: ${({ theme }: Theme) => theme?.colors?.neutral?.medium} !important;
     }
 
     &:focus:before {
-      border-color: ${({ theme, error }: any) =>
+      border-color: ${({ theme, error }: Theme) =>
         error
           ? theme?.colors?.feedback?.error?.default
           : theme?.colors?.brand?.tertiary?.default};
@@ -27,7 +33,7 @@ export const WrapperSelect = styled.div`
       background: none;
 
       &:before {
-        border-color: ${({ theme, error }: any) =>
+        border-color: ${({ theme, error }: Theme) =>
           error
             ? theme?.colors?.feedback?.error?.default
             : theme?.colors?.brand?.tertiary?.default};
@@ -35,7 +41,7 @@ export const WrapperSelect = styled.div`
       }
 
       & .MuiSelect-icon {
-        color: ${({ theme }: any) => theme?.colors?.brand?.tertiary?.default};
+        color: ${({ theme }: Theme) => theme?.colors?.brand?.tertiary?.default};
         top: calc(50% - 14px);
       }
     }
@@ -43,7 +49,7 @@ export const WrapperSelect = styled.div`
     &:before {
       animation: border 0.3s linear;
       border: 1px solid
-        ${({ theme, error }: any) =>
+        ${({ theme, error }: Theme) =>
           error
             ? theme?.colors?.feedback?.error?.default
             : theme?.colors?.neutral?.regular};
@@ -67,7 +73,7 @@ export const WrapperSelect = styled.div`
     }
 
     & .MuiSelect-icon {
-      color: ${({ theme }: any) => theme?.colors?.brand?.secondary?.default};
+      color: ${({ theme }: Theme) => theme?.colors?.brand?.secondary?.default};
       top: calc(50% - 14px);
     }
 
@@ -76,11 +82,11 @@ export const WrapperSelect = styled.div`
     }
 
     & .MuiFormLabel-root.Mui-error {
-      color: ${({ theme }: any) => theme?.colors?.neutral?.dark};
+      color: ${({ theme }: Theme) => theme?.colors?.neutral?.dark};
     }
 
     & .MuiSelect-filled.MuiSelect-filled {
-      color: ${({ theme }: any) => theme?.colors?.neutral?.dark};
+      color: ${({ theme }: Theme) => theme?.colors?.neutral?.dark};
       font-size: ${pxToRem(18)};
       line-height: ${pxToRem(22)};
       padding-left: ${pxToRem(16)};
@@ -122,7 +128,7 @@ export const WrapperSelect = styled.div`
 
     & .MuiFormHelperText-root.Mui-error,
     & .MuiSelect-icon {
-      color: ${({ theme }: any) => theme?.colors?.feedback?.error?.default};
+      color: ${({ theme }: Theme) => theme?.colors?.feedback?.error?.default};
     }
 
     .MuiInputLabel-filled.MuiInputLabel-shrink {
