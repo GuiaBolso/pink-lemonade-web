@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [3.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.1...@guiabolsobr/ui@3.6.0) (2021-05-07)
+
+
+### Features
+
+* 🎸 add storybook ([fe5f385](https://github.com/GuiaBolso/pink-lemonade-web/commit/fe5f385109f9d01bda23804f0c9875f4799ada2f))
+
 ### @guiabolsobr/ui [3.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.0...@guiabolsobr/ui@3.5.1) (2021-04-20)
 
 
