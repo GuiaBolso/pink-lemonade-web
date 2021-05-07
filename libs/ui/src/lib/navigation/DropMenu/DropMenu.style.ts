@@ -41,12 +41,13 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li<DropMenuProps>`
-  color: ${({ theme }) => theme?.colors?.neutral?.medium};
+  color: ${({ theme }) => theme?.colors?.neutral?.dark};
   padding: 16px;
   transition: background-color 0.2s;
 
   &:hover {
     background-color: ${({ theme }) => theme?.colors?.neutral?.light};
+    cursor: pointer;
   }
 `;
 
