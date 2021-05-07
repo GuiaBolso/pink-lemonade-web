@@ -1,7 +1,7 @@
 import React from 'react';
 import { StoryFn } from '@storybook/addons';
 import { Meta } from '@storybook/react/types-6-0';
-import { Cached, MoreVert } from '@material-ui/icons';
+import { Cached, MoreVert } from '../../../icons';
 
 import CardHeader from './CardHeader';
 
