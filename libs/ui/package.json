@@ -7,8 +7,7 @@
   "peerDependencies": {
     "react": "*",
     "react-dom": "*",
-    "@material-ui/core": "*",
-    "@material-ui/icons": "*"
+    "@material-ui/core": "*"
   },
   "publishConfig": {
     "access": "public"

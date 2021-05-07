@@ -6,7 +6,7 @@ import { Card, CardHeader, CardContent, CardFooter } from './index';
 import { Action } from '../../forms/Action';
 import { Button } from '../../forms/Button';
 
-import { ListAlt, MoreVert } from '@material-ui/icons';
+import { ListAlt, MoreVert } from '../../icons';
 
 export default {
   title: 'Containers/Card',

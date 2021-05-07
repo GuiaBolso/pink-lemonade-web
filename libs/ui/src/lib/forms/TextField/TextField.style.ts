@@ -5,7 +5,6 @@ import {
   TextField as MuiTextField,
   InputAdornment as MuiInputAdornment,
 } from '@material-ui/core';
-import { Clear } from '@material-ui/icons';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
@@ -120,14 +119,5 @@ export const TextFiled = styled(MuiTextField)`
 export const PasswordAdornment = styled(MuiInputAdornment)`
   color: ${({ theme }: TextFieldProps) =>
     theme?.colors?.brand?.secondary?.default};
-  cursor: pointer;
-`;
-
-export const SearchAdornment = styled(MuiInputAdornment)`
-  color: ${({ theme }: TextFieldProps) =>
-    theme?.colors?.brand?.secondary?.default};
-`;
-
-export const ClearSearch = styled(Clear)`
   cursor: pointer;
 `;

@@ -54,8 +54,9 @@ exports[`Text Component renders connect theme correctly 1`] = `
         className="MuiIconButton-label"
       >
         <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root css-18o17hk"
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          className="css-bsqj62"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -156,8 +157,9 @@ exports[`Text Component renders correctly 1`] = `
         className="MuiIconButton-label"
       >
         <svg
-          aria-hidden={true}
-          className="MuiSvgIcon-root css-18o17hk"
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          className="css-bsqj62"
           focusable="false"
           viewBox="0 0 24 24"
         >

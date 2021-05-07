@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
-import MuiExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { ExpandMore } from '../../icons';
 
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
@@ -73,7 +73,7 @@ export const AccordionDetails = styled(MuiAccordionDetails)`
   }
 `;
 
-export const ExpandMoreIcon = styled(MuiExpandMoreIcon)`
+export const ExpandMoreIcon = styled(ExpandMore)`
   color: ${({ theme }: AccordionStyledProps) =>
     theme?.colors?.brand?.tertiary?.default};
 `;

@@ -19,11 +19,11 @@ Check the components in our [Chromatic](https://www.chromatic.com/library?appId=
 ```bash
 # with npm
 
-npm install @material-ui/core @material-ui/icons @guiabolsobr/ui
+npm install @material-ui/core @guiabolsobr/ui
 
 # with yarn
 
-yarn add @material-ui/core @material-ui/icons @guiabolsobr/ui
+yarn add @material-ui/core @guiabolsobr/ui
 ```
 
 `@guiabolsobr/ui` uses [material-ui](https://material-ui.com/) as a _peer dependency_. So it is necessary to install it too.

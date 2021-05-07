@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
-import { FormControlLabel as MuiFormControlLabel } from '@material-ui/core';
+import { default as MuiFormControlLabel } from '@material-ui/core/FormControlLabel';
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type ToggleStyledProps = {

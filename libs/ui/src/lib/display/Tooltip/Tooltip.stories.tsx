@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
-import HelpOutline from '@material-ui/icons/HelpOutline';
+import { HelpOutline } from '../../icons';
 
 import Tooltip, { TooltipProps } from './Tooltip';
 

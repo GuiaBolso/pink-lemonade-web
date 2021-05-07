@@ -27,14 +27,12 @@ const Toggle = ({
     });
 
   return (
-    <>
-      <S.FormControlLabel
-        {...rest}
-        label={label}
-        disabled={disabled}
-        control={<Switch {...toggleProps} size={size} />}
-      />
-    </>
+    <S.FormControlLabel
+      {...rest}
+      label={label}
+      disabled={disabled}
+      control={<Switch {...toggleProps} size={size} />}
+    />
   );
 };
 
