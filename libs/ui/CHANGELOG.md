@@ -1,3 +1,11 @@
+## @guiabolsobr/ui [3.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.6.0...@guiabolsobr/ui@3.7.0) (2021-05-07)
+
+
+### Features
+
+* 🎸 Merge master into branch and resolve some conflicts ([1f51ea0](https://github.com/GuiaBolso/pink-lemonade-web/commit/1f51ea03978ae34fe76bca17e4242635c8c56b13))
+* 🎸 Toggle component ([d3fa008](https://github.com/GuiaBolso/pink-lemonade-web/commit/d3fa00820db28c3a1c50fa0d2e565f8de2f93f04))
+
 ## @guiabolsobr/ui [3.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.1...@guiabolsobr/ui@3.6.0) (2021-05-07)
 
 ### Features

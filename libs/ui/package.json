@@ -1,18 +1,1 @@
-{
-  "name": "@guiabolsobr/ui",
-  "author": {
-    "name": "guiabolso",
-    "email": "tooling-dev@guiabolso.com.br"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-dom": "*",
-    "@material-ui/core": "*"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {},
-  "devDependencies": {},
-  "optionalDependencies": {}
-}
+{"name":"@guiabolsobr/ui","author":{"name":"guiabolso","email":"tooling-dev@guiabolso.com.br"},"peerDependencies":{"react":"*","react-dom":"*","@material-ui/core":"*"},"publishConfig":{"access":"public"},"dependencies":{},"devDependencies":{},"optionalDependencies":{}}
