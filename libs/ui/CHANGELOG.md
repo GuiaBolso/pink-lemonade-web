@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [3.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.0...@guiabolsobr/ui@3.7.1) (2021-05-10)
+
+
+### Bug Fixes
+
+* 🐛 Export component ([ab461cf](https://github.com/GuiaBolso/pink-lemonade-web/commit/ab461cfffa3a3c8d245727852ac0cb4430ea480e))
+
 ## @guiabolsobr/ui [3.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.6.0...@guiabolsobr/ui@3.7.0) (2021-05-07)
 
 
