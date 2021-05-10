@@ -8,7 +8,9 @@ export * from './lib/display/Tooltip';
 export * from './lib/forms/Action';
 export * from './lib/forms/Button';
 export * from './lib/forms/Checkbox';
+export * from './lib/forms/Select';
 export * from './lib/forms/TextField';
+export * from './lib/forms/Toggle';
 
 export * from './lib/general/Theme';
 
