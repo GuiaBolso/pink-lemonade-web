@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [3.7.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.1...@guiabolsobr/ui@3.7.2) (2021-05-10)
+
+
+### Bug Fixes
+
+* 🐛 Export Select and Toggle component ([507559f](https://github.com/GuiaBolso/pink-lemonade-web/commit/507559fa13f1fb712fe054dbccfe603e2e44f1c7))
+
 ### @guiabolsobr/ui [3.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.0...@guiabolsobr/ui@3.7.1) (2021-05-10)
 
 
