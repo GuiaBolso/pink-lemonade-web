@@ -100,45 +100,6 @@
         }
       }
     },
-    "ditto": {
-      "root": "libs/ditto",
-      "sourceRoot": "libs/ditto/src",
-      "projectType": "library",
-      "schematics": {},
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:lint",
-          "options": {
-            "linter": "eslint",
-            "tsConfig": [
-              "libs/ditto/tsconfig.lib.json",
-              "libs/ditto/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/ditto/**/*"]
-          }
-        },
-        "build": {
-          "builder": "@nrwl/web:package",
-          "options": {
-            "outputPath": "libs/ditto/dist",
-            "tsConfig": "libs/ditto/tsconfig.lib.json",
-            "project": "libs/ditto/package.json",
-            "entryFile": "libs/ditto/src/index.ts",
-            "external": ["react", "react-dom", "styled-components"],
-            "babelConfig": "@nrwl/react/plugins/bundle-babel",
-            "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/ditto/jest.config.js",
-            "tsConfig": "libs/ditto/tsconfig.spec.json",
-            "passWithNoTests": true
-          }
-        }
-      }
-    },
     "utils": {
       "root": "libs/utils",
       "sourceRoot": "libs/utils/src",
