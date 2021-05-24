@@ -1,3 +1,14 @@
+## @guiabolsobr/ui [4.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.2...@guiabolsobr/ui@4.0.0) (2021-05-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* 🧨 no
+
+### Bug Fixes
+
+* 🐛 Add props to the Tooltip component ([0732696](https://github.com/GuiaBolso/pink-lemonade-web/commit/07326965f811347f3174b38b3750d7498bffea2d))
+
 ### @guiabolsobr/ui [3.7.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.1...@guiabolsobr/ui@3.7.2) (2021-05-10)
 
 
