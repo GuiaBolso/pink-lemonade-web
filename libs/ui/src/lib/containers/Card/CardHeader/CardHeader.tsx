@@ -8,15 +8,16 @@ type CardHeaderProps = {
   titleIcon?: React.ReactNode;
   overline?: React.ReactNode;
   overlineIcon?: React.ReactNode;
-};
+} & React.ComponentProps<'header'>;
 
 const CardHeader = ({
   title,
   titleIcon,
   overline,
   overlineIcon,
+  ...props
 }: CardHeaderProps) => (
-  <S.Header hasOverlineText={!!overline}>
+  <S.Header hasOverlineText={!!overline} {...props}>
     {overline && (
       <>
         <S.Overline>
