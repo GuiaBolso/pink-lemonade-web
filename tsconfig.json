@@ -17,7 +17,6 @@
     "baseUrl": ".",
     "paths": {
       "@guiabolsobr/ui": ["libs/ui/src/index.ts"],
-      "@guiabolsobr/ditto": ["libs/ditto/src/index.ts"],
       "@guiabolsobr/utils": ["libs/utils/src/index.ts"]
     }
   },
