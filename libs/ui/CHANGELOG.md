@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [4.0.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.1...@guiabolsobr/ui@4.0.2) (2021-05-24)
+
+
+### Bug Fixes
+
+* 🐛 add props ([64cebc8](https://github.com/GuiaBolso/pink-lemonade-web/commit/64cebc8668383060466dd12afa4ab0310319dbbc))
+
 ## @guiabolsobr/ui [4.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.2...@guiabolsobr/ui@4.0.0) (2021-05-24)
 
 ### ⚠ BREAKING CHANGES
