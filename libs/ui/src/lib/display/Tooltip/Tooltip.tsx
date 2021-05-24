@@ -16,7 +16,13 @@ const PopperComponent = props => {
   return <S.Popper {...props} />;
 };
 
-const Tooltip = ({ title, content, children, onOpen }: TooltipProps) => (
+const Tooltip = ({
+  title,
+  content,
+  children,
+  onOpen,
+  ...props
+}: TooltipProps) => (
   <MuiTooltip
     arrow
     enterTouchDelay={1}
@@ -24,6 +30,7 @@ const Tooltip = ({ title, content, children, onOpen }: TooltipProps) => (
     interactive
     PopperComponent={PopperComponent}
     onOpen={onOpen}
+    {...props}
     title={
       <>
         {title && <S.Title variant="heading-06">{title}</S.Title>}
