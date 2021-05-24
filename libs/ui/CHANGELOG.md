@@ -1,35 +1,31 @@
 ## @guiabolsobr/ui [4.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.2...@guiabolsobr/ui@4.0.0) (2021-05-24)
 
-
 ### ⚠ BREAKING CHANGES
 
-* 🧨 no
+- 🧨 no
 
 ### Bug Fixes
 
-* 🐛 Add props to the Tooltip component ([0732696](https://github.com/GuiaBolso/pink-lemonade-web/commit/07326965f811347f3174b38b3750d7498bffea2d))
+- 🐛 Add props to the Tooltip component ([0732696](https://github.com/GuiaBolso/pink-lemonade-web/commit/07326965f811347f3174b38b3750d7498bffea2d))
 
 ### @guiabolsobr/ui [3.7.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.1...@guiabolsobr/ui@3.7.2) (2021-05-10)
 
-
 ### Bug Fixes
 
-* 🐛 Export Select and Toggle component ([507559f](https://github.com/GuiaBolso/pink-lemonade-web/commit/507559fa13f1fb712fe054dbccfe603e2e44f1c7))
+- 🐛 Export Select and Toggle component ([507559f](https://github.com/GuiaBolso/pink-lemonade-web/commit/507559fa13f1fb712fe054dbccfe603e2e44f1c7))
 
 ### @guiabolsobr/ui [3.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.0...@guiabolsobr/ui@3.7.1) (2021-05-10)
 
-
 ### Bug Fixes
 
-* 🐛 Export component ([ab461cf](https://github.com/GuiaBolso/pink-lemonade-web/commit/ab461cfffa3a3c8d245727852ac0cb4430ea480e))
+- 🐛 Export component ([ab461cf](https://github.com/GuiaBolso/pink-lemonade-web/commit/ab461cfffa3a3c8d245727852ac0cb4430ea480e))
 
 ## @guiabolsobr/ui [3.7.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.6.0...@guiabolsobr/ui@3.7.0) (2021-05-07)
 
-
 ### Features
 
-* 🎸 Merge master into branch and resolve some conflicts ([1f51ea0](https://github.com/GuiaBolso/pink-lemonade-web/commit/1f51ea03978ae34fe76bca17e4242635c8c56b13))
-* 🎸 Toggle component ([d3fa008](https://github.com/GuiaBolso/pink-lemonade-web/commit/d3fa00820db28c3a1c50fa0d2e565f8de2f93f04))
+- 🎸 Merge master into branch and resolve some conflicts ([1f51ea0](https://github.com/GuiaBolso/pink-lemonade-web/commit/1f51ea03978ae34fe76bca17e4242635c8c56b13))
+- 🎸 Toggle component ([d3fa008](https://github.com/GuiaBolso/pink-lemonade-web/commit/d3fa00820db28c3a1c50fa0d2e565f8de2f93f04))
 
 ## @guiabolsobr/ui [3.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.5.1...@guiabolsobr/ui@3.6.0) (2021-05-07)
 
