@@ -4,7 +4,7 @@ import { IconSVG } from './icons.style';
 
 export const MoreVert = props => (
   <IconSVG
-    class="MuiSvgIcon-root"
+    className="MuiSvgIcon-root"
     focusable="false"
     viewBox="0 0 24 24"
     aria-hidden="true"
