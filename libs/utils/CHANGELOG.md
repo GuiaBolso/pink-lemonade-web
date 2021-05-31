@@ -1,3 +1,16 @@
+## @guiabolsobr/utils [1.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.3.1...@guiabolsobr/utils@1.4.0) (2021-05-31)
+
+
+### Features
+
+* 🎸 improvement storage ([662962c](https://github.com/GuiaBolso/pink-lemonade-web/commit/662962c5b598aefc58890773f5cb074f00a77181))
+
+
+### Bug Fixes
+
+* 🐛 add support storage ([6150b56](https://github.com/GuiaBolso/pink-lemonade-web/commit/6150b56970e6e8fc94a40d455a242d5c0cd21c90))
+* 🐛 remove duplicate ([989e25f](https://github.com/GuiaBolso/pink-lemonade-web/commit/989e25fa0ef62c76a51fa1fac6484867f85dd23e))
+
 ### @guiabolsobr/utils [1.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.3.0...@guiabolsobr/utils@1.3.1) (2021-02-08)
 
 ### Bug Fixes
