@@ -7,14 +7,13 @@ export const setABTest = (
   value: string,
   storage: 'localStorage' | 'sessionStorage' = 'localStorage',
 ) => {
+  const key = `ab-test-${name}`;
   if (storage === 'sessionStorage') {
-    const key = `ab-test-${name}`;
     sessionKeys.push(key);
 
     return session.setItem(key, value);
   }
 
-  const key = `ab-test-${name}`;
   localKeys.push(key);
 
   return local.setItem(key, value);
