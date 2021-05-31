@@ -10,3 +10,4 @@ export * from './lib/scales/hex-to-rgb/hex-to-rgb';
 export * from './lib/ab-test/ab-test';
 export * from './lib/copy-to-clipboard/copy-to-clipboard';
 export * from './lib/create-id/create-id';
+export * from './lib/storage';
