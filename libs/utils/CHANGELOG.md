@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.4.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.4.0...@guiabolsobr/utils@1.4.1) (2021-05-31)
+
+
+### Bug Fixes
+
+* 🐛 missing import ([f4fb413](https://github.com/GuiaBolso/pink-lemonade-web/commit/f4fb413b3c60409abd89980c50e882116955710a))
+
 ## @guiabolsobr/utils [1.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.3.1...@guiabolsobr/utils@1.4.0) (2021-05-31)
 
 
