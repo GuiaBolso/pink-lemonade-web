@@ -1,11 +1,11 @@
-import { TokensGuiaBolsoProps } from 'libs/ui/src/designSystem/tokens';
+import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 import React from 'react';
 
 import warningIcon from '../../../assets/images/icons/warning-blue.svg';
 
 import * as S from './InfoPanel.style';
 
-export type FeedbackType = keyof TokensGuiaBolsoProps['colors']['feedback'];
+export type FeedbackType = keyof CustomThemeProps['colors']['feedback'];
 
 type InfoPanelProps = {
   imagePath?: string;
