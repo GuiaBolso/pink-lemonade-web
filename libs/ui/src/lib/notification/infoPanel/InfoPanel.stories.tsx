@@ -37,7 +37,7 @@ export const Complete = () => (
 );
 
 export const ErrorType = () => (
-  <InfoPanel feedbackType="error" >
+  <InfoPanel feedbackType="error">
     <Text variant="heading-06" component="h3" style={{ marginBottom: '10px' }}>
       Não precisa autorizar mais nada
     </Text>

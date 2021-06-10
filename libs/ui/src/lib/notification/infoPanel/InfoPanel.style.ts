@@ -12,7 +12,7 @@ type InfoPanelTheme = {
 
 type ContainerProps = InfoPanelTheme & {
   feedbackType: FeedbackType;
-}
+};
 
 export const Container = styled.div<ContainerProps>`
   align-items: flex-start;
