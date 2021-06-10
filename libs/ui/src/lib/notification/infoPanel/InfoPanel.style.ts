@@ -4,15 +4,20 @@ import { pxToRem } from '@guiabolsobr/utils';
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 import { Text } from '../../display/Text';
+import { FeedbackType } from './InfoPanel';
 
 type InfoPanelTheme = {
   theme: CustomThemeProps;
 };
 
-export const Container = styled.div<InfoPanelTheme>`
+type ContainerProps = InfoPanelTheme & {
+  feedbackType: FeedbackType;
+}
+
+export const Container = styled.div<ContainerProps>`
   align-items: flex-start;
-  background-color: ${({ theme }) =>
-    theme?.colors?.feedback?.notification?.lightest};
+  background-color: ${({ theme, feedbackType }) =>
+    theme?.colors?.feedback[feedbackType]?.lightest};
   border-radius: ${pxToRem(4)};
   box-shadow: 0 0 1px ${({ theme }) => theme?.colors?.neutral?.light};
   display: flex;
