@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [4.1.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.4...@guiabolsobr/ui@4.1.0) (2021-06-11)
+
+
+### Features
+
+* 🎸 add lib emotion-query ([32cb0fe](https://github.com/GuiaBolso/pink-lemonade-web/commit/32cb0fe8aaf619ff78a6f65a88c62c094ca3f8b6))
+
 ### @guiabolsobr/ui [4.0.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.3...@guiabolsobr/ui@4.0.4) (2021-05-25)
 
 ### Bug Fixes
