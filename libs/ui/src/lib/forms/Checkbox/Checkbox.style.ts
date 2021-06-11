@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 import MuiCheckbox from '@material-ui/core/Checkbox';
 import MuiFormControlLabel from '@material-ui/core/FormControlLabel';

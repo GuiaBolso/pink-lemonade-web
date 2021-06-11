@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Global, css } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
+import { withTheme, Global, css } from '@emotion/react';
 
 const makeGlobalStyles = theme => css`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
