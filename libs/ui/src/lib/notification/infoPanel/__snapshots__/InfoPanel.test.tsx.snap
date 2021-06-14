@@ -10,7 +10,7 @@ exports[`InfoPanel Component Renders Connect Theme correctly 1`] = `
     src="test-file-stub"
   />
   <span
-    className="css-koet0u"
+    className="css-m8te5u"
     data-testid="text"
   >
     <h3
@@ -44,7 +44,7 @@ exports[`InfoPanel Component Renders correctly 1`] = `
     src="test-file-stub"
   />
   <span
-    className="css-koet0u"
+    className="css-m8te5u"
     data-testid="text"
   >
     <h3
