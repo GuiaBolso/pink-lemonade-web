@@ -60,7 +60,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Restore cache node modules
         uses: actions/cache@v2
@@ -93,7 +93,7 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Restore cache node modules
         uses: actions/cache@v2
@@ -128,7 +128,7 @@ jobs:
       - name: Setup Node.js with Npm Package Registry
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Restore cache node modules
         uses: actions/cache@v2
@@ -170,7 +170,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Restore cache node modules
         uses: actions/cache@v2
