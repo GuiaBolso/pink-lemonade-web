@@ -36,6 +36,20 @@ export const Complete = () => (
   </InfoPanel>
 );
 
+export const ErrorType = () => (
+  <InfoPanel feedbackType="error">
+    <Text variant="heading-06" component="h3" style={{ marginBottom: '10px' }}>
+      Não precisa autorizar mais nada
+    </Text>
+
+    <Text variant="subtitle-small" component="p">
+      Talvez você receba um sms do seu banco solicitando para autorizar ou
+      habilitar o GuiaBolso. Não precisa e pode ficar tranquilo que não faremos
+      nenhum tipo de transação na conta.
+    </Text>
+  </InfoPanel>
+);
+
 export const TitleOnly = () => (
   <InfoPanel>
     <Text variant="heading-06" component="h3">
