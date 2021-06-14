@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
-
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { Theme } from '@emotion/react';
 
 type StepsTheme = {
   active?: boolean;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 export const StepsContainer = styled.ol`

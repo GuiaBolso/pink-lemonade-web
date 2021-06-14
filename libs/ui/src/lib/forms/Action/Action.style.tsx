@@ -1,14 +1,12 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
+import { css, Theme } from '@emotion/react';
 
 import { Button } from '../Button';
-
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type ActionProps = {
   arrowPosition?: 'leading' | 'trailing';
   wide?: boolean;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 export const Action = styled(Button)`

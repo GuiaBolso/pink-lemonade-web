@@ -26,7 +26,7 @@
             "tsConfig": "libs/ui/tsconfig.lib.json",
             "project": "libs/ui/package.json",
             "entryFile": "libs/ui/src/index.ts",
-            "external": ["react", "react-dom", "styled-components"],
+            "external": ["react", "react-dom", "@emotion/styled"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
           }
@@ -125,7 +125,7 @@
             "tsConfig": "libs/utils/tsconfig.lib.json",
             "project": "libs/utils/package.json",
             "entryFile": "libs/utils/src/index.ts",
-            "external": ["react", "react-dom", "styled-components"],
+            "external": ["react", "react-dom", "@emotion/styled"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup"
           },
@@ -162,15 +162,15 @@
     },
     "@nrwl/react": {
       "application": {
-        "style": "styled-components",
+        "style": "@emotion/styled",
         "linter": "eslint",
         "babel": true
       },
       "component": {
-        "style": "styled-components"
+        "style": "@emotion/styled"
       },
       "library": {
-        "style": "styled-components",
+        "style": "@emotion/styled",
         "linter": "eslint"
       }
     },

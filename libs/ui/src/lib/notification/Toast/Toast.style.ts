@@ -1,14 +1,13 @@
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/react';
+import { css, keyframes, Theme } from '@emotion/react';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 import { Text } from '../../display/Text';
 
 import { ToastTypeProps } from './Toast.props';
 
 type ToastType = {
   type: ToastTypeProps;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 const toastTypes = {

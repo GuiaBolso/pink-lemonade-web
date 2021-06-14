@@ -1,24 +1,21 @@
 ### @guiabolsobr/ui [4.0.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.3...@guiabolsobr/ui@4.0.4) (2021-05-25)
 
-
 ### Bug Fixes
 
-* 🐛 class -> className ([ccce84d](https://github.com/GuiaBolso/pink-lemonade-web/commit/ccce84d7f0485baa67702ede3491fa7abf226a13))
-* 🐛 update snapshot ([c89a016](https://github.com/GuiaBolso/pink-lemonade-web/commit/c89a0163e5378f65dbb8f8f869adb367e3691a5c))
+- 🐛 class -> className ([ccce84d](https://github.com/GuiaBolso/pink-lemonade-web/commit/ccce84d7f0485baa67702ede3491fa7abf226a13))
+- 🐛 update snapshot ([c89a016](https://github.com/GuiaBolso/pink-lemonade-web/commit/c89a0163e5378f65dbb8f8f869adb367e3691a5c))
 
 ### @guiabolsobr/ui [4.0.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.2...@guiabolsobr/ui@4.0.3) (2021-05-24)
 
-
 ### Bug Fixes
 
-* 🐛 revert changes to version generated ([e49581f](https://github.com/GuiaBolso/pink-lemonade-web/commit/e49581ff99ee5399921ca083ab3a707b28b97fba))
+- 🐛 revert changes to version generated ([e49581f](https://github.com/GuiaBolso/pink-lemonade-web/commit/e49581ff99ee5399921ca083ab3a707b28b97fba))
 
 ### @guiabolsobr/ui [4.0.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.0.1...@guiabolsobr/ui@4.0.2) (2021-05-24)
 
-
 ### Bug Fixes
 
-* 🐛 add props ([64cebc8](https://github.com/GuiaBolso/pink-lemonade-web/commit/64cebc8668383060466dd12afa4ab0310319dbbc))
+- 🐛 add props ([64cebc8](https://github.com/GuiaBolso/pink-lemonade-web/commit/64cebc8668383060466dd12afa4ab0310319dbbc))
 
 ## @guiabolsobr/ui [4.0.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@3.7.2...@guiabolsobr/ui@4.0.0) (2021-05-24)
 

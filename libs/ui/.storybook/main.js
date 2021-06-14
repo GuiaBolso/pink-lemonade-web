@@ -1,10 +1,8 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const rootWebpackConfig = require('../../../.storybook/webpack.config');
-const path = require('path')
+const path = require('path');
 
-const toPath = _path => path.join(process.cwd(), _path)
-
-
+const toPath = _path => path.join(process.cwd(), _path);
 
 module.exports = {
   typescript: {
@@ -20,7 +18,6 @@ module.exports = {
   // other settings
   webpackFinal: async (config, { mode }) => {
     const tsPaths = new TsconfigPathsPlugin();
-    const cwd = process.cwd();
 
     config = await rootWebpackConfig({ config, mode });
 
@@ -30,16 +27,22 @@ module.exports = {
 
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@emotion/core": path.join(cwd, "node_modules", "@emotion", "react"),
-      "@emotion/styled": path.join(cwd, "node_modules", "@emotion", "styled"),
-      "@emotion/styled-base": path.join(cwd, "node_modules", "@emotion", "styled"),
-      "emotion-theming": path.join(cwd, "node_modules", "@emotion", "react"),
-    }
-
-    console.log(config.resolve.alias);
+      '@emotion/core': toPath('node_modules/@emotion/react'),
+      '@emotion/styled': toPath('node_modules/@emotion/styled'),
+      '@emotion/styled-base': toPath('node_modules/@emotion/styled'),
+      'emotion-theming': toPath('node_modules/@emotion/react'),
+    };
 
     return config;
   },
+  babel: async options => ({
+    ...options,
+
+    plugins: [
+      '@babel/plugin-proposal-class-properties',
+      '@babel/plugin-proposal-private-methods',
+    ],
+  }),
   stories: ['../src/lib/**/*.stories.@(mdx|jsx|tsx)'],
   addons: [
     '@storybook/addon-docs',

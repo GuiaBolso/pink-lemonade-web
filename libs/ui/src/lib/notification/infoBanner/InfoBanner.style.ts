@@ -1,15 +1,12 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
-
-import { Close as MuiClose } from '../../icons';
-// eslint-disable-next-line import/no-unresolved
+import { css, Theme } from '@emotion/react';
 import { pxToRem } from '@guiabolsobr/utils';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { Close as MuiClose } from '../../icons';
 import { Button } from '../../forms';
 
 type InfoBannerTheme = {
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 type ContainerProps = {

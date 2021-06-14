@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
-// eslint-disable-next-line import/no-unresolved
+import { Theme } from '@emotion/react';
 import { pxToRem } from '@guiabolsobr/utils';
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 import { Text } from '../../display/Text';
 
 type InfoPanelTheme = {
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 export const Container = styled.div<InfoPanelTheme>`

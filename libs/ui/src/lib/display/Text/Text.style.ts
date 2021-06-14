@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { css, Theme } from '@emotion/react';
 
 type TextProps = {
   variant?: string;
   as?: React.ElementType;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 const variants = {
