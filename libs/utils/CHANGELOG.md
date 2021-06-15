@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.0...@guiabolsobr/utils@1.5.1) (2021-06-15)
+
+
+### Bug Fixes
+
+* 🐛 change emotion query to ts ([56d54e9](https://github.com/GuiaBolso/pink-lemonade-web/commit/56d54e959107992d4a3f4d9a3fa154068ce7ebb8))
+
 ## @guiabolsobr/utils [1.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.4.1...@guiabolsobr/utils@1.5.0) (2021-06-11)
 
 ### Features

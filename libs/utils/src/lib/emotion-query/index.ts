@@ -15,6 +15,8 @@ export const defaultBreakpoints = {
   small: '450px',
 };
 
+export type BreakpointTypes = keyof typeof defaultBreakpoints;
+
 function getSizeFromBreakpoint(breakpointValue, breakpoints = {}) {
   if (breakpoints[breakpointValue]) {
     return breakpoints[breakpointValue];
@@ -34,19 +36,22 @@ function getSizeFromBreakpoint(breakpointValue, breakpoints = {}) {
  * @return {Object} - Media generators for each breakpoint
  */
 export function generateMedia(breakpoints = defaultBreakpoints) {
-  const lessThan = breakpoint => (...args) => css`
+  const lessThan = (breakpoint: BreakpointTypes) => (...args) => css`
     @media (max-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
-  const greaterThan = breakpoint => (...args) => css`
+  const greaterThan = (breakpoint: BreakpointTypes) => (...args) => css`
     @media (min-width: ${getSizeFromBreakpoint(breakpoint, breakpoints)}) {
       ${css(...args)}
     }
   `;
 
-  const between = (firstBreakpoint, secondBreakpoint) => (...args) => css`
+  const between = (
+    firstBreakpoint: BreakpointTypes,
+    secondBreakpoint: BreakpointTypes,
+  ) => (...args) => css`
     @media (min-width: ${getSizeFromBreakpoint(
         firstBreakpoint,
         breakpoints,
@@ -103,7 +108,7 @@ export function generateMedia(breakpoints = defaultBreakpoints) {
  * Media object with default breakpoints
  * @return {object} - Media generators for each size
  */
-export default generateMedia();
+export const media = generateMedia();
 
 /**
  * Usage: styled.div` ${media.from.medium`background: #000;`} `;
