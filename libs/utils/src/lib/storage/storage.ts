@@ -56,8 +56,11 @@ declare global {
     memoryStorage: typeof memoryStorage;
   }
 }
-// @ts-ignore
-window.__proto__.memoryStorage = memoryStorage;
+
+if (window) {
+  // @ts-ignore
+  window.__proto__.memoryStorage = memoryStorage;
+}
 
 type StorageTypes = 'local' | 'session' | 'memory';
 
