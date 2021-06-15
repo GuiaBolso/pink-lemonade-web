@@ -4,7 +4,7 @@
  * Copy to clipboard
  */
 export const copyToClipboard = (str: string): Promise<void | boolean> => {
-  const { clipboard } = window.navigator;
+  const { clipboard } = globalThis.navigator;
   /*
    * fallback to older browsers (including Safari)
    * if clipboard API not supported
@@ -19,7 +19,7 @@ export const copyToClipboard = (str: string): Promise<void | boolean> => {
     document.body.appendChild(textarea);
     textarea.select();
     const range = document.createRange();
-    const sel = window.getSelection();
+    const sel = globalThis.getSelection();
     sel.removeAllRanges();
     sel.addRange(range);
     textarea.setSelectionRange(0, textarea.value.length);

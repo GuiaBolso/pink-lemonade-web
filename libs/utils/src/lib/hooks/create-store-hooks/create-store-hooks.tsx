@@ -53,8 +53,8 @@ const addReactContextDevTools = <T extends Record<string, unknown>>(
   name: string,
   id: string,
 ) => {
-  if (window._REACT_CONTEXT_DEVTOOL) {
-    window._REACT_CONTEXT_DEVTOOL({
+  if (globalThis._REACT_CONTEXT_DEVTOOL) {
+    globalThis._REACT_CONTEXT_DEVTOOL({
       values,
       id,
       displayName: `Context: ${name}`,
