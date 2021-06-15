@@ -57,9 +57,9 @@ declare global {
   }
 }
 
-if (window) {
+if (globalThis) {
   // @ts-ignore
-  window.__proto__.memoryStorage = memoryStorage;
+  globalThis.__proto__.memoryStorage = memoryStorage;
 }
 
 type StorageTypes = 'local' | 'session' | 'memory';
@@ -70,12 +70,12 @@ export function createStorage(type: StorageTypes) {
   try {
     $Storage =
       ({
-        local: window.localStorage,
-        session: window.sessionStorage,
-        memory: window.memoryStorage,
-      } as { [K in StorageTypes]: unknown })[type] ?? window.memoryStorage;
+        local: globalThis.localStorage,
+        session: globalThis.sessionStorage,
+        memory: globalThis.memoryStorage,
+      } as { [K in StorageTypes]: unknown })[type] ?? globalThis.memoryStorage;
   } catch (error) {
-    $Storage = window.memoryStorage;
+    $Storage = globalThis.memoryStorage;
   }
 
   return StorageImpl($Storage);
