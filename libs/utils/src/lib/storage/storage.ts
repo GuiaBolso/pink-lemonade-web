@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function StorageImpl(instance: any) {
   const setItem = <T, K extends string>(key: K, value: T) => {
     try {

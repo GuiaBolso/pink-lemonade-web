@@ -1,12 +1,10 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, Theme } from '@emotion/react';
 import { Close as MuiClose } from '../../icons';
 import { pxToRem, hexToRgb } from '@guiabolsobr/utils';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
-
 type ModalStyleProps = {
-  theme: CustomThemeProps;
+  theme?: Theme;
   fade?: boolean;
   opened?: boolean;
   backdropMode?: boolean;

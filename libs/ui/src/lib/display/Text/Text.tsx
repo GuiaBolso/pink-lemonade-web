@@ -1,5 +1,5 @@
 import React, { memo } from 'react';
-import * as Styled from './Text.style';
+import * as S from './Text.style';
 
 export type VariantProps =
   | 'display-01'
@@ -41,9 +41,9 @@ export const Text = ({
   ...rest
 }: TextProps) => {
   return (
-    <Styled.Text as={component} variant={variant} data-testid="text" {...rest}>
+    <S.Text as={component} variant={variant} data-testid="text" {...rest}>
       {children}
-    </Styled.Text>
+    </S.Text>
   );
 };
 

@@ -1,16 +1,14 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, Theme } from '@emotion/react';
 
 // eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
 
 import { Text } from '../../../display/Text';
 
-import { CustomThemeProps } from '../../../../typings/CustomThemeProps';
-
 type CardFooterProps = {
   addendum?: boolean;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 export const CardFooter = styled.footer`

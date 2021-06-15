@@ -1,31 +1,27 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, Theme } from '@emotion/react';
 
-// eslint-disable-next-line import/no-unresolved
 import { pxToRem } from '@guiabolsobr/utils';
-import { themeProps } from '@guiabolsobr/ui';
-
-import { CustomThemeProps } from '../../../../typings/CustomThemeProps';
 
 type HeaderProps = {
   hasOverlineText: boolean;
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
-const iconStyle = ({ theme }: { theme: themeProps }) => css`
+const iconStyle = ({ theme }: { theme: Theme }) => css`
   align-items: center;
   color: ${theme?.colors?.brand?.secondary?.default};
   display: flex;
   justify-content: flex-end;
 `;
 
-const title = ({ theme }: { theme: themeProps }) => css`
+const title = ({ theme }: { theme: Theme }) => css`
   align-items: center;
   color: ${theme?.colors?.neutral?.dark};
   display: flex;
 `;
 
-export const Header = styled.header`
+export const Header = styled.header<HeaderProps>`
   display: grid;
   grid-gap: ${({ hasOverlineText }: HeaderProps) =>
     hasOverlineText ? pxToRem(8) : `0 ${pxToRem(8)}`};

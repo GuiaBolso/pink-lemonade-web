@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, Theme } from '@emotion/react';
 
 import MuiCheckbox from '@material-ui/core/Checkbox';
 import MuiFormControlLabel from '@material-ui/core/FormControlLabel';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
-
 type CheckboxStyledProps = {
-  theme: CustomThemeProps;
+  theme?: Theme;
   variant: 'simple' | 'stand-alone';
 };
 

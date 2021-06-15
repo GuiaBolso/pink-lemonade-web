@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
+import { Theme } from '@emotion/react';
 
 import DropMenuIcon from './DropMenuIcon';
 
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
-
 type DropMenuProps = {
-  theme: CustomThemeProps;
+  theme?: Theme;
 };
 
 export const ButtonContainer = styled.div`

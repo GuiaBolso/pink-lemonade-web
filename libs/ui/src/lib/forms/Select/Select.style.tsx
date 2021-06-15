@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
+import { Theme as ThemeProps } from '@emotion/react';
 import { pxToRem } from '@guiabolsobr/utils';
-import { CustomThemeProps } from '../../../typings/CustomThemeProps';
 
 type Theme = {
-  theme: CustomThemeProps;
+  theme?: ThemeProps;
   error?: boolean;
 };
 

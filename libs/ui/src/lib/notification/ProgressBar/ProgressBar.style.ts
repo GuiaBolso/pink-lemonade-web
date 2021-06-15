@@ -1,19 +1,18 @@
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { css, Theme } from '@emotion/react';
 
 import { pxToRem } from '@guiabolsobr/utils';
-import { themeProps } from '@guiabolsobr/ui';
 
 type LineProps = {
   lineColor?: string;
-  theme: themeProps;
+  theme?: Theme;
 };
 
 type SublineProps = {
   animation?: 'dec' | 'inc';
   value?: number;
   sublineColor?: string;
-  theme: themeProps;
+  theme?: Theme;
 };
 
 const animations = css`
@@ -85,7 +84,7 @@ export const Subline = styled.div`
 `;
 
 export const Info = styled.div`
-  color: ${({ theme }: { theme: themeProps }) => theme?.colors?.neutral?.dark};
+  color: ${({ theme }: { theme: Theme }) => theme?.colors?.neutral?.dark};
   display: flex;
   justify-content: space-between;
   margin-top: ${pxToRem(8)};

@@ -1,9 +1,8 @@
 import React from 'react';
 
-import { Global, css } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
+import { withTheme, Global, css, Theme } from '@emotion/react';
 
-const makeGlobalStyles = theme => css`
+const makeGlobalStyles = (theme: Theme) => css`
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap');
 
   body,
@@ -13,7 +12,7 @@ const makeGlobalStyles = theme => css`
   }
 `;
 
-const GlobalStyle = withTheme(({ theme }) => (
+const GlobalStyle = withTheme(({ theme }: { theme: Theme }) => (
   <Global styles={makeGlobalStyles(theme)} />
 ));
 

@@ -15,10 +15,10 @@ const themesValueOptions = {
 };
 
 const optionType = {
-  display: 'select',
+  display: 'inline-radio',
 };
 
-const withGlobal = cb => {
+const withGlobal = Story => {
   const value = options(
     'Tema', // Label
     themesValueOptions, // Options
@@ -27,7 +27,11 @@ const withGlobal = cb => {
     'Opções Globais', // Group
   );
 
-  return <Theme theme={themes[value]}>{cb()}</Theme>;
+  return (
+    <Theme theme={themes[value]}>
+      <Story />
+    </Theme>
+  );
 };
 
 export const decorators = [withKnobs, withGlobal];

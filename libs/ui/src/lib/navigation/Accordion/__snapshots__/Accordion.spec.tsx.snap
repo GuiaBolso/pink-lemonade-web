@@ -55,7 +55,7 @@ exports[`Text Component renders connect theme correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="css-bsqj62"
+          className="css-6znstb"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -157,7 +157,7 @@ exports[`Text Component renders correctly 1`] = `
       >
         <svg
           aria-hidden="true"
-          className="css-bsqj62"
+          className="css-6znstb"
           focusable="false"
           viewBox="0 0 24 24"
         >

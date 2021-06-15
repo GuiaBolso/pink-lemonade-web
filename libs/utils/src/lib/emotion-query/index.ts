@@ -1,4 +1,4 @@
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import { pxToEm as pxToEmQuery, pxToRem as pxToRemQuery } from './conversor';
 
 export { pxToRemQuery, pxToEmQuery };
