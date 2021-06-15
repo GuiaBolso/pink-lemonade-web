@@ -1,9 +1,14 @@
-### @guiabolsobr/utils [1.5.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.1...@guiabolsobr/utils@1.5.2) (2021-06-15)
-
+### @guiabolsobr/utils [1.5.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.2...@guiabolsobr/utils@1.5.3) (2021-06-15)
 
 ### Bug Fixes
 
-* 🐛 update peer dependences ([9b0978f](https://github.com/GuiaBolso/pink-lemonade-web/commit/9b0978fd5576832997f967c3858ba99f50f75a55))
+- 🐛 check window ([#71](https://github.com/GuiaBolso/pink-lemonade-web/issues/71)) ([b1d65b5](https://github.com/GuiaBolso/pink-lemonade-web/commit/b1d65b50bc5cfd35f672475a0629f10b65ce08c6))
+
+### @guiabolsobr/utils [1.5.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.1...@guiabolsobr/utils@1.5.2) (2021-06-15)
+
+### Bug Fixes
+
+- 🐛 update peer dependences ([9b0978f](https://github.com/GuiaBolso/pink-lemonade-web/commit/9b0978fd5576832997f967c3858ba99f50f75a55))
 
 ### @guiabolsobr/utils [1.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.0...@guiabolsobr/utils@1.5.1) (2021-06-15)
 
