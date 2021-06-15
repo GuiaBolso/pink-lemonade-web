@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.5.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.2...@guiabolsobr/utils@1.5.3) (2021-06-15)
+
+
+### Bug Fixes
+
+* 🐛 check window ([#71](https://github.com/GuiaBolso/pink-lemonade-web/issues/71)) ([b1d65b5](https://github.com/GuiaBolso/pink-lemonade-web/commit/b1d65b50bc5cfd35f672475a0629f10b65ce08c6))
+
 ### @guiabolsobr/utils [1.5.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.1...@guiabolsobr/utils@1.5.2) (2021-06-15)
 
 
