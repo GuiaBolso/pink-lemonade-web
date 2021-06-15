@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 12
       - name: Cache node modules
@@ -58,7 +58,7 @@ jobs:
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14
 
@@ -91,7 +91,7 @@ jobs:
 
       - run: git fetch --no-tags --prune --depth=5 origin master
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
           node-version: 14
 
@@ -126,7 +126,7 @@ jobs:
       - run: git fetch --no-tags --prune --depth=5 origin master
 
       - name: Setup Node.js with Npm Package Registry
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 14
 
@@ -168,7 +168,7 @@ jobs:
       - run: git fetch --no-tags --prune --depth=5 origin master
 
       - name: Setup Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
           node-version: 14
 
