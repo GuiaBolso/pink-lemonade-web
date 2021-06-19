@@ -1,16 +1,14 @@
 ## @guiabolsobr/utils [1.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.4...@guiabolsobr/utils@1.6.0) (2021-06-19)
 
-
 ### Features
 
-* 🎸 add useBreakpoints hook ([#73](https://github.com/GuiaBolso/pink-lemonade-web/issues/73)) ([0bedb9d](https://github.com/GuiaBolso/pink-lemonade-web/commit/0bedb9dcedeef12667b0f6c523f45e367551dead))
+- 🎸 add useBreakpoints hook ([#73](https://github.com/GuiaBolso/pink-lemonade-web/issues/73)) ([0bedb9d](https://github.com/GuiaBolso/pink-lemonade-web/commit/0bedb9dcedeef12667b0f6c523f45e367551dead))
 
 ### @guiabolsobr/utils [1.5.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.3...@guiabolsobr/utils@1.5.4) (2021-06-15)
 
-
 ### Bug Fixes
 
-* 🐛 change window ([#72](https://github.com/GuiaBolso/pink-lemonade-web/issues/72)) ([702824f](https://github.com/GuiaBolso/pink-lemonade-web/commit/702824f099d70443044b7c98c2388ffb66b630ab))
+- 🐛 change window ([#72](https://github.com/GuiaBolso/pink-lemonade-web/issues/72)) ([702824f](https://github.com/GuiaBolso/pink-lemonade-web/commit/702824f099d70443044b7c98c2388ffb66b630ab))
 
 ### @guiabolsobr/utils [1.5.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.5.2...@guiabolsobr/utils@1.5.3) (2021-06-15)
 
