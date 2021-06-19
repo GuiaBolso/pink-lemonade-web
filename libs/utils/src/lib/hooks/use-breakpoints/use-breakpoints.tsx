@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useMediaQuery } from '../use-media-query/use-media-query';
 import { defaultBreakpoints } from '../../emotion-query';
 
@@ -28,6 +29,7 @@ const useGreaterThan = ({ breakpoint, customBreakpoint }: LessGreaterParams) =>
   );
 
 export function useBreakpoints() {
+  const [active, setActive] = useState<Breakpoints>('small');
   const { small, medium, large, huge } = defaultBreakpoints;
 
   const breakpoints: BreakpointProps = {
@@ -37,13 +39,13 @@ export function useBreakpoints() {
     isHuge: useMediaQuery(`(min-width: ${huge})`),
     lessThen: useLessThen,
     greaterThan: useGreaterThan,
-    active: 'small',
+    active,
   };
 
-  if (breakpoints.isSmall) breakpoints.active = 'small';
-  if (breakpoints.isMedium) breakpoints.active = 'medium';
-  if (breakpoints.isLarge) breakpoints.active = 'large';
-  if (breakpoints.isHuge) breakpoints.active = 'huge';
+  if (breakpoints.isSmall) setActive('small');
+  if (breakpoints.isMedium) setActive('medium');
+  if (breakpoints.isLarge) setActive('large');
+  if (breakpoints.isHuge) setActive('huge');
 
   return breakpoints;
 }
