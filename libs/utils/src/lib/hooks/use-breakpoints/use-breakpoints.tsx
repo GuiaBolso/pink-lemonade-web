@@ -1,12 +1,6 @@
 import { useMediaQuery } from '../use-media-query/use-media-query';
 import { defaultBreakpoints } from '../../emotion-query';
 
-/**
- * Get a set of boolean representing which breakpoint is active
- * and which breakpoints are inactive.
- *
- * Inspired by: https://github.com/contra/react-responsive/issues/162#issuecomment-592082035
- */
 type BreakpointProps = {
   isSmall: boolean;
   isMedium: boolean;
