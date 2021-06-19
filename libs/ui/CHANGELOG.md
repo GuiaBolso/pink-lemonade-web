@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [4.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.0...@guiabolsobr/ui@4.3.1) (2021-06-19)
+
+
+### Bug Fixes
+
+* 🐛 name ([#75](https://github.com/GuiaBolso/pink-lemonade-web/issues/75)) ([93a53d6](https://github.com/GuiaBolso/pink-lemonade-web/commit/93a53d6e65f390910407a604d97911fee5dc4c10))
+
 ## @guiabolsobr/ui [4.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.2.2...@guiabolsobr/ui@4.3.0) (2021-06-19)
 
 ### Features
