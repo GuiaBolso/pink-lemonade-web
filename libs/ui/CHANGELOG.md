@@ -1,9 +1,8 @@
 ## @guiabolsobr/ui [4.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.2.2...@guiabolsobr/ui@4.3.0) (2021-06-19)
 
-
 ### Features
 
-* 🎸 add useBreakpoints ([#74](https://github.com/GuiaBolso/pink-lemonade-web/issues/74)) ([50d5310](https://github.com/GuiaBolso/pink-lemonade-web/commit/50d53102755db21811b2a751e3d1ae3b01773b31))
+- 🎸 add useBreakpoints ([#74](https://github.com/GuiaBolso/pink-lemonade-web/issues/74)) ([50d5310](https://github.com/GuiaBolso/pink-lemonade-web/commit/50d53102755db21811b2a751e3d1ae3b01773b31))
 
 ### @guiabolsobr/ui [4.2.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.2.1...@guiabolsobr/ui@4.2.2) (2021-06-15)
 
