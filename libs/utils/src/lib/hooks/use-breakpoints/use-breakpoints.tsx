@@ -29,7 +29,7 @@ const useGreaterThan = ({ breakpoint, customBreakpoint }: LessGreaterParams) =>
   );
 
 export function useBreakpoints() {
-  const [active, setActive] = useState<Breakpoints>('small');
+  const [active, setActive] = useState<Breakpoints>(null);
   const { small, medium, large, huge } = defaultBreakpoints;
 
   const breakpoints: BreakpointProps = {
