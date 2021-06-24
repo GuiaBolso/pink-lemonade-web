@@ -14,6 +14,8 @@ export * from './lib/forms/Toggle';
 
 export * from './lib/general/Theme';
 
+export * from './lib/icons';
+
 export * from './lib/navigation/Accordion';
 export * from './lib/navigation/Arrow';
 export * from './lib/navigation/DropMenu';
