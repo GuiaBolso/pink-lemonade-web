@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [4.4.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.1...@guiabolsobr/ui@4.4.2) (2021-06-24)
+
+
+### Bug Fixes
+
+* 🐛 pass props to card ([#78](https://github.com/GuiaBolso/pink-lemonade-web/issues/78)) ([0deed3e](https://github.com/GuiaBolso/pink-lemonade-web/commit/0deed3efc9d0fe129dcaaaad300fc7c0965300f2))
+
 ### @guiabolsobr/ui [4.4.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.0...@guiabolsobr/ui@4.4.1) (2021-06-24)
 
 
