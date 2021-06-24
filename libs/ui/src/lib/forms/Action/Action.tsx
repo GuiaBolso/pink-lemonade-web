@@ -27,7 +27,7 @@ export const Action = ({
     wide={wide}
     disableRipple
     {...rest}
-  ></S.Action>
+  />
 );
 
 export default Action;
