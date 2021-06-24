@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [4.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.1...@guiabolsobr/ui@4.4.0) (2021-06-24)
+
+
+### Features
+
+* 🎸 export icons ([#76](https://github.com/GuiaBolso/pink-lemonade-web/issues/76)) ([1d790fc](https://github.com/GuiaBolso/pink-lemonade-web/commit/1d790fc2238f7e3569e206431573c09747438623))
+
 ### @guiabolsobr/ui [4.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.0...@guiabolsobr/ui@4.3.1) (2021-06-19)
 
 
