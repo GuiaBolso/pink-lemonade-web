@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [4.4.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.0...@guiabolsobr/ui@4.4.1) (2021-06-24)
+
+
+### Bug Fixes
+
+* 🐛 proxy button ([#77](https://github.com/GuiaBolso/pink-lemonade-web/issues/77)) ([35d71be](https://github.com/GuiaBolso/pink-lemonade-web/commit/35d71be333a8805ef7cd394211c5eabe6ca1a136))
+
 ## @guiabolsobr/ui [4.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.1...@guiabolsobr/ui@4.4.0) (2021-06-24)
 
 
