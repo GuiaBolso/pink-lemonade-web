@@ -15,7 +15,10 @@ export const CardFooter = styled.footer`
   background: ${({ addendum, theme }: CardFooterProps) =>
     addendum ? theme?.colors?.brand?.secondary?.lightest : 'none'};
   border-radius: 0 0 ${pxToRem(4)} ${pxToRem(4)};
-  padding: 0 ${pxToRem(16)} ${pxToRem(16)};
+  padding: ${({ addendum }: CardFooterProps) =>
+    addendum
+      ? `${pxToRem(16)} ${pxToRem(16)}`
+      : `0 ${pxToRem(16)} ${pxToRem(16)}`};
 `;
 
 export const CardFooterText = styled(Text)`
@@ -25,7 +28,8 @@ export const CardFooterText = styled(Text)`
   ${({ theme }: CardFooterProps) => css`
     color: ${theme?.colors?.neutral?.dark};
   `};
-  padding: ${pxToRem(16)} 0;
+  padding: ${({ addendum }: CardFooterProps) =>
+    addendum ? `0 0 ${pxToRem(16)} 0` : `${pxToRem(16)} 0`};
 `;
 
 CardFooterText.defaultProps = {

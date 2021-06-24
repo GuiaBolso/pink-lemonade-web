@@ -11,7 +11,9 @@ export type CardFooterProps = {
 const Card = ({ action, description, addendum = false }: CardFooterProps) => {
   return (
     <S.CardFooter addendum={addendum}>
-      {description && <S.CardFooterText>{description}</S.CardFooterText>}
+      {description && (
+        <S.CardFooterText addendum={addendum}>{description}</S.CardFooterText>
+      )}
 
       {action && <>{action}</>}
     </S.CardFooter>
