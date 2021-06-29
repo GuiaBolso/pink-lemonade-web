@@ -4,7 +4,7 @@ import { css, Theme } from '@emotion/react';
 import MuiCheckbox from '@material-ui/core/Checkbox';
 import MuiFormControlLabel from '@material-ui/core/FormControlLabel';
 
-type CheckboxStyledProps = {
+export type CheckboxStyledProps = {
   theme?: Theme;
   variant: 'simple' | 'stand-alone';
 };
@@ -18,6 +18,9 @@ export const FormControlLabel = styled(MuiFormControlLabel)`
 
     return css`
       && {
+        &.MuiFormControlLabel-root {
+          align-items: flex-start;
+        }
         .MuiCheckbox-root {
           color: ${colors[variant] || colors.simple};
           &.Mui-checked {

@@ -41,7 +41,10 @@ export const WrapperSelect = styled.div`
       }
 
       & .MuiSelect-icon {
-        color: ${({ theme }: Theme) => theme?.colors?.brand?.tertiary?.default};
+        color: ${({ theme, error }: Theme) =>
+          error
+            ? theme?.colors?.feedback?.error?.default
+            : theme?.colors?.brand?.tertiary?.default};
         top: calc(50% - 14px);
       }
     }
@@ -128,7 +131,10 @@ export const WrapperSelect = styled.div`
 
     & .MuiFormHelperText-root.Mui-error,
     & .MuiSelect-icon {
-      color: ${({ theme }: Theme) => theme?.colors?.feedback?.error?.default};
+      color: ${({ theme, error }: Theme) =>
+        error
+          ? theme?.colors?.feedback?.error?.default
+          : theme?.colors?.brand?.secondary?.default};
     }
 
     .MuiInputLabel-filled.MuiInputLabel-shrink {

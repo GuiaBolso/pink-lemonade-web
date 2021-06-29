@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '../../display/Text/Text';
 import Checkbox from './Checkbox';
 
 export default {
@@ -8,6 +9,22 @@ export default {
 
 export const simple = () => (
   <Checkbox label={<span>Receber newsletter</span>} name="newsletter" />
+);
+
+export const simpleWithLongText = () => (
+  <Checkbox
+    label={
+      <>
+        <Text>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse soluta
+          corrupti officia quam qui, incidunt corporis quod id voluptatibus
+          asperiores autem natus unde saepe.{' '}
+          <b>Corrupti ad accusantium maxime </b> odio reprehenderit.
+        </Text>
+      </>
+    }
+    name="newsletter"
+  />
 );
 
 export const standAlone = () => (

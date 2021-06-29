@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 
 import { default as MuiFormControlLabel } from '@material-ui/core/FormControlLabel';
 import { CustomThemeProps } from '../../../typings/CustomThemeProps';
+import { hexToRgb } from '@guiabolsobr/utils';
 
 type ToggleStyledProps = {
   theme: CustomThemeProps;
@@ -10,8 +11,20 @@ type ToggleStyledProps = {
 
 export const FormControlLabel = styled(MuiFormControlLabel)`
   ${({ theme }: ToggleStyledProps) => {
+    const rgbSecondaryDefault = hexToRgb(
+      theme?.colors?.brand?.secondary?.default,
+    );
+
     return css`
       && {
+        .MuiSwitch-colorSecondary.Mui-checked:hover {
+          background-color: rgba(
+            ${rgbSecondaryDefault.r},
+            ${rgbSecondaryDefault.g},
+            ${rgbSecondaryDefault.b},
+            0.04
+          );
+        }
         .MuiSwitch-root {
           color: ${theme?.colors?.neutral?.dark};
 
