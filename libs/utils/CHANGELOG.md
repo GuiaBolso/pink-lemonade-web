@@ -1,3 +1,10 @@
+### @guiabolsobr/utils [1.7.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.7.1...@guiabolsobr/utils@1.7.2) (2021-06-29)
+
+
+### Bug Fixes
+
+* 🐛 update deps ([a1be62e](https://github.com/GuiaBolso/pink-lemonade-web/commit/a1be62e73693c76de5a3e7ab6e4e9ac8ba6911b3))
+
 ### @guiabolsobr/utils [1.7.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/utils@1.7.0...@guiabolsobr/utils@1.7.1) (2021-06-19)
 
 ### Bug Fixes
