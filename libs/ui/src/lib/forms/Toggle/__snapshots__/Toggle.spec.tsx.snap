@@ -2,7 +2,7 @@
 
 exports[`Toggle Component It should renders correctly 1`] = `
 <label
-  className="MuiFormControlLabel-root css-1w3s9zg"
+  className="MuiFormControlLabel-root css-b45anh"
 >
   <span
     className="MuiSwitch-root"
