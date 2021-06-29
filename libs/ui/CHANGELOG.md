@@ -1,30 +1,26 @@
 ### @guiabolsobr/ui [4.4.2](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.1...@guiabolsobr/ui@4.4.2) (2021-06-24)
 
-
 ### Bug Fixes
 
-* 🐛 pass props to card ([#78](https://github.com/GuiaBolso/pink-lemonade-web/issues/78)) ([0deed3e](https://github.com/GuiaBolso/pink-lemonade-web/commit/0deed3efc9d0fe129dcaaaad300fc7c0965300f2))
+- 🐛 pass props to card ([#78](https://github.com/GuiaBolso/pink-lemonade-web/issues/78)) ([0deed3e](https://github.com/GuiaBolso/pink-lemonade-web/commit/0deed3efc9d0fe129dcaaaad300fc7c0965300f2))
 
 ### @guiabolsobr/ui [4.4.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.0...@guiabolsobr/ui@4.4.1) (2021-06-24)
 
-
 ### Bug Fixes
 
-* 🐛 proxy button ([#77](https://github.com/GuiaBolso/pink-lemonade-web/issues/77)) ([35d71be](https://github.com/GuiaBolso/pink-lemonade-web/commit/35d71be333a8805ef7cd394211c5eabe6ca1a136))
+- 🐛 proxy button ([#77](https://github.com/GuiaBolso/pink-lemonade-web/issues/77)) ([35d71be](https://github.com/GuiaBolso/pink-lemonade-web/commit/35d71be333a8805ef7cd394211c5eabe6ca1a136))
 
 ## @guiabolsobr/ui [4.4.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.1...@guiabolsobr/ui@4.4.0) (2021-06-24)
 
-
 ### Features
 
-* 🎸 export icons ([#76](https://github.com/GuiaBolso/pink-lemonade-web/issues/76)) ([1d790fc](https://github.com/GuiaBolso/pink-lemonade-web/commit/1d790fc2238f7e3569e206431573c09747438623))
+- 🎸 export icons ([#76](https://github.com/GuiaBolso/pink-lemonade-web/issues/76)) ([1d790fc](https://github.com/GuiaBolso/pink-lemonade-web/commit/1d790fc2238f7e3569e206431573c09747438623))
 
 ### @guiabolsobr/ui [4.3.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.3.0...@guiabolsobr/ui@4.3.1) (2021-06-19)
 
-
 ### Bug Fixes
 
-* 🐛 name ([#75](https://github.com/GuiaBolso/pink-lemonade-web/issues/75)) ([93a53d6](https://github.com/GuiaBolso/pink-lemonade-web/commit/93a53d6e65f390910407a604d97911fee5dc4c10))
+- 🐛 name ([#75](https://github.com/GuiaBolso/pink-lemonade-web/issues/75)) ([93a53d6](https://github.com/GuiaBolso/pink-lemonade-web/commit/93a53d6e65f390910407a604d97911fee5dc4c10))
 
 ## @guiabolsobr/ui [4.3.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.2.2...@guiabolsobr/ui@4.3.0) (2021-06-19)
 
