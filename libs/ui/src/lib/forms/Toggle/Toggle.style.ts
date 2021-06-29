@@ -19,9 +19,9 @@ export const FormControlLabel = styled(MuiFormControlLabel)`
       && {
         .MuiSwitch-colorSecondary.Mui-checked:hover {
           background-color: rgba(
-            ${rgbSecondaryDefault.r},
-            ${rgbSecondaryDefault.g},
-            ${rgbSecondaryDefault.b},
+            ${rgbSecondaryDefault?.r},
+            ${rgbSecondaryDefault?.g},
+            ${rgbSecondaryDefault?.b},
             0.04
           );
         }
