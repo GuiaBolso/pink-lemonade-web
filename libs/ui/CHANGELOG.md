@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [4.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.4...@guiabolsobr/ui@4.5.0) (2021-07-07)
+
+
+### Features
+
+* 🎸 change layout of modal footer ([#80](https://github.com/GuiaBolso/pink-lemonade-web/issues/80)) ([9d538f7](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d538f7a48370b6a180f560b347048118874526f))
+
 ### @guiabolsobr/ui [4.4.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.3...@guiabolsobr/ui@4.4.4) (2021-06-29)
 
 
