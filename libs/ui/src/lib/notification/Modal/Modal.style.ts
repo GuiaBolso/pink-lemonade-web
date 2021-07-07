@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { css, Theme } from '@emotion/react';
 import { Close as MuiClose } from '../../icons';
-import { pxToRem, hexToRgb } from '@guiabolsobr/utils';
+import { pxToRem, hexToRgb, defaultBreakpoints } from '@guiabolsobr/utils';
 
 type ModalStyleProps = {
   theme?: Theme;
@@ -33,7 +33,7 @@ export const Backdrop = styled.div`
   width: 100vw;
   z-index: ${ModalConsts.zIndex};
 
-  @media all and (max-width: 768px) {
+  @media all and (max-width: ${defaultBreakpoints.medium}) {
     ${({ backdropMode }: ModalStyleProps) =>
       backdropMode &&
       `
@@ -76,7 +76,7 @@ export const Container = styled.section`
     border-radius: ${pxToRem(8)};
   }
 
-  @media all and (max-width: 768px) {
+  @media all and (max-width: ${defaultBreakpoints.medium}) {
     ${({ backdropMode }: ModalStyleProps) =>
       backdropMode &&
       css`
@@ -115,6 +115,15 @@ export const Footer = styled.footer`
   grid-gap: ${pxToRem(ModalConsts.spacingBetweenElements)};
   justify-content: end;
   margin-top: ${pxToRem(ModalConsts.spacingBetweenElements)};
+
+  @media all and (max-width: ${defaultBreakpoints.medium}) {
+    grid-auto-flow: row;
+    justify-content: stretch;
+
+    .primary {
+      grid-row: 1;
+    }
+  }
 `;
 
 export const Close = styled(MuiClose)`
