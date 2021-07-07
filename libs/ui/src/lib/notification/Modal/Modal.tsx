@@ -1,4 +1,5 @@
 import React, { useEffect, useState, memo, useCallback } from 'react';
+import { useBreakpoints } from '@guiabolsobr/utils';
 
 import { Text } from '../../display';
 import { Button } from '../../forms';
@@ -21,6 +22,8 @@ const Modal = ({
 }: ModalProps) => {
   const [fade, setFade] = useState<boolean>(false);
   const [isOpened, setIsOpened] = useState<boolean>(opened);
+  const { lessThan } = useBreakpoints();
+
   const { removeModal } = useModal();
   const DELAY_TO_FADE_IN = 100;
   const DELAY_TO_FADE_OUT = 300;
@@ -97,7 +100,8 @@ const Modal = ({
             )}
 
             <Button
-              scale="narrow"
+              scale={lessThan({ breakpoint: 'medium' }) ? 'fixed' : 'narrow'}
+              className="primary"
               appearance={type === 'alert' ? 'tertiary' : 'primary'}
               onClick={() => {
                 confirm?.handler?.();

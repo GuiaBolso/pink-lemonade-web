@@ -105,10 +105,6 @@ export const Button = styled(ProxyMuiButton)`
         &-sizeSmall {
           min-height: ${pxToRem(40)};
         }
-
-        &-fullWidth {
-          border-radius: 0;
-        }
       }
 
       .MuiButton-label {
