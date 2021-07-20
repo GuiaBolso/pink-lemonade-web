@@ -1,3 +1,10 @@
+### @guiabolsobr/ui [4.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.5.0...@guiabolsobr/ui@4.5.1) (2021-07-20)
+
+
+### Bug Fixes
+
+* 🐛 border button ([#81](https://github.com/GuiaBolso/pink-lemonade-web/issues/81)) ([6fd733d](https://github.com/GuiaBolso/pink-lemonade-web/commit/6fd733d4980913022f4074a1b43d27855bd6b5bb))
+
 ## @guiabolsobr/ui [4.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.4...@guiabolsobr/ui@4.5.0) (2021-07-07)
 
 
