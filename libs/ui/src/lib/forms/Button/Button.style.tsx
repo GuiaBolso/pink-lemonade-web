@@ -25,7 +25,7 @@ const ProxyMuiButton = ({
 }: ProxyButtonProps) => <MuiButton {...rest} />;
 
 export const Button = styled(ProxyMuiButton)`
-  ${({ theme, narrow, customColor }: ButtonStyledProps) => {
+  ${({ theme, customColor, narrow }: ButtonStyledProps) => {
     return css`
       &.MuiButton {
         &-root {
