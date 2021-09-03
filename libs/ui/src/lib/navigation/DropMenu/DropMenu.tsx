@@ -22,7 +22,7 @@ const DropMenu = ({ children, executeOnClose, ...rest }: DropMenuProps) => {
   return (
     <>
       <S.Menu {...rest}>{children}</S.Menu>
-      <S.MenuMask onClick={executeOnClose} />
+      <S.MenuMask role="presentation" aria-label="Drop Menu Backdrop" onClick={executeOnClose} />
     </>
   );
 };
