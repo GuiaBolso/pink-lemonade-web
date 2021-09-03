@@ -1,23 +1,20 @@
 ### @guiabolsobr/ui [4.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.5.0...@guiabolsobr/ui@4.5.1) (2021-07-20)
 
-
 ### Bug Fixes
 
-* 🐛 border button ([#81](https://github.com/GuiaBolso/pink-lemonade-web/issues/81)) ([6fd733d](https://github.com/GuiaBolso/pink-lemonade-web/commit/6fd733d4980913022f4074a1b43d27855bd6b5bb))
+- 🐛 border button ([#81](https://github.com/GuiaBolso/pink-lemonade-web/issues/81)) ([6fd733d](https://github.com/GuiaBolso/pink-lemonade-web/commit/6fd733d4980913022f4074a1b43d27855bd6b5bb))
 
 ## @guiabolsobr/ui [4.5.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.4...@guiabolsobr/ui@4.5.0) (2021-07-07)
 
-
 ### Features
 
-* 🎸 change layout of modal footer ([#80](https://github.com/GuiaBolso/pink-lemonade-web/issues/80)) ([9d538f7](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d538f7a48370b6a180f560b347048118874526f))
+- 🎸 change layout of modal footer ([#80](https://github.com/GuiaBolso/pink-lemonade-web/issues/80)) ([9d538f7](https://github.com/GuiaBolso/pink-lemonade-web/commit/9d538f7a48370b6a180f560b347048118874526f))
 
 ### @guiabolsobr/ui [4.4.4](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.3...@guiabolsobr/ui@4.4.4) (2021-06-29)
 
-
 ### Bug Fixes
 
-* 🐛 resolve deps ([342f788](https://github.com/GuiaBolso/pink-lemonade-web/commit/342f7883c3ae81cfa61162c385cb40fa1841b5bd))
+- 🐛 resolve deps ([342f788](https://github.com/GuiaBolso/pink-lemonade-web/commit/342f7883c3ae81cfa61162c385cb40fa1841b5bd))
 
 ### @guiabolsobr/ui [4.4.3](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.4.2...@guiabolsobr/ui@4.4.3) (2021-06-29)
 
