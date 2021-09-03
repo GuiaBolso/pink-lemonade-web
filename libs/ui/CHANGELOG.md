@@ -1,3 +1,10 @@
+## @guiabolsobr/ui [4.6.0](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.5.1...@guiabolsobr/ui@4.6.0) (2021-09-03)
+
+
+### Features
+
+* 🎸 update import order lol ([e68b8fa](https://github.com/GuiaBolso/pink-lemonade-web/commit/e68b8fa343605928e119bc67b85697b29a20d775))
+
 ### @guiabolsobr/ui [4.5.1](https://github.com/GuiaBolso/pink-lemonade-web/compare/@guiabolsobr/ui@4.5.0...@guiabolsobr/ui@4.5.1) (2021-07-20)
 
 ### Bug Fixes
