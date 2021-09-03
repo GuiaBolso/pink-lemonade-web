@@ -26,7 +26,7 @@ const DropMenu = ({ children, executeOnClose, ...rest }: DropMenuProps) => {
         role="presentation"
         aria-label="Drop Menu Backdrop"
         onClick={executeOnClose}
-       />
+      />
     </>
   );
 };
